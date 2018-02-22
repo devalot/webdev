@@ -21,7 +21,7 @@ running the following command:
   1. From the command line, and in the `src` directory, run the following
      command:
 
-        node bin/server.js
+         node bin/server.js
 
   2. Open the following URL in your browser of choice:
 
@@ -29,3 +29,14 @@ running the following command:
 
 [pjones]: http://www.devalot.com/about/pjones.html
 [node.js]: https://nodejs.org/
+
+
+## Building the Course Content (PDF Files)
+
+  1. Install the [Nix Package Manager](https://nixos.org/nix/)
+
+  2. Run the following command:
+
+         nix-build
+
+The generated PDF files will be in the `result/docs` directory.
