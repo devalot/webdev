@@ -1,4 +1,6 @@
-## Brief Overview of HTML
+# Brief Overview of HTML
+
+## Introduction to HTML
 
 ### What is HTML?
 
@@ -58,6 +60,8 @@
     <input type="password" name="pin"/>
     ~~~
 
+## HTML Tags
+
 ### HTML Element Refresher: Structure Elements
 
   - `div`, and `span`
@@ -84,6 +88,8 @@
     -   `section`, `article`, `aside`, `figure`, `figcaption`
     -   `time`, `mark`, `details`, `summary`
   - <http://jsfiddle.net/mrmorris/cb47mzpq/>
+
+## HTML Structures
 
 ### HTML5 Forms
 

@@ -102,11 +102,11 @@ li:nth-child(3n+1):not(:only-child) { /* ... */ }
 
   #. Open (and edit) the following file in your text editor:
 
-        www/selectors/part-01.css
+        src/www/css/selectors/part-01.css
 
   #. Review (but don't edit) the following file:
 
-        www/selectors/index.html
+        src/www/css/selectors/index.html
 
   #. Follow the directions in the CSS file
 
@@ -186,11 +186,11 @@ li:nth-child(3n+1):not(:only-child) { /* ... */ }
 
   #. Open (and edit) the following file in your text editor:
 
-        www/selectors/part-02.css
+        src/www/css/selectors/part-02.css
 
   #. Review (but don't edit) the following file:
 
-        www/selectors/index.html
+        src/www/css/selectors/index.html
 
   #. Follow the directions in the CSS file
 
@@ -226,11 +226,11 @@ li:nth-child(3n+1):not(:only-child) { /* ... */ }
 
   #. Open (and edit) the following file in your text editor:
 
-        www/selectors/part-03.css
+        src/www/css/selectors/part-03.css
 
   #. Review (but don't edit) the following file:
 
-        www/selectors/index.html
+        src/www/css/selectors/index.html
 
   #. Follow the directions in the CSS file
 
@@ -367,11 +367,11 @@ Type selector example:
 
   #. Open (and edit) the following file in your text editor:
 
-        www/selectors/part-04.css
+        src/www/css/selectors/part-04.css
 
   #. Review (but don't edit) the following file:
 
-        www/selectors/index.html
+        src/www/css/selectors/index.html
 
   #. Follow the directions in the CSS file
 
@@ -422,11 +422,11 @@ For more information and more complete examples, see [@W3CSel].
 
   #. Open (and edit) the following file in your text editor:
 
-        www/selectors/part-05.css
+        src/www/css/selectors/part-05.css
 
   #. Review (but don't edit) the following file:
 
-        www/selectors/index.html
+        src/www/css/selectors/index.html
 
   #. Follow the directions in the CSS file
 
