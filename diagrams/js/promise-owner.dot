@@ -1,0 +1,18 @@
+digraph promiseOwner {
+
+  // ###########################################################################
+  // graph [rankdir=LR];
+  node  [shape="record"];
+  edge  [label=""];
+
+  promise [label="new Promise(executor);"];
+  executor [label="executor(resolve, reject);"];
+  async [label="{Do async work... | {<f1>success | <f2>failure}}"];
+  success [label="resolve(value);"];
+  failure [label="reject(errorMessage)"];
+  
+  promise -> executor;
+  executor -> async;
+  async:f1 -> success;
+  async:f2 -> failure;
+}

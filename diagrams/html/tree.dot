@@ -1,0 +1,26 @@
+digraph DOM {
+
+  // ###########################################################################
+  graph [rankdir=TB];
+  node  [shape="record"];
+  edge  [];
+
+  // ###########################################################################
+  h1 [label="{h1|id: \"title\"}"];
+  span [label="{span|className: \"loud\"}"];
+  hw [label="\"Hello World!\"", shape="oval"];
+  welcome [label="\"Welcome\"", shape="oval"];
+  awesome [label="\"Awesome\"", shape="oval"];
+  site [label="\"Site!\"" shape="oval"];
+
+  // ###########################################################################
+  html -> head [label="[0]"];
+  html -> body [label="[1]"];
+  head -> title -> hw;
+  body -> h1 [label="[0]"];
+  body -> p [label="[1]"];
+  h1 -> welcome;
+  p -> awesome [label="[0]"];
+  p -> span [label="[1]"];
+  span -> site;
+}

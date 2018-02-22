@@ -1,0 +1,47 @@
+/*############################################################################*/
+/*
+ * Exercises:
+ *
+ * For these exercises you will need to write a selector and apply
+ * some styling properties.  Sometimes you'll be able to use any
+ * selector you wish, while other times you'll be asked to use a
+ * specific selector.
+ */
+
+/*############################################################################*/
+/* Exercise 1:
+
+   Select form inputs that have the keyboard focus and place a blue
+   border around them.
+
+*/
+
+
+/*############################################################################*/
+/* Exercise 2:
+
+   Select disabled form inputs and put a line through their text.
+
+   Hint: text-decoration: line-through;
+*/
+
+
+/*############################################################################*/
+/* Exercise 3:
+
+   Select paragraphs that are direct children of the article tag and
+   change the first letter of text so its font size is 2em.
+
+   Hint: Paragraphs inside tables should not be affected.
+*/
+
+
+/*############################################################################*/
+/* Exercise 4:
+
+   When the user selects text in a paragraph with their mouse, the
+   background color of the text should be #009 and the foreground
+   color should be #fff.
+
+   Hint: Only style the user selection if it's in a paragraph.
+*/

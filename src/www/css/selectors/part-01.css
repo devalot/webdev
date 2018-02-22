@@ -1,0 +1,51 @@
+/*############################################################################*/
+/*
+ * Exercises:
+ *
+ * For these exercises you will need to write a selector and apply
+ * some styling properties.  Sometimes you'll be able to use any
+ * selector you wish, while other times you'll be asked to use a
+ * specific selector.
+ */
+
+/*############################################################################*/
+/* Exercise 1:
+
+   Select paragraphs that are direct children of the article tag and
+   change the font family to fantasy.
+
+   Hint: font-family: fantasy;
+
+   Hint: Paragraphs inside tables should not be affected.
+*/
+
+
+/*############################################################################*/
+/* Exercise 2:
+
+   Select paragraphs that directly follow tables (siblings) and add a
+   left border on the paragraph that is 3 pixels wide, solid, and
+   green.
+
+   Hint: Other paragraphs should not be affected.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 3:
+
+   Select paragraphs that are inside a table and remove all margins
+   and padding.
+*/
+
+
+/*############################################################################*/
+/* Exercise 4:
+
+   Select all paragraphs that come after an h2 tag that are siblings
+   of the h2 and set a left padding of 1.5em.
+
+   Hint: Other paragraphs should not be affected (i.e. the p tags
+   inside ol tags).
+*/

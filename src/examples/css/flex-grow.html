@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex-Grow</title>
+
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .container > * {
+        border: 1px solid #aaa;
+        flex: 1;
+      }
+
+      .container :nth-child(2) {
+        flex: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <ul>
+        <li>Sed id ligula quis est convallis tempor.</li>
+        <li>Suspendisse potenti.</li>
+        <li>Etiam vel tortor sodales tellus ultricies commodo.</li>
+        <li>Donec hendrerit tempor tellus.</li>
+      </ul>
+
+      <ul>
+        <li>Donec pretium posuere tellus.</li>
+        <li>Phasellus lacus.</li>
+        <li>Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</li>
+        <li>Aenean in sem ac leo mollis blandit.</li>
+      </ul>
+
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Mauris mollis tincidunt felis.</li>
+        <li>Phasellus purus.</li>
+        <li>Donec hendrerit tempor tellus.</li>
+      </ul>
+    </div>
+  </body>
+</html>

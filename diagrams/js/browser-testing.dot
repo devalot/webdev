@@ -1,0 +1,42 @@
+digraph BAT {
+
+  // ###########################################################################
+  graph [rankdir=TB];
+  node  [shape="record"];
+  edge  [];
+
+  // ###########################################################################
+  bat [label="Browser Automated Testing"];
+  selenium [label="{Selenium | <s>WebDriver Server | <a>WebDriver API}"];
+  capybara [label="Capybara"];
+  phantomjs [label="PhantomJS"];
+  qtwebkit [label="QtWebKit"];
+
+  // ###########################################################################
+  chrome [label="ChromeDriver"];
+  firefox [label="FirefoxDriver"];
+  ie [label="{InternetExplorerDriver | v7 through v11 }"];
+  opera [label="{OperaDriver | Maintained by Opera}"]
+  safari [label="{SafariDriver | Older versions only }"]
+
+  webdriverjs [label="WebDriverJS"];
+  nightwatch [label="Nightwatch"];
+  protractor [label="Protractor"];
+  
+  // ###########################################################################
+  bat -> selenium;
+  bat -> capybara;
+  bat -> phantomjs;
+  capybara -> selenium;
+  capybara -> qtwebkit;
+
+  selenium:s -> chrome;
+  selenium:s -> firefox;
+  selenium:s -> ie;
+  selenium:s -> opera;
+  selenium:s -> safari;
+
+  selenium:a -> webdriverjs;
+  selenium:a -> nightwatch;
+  selenium:a -> protractor;
+}

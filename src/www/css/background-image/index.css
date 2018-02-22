@@ -1,0 +1,12 @@
+html { background-color: #1b1322; }
+
+h1 {
+  color: #eee;
+  height: 100vh;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff, 2px 2px 2px #111;
+}
+
+.logo {
+  background-image: url(../images/haskell.png);
+}

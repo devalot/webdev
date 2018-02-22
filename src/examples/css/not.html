@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Negation Pseudo-Class</title>
+
+    <style>
+      /* <<: not-class */
+      ul:not(.products) {
+        background-color: #eee;
+      }
+      /* :>> */
+
+      /* <<: not-ul */
+      .products:not(ul) {
+        background-color: #f00;
+      }
+      /* :>> */
+    </style>
+  </head>
+
+  <body>
+    <ul class="products">
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Forth</li>
+    </ul>
+
+    <ul class="actions">
+      <li>Only Child</li>
+    </ul>
+
+    <p class="products">
+      Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum
+      leo, quis tempor ligula erat quis odio.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.visual-selector {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.visual-selector-hidden {
+  display: none;
+}
+
+.visual-selector input {
+  display: block;
+  margin: 5px auto;
+  padding: 10px;
+  width: 80%;
+  font-size: 32px;
+  color: black;
+}
+
+.visual-selector input.found-matches {
+  color: #00dd00;
+}
+
+.visual-selector input.nothing-matches {
+  color: #888;
+}
+
+.visual-selector input.invalid-selector {
+  color: red;
+}
+
+.visual-selector-highlighted {
+  background-color: #ccccff;
+  border: solid 2px #aaaaff;
+}
+
+.visual-selector-singled-out {
+  background-color: #ccffcc;
+}

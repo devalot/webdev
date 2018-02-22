@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keyframes</title>
+
+    <style>
+      /* <<: keyframes */
+      @keyframes colorPlay {
+        from { color: green;  }
+        25%  { color: blue;   }
+        75%  { color: purple; }
+        to   { color: red;    }
+      }
+      /* :>> */
+
+      /* <<: using */
+      .standout {
+        animation-name: colorPlay;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      /* :>> */
+    </style>
+  </head>
+
+  <body>
+    <h1 class="standout">Hey There!</h1>
+  </body>
+</html>

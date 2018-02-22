@@ -1,0 +1,36 @@
+digraph proto {
+
+  // ###########################################################################
+  graph [layout=dot, nodesep=0.1, ratio=0.5, rankdir=LR];
+  node  [shape="record"];
+  edge  [];
+
+  // ###########################################################################
+  array_instance [label="<f0>[1, 2, 3] | <f2>__proto__ | <f3>constructor", fillcolor="violet"];
+  array_function [label="<f0>Array | <f1>prototype | <f2>__proto__ | <f3>constructor"];
+  array_prototype [label="<f0>Array.prototype | <f2>__proto__ | <f3>constructor"];
+  function_function [label="<f0>Function | <f1>prototype | <f2>__proto__ | <f3>constructor"];
+  function_prototype [label="<f0>Function.prototype | <f2>__proto__ | <f3>constructor"];
+  object_function [label="<f0>Object | <f1>prototype | <f2>__proto__ | <f3>constructor"];
+  object_prototype [label="<f0>Object.prototype | <f2>__proto__ | <f3>constructor"];
+  null [label="<f0>null"];
+
+  // ###########################################################################
+  array_instance:f2     -> array_prototype:f0       [color="red"];
+  array_instance:f3     -> array_function:f0        [color="blue"];
+  array_function:f1     -> array_prototype:f0       [color="gray"];
+  array_function:f3     -> function_function:f0     [color="blue"];
+  array_function:f2     -> function_prototype:f0    [color="red"];
+  array_prototype:f2    -> object_prototype:f0      [color="red"];
+  array_prototype:f3    -> array_function:f0        [color="blue"];
+  function_function:f1  -> function_prototype:f0    [color="gray"];
+  function_function:f2  -> function_prototype:f0    [color="red"];
+  function_function:f3  -> function_function:f0     [color="blue"];
+  function_prototype:f2 -> object_prototype:f0      [color="red"];
+  function_prototype:f3 -> function_function:f0     [color="blue"];
+  object_function:f1    -> object_prototype:f0      [color="gray"];
+  object_function:f2    -> function_prototype:f0    [color="red"];
+  object_function:f3    -> function_function:f0     [color="blue"];
+  object_prototype:f2   -> null:f0                  [color="red", minlen=2];
+  object_prototype:f3   -> object_function:f0       [color="blue"];
+}

@@ -1,0 +1,20 @@
+digraph DOM {
+
+  // ###########################################################################
+  graph [rankdir=TB];
+  node  [shape="record"];
+  edge  [];
+
+  // ###########################################################################
+  body [label="{body|color: red;}", fontcolor=red];
+  h1 [label="h1", fontcolor=red];
+  p [label="{p|color: green;}", fontcolor=green];
+  hspan [label="span", fontcolor=red];
+  span [label="span", fontcolor=green];
+
+  // ###########################################################################
+  body -> h1;
+  h1 -> hspan;
+  body -> p;
+  p -> span;
+}

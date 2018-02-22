@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blink</title>
+
+    <style>
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+      }
+
+      .blink {
+        animation-name: fadeOut;
+        animation-duration: 500ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .banner {
+        color: red;
+        font-size: 60px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="blink banner">Winner!</h1>
+  </body>
+</html>

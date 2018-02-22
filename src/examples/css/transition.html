@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transition</title>
+
+    <style>
+      /* <<: css */
+      .jumper {
+        transition-property: all;
+        transition-duration: 500ms;
+      }
+
+      .jumper:hover {
+        transform: scale(2);
+        transition-property: all;
+        transition-duration: 250ms;
+      }
+
+      .jumper:active {
+        transform: scale(0);
+      }
+      /* :>> */
+    </style>
+  </head>
+
+  <body>
+    <button class="jumper">Click Me!</button>
+  </body>
+</html>

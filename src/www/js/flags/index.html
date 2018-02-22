@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flag Exercise</title>
+    <link href="/core.css" rel="stylesheet" type="text/css"/>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1 class="foo">Find the flag elements.</h1>
+
+      <div class="main">
+        <h2 class="foo">List of Articles:</h2>
+
+        <ul>
+          <li>One</li>
+          <li class="foo">FLAG #1</li>
+          <li>Three</li>
+        </ul>
+
+        <div id="articles" class="foo">
+          <article class="new">
+            <h3>Article 1</h3>
+
+            <p>
+              This is <a href="#">some</a> body content.
+            </p>
+
+            <p>
+              This is some body content
+              <a href="#"><span>FLAG #2</span></a>
+            </p>
+          </article>
+
+          <article class="new">
+            <h3>Article 2</h3>
+            <p>This is some body content</p>
+          </article>
+
+          <article id="article-3">
+            <h3>Article 3</h3>
+            <p>This is some body content.</p>
+            <p>This is some body content.</p>
+            <p>FLAG #5 <span>FLAG #4</span></p>
+            <p>This is some body content.</p>
+          </article>
+
+          <div class="footer">
+            <div>
+              <div>
+                <div></div>
+                <div>
+                  <div>FLAG #3</div>
+                  <div>NOT A FLAG</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bucket">
+        <h2>Dropped Flags:</h2>
+        <ul>
+          <!--
+            Put the flags in here as <li> elements, in the correct
+            order, and as separate <li> elements.
+          -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/linter.js"></script>
+    <script src="flags.js"></script>
+  </body>
+</html>

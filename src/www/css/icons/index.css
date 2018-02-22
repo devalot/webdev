@@ -1,0 +1,6 @@
+/* Make each <LI> show just its designated icon. */
+
+.icon {
+  height: 48px;
+  background-image: url(../images/icons.png);
+}

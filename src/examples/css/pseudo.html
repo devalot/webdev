@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pseudo Classes</title>
+
+    <style>
+      /* <<: css */
+      li:first-child, li:last-child {
+        background-color: #eee;
+      }
+
+      li:only-child {
+        color: #f00;
+      }
+      /* :>> */
+
+      /* <<: type-css */
+      .products p:first-of-type {
+        border-top: 1px solid #ddd;
+      }
+
+      .products p:last-of-type {
+        border-bottom: 1px solid #ddd;
+      }
+      /* :>> */
+    </style>
+  </head>
+
+  <body>
+    <!-- <<: html -->
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Forth</li>
+    </ul>
+    <!-- :>> -->
+
+    <ul>
+      <li>Only Child</li>
+    </ul>
+
+    <!-- <<: type-html -->
+    <section class="products">
+      <header><h2>Products</h2></header>
+      <p>First</p>
+      <p>Second</p>
+      <p>Third</p>
+    </section>
+    <!-- :>> -->
+  </body>
+</html>

@@ -1,0 +1,26 @@
+digraph runtime {
+  graph [layout=circo];
+  node [shape=rect];
+
+  start [label="Start", shape=oval];
+  check_events [label="Pending\nEvents?", shape=diamond];
+  check_queue  [label="Callback\nQueue\nEmpty?", shape=diamond];
+
+  enqueue [label="Push Event to\nCallback Queue"];
+  dequeue [label="Pop Callback\nfrom Queue"];
+  run     [label="Run Function and\nWait for Completion", fillcolor="lightpink"];
+  wait    [label="Wait for Event"];
+
+  start -> check_events;
+
+  check_events -> enqueue [label="One or More\nEvents"];
+  check_events -> check_queue [label="No Events Pending"];
+  enqueue -> check_queue;
+
+  check_queue -> dequeue [label="Callbacks\nPresent"];
+  check_queue -> wait [label="Queue\nEmpty"];
+  wait -> check_events;
+
+  dequeue -> run;
+  run -> check_events [label="Function\nDone"];
+}

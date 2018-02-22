@@ -1,0 +1,32 @@
+digraph proto {
+
+  // ###########################################################################
+  graph [rankdir=BT];
+  node  [shape="record"];
+  edge  [label=""];
+
+  // ###########################################################################
+  null [label="null"];
+  object_proto [label="Object.prototype"];
+
+  // ###########################################################################
+  array_object [label="[1, 2, 3]"];
+  array_proto  [label="{Array.prototype|slice: function()\{...\},\nother array methods...}"];
+
+  // ###########################################################################
+  fun_object [label="function f(args) \{...\}"];
+  fun_proto  [label="{Function.prototype|apply: function()\{...\},\nother function methods...}"];
+
+  // ###########################################################################
+  num_object [label="42"];
+  num_proto  [label="{Number.prototype|toPrecision: function()\{...\},\nother number methods...}"];
+
+  // ###########################################################################
+  array_object -> array_proto;
+  array_proto  -> object_proto;
+  fun_object   -> fun_proto;
+  fun_proto    -> object_proto;
+  num_object   -> num_proto;
+  num_proto    -> object_proto;
+  object_proto -> null;
+}

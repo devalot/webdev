@@ -1,0 +1,17 @@
+digraph proto {
+
+  // ###########################################################################
+  graph [layout=circo];
+  node  [shape="record"];
+  edge  [label=""];
+
+  // ###########################################################################
+  object__ [label="..."];
+  object_a [label="{<name>a|color: \"red\"|speed: 100|<p>__proto__}"];
+  object_b [label="{<name>b|color: \"green\"|<p>__proto__}"];
+  object_c [label="{<name>c|width: 10|<p>__proto__}"];
+  
+  object_c:p -> object_b:name;
+  object_b:p -> object_a:name;
+  object_a:p -> object__;
+}

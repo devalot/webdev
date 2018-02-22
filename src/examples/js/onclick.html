@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>onClick is Bad</title>
+  </head>
+
+  <body>
+    <button id="button">Click Me</button>
+
+    <!-- Code from library A: -->
+    <script id="A">
+      document.getElementById("button").
+        onclick = function() {
+          console.log("onClick A");
+        };
+    </script>
+
+    <!-- Code from library B: -->
+    <script id="B">
+      document.getElementById("button").
+        onclick = function() {
+          console.log("onClick B");
+        };
+    </script>
+  </body>
+</html>

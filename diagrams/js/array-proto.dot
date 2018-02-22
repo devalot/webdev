@@ -1,0 +1,16 @@
+digraph proto {
+
+  // ###########################################################################
+  graph [layout=circo];
+  node  [shape="record"];
+  edge  [label=""];
+
+  // ###########################################################################
+  an_array [label="{[1,2,3]|length|<p>__proto__}"];
+  array [label="{Array|isArray|...|<p>prototype}"];
+  prototype [label="{<name>Array.prototype|forEach|slice|...|push|pop}"];
+  
+  // ###########################################################################
+  an_array:p -> prototype:name;
+  array:p -> prototype:name;
+}

@@ -1,0 +1,67 @@
+/*############################################################################*/
+/*
+ * Exercises:
+ *
+ * For these exercises you will need to write a selector and apply
+ * some styling properties.  Sometimes you'll be able to use any
+ * selector you wish, while other times you'll be asked to use a
+ * specific selector.
+ */
+
+/* Attribute Selectors */
+
+/*############################################################################*/
+/* Exercise 1:
+
+  There are two parts to this exercise:
+
+    1) Select form inputs that are text inputs and change their width
+       to 20em.
+
+    2) Select form inputs that are number inputs and change their
+       width to 5em.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 2:
+
+   Select links that meet all of the following conditions and make
+   their text color orange.
+
+     1) The mouse is hovering over the link.
+
+     2) The href attribute for the link starts with a hash (#).
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 3:
+
+   Select all links whose href attribute contains the substring
+   "salesforce" and make their background color darkblue.
+
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 4:
+
+   Select all elements that have a "data-product-id" attribute and
+   change their font weight to bold.
+
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 5:
+
+   Select elements that have a "product" class and also have the word
+   "hot" listed in the "data-keywords" attribute.  Change the
+   background color of matching elements to "hotpink".
+
+*/

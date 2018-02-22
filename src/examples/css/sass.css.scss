@@ -1,0 +1,21 @@
+$background-color: #eee;
+$foreground-color: #000;
+
+body > header {
+  border: 1px;
+  color: $foreground-color;
+  background-color: $background-color;
+
+  nav { position: absolute; }
+  nav li { display: inline; }
+
+  animation: {
+    name: foo;
+    duration: 2s;
+  }
+}
+
+p { padding: 10px;}
+
+// Compile with:
+// sassc -t expanded examples/sass.css.scss

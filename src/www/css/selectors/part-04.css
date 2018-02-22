@@ -1,0 +1,61 @@
+/*############################################################################*/
+/*
+ * Exercises:
+ *
+ * For these exercises you will need to write a selector and apply
+ * some styling properties.  Sometimes you'll be able to use any
+ * selector you wish, while other times you'll be asked to use a
+ * specific selector.
+ */
+
+/*############################################################################*/
+/* Exercise 1:
+
+   Select every other table row (even rows) and change their
+   background color to #eee.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 2:
+
+   Select the last three table rows and change their font weight to
+   bold.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 3:
+
+   Select the unordered list near the bottom of the article tag and:
+
+     1) Change the background color for the first four list items to
+        yellow.
+
+     2) Change the background color for the last four list items to
+        orange.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 4:
+
+   For every list in the HTML (ul or ol), select every third list
+   item, starting with the first item, and make the text color red.
+   Lists with a single list item should not be affected.
+*/
+
+
+
+/*############################################################################*/
+/* Exercise 5:
+
+   Select the first column in every fourth table row and align the
+   text to the right.  Also add the following property to each
+   selected column:
+
+     border-right: 1px solid black;
+*/
