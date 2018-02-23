@@ -63,8 +63,5 @@
  * and moves the flags as they are found.  Don't forget to sort the
  * flags so they are in the correct order in the bucket.
  */
-(function() { // Keep this line.
 
-  // Your code here.
-
-})(); // Keep this line too.
+// Your code here.

@@ -7,7 +7,7 @@
  * (In other words, use the `hasOwnProperty' method.)
  *
  */
-copy = function(object) {
+function copy(object) {
 
   // Your code here.
 

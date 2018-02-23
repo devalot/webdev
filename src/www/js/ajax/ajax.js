@@ -24,8 +24,5 @@
 // URL:
 //     /api/artists/N/albums
 //
-(function() {
 
-  // Your code here.
-
-})();
+// Your code here.

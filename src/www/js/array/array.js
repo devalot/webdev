@@ -16,7 +16,7 @@ var users = [
 //
 // The function below should return an array of users from the TEST
 // DATA above that only includes users under the age of 18.
-function Exercise1() {
+function exercise1() {
 
   // Your code here.
 
@@ -28,7 +28,7 @@ function Exercise1() {
 // The function below should return an array of strings.  The strings
 // should be all of the usernames from the TEST DATA above, in the
 // same order.
-function Exercise2() {
+function exercise2() {
 
   // Your code here.
 
@@ -41,7 +41,7 @@ function Exercise2() {
 // should be all of the numeric IDs (converted into a string via the
 // `toString()` method) from the TEST DATA above where the user is
 // over the age of 20 and younger than 40.
-function Exercise3() {
+function exercise3() {
 
   // Your code here.
 
@@ -52,7 +52,7 @@ function Exercise3() {
 //
 // The function below should return the `users' array from above (TEST
 // DATA) in reverse order.  Do not use the built-in reverse function.
-function Exercise4() {
+function exercise4() {
 
   // Your code here.
 

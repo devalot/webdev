@@ -17,7 +17,7 @@
  *
  *   "foo pi xx" -> "foo 3.14 xx 2"
  */
-processString = function(input) {
+function processString(input) {
 
   // Your code here.
 

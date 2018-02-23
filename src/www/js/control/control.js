@@ -4,7 +4,7 @@
 // In the function below, return true if the input variable is equal
 // to the number 42.  Otherwise return false.  Use an `if' statement
 // to achieve this.
-function Exercise1 (input) {
+function exercise1(input) {
 
   // Your code here.
 
@@ -18,7 +18,7 @@ function Exercise1 (input) {
 // In all other cases return false.
 //
 // Use an `if' statement to achieve this.
-function Exercise2 (input) {
+function exercise2(input) {
 
   // Your code here.
 
@@ -28,7 +28,7 @@ function Exercise2 (input) {
 // EXERCISE 3:
 //
 // Repeat exercise 2, this time using a `switch' statement.
-function Exercise3 (input) {
+function exercise3(input) {
 
   // Your code here.
 
@@ -44,7 +44,7 @@ function Exercise3 (input) {
 //
 //     counter();
 //
-function Exercise4 (counter) {
+function exercise4(counter) {
 
   // Your code here.
 
@@ -55,7 +55,7 @@ function Exercise4 (counter) {
 //
 // The function below will be called with an array of numbers.  Return
 // the sum of those numbers.
-function Exercise5 (numbers) {
+function exercise5(numbers) {
 
   // Your code here.
 

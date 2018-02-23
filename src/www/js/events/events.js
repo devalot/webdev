@@ -11,8 +11,6 @@
 //
 // BONUS 2: When the global counter goes above 10 add the "goal" class
 // to it.  Doing so should make it turn red.
-(function() {
 
-  // Your code here.
 
-})();
+// Your code here.
