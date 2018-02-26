@@ -1,0 +1,17 @@
+#+title: To-do List
+#+author: Peter J. Jones
+#+email: pjones@devalot.com
+#+startup: content
+
+* Items Related to Course Content     [0/5]
+** TODO Remove reference to =bin/server.js= (JS Fundamentals)
+** TODO Create a single day introduction to JavaScript class (Core JavaScript)
+** TODO Create a single day "JavaScript in the Browser" class
+** TODO Create a single day "Intermediate JavaScript" class
+** TODO Create a single day CSS class (Learning Spike)
+* Items Related to Course Source Code [0/2]
+** TODO Remove the need to have Node.js installed (JS Fundamentals)
+   - The only exercise that needs this right now is =ajax.js=
+   - Move that exercise off to a cloud server?
+** TODO Move all =spec= tests to Jasmine Standalone
+   - Easier for students to debug in-browser tests
