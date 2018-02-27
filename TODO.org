@@ -3,15 +3,23 @@
 #+email: pjones@devalot.com
 #+startup: content
 
-* Items Related to Course Content     [0/5]
+* Items Related to Course Content     [1/5]
 ** TODO Remove reference to =bin/server.js= (JS Fundamentals)
-** TODO Create a single day introduction to JavaScript class (Core JavaScript)
 ** TODO Create a single day "JavaScript in the Browser" class
 ** TODO Create a single day "Intermediate JavaScript" class
 ** TODO Create a single day CSS class (Learning Spike)
-* Items Related to Course Source Code [0/2]
+** DONE Create a single day introduction to JavaScript class (Core JavaScript)
+   CLOSED: [2018-02-26 Mon 17:59]
+* Items Related to Course Source Code [2/5]
+** TODO Reorder the labs in =index.html= to match the content
 ** TODO Remove the need to have Node.js installed (JS Fundamentals)
    - The only exercise that needs this right now is =ajax.js=
    - Move that exercise off to a cloud server?
 ** TODO Move all =spec= tests to Jasmine Standalone
    - Easier for students to debug in-browser tests
+** DONE Create a Constructor Function Lab
+   CLOSED: [2018-02-26 Mon 17:23]
+** DONE The Primitives Exercise Uses Array
+   CLOSED: [2018-02-26 Mon 17:23]
+   - Update the primitives exercise so it only uses the primitive
+     values (strings, numbers, bool, null, undefined)

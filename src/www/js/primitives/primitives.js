@@ -16,11 +16,3 @@ function exercise2() {
   // Your code here.
 
 }
-
-/******************************************************************************/
-// EXERCISE 3: Create (and return) an array that has at least 5 elements
-function exercise3() {
-
-  // Your code here.
-
-}

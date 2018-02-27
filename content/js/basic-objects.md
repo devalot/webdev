@@ -1,30 +1,36 @@
 ## Objects
 
-### Back to Objects
+### A Collection of Key/Value Pairs
 
-  - Remember: everything is an object
+  - Built up from the core types
 
-  - Even primitives have object wrappers
+  - A dynamic collection of **properties**:
+
+    ~~~ {.javascript}
+    var box = {
+      color: "tan",
+      height: 12
+    };
+
+    box.color;             // Getter method
+    box.color = "red";     // Setter method
+
+    var x = "color";
+    box[x];          // "red"
+    box[x] = "blue"; // Alternative syntax
+    ~~~
+
+### Object Basics
+
+  - Everything is an object (almost)
+
+  - Primitive types have object wrappers (except `null` and `undefined`)
+
+  - They remain primitive until used as objects, for performance reasons
 
   - An object is a dynamic collection of properties
 
-### Object Literals
-
-Create object literals with curly braces:
-
-~~~ {.javascript}
-var person = {
-
-  name: "Mr Object",
-
-  age: 99,
-
-  toString: function() {
-    return this.name;
-  },
-
-};
-~~~
+  - Properties can be functions
 
 ### Object Properties
 
@@ -64,6 +70,8 @@ There are four primary ways to work with object properties:
     Object.defineProperty(obj, "someName", {
       configurable: false, // someName can't be deleted
       enumerable:   false, // someName is hidden
+      writable:     false, // No setter for someName
+      // ...
     });
     ~~~
 
@@ -208,13 +216,14 @@ for (var propertyName in object) {
 
   #. Open the following file:
 
-        www/copy/copy.js
+        src/www/js/copy/copy.js
 
   #. Complete the exercise.
 
-  #. Run the tests by opening <http://localhost:3000/copy/>
+  #. Run the tests by opening the `index.html` file in your browser.
 
+Hints:
 
-Hint: `for (var prop in obj) { /* ... */ }`
+  - `for (var prop in someobj) { /* ... */ }`
 
-Hint: `obj.hasOwnProperty(prop)`
+  - `someobj.hasOwnProperty(prop)`

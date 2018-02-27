@@ -1,6 +1,4 @@
-# Exception Handling
-
-## Errors in JavaScript
+## Exception Handling
 
 Handling errors in JavaScript is done through exceptions.  Programmers
 familiar with Java or C++ will feel (mostly) comfortable with
@@ -18,6 +16,8 @@ JavaScript's exception system.
       - `throw`: Start exception processing
       - `finally`: Resource clean-up handler
 
+## Throwing Exceptions
+
 ### Example: Throwing an Exception
 
 When a major error occurs, use the `throw` keyword:
@@ -25,7 +25,7 @@ When a major error occurs, use the `throw` keyword:
 ~~~ {.javascript insert="../../src/examples/js/except.js" token="throw"}
 ~~~
 
-### Exception Objects
+## Exception Objects
 
 While you can throw exceptions with primitive types such as numbers
 and strings, it's more idiomatic to throw exception objects.
@@ -80,3 +80,13 @@ Most of the time you only want to deal with specific exceptions:
 
 ~~~ {.javascript insert="../../src/examples/js/except.js" token="catch2"}
 ~~~
+
+### Exercise: Exceptions
+
+  #. Open the following file:
+
+        src/www/js/exceptions/exceptions.js
+
+  #. Complete the exercise.
+
+  #. Run the tests by opening the `index.html` file in your browser.

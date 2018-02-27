@@ -1,10 +1,10 @@
 # JavaScript Resources {.unnumbered}
 
-## JavaScript Documentation
+## JavaScript Documentation {.unnumbered}
 
   * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## Books on JavaScript
+## Books on JavaScript {.unnumbered}
 
   * JavaScript: The Good Parts
     - By: Douglas Crockford
@@ -20,11 +20,11 @@
     - Through book about design patters in JavaScript
     - Exercises and Answers
 
-## Training Videos from Pluralsight
+## Training Videos from Pluralsight {.unnumbered}
 
 <div class="notes">
 
-### Beginner to Intermediate
+### Beginner to Intermediate {.unnumbered}
 
   * [Basics of Programming with JavaScript](https://app.pluralsight.com/library/courses/javascript-programming-basics/table-of-contents)
 
@@ -34,7 +34,7 @@
 
   * [JavaScript: From Fundamentals to Functional JS](https://app.pluralsight.com/library/courses/javascript-from-fundamentals-to-functional-js/table-of-contents)
 
-### Intermediate to Advanced
+### Intermediate to Advanced {.unnumbered}
 
   * [Object-oriented Programming in JavaScript](https://app.pluralsight.com/library/courses/javascript-es6-object-oriented-programming)
 
@@ -48,10 +48,10 @@
 
 </div>
 
-## Libraries
+## Libraries {.unnumbered}
 
   * Testing: [Jasmine][], [JSPec][], [Sinon][], and [Chai][]
 
-## Compatibility Tables
+## Compatibility Tables {.unnumbered}
 
   * [ES6 Status By kangax](https://kangax.github.io/compat-table/es6/)

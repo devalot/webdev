@@ -16,6 +16,32 @@
         -   `group(name)` and `groupEnd()`
         -   `assert(boolean, message)`
 
+### Accessing the Debugger
+
+  - In the browser's debugging window, choose **Sources**
+
+  - You should be able to see JavaScript files used for the current site
+
+### Setting Breakpoints
+
+There are a few ways to create breakpoints:
+
+  - Open the source file in the browser and click a line number
+  - Right-click the line number to create conditional breakpoints
+  - Use the `debugger;` statement in your code
+
+### Stepping Through Code
+
+  - After setting breakpoints, you can reload the page (or trigger a
+    function)
+
+  - Once the debugger stops on a breakpoint you can step through the
+    code using the buttons in the debugger
+
+    - Step In: Jump into the current function call and debug it
+    - Step Over: Jump over the current function call
+    - Step Out: Jump out of the current function
+
 ### Console Tricks
 
   - `$_` the value of the last evaluation
@@ -37,27 +63,3 @@ See the [Chrome Command Line Reference][chrome-cmdln] for more details.
 [chrome-cmdln]: https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference
 
 </div>
-
-### Accessing the Debugger
-
-  - In the browser's debugging window, choose **Scripts**
-
-  - You should be able to see JavaScript files used for the current site
-
-### Setting Breakpoints
-
-  - Debugger with breakpoints
-
-  - <http://jsfiddle.net/mrmorris/X76Gq/>
-
-### Stepping Through Code
-
-  - After setting breakpoints, you can reload the page (or trigger a
-    function)
-
-  - Once the debugger stops on a breakpoint you can step through the
-    code using the buttons in the debugger
-
-    - Step In: Jump into the current function call and debug it
-    - Step Over: Jump over the current function call
-    - Step Out: Jump out of the current function

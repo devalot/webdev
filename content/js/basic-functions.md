@@ -11,18 +11,20 @@
 
 ### Defining a Function
 
+There are several ways of defining functions:
+
   - Function statements (named functions)
   - Function expression (anonymous functions)
+  - Arrow functions (new in ES2015)
 
 ### Function Definition (Statement)
 
 ~~~ {.javascript}
-  function add(a, b) {
-    return a + b;
-  }
+function add(a, b) {
+  return a + b;
+}
 
-  var result = add(1, 2); // 3
-
+var result = add(1, 2); // 3
 ~~~
 
   - This syntax is know as a **function definition statement**. It is
@@ -35,12 +37,11 @@
 ### Function Definition (Expression)
 
 ~~~ {.javascript}
-  var add = function(a, b) {
-    return a + b;
-  };
+var add = function(a, b) {
+  return a + b;
+};
 
-  var result = add(1, 2); // 3
-
+var result = add(1, 2); // 3
 ~~~
 
   - Function is callable through a variable
@@ -61,24 +62,24 @@
 ### Function Invocation (Example)
 
 ~~~ {.javascript}
-  var add = function(a, b) {
-    return a + b;
-  };
+var add = function(a, b) {
+  return a + b;
+};
 
-  add(1)       // a is 1, b is undefined
-  add(1, 2)    // a is 1, b is 2
-  add(1, 2, 3) // No name for 3.
+add(1)       // a is 1, b is undefined
+add(1, 2)    // a is 1, b is 2
+add(1, 2, 3) // No name for 3.
 ~~~
 
 ### Function Invocation and Parentheses
 
 ~~~ {.javascript}
-  var add = function(a, b) {return a + b;};
+var add = function(a, b) {return a + b;};
 
-  var x = add;       // x is now a function object
-  x(1, 2);           // Same as add(1, 2);
+var x = add;       // x is now a function object
+x(1, 2);           // Same as add(1, 2);
 
-  var y = add(1, 2); // y is 3
+var y = add(1, 2); // y is 3
 ~~~
 
 ### Functions that Return a Value
@@ -87,18 +88,18 @@ In order for a function to return a value to its caller, it must use the
 `return` keyword.
 
 ~~~ {.javascript}
-  var add = function(a, b) {
-    // WRONG!  Computes a sum then throws it away.
-    a + b;
-  };
+var add = function(a, b) {
+  // WRONG!  Computes a sum then throws it away.
+  a + b;
+};
 ~~~
 
 vs.
 
 ~~~ {.javascript}
-  var add = function(a, b) {
-    return a + b; // CORRECT!
-  };
+var add = function(a, b) {
+  return a + b; // CORRECT!
+};
 ~~~
 
 ### Be Careful with Your Line Breaks
@@ -119,7 +120,6 @@ Turns into:
 ~~~
 
 \columnsend
-
 
 Instead, write:
 
@@ -179,11 +179,11 @@ var args = Array.from(arguments);
 
   #. Open the following file:
 
-        www/parse/parse.js
+        src/www/js/parse/parse.js
 
   #. Complete the exercise.
 
-  #. Run the tests by opening: <http://localhost:3000/parse/>
+  #. Run the tests by opening the `index.html` file in your browser.
 
 ### Variable Scope
 

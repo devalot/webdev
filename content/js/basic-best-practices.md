@@ -1,3 +1,5 @@
+## Best Practices
+
 ### JavaScript Language Best Practices
 
   #. Use a linting tool such as [JSHint][] or [ESLint][]
