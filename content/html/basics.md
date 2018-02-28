@@ -1,4 +1,24 @@
-# Brief Overview of HTML
+## Introduction to Markup Languages
+
+### Word Processors and WYSIWYG
+
+  - Many content creation tools are What You See is What You Get
+    (WYSIWYG)
+
+  - Want some *emphasized* text?  Select the text and click a button
+
+  - The tool will store your text with styling information
+
+### Markup Languages
+
+  - A markup language requires you to explicitly provide information
+    along with the content:
+
+    ~~~ {.html}
+    <p>
+      This is a paragraph with <em>emphasized</em> text.
+    </p>
+    ~~~
 
 ## Introduction to HTML
 
@@ -6,98 +26,234 @@
 
   - Hyper Text Markup Language
 
+  - Uses "`<`", "`>`", and "`&`" as *control* characters
+
+  - To use those characters in your text they need to be encoded:
+
+    ~~~ {.html}
+    <p>
+      2 &gt; 1
+    </p>
+    ~~~
+
+  - Failure to encode these characters will result in errors (best
+    case) or very **serious security issues** (XSS)
+
+### Features of HTML
+
   - HTML is very error tolerant (browsers are very forgiving)
 
   - That said, you should strive to write good HTML
 
-  - Structure of the UI and the content of the **view data**
+  - All about content and structure
 
-  - Parsed as a tree of nodes (elements)
+  - Parsed as a tree of nodes (A.K.A. elements or tags)
 
-  - HTML5
-    -   Rich feature set
-    -   Semantic (focus on content and not style)
-    -   Cross-device compatibility
-    -   Easier!
+### HTML is Semantic
 
-### Anatomy of an HTML Document/Page
+Example semantic tags:
 
-~~~ {.html}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello Again!</h1>
-    <p>This is a paragraph.</p>
-  </body>
-</html>
-~~~
+  - `<p>`: Paragraph
+  - `<table>`: Table
+  - `<ul>`: Unordered list
+
+These tags tell you something about their content.  This is *very*
+important for accessibility.
+
+### Tags That Are Not Semantic
+
+Compare the semantic tags to these:
+
+  - `<div>`: Generic block division
+  - `<span>`: Generic inline content
+
+These tags tell us nothing about their content.
+
+### Current Version: HTML5
+
+  - Introduced a lot of new semantic tags
+
+  - Focus on content and not style
+
+  - Simplified the developer experience
 
 ### Anatomy of an HTML Element
 
-  - Also known as: nodes, elements, and tags:
+Also known as: nodes, elements, and tags:
 
-    ~~~ {.html}
-    <element key="value">
-      Content of element
-    </element>
-    ~~~
+~~~ {.html}
+<element key="value" key2="value2">
+  Content or children of element.
+</element>
+~~~
 
-  - Block vs. inline:
+### Example HTML Document
 
-    ~~~ {.html}
-    <p>Paragraph</p>  <!-- Creates a new visual block -->
-    <span>Text</span> <!-- Only affects inline text -->
+~~~ {.html insert="../../src/examples/html/simple.html"}
+~~~
 
-    <p>Hey, this is a <span>paragraph</span></p>
-    ~~~
+### Exercise: Writing Some HTML
 
-  - Self-closing elements:
+  #. Open the following file:
 
-    ~~~ {.html}
-    <input type="password" name="pin"/>
-    ~~~
+        src/www/html/body.html
 
-## HTML Tags
+  #. Let's write some HTML!
 
-### HTML Element Refresher: Structure Elements
+## Most Commonly Used Tags
 
-  - `div`, and `span`
-  - `table`, `tr`, `td`, `thead`, `tbody`, etc.
-  - `form`, `fieldset`, `label`, `input`, etc.
-  - And new HTML5 semantic elements
+### Ordered Lists
 
-### HTML Element Refresher: Content Elements
+List items are displayed as sequentially numbered items.
 
-  - `h1` through `h6`
-  - `p`
-  - `ol` or `ul` along with `li`
-  - Text modifies such as `em` and `strong`
+~~~ {.html insert="../../src/examples/html/ordered-list.html" token="list"}
+~~~
 
-### HTML Element Refresher: Reference
+See: `src/examples/html/ordered-list.html`
 
-  - <https://developer.mozilla.org/en-US/docs/Web/HTML/Element>
+### Unordered Lists
 
-### HTML5 Semantic Elements
+List items are displayed as bullet points.
 
-  - Designed to degrade gracefully on non-HTML5 browsers
-  - Defines an outline and semantic hints for a document
-    -   `header`, `footer`, `nav`, `main`
-    -   `section`, `article`, `aside`, `figure`, `figcaption`
-    -   `time`, `mark`, `details`, `summary`
-  - <http://jsfiddle.net/mrmorris/cb47mzpq/>
+~~~ {.html insert="../../src/examples/html/unordered-list.html" token="list"}
+~~~
 
-## HTML Structures
+See: `src/examples/html/unordered-list.html`
 
-### HTML5 Forms
+### Tables
 
-  - New input types:
-    -   `number`, `range`, `url`, `email`
-    -   `tel`, `color`, `search`
-  - New element: `datalist`
-  - New input attributes:
-    -   `required`, `autofocus`, `placeholder`, `list`
-  - Built-in validation
-  - <http://jsfiddle.net/mrmorris/zh18vn4x/>
+~~~ {.html insert="../../src/examples/html/table.html" token="table"}
+~~~
+
+See: `src/examples/html/table.html`
+
+### Forms
+
+~~~ {.html insert="../../src/examples/html/form.html" token="form"}
+~~~
+
+See: `src/examples/html/form.html`
+
+### Form Input Types
+
+\columnsbegin
+\column{.5\textwidth}
+
+  - `button`
+  - `checkbox`
+  - `color`
+  - `date`
+  - `datetime-local`
+  - `email`
+  - `file`
+  - `hidden`
+  - `image`
+  - `month`
+
+\column{.5\textwidth}
+
+  - `number`
+  - `password`
+  - `radio`
+  - `range`
+  - `reset`
+  - `submit`
+  - `tel`
+  - `text`
+  - `time`
+  - `url`
+  - `week`
+
+\columnsend
+
+See [the HTML spec][htmlspec] for details on the input types.
+
+[htmlspec]: https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute
+
+### Exercise: Writing Forms
+
+  #. Open the following file:
+
+        src/www/html/form.html
+
+  #. Let's write some HTML!
+
+### Audio
+
+There is no standard audio format.  You should provide various formats
+based on the browsers you support.  See the [MDN compatibility chart
+for more details][formats].
+
+~~~ {.html insert="../../src/examples/html/audio.html" token="audio"}
+~~~
+
+See: `src/examples/html/audio.html`
+
+### Video
+
+There is no standard video format.  You should provide various formats
+based on the browsers you support.  See the [MDN compatibility chart
+for more details][formats].
+
+~~~ {.html insert="../../src/examples/html/video.html" token="video"}
+~~~
+
+See: `src/examples/html/video.html`
+
+## Semantic Tags to Structure Documents
+
+HTML5 introduced many new semantic tags to help structure our
+documents.  In this section we'll explore some of the most useful
+tags.
+
+### Sections
+
+Separating the content in your HTML:
+
+  - `<article>`: Content that can stand alone
+
+  - `<main>`: Indicates the main content
+
+  - `<aside>`: Tangential content
+
+  - `<section>`: Generic section (useful in an `article`)
+
+### Headings
+
+In addition to the existing `<h1>` through `<h6>` tags, HTML5 adds:
+
+  - `<header>`: Introduce a section header
+
+  - `<hgroup>`: Group headings or introduce subheadings/subtitles
+
+  - `<footer>`: Information about the containing section.
+
+  - `<address>`: Contact information for the containing article.
+
+### Navigation
+
+~~~ {.html insert="../../src/examples/html/nav.html" token="nav"}
+~~~
+
+See: `src/examples/html/nav.html`
+
+## Developer Tools
+
+### Viewing the Source Code of a Page
+
+  * Browsers allow you to see the source of a page using the *View
+    Source* menu item
+
+  * This is the content the browser pulled from the server
+
+  * Does not reflect any changes made by JavaScript
+
+### Inspecting Elements
+
+  * Most modern browsers allow you to see a live view of the HTML
+    using the *Inspect Element* menu item
+
+  * This provides a wealth of information, and even allows you to edit
+    the HTML (internal to the browser only)
+
+[formats]: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility

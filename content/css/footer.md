@@ -26,7 +26,7 @@ sheets:
 
   * Flexible Box Cheat Sheet: @Bologna2014
 
-## Training Videos from Pluralsight
+## Training Videos from Pluralsight {.unnumbered}
 
   * [CSS3 In-Depth](https://app.pluralsight.com/library/courses/css3-in-depth/table-of-contents)
 

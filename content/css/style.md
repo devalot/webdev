@@ -1,5 +1,3 @@
-# Properties for Styling
-
 ## Advanced Font Tricks
 
 ### Specifying Fonts

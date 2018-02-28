@@ -1,5 +1,6 @@
 ---
 title: "Introduction to HTML and CSS"
+subtitle: "A Hands-on Course"
 
 author:
   - name: "Peter J. Jones"
@@ -18,9 +19,15 @@ copyright: >
 
 # Introduction to This Course {.unnumbered}
 
+## Source Code {.unnumbered}
+
 The source code for this course can be found at the following URL:
 
 <https://github.com/devalot/webdev>
+
+## Overview {.unnumbered}
+
+This HTML and CSS course is delivered during a single day.
 
 ### What's In Store {.unnumbered}
 
@@ -32,13 +39,28 @@ The source code for this course can be found at the following URL:
   CSS Syntax and Structure         Flexible Box Layout
   Basic Selectors and Properties   Responsive Design
 
-<!-- AND NOW, THE CONTENT... -->
+<!-- ====================================================================== -->
+<!-- And now, the content... -->
+<!-- ====================================================================== -->
 
-<<(../content/css/requirements.md)
-<<(../content/html/basics.md)
-<<(../content/css/selectors.md)
-<<(../content/css/cascade.md)
-<<(../content/css/style.md)
+  <<(../content/css/requirements.md)
+
+# Overview of HTML
+
+  <<(../content/html/basics.md)
+
+# Selectors
+
+  <<(../content/css/selectors.md)
+  <<(../content/html/forms.md)
+
+# Inheritance, Cascading, and Specificity
+
+  <<(../content/css/cascade.md)
+
+# Fonts and Images
+
+  <<(../content/css/style.md)
 
 # CSS Layout
 
@@ -48,8 +70,9 @@ CSS layout is concerned with moving HTML boxes around on the screen to
 make the site look the way you want.  By default the browser will
 simply stack all the boxes on top of one another.
 
-<<(../content/css/layout/block.md)
-<<(../content/css/layout/flexbox.md)
-<<(../content/css/layout/responsive.md)
-<<(../content/css/footer.md)
-<<(../metadata/links.md)
+  <<(../content/css/layout/block.md)
+  <<(../content/css/layout/floating.md)
+  <<(../content/css/layout/flexbox.md)
+  <<(../content/css/layout/responsive.md)
+  <<(../content/css/footer.md)
+  <<(../metadata/links.md)

@@ -1,5 +1,3 @@
-# Inheritance, Cascading, and Specificity
-
 ## Inheritance
 
 ### Inheriting Styles from Ancestors

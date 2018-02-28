@@ -35,13 +35,24 @@ The source code for this course can be found at the following URL:
 
 
 <<(../content/css/requirements.md)
+
 <<(../content/css/review.md)
 <<(../content/html/refresher.md)
 <<(../content/css/refresher.md)
-<<(../content/css/selectors.md)
-<<(../content/html/forms.md)
-<<(../content/css/cascade.md)
-<<(../content/css/style.md)
+
+# Advanced Selectors
+
+  <<(../content/css/selectors.md)
+  <<(../content/html/forms.md)
+
+# Inheritance, Cascading, and Specificity
+
+  <<(../content/css/cascade.md)
+
+# Properties for Styling
+
+  <<(../content/css/style.md)
+
 <<(../content/css/animation.md)
 <<(../content/css/layout.md)
 <<(../content/css/tools.md)
