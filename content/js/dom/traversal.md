@@ -44,8 +44,8 @@ text nodes and comments in addition to child elements!
 
 (@domex) Example: Examining the children of a node:
 
-    ~~~ {.javascript insert="../../src/examples/js/domex.js"}
-    ~~~
+~~~ {.javascript insert="../../../src/examples/js/domex.js"}
+~~~
 
 </div>
 

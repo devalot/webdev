@@ -1,5 +1,3 @@
-# Asynchronous JavaScript and XML
-
 ## Introduction
 
 ### Ajax Basics
@@ -49,12 +47,6 @@ req.addEventListener("load", function(e) {
 });
 ~~~
 
-<div class="notes">
-
-Full example: <http://jsfiddle.net/devalot/pz2kf3jj/5/>
-
-</div>
-
 ## Payload Formats
 
 ### Popular Data Formats for Ajax
@@ -71,8 +63,10 @@ Full example: <http://jsfiddle.net/devalot/pz2kf3jj/5/>
 
 ### Ajax with XML
 
-  - More work to turn the XML into HTML
-  - <http://jsfiddle.net/devalot/axpj7zv7/>
+More work to extract data from XML:
+
+~~~ {.javascript insert="../../src/examples/js/xml-ajax.js" token="load"}
+~~~
 
 ### What is JavaScript Object Notation (JSON)?
 
@@ -115,12 +109,6 @@ Full example: <http://jsfiddle.net/devalot/pz2kf3jj/5/>
     var data = JSON.parse(req.responseText);
     ~~~
 
-<div class="notes">
-
-Full example: <http://jsfiddle.net/devalot/z5k2udk0/>
-
-</div>
-
 ## Tips and Tricks
 
 ### Should You Use the XHR API?
@@ -141,11 +129,11 @@ Full example: <http://jsfiddle.net/devalot/z5k2udk0/>
 
   #. Open the following files:
 
-     - `www/ajax/ajax.js`
+     - `src/www/js/ajax/ajax.js`
 
-     - `www/ajax/index.html`
+     - `src/www/js/ajax/index.html`
 
-  #. Open <http://localhost:3000/ajax/>
+  #. Open <http://localhost:3000/js/ajax/>
 
   #. Complete the exercise.
 
@@ -159,6 +147,8 @@ Full example: <http://jsfiddle.net/devalot/z5k2udk0/>
     -   A proxy on the server
     -   JSONP: JSON with Padding
     -   Cross-origin Resource Sharing (CORS) (`>=` IE10)
+
+Recommendation: Use CORS.
 
 ### Introducing JSONP
 

@@ -32,7 +32,7 @@ called when an event is triggered:
 
 Example: Registering a click handler:
 
-~~~ {.javascript insert="../../src/examples/js/eventex.js"}
+~~~ {.javascript insert="../../../src/examples/js/eventex.js"}
 ~~~
 
 **Note**: Don't use older event handler APIs such as `onClick`!
@@ -74,7 +74,7 @@ default action.
 
 Example: Event Handler
 
-~~~ {.javascript insert="../../src/examples/js/eventstop.js" token="example"}
+~~~ {.javascript insert="../../../src/examples/js/eventstop.js" token="example"}
 ~~~
 
 ### Event Delegation
@@ -91,5 +91,33 @@ Example: Event Handler
 
 ### A Complete Example
 
-~~~ {.javascript insert="../../src/examples/js/events.js"}
+~~~ {.javascript insert="../../../src/examples/js/events.js"}
+~~~
+
+### Exercise: Simple User Interaction
+
+  #. Open the following files in your text editor:
+
+     - `src/www/js/events/events.js`
+
+     - `src/www/js/events/index.html` (read only!)
+
+  #. Open the `index.html` file in your web browser.
+
+  #. Complete the exercise.
+
+### Event Loop Warnings
+
+  - Avoid blocking functions (e.g., `alert`, `confirm`)
+
+  - For long tasks use eteration or web workers
+
+  - Eteration: Break work up using `setTimeout(0)`
+
+### Event "Debouncing"
+
+  - Respond to events in intervals instead of in real-time
+  - Reuse a timeout object to process events in the future
+
+~~~ {.javascript insert="../../../src/examples/js/debounce.js" token="debounce"}
 ~~~

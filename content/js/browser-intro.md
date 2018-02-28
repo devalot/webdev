@@ -1,5 +1,3 @@
-# JavaScript and the Web Browser
-
 ## Where JavaScript Fits In
 
 ### JavaScript and the Browser

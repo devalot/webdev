@@ -60,31 +60,28 @@ The source code for this course can be found at the following URL:
 
   <<(../content/js/exceptions.md)
 
-<<(../content/js/regexps.md)
+# Regular Expressions
 
-<<(../content/js/browser-intro.md)
+  <<(../content/js/regexps.md)
 
-<<(../content/html/refresher.md)
-<<(../content/css/refresher.md)
+# JavaScript and the Web Browser
 
-<<(../content/js/loading.md)
+  <<(../content/js/browser-intro.md)
+  <<(../content/html/refresher.md)
+  <<(../content/css/refresher.md)
+  <<(../content/js/loading.md)
 
-<<(../content/js/dom.md)
-<<(../content/js/dom-fetch.md)
-<<(../content/js/dom-traversal.md)
-<<(../content/js/dom-types.md)
-<<(../content/js/dom-create.md)
-<<(../content/js/dom-attrs.md)
-<<(../content/js/dom-classes.md)
-<<(../content/js/dom-text.md)
-<<(../content/js/dom-flags.md)
-<<(../content/js/dom-events.md)
-<<(../content/js/dom-events-exercises.md)
-<<(../content/js/dom-events-tips.md)
+# The Document Object Model
 
-<<(../content/js/ajax.md)
+  <<(../content/js/dom.md)
+
+# Asynchronous JavaScript and XML
+
+  <<(../content/js/ajax.md)
+
+<!-- ====================================================================== -->
+<!-- FOOTER                                                                 -->
+<!-- ====================================================================== -->
 
 <<(../content/js/resources.md)
-
-
 <<(../metadata/links.md)

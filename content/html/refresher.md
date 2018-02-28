@@ -18,16 +18,6 @@
     - Cross-device compatibility
     - Easier!
 
-### HTML Represented as Plain Text
-
-~~~ {.html insert="../../src/examples/html/simple.html"}
-~~~
-
-### HTML Parsed into a Tree Structure
-
-![](../../diagrams/html/tree.dot)\
-<!-- Placeholder -->
-
 ### Anatomy of an HTML Element
 
   - Also known as: nodes, elements, and tags:
@@ -38,20 +28,12 @@
     </element>
     ~~~
 
-  - Block vs. inline:
+### HTML Represented as Plain Text
 
-    ~~~ {.html}
-    <p>Paragraph</p>  <!-- Creates a new visual block -->
-    <span>Text</span> <!-- Only affects inline text -->
+~~~ {.html insert="../../src/examples/html/simple.html"}
+~~~
 
-    <p>Hey, this is a <span>paragraph</span></p>
-    ~~~
+### HTML Parsed into a Tree Structure
 
-  - Self-closing elements:
-
-    ~~~ {.html}
-    <input type="password" name="pin"/>
-
-    <!-- or, with HTML5: -->
-    <input type="password" name="pin">
-    ~~~
+![](../../diagrams/html/tree.dot)\
+<!-- Placeholder -->

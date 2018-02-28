@@ -1,4 +1,4 @@
-describe("String Exercise", function() {
+describe("Regular Expression Exercise", function() {
   var today = new Date().toDateString();
 
   [ ["today",       today + " 0"],

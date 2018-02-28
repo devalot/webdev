@@ -1,5 +1,3 @@
-# Regular Expressions
-
 ## Introduction to Regular Expressions
 
 ### Regular Expressions
@@ -60,20 +58,13 @@
 
   #. Open the following file:
 
-        www/string/string.js
+        src/www/js/regexp/regexp.js
 
   #. Complete the exercise.
 
-  #. Run the tests by opening <http://localhost:3000/string/>
+  #. Run the tests by opening the `index.html` file in your browser.
 
-Hint: Use <http://devdocs.io/> or <https://developer.mozilla.org/> for
-documentation.
-
-<div class="notes">
-
-[Solution](#cc82c483-5044-43d9-803e-cb4f5dd5b53e)
-
-</div>
+Hint: Use <https://developer.mozilla.org/> for documentation.
 
 ## Additional Resources on Regular Expressions
 
