@@ -1,27 +1,29 @@
-# WebDev: Web Development Course
+WebDev: Web Development Course
+==============================
 
 This is the source code and training content for the Web
 Development course taught by [Peter J. Jones][pjones].
 
-## Prerequisites
+The official site for this course is
+<https://github.com/devalot/webdev>
+
+Prerequisites
+-------------
 
 This collection of exercises and demos needs [Node.js][] installed to
 work correctly.
 
-## Bootstrapping
+Starting Things Up
+------------------
 
-If you cloned this repository from GitHub you'll need to bootstrap it.
-From the command line, and within the `src` directory, bootstrap by
-running the following command:
+  1. Look in the `bin` folder for a file matching your operating
+     system:
 
-    npm install
+       - macOS: Double-click the `macos.command` file
 
-## Starting Things Up
+       - Windows: (bat file coming soon)
 
-  1. From the command line, and in the `src` directory, run the following
-     command:
-
-         node bin/server.js
+       - Linux/*BSD: Open a term and use `linux.sh`
 
   2. Open the following URL in your browser of choice:
 
@@ -31,7 +33,8 @@ running the following command:
 [node.js]: https://nodejs.org/
 
 
-## Building the Course Content (PDF Files)
+Building the Course Content (PDF Files)
+---------------------------------------
 
   1. Install the [Nix Package Manager](https://nixos.org/nix/)
 
