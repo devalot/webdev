@@ -76,7 +76,13 @@ This JavaScript course is delivered during a single day.
   <<(../content/js/jquery/ajax.md)
   <<(../content/js/apis/fetch.md)
 
-<!-- FIXME: Add form validation slides. -->
+# Writing and Validating Forms
+
+## Forms in HTML5
+
+  <<(../content/html/forms.md)
+  <<(../content/css/forms.md)
+  <<(../content/js/form.md)
 
 <!-- ====================================================================== -->
 <!-- FOOTER                                                                 -->

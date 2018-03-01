@@ -1,36 +1,50 @@
-## HTML Forms
+### Forms
 
-### New `input` Types
-
-~~~ {.html}
-<input type="text">
+~~~ {.html insert="../../src/examples/html/form.html" token="form"}
 ~~~
 
- * `color`: Color picker
- * `date` or `datetime` or `time`: Date/time picker
- * `email`: Restrict to valid email addresses
- * `number`: Restrict to valid floating point numbers
- * `range`: Number picker via a UI slider
- * `search`: Like `text`, but browsers can stylize
- * `tel`: Telephone number (no restrictions)
- * `url`: Validated to be a URL
- * `week` or `month`: Week/month picker
+See: `src/examples/html/form.html`
 
-### Form Validation in the Browser
+### Form Input Types
 
-Validation attributes:
+\columnsbegin
+\column{.5\textwidth}
 
-  * `max`: Maximum number or date
-  * `maxlength`: Maximum number of characters
-  * `min`: Minimum number or date
-  * `minlength`: Minimum number of characters
-  * `pattern`: Regular expression `value` must match
-  * `required`: Input must have a value
-  * `title`: Describe the `pattern` conditions
+  - `button`
+  - `checkbox`
+  - `color`
+  - `date`
+  - `datetime-local`
+  - `email`
+  - `file`
+  - `hidden`
+  - `image`
+  - `month`
 
-CSS Pseudo Classes:
+\column{.5\textwidth}
 
-  * `:valid`: Element's value is valid
-  * `:invalid`: Element's value is invalid
-  * `:optional`: No value is required
-  * `:required`: A value is required
+  - `number`
+  - `password`
+  - `radio`
+  - `range`
+  - `reset`
+  - `submit`
+  - `tel`
+  - `text`
+  - `time`
+  - `url`
+  - `week`
+
+\columnsend
+
+See [the HTML spec][htmlspec] for details on the input types.
+
+[htmlspec]: https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute
+
+### Exercise: Writing Forms
+
+  #. Open the following file:
+
+        src/www/html/form.html
+
+  #. Let's write some HTML!

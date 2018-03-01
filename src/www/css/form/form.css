@@ -1,0 +1,21 @@
+/*
+
+  Update the HTML file to include the following validations:
+
+    1. All fields are required.
+
+    2. The favorite number field must be between 1 and 10.
+
+    3. The plate number must be 7 digits in length and only include
+       the leters A through Z and the numbers 0 through 9.
+
+  Update the CSS so that:
+
+  1. Required fields that are not valid should have a red border
+     around them.
+
+  2. Required fields that are valid should have green text.
+
+  3. Make the form look pretty.
+
+*/

@@ -43,7 +43,7 @@ The source code for this course can be found at the following URL:
 # Advanced Selectors
 
   <<(../content/css/selectors.md)
-  <<(../content/html/forms.md)
+  <<(../content/css/forms.md)
 
 # Inheritance, Cascading, and Specificity
 

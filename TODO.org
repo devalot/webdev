@@ -3,12 +3,13 @@
 #+email: pjones@devalot.com
 #+startup: content
 
-* Items Related to Course Content     [3/8]
-** TODO Create a single day "JavaScript in the Browser" class
+* Items Related to Course Content     [4/8]
 ** TODO Create a single day "Intermediate JavaScript" class
 ** TODO Add content for =MutationObserver=
 ** TODO Add content on form validation
 ** TODO Create a single day CSS class (Learning Spike)
+** DONE Create a single day "JavaScript in the Browser" class
+   CLOSED: [2018-03-01 Thu 15:46]
 ** DONE Add content for the newish =fetch= function
    CLOSED: [2018-02-28 Wed 16:59]
 ** DONE Remove reference to =bin/server.js= (JS Fundamentals)

@@ -52,7 +52,7 @@ This HTML and CSS course is delivered during a single day.
 # Selectors
 
   <<(../content/css/selectors.md)
-  <<(../content/html/forms.md)
+  <<(../content/css/forms.md)
 
 # Inheritance, Cascading, and Specificity
 
