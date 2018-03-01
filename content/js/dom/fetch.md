@@ -14,11 +14,11 @@ element's decedents.
 
 Starting on the `document` object or a previously selected element:
 
-`getElementById("main");`
+`document.getElementById("main");`
 
   : Returns the element with the given ID (e.g., `<div id="main">`).
 
-`querySelector("p span");`
+`document.querySelector("p span");`
 
   : Returns the *first* element that matches the given CSS selector.
     The search is done using depth-first pre-order traversal.
@@ -27,16 +27,16 @@ Starting on the `document` object or a previously selected element:
 
 Starting on the `document` object or a previously selected element:
 
-`getElementsByTagName("a");`
+`document.getElementsByTagName("a");`
 
   : Returns a `NodeList` containing *all* `<a>` elements.
 
-`getElementsByClassName("highlight");`
+`document.getElementsByClassName("highlight");`
 
   : Returns a `NodeList` containing *all* elements that have a `class`
     attribute set to `foo` (e.g., `<div class="highlight">`).
 
-`querySelectorAll("p span");`
+`document.querySelectorAll("p span");`
 
   : Returns a `NodeList` containing *all* elements that match the given
     CSS selector.
