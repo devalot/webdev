@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "WebDev Exercises and Demos",
   "main": "bin/server.js",
-  "scripts": {},
   "directories": {},
+  "scripts": {},
   "author": "Peter J. Jones",
   "license": "BSD-2-Clause",
   "dependencies": {

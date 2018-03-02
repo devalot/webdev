@@ -10,18 +10,18 @@ The official site for this course is
 Prerequisites
 -------------
 
-This collection of exercises and demos needs [Node.js][] installed to
-work correctly.
+This collection of exercises and demos needs [Node.js][] `>=` 8
+installed to work correctly.
 
 Starting Things Up
 ------------------
 
-  1. Look in the `bin` folder for a file matching your operating
-     system:
+  1. Look in the `start-scripts` folder for a file matching your
+     operating system:
 
        - macOS: Double-click the `macos.command` file
 
-       - Windows: (bat file coming soon)
+       - Windows: (cmd file coming soon)
 
        - Linux/*BSD: Open a term and use `linux.sh`
 
@@ -29,17 +29,18 @@ Starting Things Up
 
      <http://localhost:3000/>
 
-[pjones]: http://www.devalot.com/about/pjones.html
-[node.js]: https://nodejs.org/
-
 
 Building the Course Content (PDF Files)
 ---------------------------------------
 
-  1. Install the [Nix Package Manager](https://nixos.org/nix/)
+  1. Install the [Nix Package Manager](https://nixos.org/nix/) (`>=`
+     2.0 is required)
 
   2. Run the following command:
 
-         nix-build
+         nix build
 
-The generated PDF files will be in the `result/docs` directory.
+The generated PDF files will be in the `result` directory.
+
+[pjones]: http://www.devalot.com/about/pjones.html
+[node.js]: https://nodejs.org/
