@@ -14,6 +14,7 @@
    Select form inputs that have the keyboard focus and place a blue
    border around them.
 
+   Hint: {border: 2px solid blue;}
 */
 
 
@@ -22,7 +23,7 @@
 
    Select disabled form inputs and put a line through their text.
 
-   Hint: text-decoration: line-through;
+   Hint: {text-decoration: line-through;}
 */
 
 
@@ -33,6 +34,8 @@
    change the first letter of text so its font size is 2em.
 
    Hint: Paragraphs inside tables should not be affected.
+
+   Hint: {font-size: 2em;}
 */
 
 
@@ -44,4 +47,6 @@
    color should be #fff.
 
    Hint: Only style the user selection if it's in a paragraph.
+
+   Hint: {background-color: #009; color: #fff;}
 */

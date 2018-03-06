@@ -14,7 +14,7 @@
    Select paragraphs that are direct children of the article tag and
    change the font family to fantasy.
 
-   Hint: font-family: fantasy;
+   Hint: {font-family: fantasy;}
 
    Hint: Paragraphs inside tables should not be affected.
 */
@@ -27,6 +27,8 @@
    left border on the paragraph that is 3 pixels wide, solid, and
    green.
 
+   Hint: {border-left: 3px solid green;}
+
    Hint: Other paragraphs should not be affected.
 */
 
@@ -37,6 +39,8 @@
 
    Select paragraphs that are inside a table and remove all margins
    and padding.
+
+   Hint: {margin: 0; padding: 0;}
 */
 
 
@@ -48,4 +52,6 @@
 
    Hint: Other paragraphs should not be affected (i.e. the p tags
    inside ol tags).
+
+   Hint: {padding-left: 1.5em;}
 */

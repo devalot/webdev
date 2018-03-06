@@ -16,6 +16,7 @@
    In the section with the ID of "products", select the first <ul>
    element and place a black 1 pixel border along its bottom edge.
 
+   Hint: {border-bottom: 1px solid black;}
 */
 
 
@@ -26,6 +27,7 @@
    In the section with the ID of "products",  select the last <p>
    element and change the text color to brown.
 
+   Hint: {color: brown;}
 */
 
 
@@ -36,4 +38,5 @@
    In the section with the ID of "products",  select the first <p>
    element and change the text color to green.
 
+   Hint: {color: green;}
 */

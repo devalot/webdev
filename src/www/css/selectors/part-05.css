@@ -20,6 +20,8 @@
 
     2) Select form inputs that are number inputs and change their
        width to 5em.
+
+  Hint: {width: size;}
 */
 
 
@@ -33,6 +35,8 @@
      1) The mouse is hovering over the link.
 
      2) The href attribute for the link starts with a hash (#).
+
+   Hint: {color: orange;}
 */
 
 
@@ -43,6 +47,7 @@
    Select all links whose href attribute contains the substring
    "salesforce" and make their background color darkblue.
 
+   Hint: {background-color: darkblue;}
 */
 
 
@@ -53,6 +58,7 @@
    Select all elements that have a "data-product-id" attribute and
    change their font weight to bold.
 
+   Hint: {font-weight: bold;}
 */
 
 
@@ -64,4 +70,5 @@
    "hot" listed in the "data-keywords" attribute.  Change the
    background color of matching elements to "hotpink".
 
+   Hint: {background-color: hotpink;}
 */

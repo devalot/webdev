@@ -1,6 +1,8 @@
-# CSS Resources {.unnumbered}
+# HTML and CSS Resources {.unnumbered}
 
 ## Official Documentation {.unnumbered}
+
+  * HTML Living Standard: @WHATWGHTML5
 
   * CSS 2.1 Specification: @W3CCSS21
 

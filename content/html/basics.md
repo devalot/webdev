@@ -92,6 +92,11 @@ Also known as: nodes, elements, and tags:
 ~~~ {.html insert="../../src/examples/html/simple.html"}
 ~~~
 
+### HTML Parsed into a Tree Structure
+
+![](../../diagrams/html/tree.dot)\
+<!-- Placeholder -->
+
 ### Exercise: Writing Some HTML
 
   #. Open the following file:

@@ -13,6 +13,8 @@
 
    Select every other table row (even rows) and change their
    background color to #eee.
+
+   Hint: {background-color: #eee;}
 */
 
 
@@ -22,6 +24,8 @@
 
    Select the last three table rows and change their font weight to
    bold.
+
+   Hint: {font-weight: bold;}
 */
 
 
@@ -36,6 +40,8 @@
 
      2) Change the background color for the last four list items to
         orange.
+
+   Hint: {background-color: color;}
 */
 
 
@@ -46,6 +52,8 @@
    For every list in the HTML (ul or ol), select every third list
    item, starting with the first item, and make the text color red.
    Lists with a single list item should not be affected.
+
+   Hint: {color: red;}
 */
 
 
@@ -53,9 +61,10 @@
 /*############################################################################*/
 /* Exercise 5:
 
-   Select the first column in every fourth table row and align the
-   text to the right.  Also add the following property to each
-   selected column:
+   Select the first column in every fourth table row, and:
 
-     border-right: 1px solid black;
+     * Align the text to the right
+     * Add a black right border
+
+   Hint: {text-align: right; border-right: 1px solid black;}
 */
