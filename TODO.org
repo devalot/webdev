@@ -8,6 +8,11 @@
 ** TODO Add content for =MutationObserver=
 ** TODO Add content on form validation
 ** TODO Create a single day CSS class (Learning Spike)
+** CSS Courses [0/1]
+*** TODO Classes examples are too complicated
+    - The existing example is using "info admin report"
+    - It should better demonstrate how classes can be used to style
+      all "reports" one way, then override admin reports.
 ** DONE Create a single day "JavaScript in the Browser" class
    CLOSED: [2018-03-01 Thu 15:46]
 ** DONE Add content for the newish =fetch= function
