@@ -28,6 +28,8 @@
 ~~~ {.javascript insert="../../src/examples/js/closure.js"}
 ~~~
 
+See: `src/examples/js/closure.html`
+
 ### Closures: Practical Example
 
 ~~~ {.javascript}

@@ -1,15 +1,15 @@
-function a() {
+function outer() {
   var name = "Grim";
 
-  var b = function() {
+  var inner = function() {
     console.log(name);
   };
 
-  return b;
+  return inner;
 }
 
-// Invoke `a' and get a function back:
-var innerFunction = a();
+// Invoke `outer' and get a function back:
+var f = outer();
 
 // Sometime in the future...
-innerFunction();
+f();
