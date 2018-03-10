@@ -1,28 +1,55 @@
-// In the index.html file there is a button.  When the button is
-// clicked kick off an HTTP GET request to the following URL:
-//
-//   /api/artists
-//
-// The response text will be a JSON-encoded array of objects.  Inspect
-// the response using the browser debugger and then insert the objects
-// into the DOM.  Each artist in the response should be used to create
-// a new <li> element in the existing <ul> container (the one with the
-// ID of "artists").  Display the name of each artist inside the newly
-// created <li> elements.
-//
-// BONUS #1:
-//
-// Clicking one of the <li> elements should display all information
-// about the clicked artist in the <ul> with the ID of "details".
-// (Hint: make another HTTP request to /api/artists/N where N is the
-// artist ID.)
-//
-// BONUS #2:
-//
-// After displaying a list of artist details, also display a list of
-// album names.  A list of albums can be fetched using the following
-// URL:
-//     /api/artists/N/albums
-//
+/******************************************************************************/
+/*
+ * All data coming in and going out will be converted to/from JSON.
+ *
+ * Promises should be resolved with response data from the server,
+ * decoded from JSON.
+ *
+ * Hints:
+ *
+ * Set content type before sending a request:
+ *
+ *   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+ *
+ * Send a data object as JSON:
+ *
+ *    req.send(JSON.stringify(data));
+ *
+ * Parse an incoming JSON string:
+ *
+ *   var data = JSON.parse(req.responseText || "null");
+ *
+ * Only resolve the promise if the (load) `status' code is >= 200 and
+ * < 300.  Otherwise reject the promise.  Also reject the promise on
+ * XHR failure (error).
+ *
+ */
+Ajax = (function(){
+  var raw = function(url, method, data) {
+    // Return a promise.
+  };
 
-// Your code here.
+  // HTTP GET (Fetch resource).
+  var get = function(url) {
+  };
+
+  // HTTP POST (Create new resource).
+  var post = function(url, data) {
+  };
+
+  // HTTP PATCH (Update existing resource).
+  var patch = function(url, data) {
+  };
+
+  // HTTP DELETE (Delete existing resource).
+  var destroy = function(url) {
+  };
+
+  // Public interface here:
+  return {
+    get:     get,
+    post:    post,
+    patch:   patch,
+    destroy: destroy,
+  };
+})();

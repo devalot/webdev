@@ -63,15 +63,9 @@ Making an Ajax request:
 
 ### Exercise: A Simple Ajax Library
 
-  #. Open `www/discography/js/lib/ajax.js`
+  #. Open `www//js/ajax/ajax.js`
 
   #. Fill in the missing pieces
-
-  #. Run the tests:
-
-    ~~~
-    node bin/jasmine spec/ajax.spec.js
-    ~~~
 
   #. Get the tests to pass
 

@@ -129,9 +129,9 @@ More work to extract data from XML:
 
   #. Open the following files:
 
-     - `src/www/js/ajax/ajax.js`
+     - `src/www/js/artists/artists.js`
 
-     - `src/www/js/ajax/index.html`
+     - `src/www/js/artists/index.html`
 
   #. Open <http://localhost:3000/js/ajax/>
 

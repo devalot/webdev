@@ -1,8 +1,3 @@
-require("../www/discography/js/lib/model.js");
-require("../www/discography/js/models/artist.js");
-require("../www/discography/js/lib/ajax.js");
-require("../www/discography/js/lib/promise.js");
-
 /******************************************************************************/
 //
 // Jasmine Docs: https://jasmine.github.io/2.4/introduction.html

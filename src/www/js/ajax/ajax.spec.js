@@ -1,7 +1,6 @@
-require("../www/discography/js/lib/ajax.js");
-require("../www/discography/js/lib/promise.js");
-
 describe("Ajax interface", function() {
+
+  /****************************************************************************/
   it("has a get method", function() {
     expect(Ajax.get).toBeDefined();
   });

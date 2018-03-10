@@ -1,5 +1,5 @@
-Welcome to HTML and CSS Introduction
-====================================
+Welcome to Core JavaScript
+==========================
 
 **Please do the following:**
 
@@ -15,7 +15,7 @@ Welcome to HTML and CSS Introduction
 
   5. Then open the course PDF file:
 
-     handouts/html-css-introduction.pdf
+     handouts/javascript-spike-core.pdf
 
 
 Don't have a preferred text editor or IDE?
