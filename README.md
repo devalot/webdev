@@ -21,7 +21,7 @@ Starting Things Up
 
        - macOS: Double-click the `macos.command` file
 
-       - Windows: (cmd file coming soon)
+       - Windows: Double-click the `windows.cmd` file
 
        - Linux/*BSD: Open a term and use `linux.sh`
 

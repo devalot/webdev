@@ -97,6 +97,6 @@ pkgs.stdenv.mkDerivation rec {
     )
 
     # Build archives:
-    ( cd $out && zip -r ${name}.zip ${name} )
+    ( cd $out && zip -9 -y -r -q ${name}.zip ${name} )
   '';
 }
