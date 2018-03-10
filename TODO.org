@@ -3,7 +3,7 @@
 #+email: pjones@devalot.com
 #+startup: content
 
-* Items Related to Course Content     [4/8]
+* Items Related to Course Content     [5/9]
 ** TODO Create a single day "Intermediate JavaScript" class
 ** TODO Add content for =MutationObserver=
 ** TODO Add content on form validation
@@ -13,7 +13,8 @@
     - The existing example is using "info admin report"
     - It should better demonstrate how classes can be used to style
       all "reports" one way, then override admin reports.
-** TODO Make Jasmine run code in order and stop on failures
+** DONE Make Jasmine run code in order and stop on failures
+   CLOSED: [2018-03-10 Sat 15:32]
 ** DONE Create a single day "JavaScript in the Browser" class
    CLOSED: [2018-03-01 Thu 15:46]
 ** DONE Add content for the newish =fetch= function

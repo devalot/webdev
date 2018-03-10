@@ -51,17 +51,21 @@
 
   var filterSpecs = !!queryString.getParam("spec");
 
-  var stoppingOnSpecFailure = queryString.getParam("failFast");
-  env.stopOnSpecFailure(stoppingOnSpecFailure);
+  // var stoppingOnSpecFailure = queryString.getParam("failFast");
+  // env.stopOnSpecFailure(stoppingOnSpecFailure);
+  //
+  // var throwingExpectationFailures = queryString.getParam("throwFailures");
+  // env.throwOnExpectationFailure(throwingExpectationFailures);
+  //
+  // var random = queryString.getParam("random");
+  //
+  // if (random !== undefined && random !== "") {
+  //   env.randomizeTests(random);
+  // }
 
-  var throwingExpectationFailures = queryString.getParam("throwFailures");
-  env.throwOnExpectationFailure(throwingExpectationFailures);
-
-  var random = queryString.getParam("random");
-
-  if (random !== undefined && random !== "") {
-    env.randomizeTests(random);
-  }
+  env.stopOnSpecFailure(true);
+  env.throwOnExpectationFailure(true);
+  env.randomizeTests(false);
 
   var seed = queryString.getParam("seed");
   if (seed) {
