@@ -19,4 +19,4 @@ function closure() {
 
   // Your code here.
 
-};
+}

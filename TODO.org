@@ -3,16 +3,18 @@
 #+email: pjones@devalot.com
 #+startup: content
 
-* Items Related to Course Content     [5/9]
-** TODO Create a single day "Intermediate JavaScript" class
+* Items Related to Course Content     [7/9]
 ** TODO Add content for =MutationObserver=
-** TODO Add content on form validation
 ** TODO Create a single day CSS class (Learning Spike)
 ** CSS Courses [0/1]
 *** TODO Classes examples are too complicated
     - The existing example is using "info admin report"
     - It should better demonstrate how classes can be used to style
       all "reports" one way, then override admin reports.
+** DONE Add content on form validation
+   CLOSED: [2018-03-12 Mon 16:43]
+** DONE Create a single day "Intermediate JavaScript" class
+   CLOSED: [2018-03-12 Mon 16:43]
 ** DONE Make Jasmine run code in order and stop on failures
    CLOSED: [2018-03-10 Sat 15:32]
 ** DONE Create a single day "JavaScript in the Browser" class
@@ -23,13 +25,20 @@
    CLOSED: [2018-02-28 Wed 16:13]
 ** DONE Create a single day introduction to JavaScript class (Core JavaScript)
    CLOSED: [2018-02-26 Mon 17:59]
-* Items Related to Course Source Code [2/5]
+* Items Related to Course Source Code [5/9]
+** TODO Create a =index.html= file in =www=
 ** TODO Reorder the labs in =index.html= to match the content
 ** TODO Remove the need to have Node.js installed (JS Fundamentals)
    - The only exercise that needs this right now is =ajax.js=
    - Move that exercise off to a cloud server?
 ** TODO Move all =spec= tests to Jasmine Standalone
    - Easier for students to debug in-browser tests
+** DONE Remove the trailing semicolon in =copy.js=
+   CLOSED: [2018-03-12 Mon 16:35]
+** DONE Remove the trailing semicolon in =parse.js=
+   CLOSED: [2018-03-12 Mon 16:33]
+** DONE Remove the trailing semicolon in =closure.js=
+   CLOSED: [2018-03-12 Mon 16:32]
 ** DONE Create a Constructor Function Lab
    CLOSED: [2018-02-26 Mon 17:23]
 ** DONE The Primitives Exercise Uses Array

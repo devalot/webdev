@@ -21,7 +21,7 @@ Welcome to Core JavaScript
 Don't have a preferred text editor or IDE?
 ------------------------------------------
 
-If you don't have a coding editor already, I recommend Visual Studio
-Code for Mac, Windows, and Linux:
+If you don't have a coding editor already, 
+I recommend Visual Studio Code:
 
   https://code.visualstudio.com/
