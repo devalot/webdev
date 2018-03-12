@@ -25,14 +25,17 @@
    CLOSED: [2018-02-28 Wed 16:13]
 ** DONE Create a single day introduction to JavaScript class (Core JavaScript)
    CLOSED: [2018-02-26 Mon 17:59]
-* Items Related to Course Source Code [5/9]
-** TODO Create a =index.html= file in =www=
+* Items Related to Course Source Code [8/9]
 ** TODO Reorder the labs in =index.html= to match the content
-** TODO Remove the need to have Node.js installed (JS Fundamentals)
+** DONE Remove the need to have Node.js installed (JS Fundamentals)
+   CLOSED: [2018-03-12 Mon 16:53]
    - The only exercise that needs this right now is =ajax.js=
    - Move that exercise off to a cloud server?
-** TODO Move all =spec= tests to Jasmine Standalone
+** DONE Move all =spec= tests to Jasmine Standalone
+   CLOSED: [2018-03-12 Mon 16:53]
    - Easier for students to debug in-browser tests
+** DONE Create a =index.html= file in =www=
+   CLOSED: [2018-03-12 Mon 16:53]
 ** DONE Remove the trailing semicolon in =copy.js=
    CLOSED: [2018-03-12 Mon 16:35]
 ** DONE Remove the trailing semicolon in =parse.js=
