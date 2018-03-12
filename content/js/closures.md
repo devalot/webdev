@@ -61,18 +61,15 @@ x.getPrivateVar(); // 42
   #. Run the tests by opening the `index.html` file in your browser.
 
 
-### Loops and Closures {#f40ee4fc-46a4-4d83-b121-2b0f101ab9f8}
+### Loops and Closures {#e926298a258211e8abc83b6fee9937e9}
+
+<div class="notes">
 
   - Be careful with function expressions in loops
 
   - They can have scope issues:
 
-    ~~~ {.javascript}
-    // What will this output?
-    for (var i=0; i<3; i++) {
-      setTimeout(function(){
-        console.log(i);
-      }, 1000*i);
-    }
-    console.log("Howdy!");
-    ~~~
+</div>
+
+~~~ {.javascript insert="../../src/examples/js/timeoutcl.js" token="timeout"}
+~~~

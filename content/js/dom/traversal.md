@@ -51,7 +51,7 @@ text nodes and comments in addition to child elements!
 
 *But...*
 
-### DOM Living Standard (WHATWG)
+### DOM Living Standard (WHATWG) {#e8f42bd0258511e8936dbfa61311da9e}
 
 Supported in IE >= 9:
 

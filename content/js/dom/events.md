@@ -89,7 +89,7 @@ Example: Event Handler
     -   `event.target`: The element the event triggered for
     -   `event.currentTarget`: Registered element (parent)
 
-### A Complete Example
+### Event Handling: A Complete Example {#a6c1d41c258611e89ac42bb59fa4b75e}
 
 ~~~ {.javascript insert="../../../src/examples/js/events.js"}
 ~~~

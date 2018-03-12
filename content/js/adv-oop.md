@@ -89,15 +89,22 @@ standardized as an accessible property.
 *Warning:* Using `__proto__` directly is strongly discouraged due to
 performance concerns.
 
-### Exercise: Prototype Walking
+### Exercise: Class Builder
 
-  #. Open the debugging console
+  #. Open the following files:
+  
+     - `src/www/js/builder/builder.spec.js` (read only!)
 
-  #. Create a string and assign it to a variable
+     - `src/www/js/builder/builder.js`
 
-  #. Follow the `__proto__` links until you reach the root of the
-     tree.
-
+  #. Implement the `Builder` function:
+  
+     It should generate a constructor function using the `constructor`
+     property given to it.  The remaining properties become prototype
+     properties.
+     
+  #. Use the `index.html` file to run the tests
+     
 ## Parasitic Inheritance
 
 ### Constructors that Aren't

@@ -1,6 +1,6 @@
 ## Node Content
 
-### HTML and Text Content
+### HTML and Text Content {#a3af8004258611e88aa2efbe26ab52d0}
 
 ~~~ {.javascript}
 var element = document.getElementById("foo"),

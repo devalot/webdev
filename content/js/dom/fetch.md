@@ -10,7 +10,7 @@ element's decedents.
 
 </div>
 
-### Accessing Individual Elements
+### Accessing Individual Elements {#c90768f0258511e8b89193e5afe59cab}
 
 Starting on the `document` object or a previously selected element:
 

@@ -54,20 +54,22 @@ We're going to need a few things before we begin.
 
   * Testing framework (we'll use [Jasmine][])
 
-### Ajax Refresher
+### Ajax Refresher {#d7824fea257f11e880ac337b4e6b88ab}
 
 Making an Ajax request:
 
 ~~~ {.javascript insert="../../src/examples/js/ajax.js"}
 ~~~
 
-### Exercise: A Simple Ajax Library
+### Exercise: A Simple Ajax Library {#a67c1f10257c11e89c00134983c63ac9}
 
-  #. Open `www//js/ajax/ajax.js`
+  #. Open `www/js/ajax/ajax.js`
 
   #. Fill in the missing pieces
 
-  #. Get the tests to pass
+  #. Open the `index.html` file in your browser
+
+  #. Get the tests in `index.html` to pass
 
 ## Models
 

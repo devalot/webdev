@@ -197,7 +197,7 @@ var args = Array.from(arguments);
 
   - If you don't use `var` then variables are **global**
 
-### Example: Identify the Scope For Each Variable
+### Example: Identify the Scope For Each Variable {#a706548258211e8a1a73f1bc7dcefa25}
 
 ~~~ {.javascript insert="../../src/examples/js/three-scopes.js"}
 ~~~
@@ -235,6 +235,11 @@ var args = Array.from(arguments);
   - We’ll see more of this later...
 
   - No block scope
+
+## Variable Hoisting {#a5d15bd6258111e8a686cf157ebd8e95}
+
+When using the `var` keyword, only functions can introduce a new
+variable scope.  This leads to something known as hoisting.
 
 ### Exercise: Hoisting (Part 1 of 2)
 
@@ -306,13 +311,3 @@ Turns into:
     var x=undefined, y=undefined;
     x=0;
     ~~~
-
-### Functions Recap
-
-  - Can be defined with a name or anonymously
-
-  - Are first class objects
-
-  - Create their own scope
-
-  - Declare variables at the top of the function to avoid hoisting

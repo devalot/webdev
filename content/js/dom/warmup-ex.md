@@ -2,21 +2,14 @@
 
 ### Exercise: Warming Up with the DOM and Events
 
-  #. Start the Node.JS server:
+  #. Open the following files:
 
-        node bin/server.js
+     - `www/js/warmup/warmup.js`
 
-  #. Open the following URL:
+     - `www/js/warmup/index.html` (read only!)
 
-     <http://localhost:3000/warmup/>
+  #. Open the `index.html` file in your web browser
 
-  #. Open the following JavaScript files:
+  #. Follow the instructions in the JavaScript file
 
-        www/warmup/index.html
-
-        www/warmup/warmup.js
-
-  #. Follow the instructions.
-
-Hint: Use [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node)
-as an API reference.
+Hint: Use [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node) as an API reference.

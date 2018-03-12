@@ -1,15 +1,19 @@
 /******************************************************************************/
-require("../www/partial/partial.js");
-
-/******************************************************************************/
 describe("Partial Function Application", function() {
 
   /****************************************************************************/
   it("should allow partial function application", function() {
-    var add = function(x, y) { return x + y; };
-    var add10 = add.partial(null, 10);
-    expect(add10 instanceof Function).toBeTruthy();
-    expect(add10(2)).toBe(12);
+    var f = function(x, y, z) { return [x, y, z]; };
+
+    var g = f.curry();
+    expect(typeof g).toBe("function");
+
+    var h = g("A");
+    expect(typeof h).toBe("function");
+
+    var a = h("B", "C");
+    expect(Array.isArray(a)).toBe(true);
+    expect(a).toEqual(["A", "B", "C"]);
   });
 
   /****************************************************************************/
@@ -20,17 +24,16 @@ describe("Partial Function Application", function() {
 
       add: function(x, y) {
         return (x + y) * this.magnitude;
-      },
+      }.curry()
     };
     // :>>
 
     // <<: add10
-    var add10 = obj.add.partial(obj, 1);
-    add10(2); // Should return 30
+    var add10 = obj.add(10);
+    add10(2); // Should return 120
     // :>>
 
-    expect(add10 instanceof Function).toBeDefined();
-    expect(add10(2)).toBe(30);
+    expect(typeof add10).toBe("function");
+    expect(add10(2)).toBe(120);
   });
-
 });

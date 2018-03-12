@@ -1,20 +1,52 @@
-# Defining and Invoking Functions
+# Advanced Features of JavaScript Functions
 
-<div class="slides-only">
+## JavaScript Modules
 
-## Defining and Invoking Functions
+### Modules, Namespaces, and Packages
 
-### Defining and Invoking Functions
+  * Organize logical units of functionality
 
-Let's talk about advanced features of functions:
+  * Prevent namespace clutter and collisions
 
-  * Accessing All Function Arguments
-  * Overriding `this` at Invocation
-  * Immediately-Invoked Function Expressions
-  * Partial Function Application
-  * Lazy Function Definition
+  * Several options for module implementation
 
-</div>
+    - The module pattern
+    - CommonJS modules
+    - ECMAScript 6th Edition modules
+
+### The Module Pattern
+
+  * Allows for private methods and functions
+
+  * Useful for creating namespaces
+
+  * Uses an anonymous closure to hide private functionality and make a
+    public interface
+
+### Immediately-Invoked Function Expressions: Basics
+
+~~~ {.javascript insert="../../src/examples/js/iife.js" token="short"}
+~~~
+
+### Immediately-Invoked Function Expressions: Expanded
+
+~~~ {.javascript insert="../../src/examples/js/iife.js" token="long"}
+~~~
+
+### Example: Module Pattern
+
+~~~ {.javascript include="../../src/examples/js/module.js"}
+~~~
+
+### Exercise: Using IIFEs to Make Private Functions
+
+  #. Open the following file:
+
+        www/js/hosts/hosts.js
+
+  #. Follow the instructions inside the file
+
+  #. Open the `index.html` file for the tests
 
 ## Accessing All Function Arguments
 
@@ -41,6 +73,15 @@ var args = Array.prototype.slice.call(arguments);
 
 ~~~ {.javascript}
 var args = Array.from(arguments);
+~~~
+
+### Function Arity
+
+A function's *arity* is the number of arguments it expects.  In
+JavaScript you can access a function's arity with its `length`
+property:
+
+~~~ {.javascript insert="../../src/examples/js/arity.js"}
 ~~~
 
 ## Overriding `this` at Invocation
@@ -79,81 +120,6 @@ correctly when using a function as a callback.  For example:
 
 </div>
 
-## JavaScript Modules
-
-### Modules, Namespaces, and Packages
-
-  * Organize logical units of functionality
-
-  * Prevent namespace clutter and collisions
-
-  * Several options for module implementation
-
-    - The module pattern
-    - CommonJS modules
-    - ECMAScript 6th Edition modules
-
-### The Module Pattern
-
-  * Allows for private methods and functions
-
-  * Useful for creating namespaces
-
-  * Uses an anonymous closure to hide private functionality and make a
-    public interface
-
-### Example: Module Pattern
-
-~~~ {.javascript include="../../src/examples/js/module.js"}
-~~~
-
-## Immediately-Invoked Function Expressions (IIFE)
-
-### Immediately-Invoked Function Expressions: Basics
-
-~~~ {.javascript insert="../../src/examples/js/iife.js" token="short"}
-~~~
-
-### Immediately-Invoked Function Expressions: Expanded
-
-~~~ {.javascript insert="../../src/examples/js/iife.js" token="long"}
-~~~
-
-### Uses of IIFEs
-
-  * Define namespaces/modules/packages.
-
-  * Create a scope for private variables/functions.
-
-### Private Variables via IIFE
-
-~~~ {.javascript insert="../../src/examples/js/iife.js" token="private"}
-~~~
-
-### Exercise: Using IIFEs to Make Private Functions
-
-  #. Open the following file:
-
-        www/hosts/hosts.js
-
-  #. Follow the instructions inside the file.
-
-  #. Get the tests to pass:
-
-        node bin/jasmine spec/hosts.spec.js
-
-## Function Chaining
-
-### Calling Methods on Return Values
-
-~~~ {.javascript insert="../../src/examples/js/chaining.js" token="string"}
-~~~
-
-### Methods that Return `this`
-
-~~~ {.javascript insert="../../src/examples/js/chaining.js" token="this"}
-~~~
-
 ## Partial Function Application
 
 ### Introduction to Partial Function Application
@@ -176,22 +142,15 @@ correctly when using a function as a callback.  For example:
 
 ### Exercise: Better Partial Functions {#A3fb265fc145611e5a608e3c31be73765}
 
-Write a `Function.prototype.partial` function that let's the following
+Write a `Function.prototype.curry` function that let's the following
 code work:
 
-~~~ {.javascript insert="../../src/spec/partial.spec.js" token="obj.add"}
+~~~ {.javascript insert="../../src/www/js/partial/partial.spec.js" token="obj.add"}
 ~~~
-~~~ {.javascript insert="../../src/spec/partial.spec.js" token="add10"}
+~~~ {.javascript insert="../../src/www/js/partial/partial.spec.js" token="add10"}
 ~~~
 
-  - Use the following file: `www/partial/partial.js`
-  - Test with: `node bin/jasmine spec/partial.spec.js`
-
-<div class="notes">
-
-[Solution](#A9ce43ba0145711e59d49ef5d2850e438)
-
-</div>
+  - Use the following file: `www/js/partial/partial.js`
 
 ## Lazy Function Definition
 

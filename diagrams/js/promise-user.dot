@@ -8,11 +8,9 @@ digraph promiseUser {
 
   promiseA [label="Promise\nObject"];
   api [label="{Promise\nUser API|<f1>then(callback)|<f2>catch(callback)}"];
-  handlers [label="{Promise\nInternals|<f1>successHandlers|<f2>failureHandlers|<f3>executeSuccessHandlers|<f4>executeFailureHandlers}"];
+  handlers [label="{Promise\nInternals|<f1>successHandlers|<f2>failureHandlers}"];
 
   promiseA -> api [dir=none];
   api:f1 -> handlers:f1 [label="push"];
   api:f2 -> handlers:f2 [label="push"];
-  promiseA -> handlers:f3 [label="resolved"];
-  promiseA -> handlers:f4 [label="rejected"];
 }

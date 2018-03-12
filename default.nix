@@ -12,8 +12,8 @@ let
   # Which version of Edify to use:
   edifyRepo = {
     url    = "git://git.devalot.com/edify.git";
-    rev    = "053d5b74ebca25e572be6726bda538071c348c8c";
-    sha256 = "1biv8gqgmyiap38xxvzb2vwchagg82h45i73df66w69dmrg78q4d";
+    rev    = "a5a9b01a339fcb20440189063e114fc3a76c1892";
+    sha256 = "067j09lfl0zmc1hmc9m0pr45n0j5614mzqm3km478c8h6zldp9br";
   };
 
   # Load the host's nixpkgs, then the pinned version:
@@ -37,7 +37,7 @@ in
 
 pkgs.stdenv.mkDerivation rec {
   name = "webdev-${version}";
-  version = "0.1.1";
+  version = "0.2.0";
   src = builtins.fetchGit ./.;
 
   # Specifically don't want fixups for this package:

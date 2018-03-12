@@ -1,5 +1,3 @@
-require("../www/discography/js/lib/promise.js");
-
 describe("Promise", function() {
 
   /****************************************************************************/
@@ -31,7 +29,7 @@ describe("Promise", function() {
   /****************************************************************************/
   it("should do simple chaining", function(done) {
     // <<: chain
-    // Taken from the `promise.spec.js' file.
+    // Taken from the `src/spec/promise.spec.js' file.
     var p = new Promise(function(resolve, reject) {
       resolve(1);
     });

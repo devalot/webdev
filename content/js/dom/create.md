@@ -1,6 +1,6 @@
 ## Manipulating the DOM Tree
 
-### Creating New Nodes
+### Creating New Nodes {#f89dbf4c258511e8952d0b8f8af2f634}
 
 `document.createElement("a");`
 
@@ -11,7 +11,7 @@
 
   : Creates and returns a new text node with the given content.
 
-### Adding Nodes to the Tree
+### Adding Nodes to the Tree {#a5306c0a258611e8bfa2af6ab5c5b3cc}
 
 ~~~ {.javascript}
 var parent = document.getElementById("customers"),

@@ -1,4 +1,4 @@
-Function.prototype.partial = function() {
+Function.prototype.curry = function() {
 
   // Your code here.
 
