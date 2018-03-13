@@ -26,3 +26,43 @@
 //
 
 // Your code here.
+var View = function(selector, callback) {
+  this.element = document.querySelector(selector);
+  this.callback = callback;
+};
+
+View.prototype = {
+  render: function(items) {
+    var self = this;
+    self.element.innerHTML = "";
+
+    items.forEach(function(item) {
+      var li = document.createElement("LI");
+      self.callback(item, li);
+      self.element.appendChild(li);
+    });
+  }
+};
+
+var albumsView = new View("#details", function(album, li) {
+  li.textContent = album.name;
+});
+
+var artistsView = new View("#artists", function(artist, li) {
+  li.textContent = artist.name + " (" + artist.formation_year + ")";
+  li.setAttribute("data-id", artist.id);
+});
+
+$(artistsView.element).click(function(e) {
+  var id = e.target.getAttribute("data-id");
+  if (!id) return;
+  $.getJSON("/api/artists/" + id + "/albums")
+    .then(function(albums) {albumsView.render(albums);});
+});
+
+$("button").click(function() {
+  $.getJSON("/api/artists")
+    .then(function(artists) {
+      artistsView.render(artists);
+    });
+});

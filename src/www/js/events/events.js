@@ -14,3 +14,43 @@
 
 
 // Your code here.
+var Counter = function(node) {
+  this.element = node;
+};
+
+Counter.makeGlobalCounter = function() {
+  var h1 = document.createElement("H1");
+  h1.textContent = "Global Counter: ";
+
+  var num = document.createElement("SPAN");
+  num.textContent = "0";
+  
+  h1.appendChild(num);
+  document.body.insertBefore(h1, document.body.firstChild);
+
+  return new Counter(num);
+};
+
+Counter.prototype = {
+  // Get the counter's current value.
+  get: function() {
+    return parseInt(this.element.textContent) || 0;
+  },
+
+  // Increment the counter.
+  inc: function() {
+    this.element.textContent = this.get() + 1;
+  }
+};
+
+var global = Counter.makeGlobalCounter();
+
+document.body.addEventListener("click", function(event) {
+  if (event.target.textContent !== "Click Me") return;
+
+  var counter = new Counter(event.target.nextElementSibling);
+  counter.inc();
+  global.inc();
+  
+  event.preventDefault();
+});
