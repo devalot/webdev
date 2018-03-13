@@ -131,9 +131,9 @@ More work to extract data from XML:
 
      - `src/www/js/artists/artists.js`
 
-     - `src/www/js/artists/index.html`
+     - `src/www/js/artists/index.html` (read only!)
 
-  #. Open <http://localhost:3000/js/ajax/>
+  #. Open <http://localhost:3000/js/artists/>
 
   #. Complete the exercise.
 
