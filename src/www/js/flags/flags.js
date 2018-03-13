@@ -65,3 +65,50 @@
  */
 
 // Your code here.
+var Bucket = function(selector) {
+  this.element = document.querySelector(selector);
+};
+
+// Wrap a node in an <LI>.
+Bucket.prototype.wrap = function(node) {
+  if (node.tagName === "LI") return node;
+  var li = document.createElement("LI");
+  li.appendChild(node);
+  return li;
+};
+
+// Add a node to the bucket.
+Bucket.prototype.insert = function(node) {
+  this.element.appendChild(this.wrap(node));
+};
+
+Bucket.prototype.insertFromSelector = function(selector) {
+  this.insert(document.querySelector(selector));
+};
+
+// Bonus:
+Bucket.prototype.bruteForce = function(node) {
+  if (node.nodeType === 1 || node.nodeType === 9) {
+    for (var i=0; i<node.childNodes.length; ++i)
+      this.bruteForce(node.childNodes[i]);
+  } else if (node.nodeType === 3 && node.nodeValue.match(/FLAG #/)) {
+    this.insert(node.parentNode);
+  }
+};
+
+var bucket = new Bucket("#bucket ul");
+//bucket.bruteForce(document);
+
+// FLAG #1 and #2:
+bucket.insertFromSelector("#container li.foo");
+bucket.insertFromSelector("#articles span");
+ 
+// // FLAG #3:
+var parent = document.querySelector("div.footer div div");
+bucket.insert(parent.children[1].firstElementChild);
+ 
+// FLAG #4 and #5:
+var flag4 = document.querySelector("#article-3 p span");
+var flag5 = flag4.parentNode;
+bucket.insert(flag4);
+bucket.insert(flag5);
