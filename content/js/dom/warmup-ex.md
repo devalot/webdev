@@ -4,9 +4,9 @@
 
   #. Open the following files:
 
-     - `www/js/warmup/warmup.js`
+     - `src/www/js/warmup/warmup.js`
 
-     - `www/js/warmup/index.html` (read only!)
+     - `src/www/js/warmup/index.html` (read only!)
 
   #. Open the `index.html` file in your web browser
 

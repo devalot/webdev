@@ -42,7 +42,7 @@
 
   #. Open the following file:
 
-        www/js/hosts/hosts.js
+        src/www/js/hosts/hosts.js
 
   #. Follow the instructions inside the file
 
@@ -150,7 +150,7 @@ code work:
 ~~~ {.javascript insert="../../src/www/js/partial/partial.spec.js" token="add10"}
 ~~~
 
-  - Use the following file: `www/js/partial/partial.js`
+  - Use the following file: `src/www/js/partial/partial.js`
 
 ## Lazy Function Definition
 

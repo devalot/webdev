@@ -30,12 +30,8 @@
  *  - Do not introduce any new global variables.  The `Hosts` variable
  *    is the only allowed global variable.
  *
- *  - Run the tests using the following command:
- *
- *        node bin/jasmine spec/hosts.spec.js
- *
  *  - Look at the spec file for clarification of the requirements
- *    listed above.  The spec file is: spec/hosts.spec.js
+ *    listed above.  The spec file is: hosts.spec.js
  *
  *
  * Bonus Exercise:

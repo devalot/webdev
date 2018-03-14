@@ -1,5 +1,4 @@
 describe("Hosts", function() {
-  var hosts = null;
 
   /****************************************************************************/
   beforeEach(function() {
