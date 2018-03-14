@@ -26,3 +26,27 @@
 //
 
 // Your code here.
+var ArtistView = function(selector) {
+  this.element = document.querySelector(selector);
+};
+
+ArtistView.prototype = {
+  render: function(artists) {
+    var self = this;
+    self.element.innerHTML = "";
+
+    artists.forEach(function(artist) {
+      var li = document.createElement("LI");
+      li.textContent = artist.name;
+      self.element.appendChild(li);
+    });
+  }
+};
+
+var view = new ArtistView("#artists");
+var button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+  Ajax.get("/api/artists")
+    .then(view.render.bind(view));
+});
