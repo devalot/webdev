@@ -47,4 +47,30 @@
  *
  * Make sure your tests still pass.
  */
-Hosts = undefined;
+Hosts = (function() {
+  // Create an empty object that doesn't inherit from anything.
+  var table = Object.create(null);
+  
+  return {
+    add: function(name, address) {
+      if (!table[name]) table[name] = [];
+      table[name].push(address);
+    },
+    lookupByName: function(name) {
+      if (table[name]) return table[name];
+      return [];
+    },
+    lookupByIP: function(address) {
+      var matches = [];
+
+      for (var name in table) {
+        if (table[name].indexOf(address) >= 0)
+          matches.push(name);
+      }
+      return matches;
+    },
+    clear: function() {
+      table = Object.create(null);
+    }
+  };
+})();
