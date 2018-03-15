@@ -10,11 +10,15 @@ ES8 included a small number of important changes to the language.
 generators.  Asynchronous callbacks are hidden with new syntax.
 
 ~~~ {.javascript}
-async function f() {
+async function getArtist() {
   try {
-    var artist = await Ajax.get("/api/artists/1");
-    artist.albums = await Ajax.get("/api/artists/1/albums");
-    View.set("artist", artist);
+    var response1 = await fetch("/api/artists/1");
+    var artist = await response1.json();
+
+    var response2 = await fetch("/api/artists/1/albums");
+    artist.albums = await response2.json();
+
+    return artist;
   } catch(e) {
     // Rejected promises throw exceptions
     // when using `await'.

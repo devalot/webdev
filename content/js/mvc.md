@@ -63,7 +63,7 @@ Making an Ajax request:
 
 ### Exercise: A Simple Ajax Library {#a67c1f10257c11e89c00134983c63ac9}
 
-  #. Open `www/js/ajax/ajax.js`
+  #. Open `src/www/js/ajax/ajax.js`
 
   #. Fill in the missing pieces
 

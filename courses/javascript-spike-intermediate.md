@@ -72,7 +72,7 @@ This JavaScript course is delivered during a single day.
 
 ### Exercise: Using Your Ajax Library
 
-  #. Open `www/js/artists/artists.js`
+  #. Open `src/www/js/artists/artists.js`
 
   #. Complete the exercise using your Ajax library
 
