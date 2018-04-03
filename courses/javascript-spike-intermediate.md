@@ -34,7 +34,7 @@ This JavaScript course is delivered during a single day.
   Quick Review                     Asynchronous Programming
   Advanced Functions               Testing w/ Jasmine
   Object-Oriented Programming      Browser APIs
-                                   
+
 
 <!-- ====================================================================== -->
 <!-- And now, the content... -->
@@ -47,6 +47,7 @@ This JavaScript course is delivered during a single day.
 <<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
 <<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
 <<(../content/js/closures.md#e926298a258211e8abc83b6fee9937e9)
+<<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
 ## Document Object Model Review
 
@@ -61,6 +62,10 @@ This JavaScript course is delivered during a single day.
 <<(../content/js/adv-functions.md)
 
 <<(../content/js/adv-oop.md)
+
+# Debugging
+
+<<(../content/js/debugging.md)
 
 <<(../content/js/testing.md)
 

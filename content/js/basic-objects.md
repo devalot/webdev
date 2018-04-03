@@ -227,3 +227,6 @@ Hints:
   - `for (var prop in someobj) { /* ... */ }`
 
   - `someobj.hasOwnProperty(prop)`
+
+
+<<(es6.md#o68acf4e36cb11e8a63ff768f96bc38a)

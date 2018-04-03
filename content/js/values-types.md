@@ -176,6 +176,8 @@ identifiers.)
 
 (Most operators have assignment shortcut versions.)
 
+## Equality in JavaScript {#ec9075fc36c911e8bf5bdbeceee344b0}
+
 ### Sloppy Equality
 
   - The traditional equality operators in JS are sloppy
@@ -204,6 +206,10 @@ operator:
 ~~~
 
 (This operator first appeared in ECMAScript Edition 3, circa 1999.)
+
+<<(es6.md#x4588a4c36ca11e8bffa276babc0cbbb)
+
+## Boolean Values and Logic Operators
 
 ### What Is `true` and What Is `false`?
 

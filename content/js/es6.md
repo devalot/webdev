@@ -7,9 +7,10 @@ list, take a look at the [es6features] [] repository on GitHub.
 
 [es6features]: https://github.com/lukehoban/es6features
 
-## Lexical (Block-level) Scopes
+Lexical (Block-level) Scopes
+----------------------------
 
-### The New `let` Keyword
+### The New `let` Keyword ###
 
   * ES6 introduces `let`
 
@@ -22,7 +23,7 @@ list, take a look at the [es6features] [] repository on GitHub.
     } // Woah!
     ~~~
 
-### Hoisting and `let`
+### Hoisting and `let` ###
 
 It does not hoist!
 
@@ -35,7 +36,7 @@ It does not hoist!
 }
 ```
 
-### Looping with `let`
+### Looping with `let` ###
 
 Using let with a for loop is possible in ES6:
 
@@ -47,9 +48,10 @@ for (let i=0; i<10; i++) {
 }
 ```
 
-## Single Assignment Protection
+Single Assignment Protection
+----------------------------
 
-### Preventing Reassignment
+### Preventing Reassignment ###
 
 The `const` keyword defines a block-level variable that must be
 initialized when it's declared and can't be reassigned:
@@ -64,9 +66,10 @@ var f = function() {
 };
 ~~~
 
-## Functions
+Functions
+---------
 
-### Arrow Functions
+### Arrow Functions ###
 
 ~~~ {.javascript}
 element.addEventListener("click", function(e) {
@@ -81,7 +84,7 @@ element.addEventListener("click", e => {
 });
 ~~~
 
-### Implicit `return` for Arrow Expressions
+### Implicit `return` for Arrow Expressions ###
 
 If you omit curly braces you can write a single expression that
 automatically becomes the return value of the function:
@@ -96,13 +99,99 @@ a.map(function(e) {
 a.map(e => e + 1);
 ~~~
 
-### Arrow Warnings
+### Arrow Warnings ###
 
   * Arrow function do not have a `this` or an `arguments` variable!
 
   * If you use curly braces you need to use `return`.
 
-## Object-oriented Programming
+### Default Parameters ###
+
+~~~ {.javascript insert="../../src/babel/es6/parameters.js" token="default"}
+~~~
+~~~ {.javascript exec="node ../../src/babel/es6/parameters.js | grep add"}
+~~~
+
+  * Parameters can have *default* values
+
+  * When a parameter isn't bound by an argument it takes on the
+    default value, or `undefined` if no default is set
+
+  * Default parameters are evaluated at *call time*
+
+  * May refer to any other variables in scope
+
+<div class="notes">
+
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+
+</div>
+
+### Rest Parameters
+
+~~~ {.javascript insert="../../src/babel/es6/parameters.js" token="rest"}
+~~~
+~~~ {.javascript exec="node ../../src/babel/es6/parameters.js | grep last"}
+~~~
+
+  * When an argument name is prefixed with "`...`" it will be an array
+    containing all of the arguments that are not bound to names
+
+  * Unlike `arguments`, the rest parameter only contains arguments
+    that are not bound to names
+
+  * Unlike `arguments`, the rest parameter is a real `Array`
+
+<div class="notes">
+
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+</div>
+
+### Spread Syntax
+
+~~~ {.javascript insert="../../src/babel/es6/parameters.js" token="spread"}
+~~~
+~~~ {.javascript exec="node ../../src/babel/es6/parameters.js | grep max"}
+~~~
+
+  * When the name of an array is prefixed with "`...`" in an
+    expression that expects arguments or elements, the array is
+    expanded
+
+  * Works when calling functions and creating array literals
+
+  * Can be used to splice arrays together
+
+(Object spreading is part of ES2018.)
+
+<div class="notes">
+
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+</div>
+
+### Array Destructuring
+
+~~~ {.javascript insert="../../src/babel/es6/destructuring.js" token="array"}
+~~~
+~~~ {.javascript exec="node ../../src/babel/es6/destructuring.js"}
+~~~
+
+  * Similar to *pattern matching* from functional languages
+  
+  * The *lvalue* can be an array of names to bind from the *rvalue*
+
+(Object destructuring is part of ES2018.)
+
+<div class="notes">
+
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+</div>
+
+Object-oriented Programming
+---------------------------
 
 ### Classes
 
@@ -131,6 +220,33 @@ class Square extends Rectangle {
       // ..
     };
     ~~~
+
+### Same-Value Equality {#x4588a4c36ca11e8bffa276babc0cbbb}
+
+Similar to "`===`" with a few small changes:
+
+~~~ {.javascript}
+Object.is(NaN, NaN); // true
+
+Object.is(+0, -0);   // false
+~~~
+
+(This function first appeared in ECMAScript Edition 6, 2015.)
+
+### The `Object.assign` Function {#o68acf4e36cb11e8a63ff768f96bc38a}
+
+Copies properties from one object to another:
+
+~~~ {.javascript insert="../../src/babel/es6/assign.js"}
+~~~
+
+Produces this output:
+
+~~~ {.javascript exec="node ../../src/babel/es6/assign.js"}
+~~~
+
+(This function first appeared in ECMAScript Edition 6, 2015.)
+
 
 ### Modules
 

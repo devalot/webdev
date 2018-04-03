@@ -92,19 +92,19 @@ performance concerns.
 ### Exercise: Class Builder
 
   #. Open the following files:
-  
+
      - `src/www/js/builder/builder.spec.js` (read only!)
 
      - `src/www/js/builder/builder.js`
 
   #. Implement the `Builder` function:
-  
+
      It should generate a constructor function using the `constructor`
      property given to it.  The remaining properties become prototype
      properties.
-     
+
   #. Use the `index.html` file to run the tests
-     
+
 ## Parasitic Inheritance
 
 ### Constructors that Aren't
@@ -176,10 +176,7 @@ Parasitic inheritance is created by:
 
     ~~~ {.javascript}
     // Returns `true':
-    Object.prototype.isPrototypeOf([1, 2, 3]);
-
-    // Returns `false':
-    String.prototype.isPrototypeOf([1, 2, 3]);
+    Array.prototype.isPrototypeOf([1, 2, 3]);
     ~~~
 
   * The `Object.getPrototypeOf` Function:
