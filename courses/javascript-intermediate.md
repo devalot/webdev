@@ -14,13 +14,19 @@ copyright: >
   To license this work for use in a commercial setting contact Peter J. Jones.
 ---
 
-# Introduction to This Course {.unnumbered}
+Introduction to This Course {.unnumbered}
+=========================================
 
 The source code for this course can be found at the following URL:
 
 <https://github.com/devalot/webdev>
 
-### What's In Store  {.unnumbered}
+Overview {.unnumbered}
+----------------------
+
+This JavaScript course is delivered during two days.
+
+### What's In Store ### {.unnumbered}
 
   Day 1                        Day 2
   --------------               --------------
@@ -31,27 +37,46 @@ The source code for this course can be found at the following URL:
   Testing w/ Jasmine           Developer Tools for JS
 
 <<(../metadata/links.md)
-
 <<(../content/js/requirements.md)
-<<(../content/js/review.md)
-<<(../content/js/dom/fetch.md)
-<<(../content/js/dom/traversal.md)
-<<(../content/js/dom/types.md)
-<<(../content/js/dom/create.md)
-<<(../content/js/dom/attrs.md)
-<<(../content/js/dom/text.md)
-<<(../content/js/dom/events.md)
+
+# JavaScript Review (Warming Up)
+
+<<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
+<<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
+<<(../content/js/closures.md#e926298a258211e8abc83b6fee9937e9)
+<<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
+
+## Document Object Model Review
+
+<<(../content/js/dom/fetch.md#c90768f0258511e8b89193e5afe59cab)
+<<(../content/js/dom/traversal.md#e8f42bd0258511e8936dbfa61311da9e)
+<<(../content/js/dom/create.md#f89dbf4c258511e8952d0b8f8af2f634)
+<<(../content/js/dom/create.md#a5306c0a258611e8bfa2af6ab5c5b3cc)
+<<(../content/js/dom/text.md#a3af8004258611e88aa2efbe26ab52d0)
+<<(../content/js/dom/events.md#a6c1d41c258611e89ac42bb59fa4b75e)
 <<(../content/js/dom/warmup-ex.md)
+
+<!-- Advanced Functions -->
 <<(../content/js/adv-functions.md)
+
+<!-- Advanced OOP -->
 <<(../content/js/adv-oop.md)
+
+<!-- Testing -->
 <<(../content/js/testing.md)
+
+<!-- The runtime and promises -->
 <<(../content/js/adv-async.md)
+
 <<(../content/js/mvc.md)
+
 <<(../content/js/es6.md)
 <<(../content/js/es7.md)
 <<(../content/js/es8.md)
+
 <<(../content/js/popular-apis.md)
 <<(../content/js/frameworks.md)
+
 <<(../content/js/alternatives.md)
 <<(../content/js/tools.md)
 <<(../content/js/resources.md)
