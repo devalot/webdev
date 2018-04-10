@@ -16,7 +16,14 @@
  * generated should inherit from it.
  */
 function Builder(properties, parent) {
+  var ctor = properties.constructor;
+  delete properties.constructor;
 
-  // Your code here.
+  if (parent !== undefined) {
+    // properties.__proto__ = parent.prototype;
+    Object.setPrototypeOf(properties, parent.prototype);
+  }
 
+  ctor.prototype = properties;
+  return ctor;
 }

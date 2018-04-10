@@ -47,4 +47,41 @@
  *
  * Make sure your tests still pass.
  */
-Hosts = undefined;
+Hosts = (function() {
+  // Use an object as a lookup table.
+  // In ES2015 you should use the `Map' type.
+  var table = Object.create(null);
+
+  var api = {
+    add: function(name, address) {
+      if (!table[name]) table[name] = [];
+      table[name].push(address);
+    },
+
+    lookupByName: function(name) {
+      if (table[name]) return table[name];
+      return [];
+    },
+
+    lookupByIP: function(address) {
+      var matches = [];
+
+      for (var name in table) {
+        var idx = table[name]
+            .indexOf(address);
+
+        if (idx >= 0) {
+          matches.push(name);
+        }
+      }
+
+      return matches;
+    },
+
+    clear: function() {
+      table = Object.create(null);
+    }
+  };
+
+  return api;
+})();
