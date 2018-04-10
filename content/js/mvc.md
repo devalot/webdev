@@ -69,7 +69,7 @@ Making an Ajax request:
 
   #. Open the `index.html` file in your browser
 
-  #. Get the tests in `index.html` to pass
+  #. Get the tests to pass
 
 ## Models
 
