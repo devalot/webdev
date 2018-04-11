@@ -2,6 +2,12 @@ ArtistsController = (function(){
 
   // Display all artists.
   var index = function() {
+    Artist.fetchAll()
+      .then(function(artists) {
+        View.set("artists-index", {
+          artists: artists
+        });
+      });
   };
 
   // Display a single artist.

@@ -21,4 +21,53 @@ describe("Artist model interface", function() {
       done.fail("shouldn't have failed");
     });
   });
+
+  it("fetch All should provide an array of artists", function(done) {
+    var fakeRecords = [
+      {id: 1, name: "Queen", formation_year: "x", website: "y"},
+      {id: 2, name: "Gaga",  formation_year: "z", website: "w"},
+    ];
+
+    ajaxSpy("get", fakeRecords);
+
+    Artist.fetchAll()
+      .then(function(artists) {
+        expect(artists).toEqual(fakeRecords);
+        done();
+      })
+      .catch(function(error) {
+        done.fail("didn't expect: " + error);
+      });
+  });
+
+  it("should save a new record to the backend", function(done) {
+    var record = {name: "INXS", id: 42};
+
+    ajaxSpy("post", record);
+    ajaxSpy("patch", null, "should be a POST");
+
+    var artist = new Artist({name: record.name});
+
+    artist.save()
+      .then(function() {
+        expect(artist.id).toBe(record.id);
+        done();
+      });
+  });
+
+  it("saving an existing record does a PATCH", function(done) {
+    var artist = new Artist({id: 1, name: "Prince"});
+
+    ajaxSpy("patch", {});
+    ajaxSpy("post", null, "should be a PATCH");
+
+    artist.save()
+      .then(function(a) {
+        expect(a).toBe(artist);
+        done();
+      })
+      .catch(function(message) {
+        done.fail(message);
+      });
+  });
 });
