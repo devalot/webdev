@@ -37,7 +37,7 @@ in
 
 pkgs.stdenv.mkDerivation rec {
   name = "webdev-${version}";
-  version = "0.3.0";
+  version = "0.4.0";
   src = builtins.fetchGit ./.;
 
   # Specifically don't want fixups for this package:
