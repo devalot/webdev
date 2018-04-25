@@ -1,12 +1,17 @@
 html { background-color: #1b1322; }
+body { margin: 0; padding: 0;}
 
 h1 {
+  margin: 0;
+  padding: 0;
   color: #eee;
   height: 100vh;
   text-align: center;
   text-shadow: 1px 1px 1px #fff, 2px 2px 2px #111;
 }
-
 .logo {
-  background-image: url(../images/haskell.png);
+  background-image: url(../images/haskell.png), url(../images/haskell.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: 25%, auto;
 }

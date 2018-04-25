@@ -16,8 +16,8 @@
 
    Hint: {background-color: #eee;}
 */
-
-
+tbody tr:nth-child(2n)
+{ background-color: #eee; }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -27,8 +27,8 @@
 
    Hint: {font-weight: bold;}
 */
-
-
+tbody tr:nth-last-child(-n+3)
+{ font-weight: bold; }
 
 /*############################################################################*/
 /* Exercise 3:
@@ -43,8 +43,8 @@
 
    Hint: {background-color: color;}
 */
-
-
+article > ul:last-of-type li:nth-child(-n+4) { background-color: yellow; }
+article > ul:last-of-type li:nth-last-child(-n+4) { background-color: orange; }
 
 /*############################################################################*/
 /* Exercise 4:
@@ -55,8 +55,8 @@
 
    Hint: {color: red;}
 */
-
-
+li:nth-child(3n+1):not(:only-child)
+{ color: red; }
 
 /*############################################################################*/
 /* Exercise 5:
@@ -68,3 +68,7 @@
 
    Hint: {text-align: right; border-right: 1px solid black;}
 */
+tbody tr:nth-child(4n) td:first-child {
+  text-align: right;
+  border-right: 1px solid black;
+}

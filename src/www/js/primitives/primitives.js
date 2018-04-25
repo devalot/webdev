@@ -13,6 +13,11 @@ function exercise1() {
 // EXERCISE 2: Create (and return) a string with at least 5 characters
 function exercise2() {
 
-  // Your code here.
+  // One Solution:
+  return "Hello World!";
+
+  // Another Solution:
+  var str = "Hello World";
+  return str;
 
 }

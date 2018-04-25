@@ -1,0 +1,18 @@
+/* This is position.css */
+body > header {
+  padding: 0.5em 0.25em;
+  border-bottom: 2px solid #888;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0; left: 0; right: 0;
+}
+
+body > header > nav {
+  position: absolute;
+  top: 0; right: 0;
+}
+
+body > header ul {padding: 0.5em;}
+body > header li {display: inline;}
+.container {margin-top: 4em;}

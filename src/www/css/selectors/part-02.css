@@ -16,7 +16,7 @@
 
    Hint: {border: 2px solid blue;}
 */
-
+input:focus { border: 5px dashed blue; }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -25,7 +25,7 @@
 
    Hint: {text-decoration: line-through;}
 */
-
+input:disabled { text-decoration: line-through; }
 
 /*############################################################################*/
 /* Exercise 3:
@@ -37,7 +37,7 @@
 
    Hint: {font-size: 2em;}
 */
-
+article > p::first-letter { font-size: 2em; }
 
 /*############################################################################*/
 /* Exercise 4:
@@ -50,3 +50,7 @@
 
    Hint: {background-color: #009; color: #fff;}
 */
+p::selection {
+  background-color: pink;
+  color: black;
+}

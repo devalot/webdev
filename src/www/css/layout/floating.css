@@ -1,0 +1,31 @@
+/* This is floating.css */
+* { box-sizing: border-box; }
+p { margin: 0.5em 0; }
+h2 + p { margin-top: 0; }
+
+body > header { padding: 0.5em; }
+body > header > * { float: left; }
+body > header > nav  { float: right; }
+body > header li { float: left; padding: 0.25em; }
+
+.container > * {
+  width: 25%;
+  padding: 0.25em;
+  float: left;
+}
+.container main { width: 50%; }
+.sidebar { margin-top: 1em; }
+
+footer > * {
+  width: 50%;
+  float: left;
+}
+
+/* Fix floating errors: */
+body > header::after,
+.container::after,
+footer::after {
+  content: " ";
+  clear: both;
+  display: table;
+}

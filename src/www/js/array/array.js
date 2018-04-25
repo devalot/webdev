@@ -1,6 +1,6 @@
 /****************************************************************************/
 // Array Documentation:
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// HTTP://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 /****************************************************************************/
 // TEST DATA:
@@ -17,9 +17,13 @@ var users = [
 // The function below should return an array of users from the TEST
 // DATA above that only includes users under the age of 18.
 function exercise1() {
+  // Using ES6 arrow functions:
+  return users.filter(u => u.age < 18);
 
-  // Your code here.
-
+  // Using ES5 function expressions:
+  return users.filter(function(u) {
+    return u.age < 18;
+  });
 }
 
 /****************************************************************************/
@@ -29,9 +33,13 @@ function exercise1() {
 // should be all of the usernames from the TEST DATA above, in the
 // same order.
 function exercise2() {
+  // Using ES6 arrow functions:
+  return users.map(u => u.username);
 
-  // Your code here.
-
+  // Using ES5 function expressions:
+  return users.map(function(u) {
+    return u.username;
+  });
 }
 
 /****************************************************************************/
@@ -42,9 +50,17 @@ function exercise2() {
 // `toString()` method) from the TEST DATA above where the user is
 // over the age of 20 and younger than 40.
 function exercise3() {
+  // Using ES6 arrow functions:
+  return users
+    .filter(u => u.age > 20 && u.age < 40)
+    .map(u => u.id.toString());
 
-  // Your code here.
-
+  // Using ES5 function expressions:
+  return users.filter(function(u) {
+    return u.age > 20 && u.age < 40;
+  }).map(function(u) {
+    return u.id.toString();
+  });
 }
 
 /****************************************************************************/
@@ -53,7 +69,8 @@ function exercise3() {
 // The function below should return the `users' array from above (TEST
 // DATA) in reverse order.  Do not use the built-in reverse function.
 function exercise4() {
-
-  // Your code here.
-
+  return users.reduce((acc, user) => {
+    acc.unshift(user);
+    return acc;
+  }, []);
 }

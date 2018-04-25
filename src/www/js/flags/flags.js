@@ -65,3 +65,29 @@
  */
 
 // Your code here.
+var Bucket = function(selector) {
+  this.element = document.querySelector(selector);
+};
+
+Bucket.prototype.push = function(node) {
+  this.element.appendChild(this.wrap(node));
+};
+
+Bucket.prototype.wrap = function(node) {
+  if (node.tagName === "LI") return node;
+  var li = document.createElement("LI");
+  li.appendChild(node);
+  return li;
+};
+
+Bucket.prototype.pushFromSelector = function(selector) {
+  this.push(document.querySelector(selector));
+};
+
+var bucket = new Bucket("#bucket ul");
+
+// Flag 1:
+bucket.pushFromSelector("#container li.foo");
+
+// Flag 2:
+// ???

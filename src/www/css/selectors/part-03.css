@@ -18,8 +18,7 @@
 
    Hint: {border-bottom: 1px solid black;}
 */
-
-
+#products ul:first-of-type { border-bottom: 1px solid black; }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -29,8 +28,7 @@
 
    Hint: {color: brown;}
 */
-
-
+#products p:last-child { color: brown; }
 
 /*############################################################################*/
 /* Exercise 3:
@@ -40,3 +38,4 @@
 
    Hint: {color: green;}
 */
+#products p:first-of-type { color: green; }

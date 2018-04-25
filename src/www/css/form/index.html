@@ -3,11 +3,35 @@
 <link href="form.css" rel="stylesheet">
 
 <form>
-  <p><label>Name: <input name="name" type="text"></label>
-  <p><label>Email Address: <input name="addr" type="email"></label>
-  <p><label>Favorite Number: <input name="num" type="number"></label>
-  <p><label>Favorite Color: <input name="color" type="color"></label>
-  <p><label>License Plate Number: <input name="plate" type="text"></label>
+  <p><label>
+       Name: <input name="name" type="text" required>
+     </label>
+
+  <p><label>
+       Email Address: <input name="addr" type="email" required>
+     </label>
+
+  <p><label>
+       Favorite Number:
+       <input name="num" type="number" min="1" max="10" required>
+     </label>
+
+  <p><label>
+       Favorite Color:
+       <input name="color" type="color" required>
+     </label>
+
+  <p><label>
+       License Plate Number:
+       <input name="plate"
+              type="text"
+              minlength="7"
+              maxlength="7"
+              pattern="[a-zA-Z0-9]+"
+              title="Letters and numbers only."
+              required>
+     </label>
+
   <p><input type="submit" value="Go!">
 </form>
 

@@ -27,3 +27,27 @@
  *                // Stack is now empty.
  *   c.get();     // returns 20
  */
+Calculator = function(initialValue) {
+  this.value = initialValue || 0;
+  this.stack = [ ];
+};
+
+Calculator.prototype = {
+  push: function(number) {
+    this.stack.push(number);
+  },
+
+  add: function() {
+    this.value += this.stack.reduce((a, n) => a + n, 0);
+    this.stack = [ ];
+  },
+
+  mul: function() {
+    this.value *= this.stack.reduce((a, n) => a * n, 1);
+    this.stack = [ ];
+  },
+
+  get: function() {
+    return this.value;
+  }
+};

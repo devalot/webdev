@@ -1,6 +1,13 @@
 /* Make each <LI> show just its designated icon. */
 
 .icon {
+  width: 48px;
   height: 48px;
   background-image: url(../images/icons.png);
+  background-repeat: no-repeat;
 }
+
+.icon.clock         { background-position-x: 0;      }
+.icon.thumbs-up     { background-position-x: -48px;  }
+.icon.shopping-cart { background-position-x: -96px;  }
+.icon.note-list     { background-position-x: -144px; }

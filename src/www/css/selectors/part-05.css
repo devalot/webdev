@@ -23,8 +23,8 @@
 
   Hint: {width: size;}
 */
-
-
+input[type="text"]   { width: 20em; }
+input[type="number"] { width: 5em;  }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -38,8 +38,7 @@
 
    Hint: {color: orange;}
 */
-
-
+a:hover[href^="#"] { color: orange; }
 
 /*############################################################################*/
 /* Exercise 3:
@@ -49,8 +48,7 @@
 
    Hint: {background-color: darkblue;}
 */
-
-
+a[href*="salesforce"] { background-color: darkblue; }
 
 /*############################################################################*/
 /* Exercise 4:
@@ -60,8 +58,7 @@
 
    Hint: {font-weight: bold;}
 */
-
-
+[data-product-id] { font-weight: bold; }
 
 /*############################################################################*/
 /* Exercise 5:
@@ -72,3 +69,4 @@
 
    Hint: {background-color: hotpink;}
 */
+.product[data-keywords~="hot"] { background-color: hotpink; }

@@ -1,0 +1,31 @@
+/* This is flex.css */
+* { box-sizing: border-box; }
+p { margin: 0.5em 0; }
+h2 + p { margin-top: 0; }
+
+body > header {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #888;
+}
+
+body > header ul { display: flex; }
+body > header li { padding-right: 0.5em; }
+
+.container { display: flex; }
+.container > * { padding: 0 0.5em; }
+.sidebar { flex-basis: 100px; flex-grow: 3; }
+main { flex-basis: 200px; flex-grow: 6; }
+
+footer {
+  display: flex;
+  padding: 0.5em;
+  margin-top: 1em;
+  border-top: 2px solid #888;
+}
+
+footer > section:first-child { width: 75%; }
+footer > section:last-child { width: 25%; }

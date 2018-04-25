@@ -19,3 +19,14 @@
   3. Make the form look pretty.
 
 */
+form :required:invalid { border-color: red;}
+form :required:valid   { color: green;     }
+
+label {font-weight: bold; color: #444}
+input {display: block;}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 20em;
+}

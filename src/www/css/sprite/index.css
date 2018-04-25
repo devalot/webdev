@@ -1,5 +1,33 @@
+@keyframes slideUp {
+  /* Start of animation: */
+  0% {background-position-y: 0;}
+
+  /* End of animation: */
+  100% {background-position-y: -2964px;}
+}
+
+@keyframes moveOver {
+  50%  { transform: translate(500px, 500px);             }
+  100% { transform: translate(800px, 0) rotate(-180deg); }
+}
+
 .spinner {
-  width: 100vw;
-  height: 100vh;
+  width: 156px;
+  height: 156px;
   background-image: url(../images/spinner.png);
+
+  /* Goal: Sitting in one place, looks like it's spinning.
+  animation-name: slideUp;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: steps(19);
+  */
+
+  /* Bonus: */
+  animation-name: slideUp, moveOver;
+  animation-duration: 500ms, 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal, alternate;
+  animation-timing-function: steps(19), ease-in-out;
 }
