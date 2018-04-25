@@ -165,11 +165,11 @@ background-repeat: no-repeat;
 
   #. Open (and edit) the following file in your text editor:
 
-        www/background-image/index.css
+        src/www/css/background-image/index.css
 
   #. Review (but don't edit) the following file:
 
-        www/background-image/index.html
+        src/www/css/background-image/index.html
 
   #. Modify the CSS so that your browser shows the same page as the
      one on the instructor's screen
@@ -192,11 +192,11 @@ background-repeat: no-repeat;
 
   #. Open (and edit) the following file in your text editor:
 
-        www/icons/index.css
+        src/www/css/icons/index.css
 
   #. Review (but don't edit) the following file:
 
-        www/icons/index.html
+        src/www/css/icons/index.html
 
   #. Make each `<LI>` show only it's designated icon.
 
