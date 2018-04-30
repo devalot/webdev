@@ -17,7 +17,7 @@
 ![The JavaScript Event Loop](../../diagrams/js/runtime.dot)\
 <!-- Placeholder -->
 
-## Promises
+## Promises {#promises}
 
 ### Callbacks without Promises
 

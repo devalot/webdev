@@ -1,0 +1,90 @@
+---
+title: "Intermediate JavaScript and CSS"
+subtitle: "A Hands-on Course"
+
+author:
+  - name: "Peter J. Jones"
+    email: "pjones@devalot.com"
+    url: "http://devalot.com"
+    twitter: "devalot"
+
+bibliography: metadata/citations.bib
+
+copyright: >
+  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License:
+  <https://creativecommons.org/licenses/by-nc-sa/4.0/>
+
+  To license this work for use in a commercial setting contact Peter J. Jones.
+---
+
+# Introduction to This Course {.unnumbered}
+
+## Source Code {.unnumbered}
+
+The source code for this course can be found at the following URL:
+
+<https://github.com/devalot/webdev>
+
+## Overview {.unnumbered}
+
+This course is delivered over three days.
+
+### What's In Store {.unnumbered}
+
+  Day 1                      Day 2              Day 3
+  -------------------------  -----------------  ------------------
+
+<!-- ====================================================================== -->
+<!-- And now, the content... -->
+<!-- ====================================================================== -->
+
+  <<(../content/css/requirements.md)
+
+# JavaScript Review (Warming Up)
+
+<<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
+<<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
+<<(../content/js/closures.md#e926298a258211e8abc83b6fee9937e9)
+<<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
+
+## Document Object Model Review
+
+<<(../content/js/dom/fetch.md#c90768f0258511e8b89193e5afe59cab)
+<<(../content/js/dom/traversal.md#e8f42bd0258511e8936dbfa61311da9e)
+<<(../content/js/dom/create.md#f89dbf4c258511e8952d0b8f8af2f634)
+<<(../content/js/dom/create.md#a5306c0a258611e8bfa2af6ab5c5b3cc)
+<<(../content/js/dom/text.md#a3af8004258611e88aa2efbe26ab52d0)
+<<(../content/js/dom/events.md#a6c1d41c258611e89ac42bb59fa4b75e)
+<<(../content/js/dom/warmup-ex.md)
+
+# Asynchronous JavaScript and XML
+
+  <<(../content/js/ajax.md)
+  <<(../content/js/jquery/ajax.md)
+  <<(../content/js/apis/fetch.md)
+  <<(../content/js/adv-async.md#promises)
+  <<(../content/js/mvc.md#a67c1f10257c11e89c00134983c63ac9)
+
+<!-- * Observables -->
+
+  <<(../content/js/es6.md)
+  <<(../content/js/es7.md)
+  <<(../content/js/es8.md)
+
+## Intermediate CSS
+
+  <!-- Icons and Web Fonts -->
+
+  <<(../content/css/layout/responsive.md)
+
+  <!-- Grids -->
+
+## Web Development: Frameworks and Tools
+
+  <<(../content/css/tools.md)
+
+<!--
+  * Grunt
+  * Webpack and Modules
+  * Foundation
+ -->
