@@ -158,7 +158,7 @@ Making an Ajax request:
 
 Let's get our list of artists into the HTML:
 
-  * We'll display them in an HTML table
+  * We'll display them in an HTML `<UL>`
 
   * To do this we'll need a view library
 
@@ -284,7 +284,7 @@ If you have time:
 
 Hints:
 
-  * On the table row, store a `data-artist-id` attribute with the ID
+  * On the `<LI>`, store a `data-artist-id` attribute with the ID
     of the current artist.  You can use this in the `click` event
     callback to send the ID to the `ArtistsController.show` method.
 
