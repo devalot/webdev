@@ -12,8 +12,9 @@ let
   # Files which describe needed NPM modules.  Use the
   # `nix/node/update.sh' script to generate these files.
   nodeNixFiles = [
-    { load = ./webdev;  for = "src";                      }
-    { load = ./webpack; for = "src/www/js/tools/webpack"; }
+    { load = ./webdev;  for = "src";                       }
+    { load = ./webpack; for = "src/www/js/tools/webpack";  }
+    { load = ./vue;     for = "src/www/js/frameworks/vue"; }
   ];
 
   ##############################################################################
@@ -22,8 +23,11 @@ let
 
   ##############################################################################
   # How to install node_modules for a project in webdev:
-  installModules = def:
-    "cp -rp ${(mkNodePkgs def.load).nodeDependencies}/lib/node_modules $dest/${def.for}";
+  installModules = def: ''
+    cp -rp ${(mkNodePkgs def.load).nodeDependencies}/lib/node_modules \
+      "$dest/${def.for}"
+    chmod -R u+w "$dest/${def.for}"
+  '';
 
   ##############################################################################
   buildInputs = [
@@ -33,6 +37,9 @@ let
 
   ##############################################################################
   installPhase = ''
+    # Keep NPM from trying to use the network:
+    export NO_UPDATE_NOTIFIER=1
+
     # Install all needed node_modules.
     ${concatMapStrings installModules nodeNixFiles}
 
@@ -40,6 +47,16 @@ let
     ( cd $dest/src
       mkdir -p babel/es5
       node node_modules/.bin/babel --presets env -d babel/es5 babel/es6
+    )
+
+    # Prepare the Webpack demo app:
+    ( cd "$dest/src/www/js/tools/webpack"
+      npm run build
+    )
+
+    # Prepare the Vue.js demo app:
+    ( cd "$dest/src/www/js/frameworks/vue"
+      npm run build
     )
   '';
 
