@@ -87,8 +87,8 @@ Let's take a look at a Webpack demonstration application:
 
         $ npm run build
 
-(If you are running your Node.js server you can access this
-application at <http://localhost:3000/js/tools/webpack/>.)
+If you are running your Node.js server you can access this
+application at <http://localhost:3000/js/tools/webpack/>
 
 <!-- === Links === -->
 [webpack]: https://webpack.js.org/
