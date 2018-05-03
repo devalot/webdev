@@ -2,7 +2,7 @@
   "name": "webdev",
   "version": "1.0.0",
   "description": "WebDev Exercises and Demos",
-  "main": "bin/server.js",
+  "private": true,
   "scripts": {},
   "directories": {},
   "author": "Peter J. Jones",
@@ -12,7 +12,7 @@
     "babel-preset-env": "^1.6.1",
     "mockapie": "git://github.com/pjones/mockapie.git",
     "nightwatch": "^0.9.8"
-  },
+   },
   "repository": {
     "type": "git",
     "url": "https://github.com/devalot/webdev.git"

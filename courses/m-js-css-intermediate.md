@@ -71,20 +71,18 @@ This course is delivered over three days.
   <<(../content/js/es7.md)
   <<(../content/js/es8.md)
 
-## Intermediate CSS
+# Intermediate CSS
 
   <!-- Icons and Web Fonts -->
-
   <<(../content/css/layout/responsive.md)
-
   <!-- Grids -->
 
-## Web Development: Frameworks and Tools
+# Web Development: Frameworks and Tools
 
-  <<(../content/css/tools.md)
+  <<(../content/css/tools/preprocessors.md)
+  <<(../content/css/frameworks/foundation.md)
+  <<(../content/js/tools/webpack.md)
 
-<!--
-  * Grunt
-  * Webpack and Modules
-  * Foundation
- -->
+<!-- === Footer === -->
+<<(../content/css/footer.md)
+<<(../metadata/links.md)
