@@ -55,6 +55,11 @@ The source code for this course can be found at the following URL:
 
 <<(../content/css/animation.md)
 <<(../content/css/layout.md)
+
+# Using CSS Tools and Frameworks
+
 <<(../content/css/tools.md)
+<<(../content/css/frameworks.md)
+
 <<(../content/css/footer.md)
 <<(../metadata/links.md)

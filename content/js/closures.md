@@ -30,7 +30,7 @@
 
 See: `src/examples/js/closure.html`
 
-### Closures: Practical Example
+### Closures: Practical Example ### {#private}
 
 ~~~ {.javascript}
 var Foo = function() {

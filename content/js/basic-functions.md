@@ -59,7 +59,7 @@ var result = add(1, 2); // 3
 
   - Missing arguments will be `undefined`
 
-### Function Invocation (Example)
+### Function Invocation (Example) ### {#wrong-args}
 
 ~~~ {.javascript}
 var add = function(a, b) {

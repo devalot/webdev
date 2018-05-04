@@ -125,7 +125,7 @@ More work to extract data from XML:
 
 ## Putting It All Together
 
-### Exercise: Making Ajax Requests
+### Exercise: Making Ajax Requests ### {#lab}
 
   #. Open the following files:
 

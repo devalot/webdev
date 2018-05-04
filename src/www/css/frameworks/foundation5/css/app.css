@@ -1,0 +1,29 @@
+.row {
+  padding: 1em 0;
+}
+
+.alt {
+  background-color: #eee;
+  border-bottom: 2px solid #ddd;
+}
+
+.artists {
+  min-height: 10em;
+}
+
+.artists li {
+  font-size: 1.2em;
+}
+
+footer {
+  background: #555;
+  color: #fff;
+}
+
+footer p, footer li {
+  font-size: 0.9em;
+}
+
+main {
+  height: 100vh;
+}

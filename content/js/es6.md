@@ -179,7 +179,7 @@ a.map(e => e + 1);
 ~~~
 
   * Similar to *pattern matching* from functional languages
-  
+
   * The *lvalue* can be an array of names to bind from the *rvalue*
 
 (Object destructuring is part of ES2018.)
@@ -247,8 +247,9 @@ Produces this output:
 
 (This function first appeared in ECMAScript Edition 6, 2015.)
 
+## JavaScript Modules ## {#modules}
 
-### Modules
+### Exporting and Importing ### {#modules-export}
 
   * Export identifiers from a library:
 
@@ -259,6 +260,18 @@ Produces this output:
 
     ~~~ {.javascript insert="../../src/babel/es6/import.js"}
     ~~~
+
+### Explicit Dependencies in JavaScript ### {#modules-why}
+
+When using ES2015 modules:
+
+  * Dependencies are explicit through imports
+
+  * Removes global namespace pollution
+
+  * You can import part of a library, or the entire thing
+
+  * Strict mode enabled by default
 
 ## Generators and Iterators
 
