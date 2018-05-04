@@ -31,8 +31,12 @@ This course is delivered over three days.
 
 ### What's In Store {.unnumbered}
 
-  Day 1                      Day 2              Day 3
-  -------------------------  -----------------  ------------------
+  | Day 1             | Day 2           | Day 3              |
+  |-------------------+-----------------+--------------------|
+  | JavaScript Review | Promises        | Responsive Design  |
+  | DOM Manipulation  | ES2015--ES2017  | Designing w/ Grids |
+  | Event Handling    | Testing         | Foundation         |
+  | Ajax and JSON     | Selector Review | Webpack            |
 
 <!-- ====================================================================== -->
 <!-- And now, the content... -->
@@ -42,20 +46,35 @@ This course is delivered over three days.
 
 # JavaScript Review (Warming Up)
 
-<<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
-<<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
-<<(../content/js/closures.md#e926298a258211e8abc83b6fee9937e9)
-<<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
+  <<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
-## Document Object Model Review
+## Objects ##
 
-<<(../content/js/dom/fetch.md#c90768f0258511e8b89193e5afe59cab)
-<<(../content/js/dom/traversal.md#e8f42bd0258511e8936dbfa61311da9e)
-<<(../content/js/dom/create.md#f89dbf4c258511e8952d0b8f8af2f634)
-<<(../content/js/dom/create.md#a5306c0a258611e8bfa2af6ab5c5b3cc)
-<<(../content/js/dom/text.md#a3af8004258611e88aa2efbe26ab52d0)
-<<(../content/js/dom/events.md#a6c1d41c258611e89ac42bb59fa4b75e)
-<<(../content/js/dom/warmup-ex.md)
+  <<(../content/js/basic-objects.md#key-value)
+
+## Functions ##
+
+  <<(../content/js/basic-functions.md#wrong-args)
+  <<(../content/js/oop/context.md#example-this)
+  <<(../content/js/closures.md#private)
+
+# The Document Object Model
+
+  <<(../content/js/dom/intro.md)
+  <<(../content/js/dom/fetch.md)
+  <<(../content/js/dom/traversal.md)
+  <<(../content/js/dom/types.md)
+  <<(../content/js/dom/create.md)
+  <<(../content/js/dom/text.md)
+  <<(../content/js/dom/flags.md)
+  <<(../content/js/jquery/intro.md)
+  <<(../content/js/jquery/dom.md)
+
+# Event Handling
+
+  <<(../content/js/dom/events.md)
+  <<(../content/js/jquery/events.md)
+  <<(../content/js/dom/warmup-ex.md)
 
 # Asynchronous JavaScript and XML
 
@@ -64,21 +83,35 @@ This course is delivered over three days.
   <<(../content/js/apis/fetch.md)
   <<(../content/js/adv-async.md#promises)
   <<(../content/js/mvc.md#a67c1f10257c11e89c00134983c63ac9)
+  <<(../content/js/ajax.md#lab)
 
-<!-- * Observables -->
+<!-- === ES2015--ES2017 === -->
 
   <<(../content/js/es6.md)
   <<(../content/js/es7.md)
   <<(../content/js/es8.md)
 
+# Testing in JavaScript
+
+  <<(../content/js/testing.md)
+
 # Intermediate CSS
 
-  <!-- Icons and Web Fonts -->
+  <<(../content/css/style.md#fonts)
   <<(../content/css/layout/responsive.md)
-  <!-- Grids -->
+  <<(../content/css/layout/grid.md)
+  <<(../content/css/selectors/basic.md)
+  <<(../content/css/selectors/relation.md)
+  <<(../content/css/selectors/basic-pseudo.md)
+  <<(../content/css/selectors/pseudo-chlid.md)
+  <<(../content/css/selectors/pseudo-funcs.md)
+  <<(../content/css/selectors/not.md)
+  <<(../content/css/selectors/attribute.md)
 
 # Web Development: Frameworks and Tools
 
+  <<(../content/js/alternatives.md)
+  <<(../content/js/tools.md)
   <<(../content/css/tools/preprocessors.md)
   <<(../content/css/frameworks/foundation.md)
   <<(../content/js/tools/webpack.md)

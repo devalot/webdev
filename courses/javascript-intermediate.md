@@ -62,7 +62,8 @@ This JavaScript course is delivered during two days.
 <!-- Advanced OOP -->
 <<(../content/js/adv-oop.md)
 
-<!-- Testing -->
+# Testing in JavaScript
+
 <<(../content/js/testing.md)
 
 <!-- The runtime and promises -->
@@ -76,6 +77,8 @@ This JavaScript course is delivered during two days.
 
 <<(../content/js/popular-apis.md)
 <<(../content/js/frameworks.md)
+
+# Real World JavaScript Development
 
 <<(../content/js/alternatives.md)
 <<(../content/js/tools.md)

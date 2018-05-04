@@ -1,5 +1,3 @@
-# Testing in JavaScript
-
 ## General Testing Overview
 
 ### Testing in the Browser

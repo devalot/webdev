@@ -1,18 +1,4 @@
-# Development Tools
-
-## Inside the Browser
-
-### Debugging
-
-  * Complete debugging with breakpoints and watch variables
-
-  * Built into all of the major browsers
-
-  * The `console` and `debugger` objects
-
-  * WebSockets API for working with the debugger remotely
-
-## Outside of the Browser
+## Development Tools
 
 ### Node.js
 

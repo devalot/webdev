@@ -247,7 +247,7 @@ Produces this output:
 
 (This function first appeared in ECMAScript Edition 6, 2015.)
 
-## ES2015 Modules ## {#modules}
+## JavaScript Modules ## {#modules}
 
 ### Exporting and Importing ### {#modules-export}
 

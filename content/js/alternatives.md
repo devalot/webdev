@@ -1,6 +1,4 @@
-# Alternatives and Extensions to JavaScript
-
-## Overview
+## Alternatives and Extensions to JavaScript
 
 ### Languages that Compile to JavaScript
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Demo</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name"><h1><a href="#">Foundation Demo</h1></a>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><a href="#">Home</a>
+            <li><a href="#">Artists</a>
+          </ul>
+        </section>
+      </nav>
+
+      <div class="alt">
+        <div class="row">
+          <div class="medium-4 columns">
+            <h2>Our Artists</h2>
+          </div>
+
+          <div class="medium-8 columns">
+            <p>
+              Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In
+              id erat non orci commodo lobortis.  Proin neque massa,
+              cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.
+              Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac
+              felis vel velit tristique imperdiet.  Donec at pede.  Etiam
+              vel neque nec dui dignissim bibendum.  Vivamus id enim.
+              Phasellus neque orci, porta a, aliquet quis, semper a,
+              massa.  Phasellus purus.  Pellentesque tristique imperdiet
+              tortor.  Nam euismod tellus id erat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="artists row">
+        <div id="view" class="medium-9 columns">
+          <ul>
+            <li>Hey there, click the button!
+          </ul>
+        </div>
+
+        <div class="medium-3 columns">
+          <a href="#" id="load" class="button round">Load</a>
+        </div>
+      </section>
+
+      <div>
+        <div class="row">
+          <div class="small-6 columns">
+            <!-- <<: button -->
+            <a href="#" class="button">Go!</a>
+            <!-- :>> -->
+          </div>
+          <div class="small-6 columns">
+            <!-- <<: split -->
+            <a href="#" class="button split">Reload<span data-dropdown="drop"></span></a><br>
+            <ul id="drop" class="f-dropdown" data-dropdown-content>
+              <li><a href="#">Delete Cache</a></li>
+              <li><a href="#">Delete Cache and Reload</a></li>
+              <li><a href="#">Launch Missiles</a></li>
+            </ul>
+            <!-- :>> -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-6 columns">
+            <!-- <<: switch -->
+            <div class="switch">
+              <input id="checkbox" type="checkbox">
+              <label for="checkbox">Checkbox</label>
+            </div>
+            <!-- :>> -->
+          </div>
+          <div class="small-6 columns">
+            <!-- <<: slider -->
+            <div class="range-slider" data-slider>
+              <span class="range-slider-handle"></span>
+              <span class="range-slider-active-segment"></span>
+              <input type="hidden">
+            </div>
+            <!-- :>> -->
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row">
+          <section class="medium-6 columns">
+            <p class="copyright">
+              Copyright &#169; 2016 Awesome Company, All Rights Reserved.
+            </p>
+
+            <p>
+              Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id
+              erat non orci commodo lobortis.  Proin neque massa, cursus ut,
+              gravida ut, lobortis eget, lacus.  Sed diam.  Praesent
+              fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel
+              velit tristique imperdiet.  Donec at pede.  Etiam vel neque
+              nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque
+              orci, porta a, aliquet quis, semper a, massa.  Phasellus
+              purus.  Pellentesque tristique imperdiet tortor.  Nam euismod
+              tellus id erat.
+            </p>
+          </section>
+
+          <section class="medium-6 columns">
+            <ul>
+              <li><a href="#">Mauris mollis tincidunt felis.</a></li>
+              <li><a href="#">Nunc rutrum turpis sed pede.</a></li>
+              <li><a href="#">Phasellus purus.</a></li>
+              <li><a href="#">Nulla posuere.</a></li>
+            </ul>
+          </section>
+        </div>
+      </footer>
+
+      <script id="template" type="x-tmpl-mustache">
+        <ul>
+          {{#artists}}
+          <li>{{name}} ({{formation_year}})</li>
+          {{/artists}}
+        </ul>
+      </script>
+
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/foundation.min.js"></script>
+      <script src="../../../js/discography/js/vendor/mustache.min.js"></script>
+      <script src="js/app.js"></script>
+      <script>
+        $(document).foundation();
+      </script>
+    </main>
+  </body>
+</html>
