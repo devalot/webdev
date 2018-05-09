@@ -111,13 +111,13 @@ Making an Ajax request:
 
 ### Exercise: Our First Model
 
-  #. Open `src/www/discography/js/models/artist.js`
+  #. Open `src/www/js/discography/js/models/artist.js`
 
   #. Fill in the missing pieces
 
   #. Run the tests by opening:
 
-        src/www/discography/js/spec/artist.html
+        src/www/js/discography/js/spec/artist.html
 
   #. Play with the code in the browser console
 
@@ -144,7 +144,7 @@ Making an Ajax request:
 
 ### Exercise: Adding Model Tests
 
-  #. Open `src/www/discography/js/spec/artist.spec.js`
+  #. Open `src/www/js/discography/js/spec/artist.spec.js`
 
   #. Add a test for the `fetchAll` function
 
@@ -238,7 +238,7 @@ For more details see the [Mustache][] library documentation.
 
 ### Exercise: Create the `View` Object
 
-  #. Open `src/www/discography/js/lib/view.js`
+  #. Open `src/www/js/discography/js/lib/view.js`
 
   #. Implement the `set` function
 
@@ -258,11 +258,11 @@ For more details see the [Mustache][] library documentation.
 
 ### Exercise: Building a Simple Controller
 
-  #. Open `src/www/discography/index.html`
+  #. Open `src/www/js/discography/index.html`
 
   #. Create a mustache template for the artist index view
 
-  #. Open `src/www/discography/js/controllers/artists_controller.js`
+  #. Open `src/www/js/discography/js/controllers/artists_controller.js`
 
   #. Fill in the `index` function
      - Fetch all artists
@@ -305,7 +305,7 @@ Let's fix that.
 
 ### Exercise: Factoring Out Common Functionality
 
-  #. Open `src/www/discography/js/lib/model.js`
+  #. Open `src/www/js/discography/js/lib/model.js`
 
   #. Move all common logic from `Artist` into `Model`
 
@@ -335,7 +335,7 @@ Let's fix that.
 
 ### Exercise: The Albums Model
 
-  #. Open `src/www/discography/js/models/album.js`
+  #. Open `src/www/js/discography/js/models/album.js`
 
   #. Fill in the `Album` model
      - Ensure that albums have an `artist_id` property
@@ -345,7 +345,7 @@ Let's fix that.
 
 ### Exercise: The Albums Controller
 
-  #. Open `src/www/discography/js/controllers/albums_controller.js`
+  #. Open `src/www/js/discography/js/controllers/albums_controller.js`
 
   #. Update the controller and views so that clicking an artist will
      display a list of albums
