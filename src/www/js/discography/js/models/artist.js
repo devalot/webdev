@@ -1,6 +1,10 @@
 /******************************************************************************/
 // Artist constructor.  Given an object describing an artist, copy all
 // of its local properties into `this'.
+//
+// This function will be called like this:
+//
+//  new Artist({name: "Prince", formation_year: 1970, ...});
 Artist = function(fields) {
 };
 

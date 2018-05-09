@@ -2,9 +2,8 @@
 // text "Click Me".  Those elements are followed by another element
 // containing the number zero, which we'll call the "counter".
 //
-// Inside the anonymous function below, write the necessary code so
-// that clicking any "Click Me" element will increment its paired
-// counter.
+// Below, write the necessary code so that clicking any "Click Me"
+// element will increment its paired counter.
 //
 // BONUS 1: Create a new element on the page that displays the sum of
 // all other counters.
