@@ -1,7 +1,7 @@
 // <<: without
-$.get("/a", function(data_a) {
-  $.get("/b/" + data_a.id, function(data_b) {
-    $.get("/c/" + data_b.id, function(data_c) {
+$.getJSON("/a", function(data_a) {
+  $.getJSON("/b/" + data_a.id, function(data_b) {
+    $.getJSON("/c/" + data_b.id, function(data_c) {
       console.log("Got C: ", data_c);
     }, function() {
       console.error("Call failed");
@@ -15,12 +15,12 @@ $.get("/a", function(data_a) {
 // :>>
 
 // <<: with
-$.get("/a").
+$.getJSON("/a").
   then(function(data) {
-    return $.get("/b/" + data.id);
+    return $.getJSON("/b/" + data.id);
   }).
   then(function(data) {
-    return $.get("/c/" + data.id);
+    return $.getJSON("/c/" + data.id);
   }).
   then(function(data) {
     console.log("Got C: ", data);
