@@ -24,5 +24,52 @@
 // URL:
 //     /api/artists/N/albums
 //
+// Wait for the DOM to be ready:
+$(function() {
+  var artistsUL = $("#artists");
+  var albumsUL  = $("#details");
 
-// Your code here.
+  artistsUL.click(function(e) {
+    var id = $(e.target).attr("data-artist-id");
+    if (id) artistClick(id);
+  });
+
+  var artistClick = function(id) {
+    albumsUL.html("");
+
+    Ajax.get("/api/artists/" + id + "/albums")
+      .then(function(albums) {
+        $(albums).each(function() {
+          $("<li>")
+            .text(this.name)
+            .appendTo(albumsUL);
+        });
+      });
+  };
+
+  var renderArtists = function(artists) {
+    artistsUL.html("");
+    albumsUL.html("");
+
+    $(artists).each(function() {
+      $("<li>")
+        .text(this.name + " (" +
+              this.formation_year + ")")
+        .attr("data-artist-id", this.id)
+        .appendTo(artistsUL);
+    });
+
+  };
+
+  $("button").click(function() {
+    Ajax.get("/api/artists")
+      .then(function(artists) {
+        renderArtists(artists);
+      })
+      .catch(function(message) {
+        // TODO: Display error message to the user.
+        console.error(message);
+      });
+  });
+
+});

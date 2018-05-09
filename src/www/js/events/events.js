@@ -13,3 +13,32 @@
 
 
 // Your code here.
+function Counter(element) {
+  this.element = element;
+}
+
+// Get the value of the counter:
+Counter.prototype.value = function() {
+  return parseInt(this.element.textContent) || 0;
+};
+
+// Increment the value of the counter:
+Counter.prototype.inc = function() {
+  this.element.textContent = this.value() + 1;
+};
+
+// Listen for click events on the body:
+document.body.addEventListener("click", function(e) {
+  // Only deal with clicks on things that look like counters:
+  if (e.target.textContent !== "Click Me") return;
+
+  // Make sure the browser doesn't deal with the click itself:
+  e.preventDefault();
+
+  // The counter is stored in a <SPAN> just after "Click Me":
+  var span = e.target.nextElementSibling;
+
+  // Create a counter object and increment the counter.
+  var counter = new Counter(span);
+  counter.inc();
+});

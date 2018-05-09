@@ -64,4 +64,31 @@
  * flags so they are in the correct order in the bucket.
  */
 
-// Your code here.
+function wrapInLI(node) {
+  if (node.tagName === "LI") {
+    return node; // Already an LI
+  }
+
+  var li = document.createElement("LI");
+  li.appendChild(node);
+  return li;
+}
+
+// This is the UL to insert into:
+var bucket = document.querySelector("#bucket ul");
+
+var flag1 = document.querySelector(".main li.foo");
+bucket.appendChild(wrapInLI(flag1));
+
+var flag2 = document.querySelector("#articles a span");
+bucket.appendChild(wrapInLI(flag2));
+
+var flag3Ancestor = document.querySelector(".footer div div");
+var flag3 = flag3Ancestor.children[1].firstElementChild;
+bucket.appendChild(wrapInLI(flag3));
+
+var flag4 = document.querySelector("#article-3 span");
+var flag5 = flag4.parentNode;
+
+bucket.appendChild(wrapInLI(flag4));
+bucket.appendChild(wrapInLI(flag5));

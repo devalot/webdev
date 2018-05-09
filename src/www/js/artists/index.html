@@ -2,25 +2,113 @@
 <html>
   <head>
     <title>Artists Exercise</title>
-    <link href="index.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+
+    <!--
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+     -->
   </head>
 
   <body>
-    <h1>Artists Exercise</h1>
-
-    <div>
-      <button>Load Content</button>
-    </div>
-
-    <div class="container">
-      <ul id="artists">
+    <header class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name"><h1><a href="#">Dirt Road Records</h1></a>
       </ul>
 
-      <ul id="details">
-      </ul>
+      <nav class="top-bar-section">
+        <ul class="right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Cart (2)</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="row">
+      <main class="medium-6 large-8 columns">
+        <div>
+          <button>Load Content</button>
+        </div>
+
+        <div class="row">
+          <div class="large-6 columns">
+            <h2>Artists</h2>
+            <ul id="artists"></ul>
+          </div>
+
+          <div class="large-6 columns">
+            <h2>Albums</h2>
+            <ul id="details"></ul>
+          </div>
+        </div>
+      </main>
+
+      <section class="medium-6 large-4 columns">
+        <p>
+          Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In
+          id erat non orci commodo lobortis.  Proin neque massa,
+          cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.
+          Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac
+          felis vel velit tristique imperdiet.  Donec at pede.  Etiam
+          vel neque nec dui dignissim bibendum.  Vivamus id enim.
+          Phasellus neque orci, porta a, aliquet quis, semper a,
+          massa.  Phasellus purus.  Pellentesque tristique imperdiet
+          tortor.  Nam euismod tellus id erat.
+        </p>
+
+        <ul>
+          <li><a href="#">Pellentesque tristique imperdiet tortor.</a></li>
+          <li><a href="#">Nam a sapien.</a></li>
+          <li><a href="#">Nulla posuere.</a></li>
+          <li><a href="#">Aliquam feugiat tellus ut neque.</a></li>
+          <li><a href="#">Donec at pede.</a></li>
+          <li><a href="#">Nulla facilisis, risus a rhoncus.</a></li>
+          <li><a href="#">Nullam tempus.</a></li>
+          <li><a href="#">Pellentesque tristique imperdiet tortor.</a></li>
+          <li><a href="#">Aliquam feugiat tellus ut neque.</a></li>
+          <li><a href="#">Nam vestibulum accumsan nisl.</a></li>
+          <li><a href="#">Phasellus lacus.</a></li>
+          <li><a href="#">Nullam libero mauris, consequat quis.</a></li>
+          <li><a href="#">Nam euismod tellus id erat.</a></li>
+          <li><a href="#">Donec neque quam, dignissim in, mollis.</a></li>
+          <li><a href="#">Cras placerat accumsan nulla.</a></li>
+        </ul>
+      </section>
     </div>
 
-    <script src="artists.js"></script>
+    <footer class="row">
+      <section class="medium-6 columns">
+        <p class="copyright">
+          Copyright &#169; 2016 Awesome Company, All Rights Reserved.
+        </p>
+
+        <p>
+          Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id
+          erat non orci commodo lobortis.  Proin neque massa, cursus ut,
+          gravida ut, lobortis eget, lacus.  Sed diam.  Praesent
+          fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel
+          velit tristique imperdiet.  Donec at pede.  Etiam vel neque
+          nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque
+          orci, porta a, aliquet quis, semper a, massa.  Phasellus
+          purus.  Pellentesque tristique imperdiet tortor.  Nam euismod
+          tellus id erat.
+        </p>
+      </section>
+
+      <section class="medium-6 columns">
+        <ul>
+          <li><a href="#">Mauris mollis tincidunt felis.</a></li>
+          <li><a href="#">Nunc rutrum turpis sed pede.</a></li>
+          <li><a href="#">Phasellus purus.</a></li>
+          <li><a href="#">Nulla posuere.</a></li>
+        </ul>
+      </section>
+
+    </footer>
     <script src="../ajax/ajax.js"></script>
+    <script src="artists.js"></script>
   </body>
 </html>

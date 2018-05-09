@@ -1,3 +1,38 @@
-.container {
+/* Mobile First Design */
+* { box-sizing: border-box; }
+
+body > header {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body > header > * {width: 100%; flex: none;}
+header h1 { text-align: center; }
+
+header > nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header > nav li {flex: none;}
+.container {display: flex; flex-direction: column;}
+.container > * {padding: 0.5em 1em;}
+
+@media (min-width: 321px) {
+  /* Overrides for Desktops */
+  body > header { flex-direction: row; }
+  header > h1 {text-align: left;}
+  body > header > * {flex: 1 1 300px; }
+
+  .container { flex-direction: row; }
+  .container > * {flex-basis: 300px;}
+
+  main       { flex-grow: 8; order: 2; }
+  .sidebar   { flex-grow: 4: order: 1; }
 }
