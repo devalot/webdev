@@ -86,11 +86,15 @@ NETWORK:
   - Chrome  >= 4
   - Opera   >= 11.5
 
+<div class="notes">
+
 ### Further Reading
 
   * [A Beginner's Guide to Using the Application Cache][html5rocks-appcache]
 
   * [Offline Web Applications (Spec)][whatwg-offline]
+
+</div>
 
 [html5rocks-appcache]: http://www.html5rocks.com/en/tutorials/appcache/beginner/
 [whatwg-offline]: https://html.spec.whatwg.org/multipage/browsers.html#offline

@@ -16,11 +16,13 @@
 
 ### Object Inheritance
 
-![Inheriting Properties](../../diagrams/js/inheritance.dot)
+![Inheriting Properties](../../diagrams/js/inheritance.dot)\
+<!-- Placeholder -->
 
 ### Object Inheritance
 
-![Setting a Property](../../diagrams/js/inheritance-set.dot)
+![Setting a Property](../../diagrams/js/inheritance-set.dot)\
+<!-- Placeholder -->
 
 ### Prototype Refresher
 
@@ -37,19 +39,23 @@
 
 ### Inheritance with `__proto__`
 
-![Prototypes](../../diagrams/js/proto-simple.dot)
+![Prototypes](../../diagrams/js/proto-simple.dot)\
+<!-- Placeholder -->
 
 ### Looking at `Array` Instances
 
-![Array and Array.prototype](../../diagrams/js/array-proto.dot)
+![Array and Array.prototype](../../diagrams/js/array-proto.dot)\
+<!-- Placeholder -->
 
 ### The Prototype Chain
 
-![Prototypal Inheritance](../../diagrams/js/proto.dot)
+![Prototypal Inheritance](../../diagrams/js/proto.dot)\
+<!-- Placeholder -->
 
 ### Another Look at `Array` Instances
 
-![Array and Friends](../../diagrams/js/full-array-proto.dot)
+![Array and Friends](../../diagrams/js/full-array-proto.dot)\
+<!-- Placeholder -->
 
 ## Establishing the Prototype Chain
 
@@ -81,7 +87,7 @@ property.
 ~~~ {.javascript insert="../../src/examples/js/inheritance.js" token="sq"}
 ~~~
 
-### Using `__proto__` in ES6
+### Using `__proto__` in ES6/ES2015
 
 Starting in ECMAScript Edition 6, the `__proto__` property is
 standardized as an accessible property.
@@ -252,9 +258,11 @@ Object.defineProperty(obj, propName, definition);
   * Define (or update) a property and its configuration
 
   * Some things that can be configured:
-    - `enumerable`: If the property is enumerated in `for .. in` loops (Boolean)
-    - `value`: The property's value
-    - `writable`: If the value can change (Boolean)
+    - `enumerable`: If the property is enumerated in `for .. in` loops
+    - `value`: The property's initial value
+    - `writable`: If the value can change
+    - `get`: Function to call when value is accessed
+    - `set`: Function to call when value is changed
 
 <div class="notes">
 

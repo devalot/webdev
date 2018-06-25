@@ -24,6 +24,10 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   - Chrome  >= 5
   - Opera   >= 16
 
+<div class="notes">
+
 ### Documentation
 
 <https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation>
+
+</div>

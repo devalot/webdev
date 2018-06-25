@@ -1,6 +1,10 @@
 digraph runtime {
   graph [layout=circo];
-  node [shape=rect];
+  node [ shape=rect
+       , style=filled
+       , fontcolor="#fdf6e3"
+       , fillcolor="#073642"
+       ];
 
   start [label="Start", shape=oval];
   check_events [label="Pending\nEvents?", shape=diamond];
@@ -8,7 +12,7 @@ digraph runtime {
 
   enqueue [label="Push Event to\nCallback Queue"];
   dequeue [label="Pop Callback\nfrom Queue"];
-  run     [label="Run Function and\nWait for Completion", fillcolor="lightpink"];
+  run     [label="Run Function and\nWait for Completion", fillcolor="#d33682"];
   wait    [label="Wait for Event"];
 
   start -> check_events;

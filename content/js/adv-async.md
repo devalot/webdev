@@ -47,6 +47,11 @@
 ![](../../diagrams/js/promise-owner.dot)\
 <!-- After diagram placeholder -->
 
+### Example: Promise Owner
+
+~~~ {.javascript insert="../../src/spec/promise.spec.js" token="delayed"}
+~~~
+
 ### Visualizing Promises (User)
 
 ![](../../diagrams/js/promise-user.dot)\

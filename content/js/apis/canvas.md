@@ -35,6 +35,11 @@ context.stroke(path);
   - Chrome  >= 1
   - Opera   >= 9
 
+<div class="notes">
+
 ### Documentation
 
 <https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial>
+
+
+</div>

@@ -5,10 +5,7 @@
 ~~~ {.javascript insert="../../../src/www/js/apis/fetch/example.js" token="fetch"}
 ~~~
 
-### Browser Support and Documentation
-
-\columnsbegin
-\column{.5\textwidth}
+### Browser Support
 
 Browsers:
 
@@ -19,11 +16,12 @@ Browsers:
   - Chrome  >= 42
   - Opera   >= 29
 
-\column{.5\textwidth}
+<div class="notes">
 
-Docs:
+### Documentation
 
   - [Living Standard](https://fetch.spec.whatwg.org/)
   - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-\columnsend
+
+</div>

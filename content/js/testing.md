@@ -12,13 +12,13 @@ In order to achieve comprehensive testing in JavaScript you need to:
 
 ### The Two Major Flavors of Testing
 
-  * Unit tests:
+  * Assertion-based testing:
 
     ~~~ {.javascript}
     assert("empty objects", objects.length > 0);
     ~~~
 
-  * Specification tests:
+  * Expectation-based testing:
 
     ~~~ {.javascript}
     expect(objects.length).toBeGreaterThan(0);
@@ -78,7 +78,7 @@ describe("ES6 String Methods", function() {
   : Should be greater than `n`.
 
 `toBeCloseTo(e, p)`:
-  : `Math.abs(e - actual) < (Math.pow(10, -p) / 2)`
+  : Difference within `p` places of precision.
 
 
 ### Smart Expectation Matchers
@@ -207,3 +207,14 @@ Other testing frameworks:
 
 ![](../../diagrams/js/browser-testing.dot)\
 <!-- Placeholder -->
+
+[karma]: http://karma-runner.github.io/0.12/index.html
+[jasmine]: http://jasmine.github.io/
+[jasmine-standalone]: https://github.com/pivotal/jasmine/releases
+[jasmine-npm]: https://github.com/jasmine/jasmine-npm
+[karma-jasmine]: https://github.com/karma-runner/karma-jasmine
+[jspec]: https://www.drupal.org/project/jspec
+[sinon]: http://sinonjs.org/
+[chai]: http://chaijs.com/
+[selenium]: http://www.seleniumhq.org/
+[phantomjs]: http://phantomjs.org/

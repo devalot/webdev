@@ -359,3 +359,6 @@ Let's fix that.
   #. Submitting the form should save an artist to the database
 
   #. Then display all artists again
+
+[mustache]: https://github.com/janl/mustache.js
+[jasmine]: http://jasmine.github.io/

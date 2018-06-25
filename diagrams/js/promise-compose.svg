@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="promise-compose.svg">
   <defs
      id="defs4" />
@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5487914"
-     inkscape:cx="166.11154"
-     inkscape:cy="921.13798"
+     inkscape:cx="262.64623"
+     inkscape:cy="843.65821"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3459"
      showgrid="true"
-     inkscape:window-width="1358"
-     inkscape:window-height="740"
-     inkscape:window-x="0"
-     inkscape:window-y="20"
+     inkscape:window-width="853"
+     inkscape:window-height="1390"
+     inkscape:window-x="854"
+     inkscape:window-y="0"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -64,18 +64,18 @@
          cy="70.453415"
          cx="206.36531"
          id="path3338"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#859900;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140"
          y="85.365524"
          x="192.94734"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="85.365524"
            x="192.94734"
            id="tspan4142"
-           sodipodi:role="line">b</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1">b</tspan></text>
       <circle
          r="25"
          cy="134.57068"
@@ -83,36 +83,36 @@
          id="path3338-7"
          style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-5"
          y="149.48279"
          x="192.94736"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#93a1a1;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="149.48279"
            x="192.94736"
            id="tspan4142-8"
-           sodipodi:role="line">b</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#93a1a1;fill-opacity:1;">b</tspan></text>
       <circle
          r="25"
          cy="198.68805"
          cx="206.36533"
          id="path3338-53"
-         style="fill:#ff6f42;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#dc322f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-2"
          y="213.60016"
          x="192.94736"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="213.60016"
            x="192.94736"
            id="tspan4142-5"
-           sodipodi:role="line">b</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">b</tspan></text>
     </g>
     <circle
-       style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#859900;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="path3338-5-6"
        cx="127.31446"
        cy="198.68805"
@@ -124,46 +124,46 @@
          cy="70.453415"
          cx="127.31445"
          id="path3338-5"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#859900;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-3"
          y="81.371384"
          x="115.67384"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="81.371384"
            x="115.67384"
            id="tspan4142-4"
-           sodipodi:role="line">a</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">a</tspan></text>
       <circle
          r="25"
          cy="134.57068"
          cx="127.31446"
          id="path3338-5-9"
-         style="fill:#ff6f42;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#dc322f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-3-3"
          y="145.48865"
          x="115.67383"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="145.48865"
            x="115.67383"
            id="tspan4142-4-9"
-           sodipodi:role="line">a</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">a</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text4140-3-2"
          y="209.60602"
          x="115.67383"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="209.60602"
            x="115.67383"
            id="tspan4142-4-5"
-           sodipodi:role="line">a</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1">a</tspan></text>
     </g>
     <g
        id="g3440">
@@ -172,52 +172,52 @@
          cy="70.453415"
          cx="331.41617"
          id="path3338-9"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#859900;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-8"
          y="81.371384"
          x="320.55679"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="81.371384"
            x="320.55679"
            id="tspan4142-0"
-           sodipodi:role="line">c</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">c</tspan></text>
       <circle
          r="25"
          cy="134.57068"
          cx="331.41617"
          id="path3338-9-8"
-         style="fill:#ff6f42;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#dc322f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-8-2"
          y="145.48865"
          x="320.55679"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="145.48865"
            x="320.55679"
            id="tspan4142-0-0"
-           sodipodi:role="line">c</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">c</tspan></text>
       <circle
          r="25"
          cy="198.68805"
          cx="331.41617"
          id="path3338-9-5"
-         style="fill:#ff6f42;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#dc322f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <text
-         sodipodi:linespacing="125%"
          id="text4140-8-4"
          y="209.60602"
          x="320.55679"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
            y="209.60602"
            x="320.55679"
            id="tspan4142-0-1"
-           sodipodi:role="line">c</tspan></text>
+           sodipodi:role="line"
+           style="font-size:40px;line-height:1.25;fill:#fdf6e3;fill-opacity:1;">c</tspan></text>
     </g>
     <g
        id="g3470"
@@ -245,49 +245,49 @@
        id="g3451"
        transform="translate(34.405121,0)">
       <text
-         sodipodi:linespacing="125%"
          id="text4214"
          y="77.608437"
          x="236.31351"
-         style="font-style:normal;font-weight:normal;font-size:22.86035347px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="77.608437"
            x="236.31351"
            id="tspan4216"
-           sodipodi:role="line">→</tspan></text>
+           sodipodi:role="line"
+           style="font-size:22.86035347px;line-height:1.25">→</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text4214-0"
          y="141.72571"
          x="236.31352"
-         style="font-style:normal;font-weight:normal;font-size:22.86035347px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="141.72571"
            x="236.31352"
            id="tspan4216-9"
-           sodipodi:role="line">→</tspan></text>
+           sodipodi:role="line"
+           style="font-size:22.86035347px;line-height:1.25">→</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text4214-7"
          y="205.84308"
          x="236.31352"
-         style="font-style:normal;font-weight:normal;font-size:22.86035347px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="205.84308"
            x="236.31352"
            id="tspan4216-8"
-           sodipodi:role="line">→</tspan></text>
+           sodipodi:role="line"
+           style="font-size:22.86035347px;line-height:1.25">→</tspan></text>
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="250"
        y="202.3622"
-       id="text3412"
-       sodipodi:linespacing="125%"><tspan
+       id="text3412"><tspan
          sodipodi:role="line"
          id="tspan3414"
          x="250"
-         y="202.3622"></tspan></text>
+         y="202.3622"
+         style="font-size:40px;line-height:1.25"> </tspan></text>
   </g>
 </svg>

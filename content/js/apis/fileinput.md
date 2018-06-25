@@ -34,6 +34,11 @@
   - Chrome  >= 13
   - Opera   >= 11.5
 
+
+<div class="notes">
+
 ### Documentation
 
 <https://developer.mozilla.org/en-US/docs/Web/API/File>
+
+</div>

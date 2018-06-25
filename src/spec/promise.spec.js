@@ -85,4 +85,44 @@ describe("Promise", function() {
       done(); // Must be the last thing called.
     });
   });
+
+  /****************************************************************************/
+  describe("delayed promise", function() {
+    /****************************************************************************/
+    // <<: delayed
+    var delayed = function() {
+      return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+
+          if (/* some condition */ true) {
+            resolve(/* resolved value */ 100);
+          } else {
+            reject(/* rejection value */ 0);
+          }
+
+        }, 500);
+      });
+    };
+    // :>>
+
+    beforeEach(function(){
+      jasmine.clock().install();
+    });
+
+    afterEach(function() {
+      jasmine.clock().uninstall();
+    });
+
+    it("should resolve in 500 milliseconds", function(done) {
+      var p = delayed();
+      jasmine.clock().tick(501);
+
+      p.then(function(n){
+        expect(n).toBe(100);
+        done();
+      }).catch(function() {
+        done.fail("WTF?");
+      });
+    });
+  });
 });
