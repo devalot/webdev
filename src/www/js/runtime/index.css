@@ -1,0 +1,37 @@
+main { display: flex; }
+main section { padding: 0 2em; }
+
+.current {
+  color: red;
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+pre {padding: 0; margin: 0;}
+pre[data-ins^="func"]:not(:first-of-type) { margin-top: 1em; }
+
+.stack ul {
+  font-family: monospace;
+  list-style-type: none;
+  border: 1px solid #888;
+  margin: 0;
+  padding: 0;
+}
+
+.stack li {
+  padding: 1em;
+  border-bottom: 1px solid #888;
+}
+
+.function li:first-child {
+  font-weight: bold;
+  border-left: 2px solid red;
+}
+
+.function li:not(:first-child) {
+  color: #888;
+}
+
+.work li[data-delay] {
+  color: #888;
+}

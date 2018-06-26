@@ -17,6 +17,8 @@
 ![The JavaScript Event Loop](../../diagrams/js/runtime.dot)\
 <!-- Placeholder -->
 
+(See the demo: `src/www/js/runtime/index.html`)
+
 ## Promises {#promises}
 
 ### Callbacks without Promises
