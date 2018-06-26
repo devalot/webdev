@@ -1,6 +1,6 @@
 ## Functional Programming with Arrays
 
-### Introducing Higher-order Functions
+### Introducing Higher-order Functions ### {#foreach}
 
 The `forEach` function is a good example of a *higer-order*
 function:
@@ -20,7 +20,7 @@ var f = function(val) { /* ... */ };
 a.forEach(f);
 ~~~
 
-### Array Testing
+### Array Testing ### {#every-some}
 
   - Test if a function returns `true` on all elements:
 

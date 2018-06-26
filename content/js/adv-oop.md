@@ -14,12 +14,12 @@
       - Can simulate classical inheritance as needed
       - More powerful
 
-### Object Inheritance
+### Object Inheritance ### {#property-get}
 
 ![Inheriting Properties](../../diagrams/js/inheritance.dot)\
 <!-- Placeholder -->
 
-### Object Inheritance
+### Object Inheritance ### {#property-set}
 
 ![Setting a Property](../../diagrams/js/inheritance-set.dot)\
 <!-- Placeholder -->
@@ -37,7 +37,7 @@
 
   * Only functions have a `prototype` property by default.
 
-### Inheritance with `__proto__`
+### Inheritance with `__proto__` ### {#proto}
 
 ![Prototypes](../../diagrams/js/proto-simple.dot)\
 <!-- Placeholder -->
@@ -77,12 +77,12 @@ property.
 ~~~ {.javascript insert="../../src/examples/js/objnew.js"}
 ~~~
 
-### Constructor Functions and OOP
+### Constructor Functions and OOP ### {#ctor-proto}
 
 ~~~ {.javascript insert="../../src/examples/js/inheritance.js" token="rec"}
 ~~~
 
-### Constructor Functions and Inheritance
+### Constructor Functions and Inheritance ### {#prototype-inheritance}
 
 ~~~ {.javascript insert="../../src/examples/js/inheritance.js" token="sq"}
 ~~~

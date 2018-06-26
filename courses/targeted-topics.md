@@ -14,8 +14,6 @@ copyright: >
   To license this work for use in a commercial setting contact Peter J. Jones.
 ---
 
-<!--
-
 # Introduction to This Course {.unnumbered}
 
 The source code for this course can be found at the following URL:
@@ -23,8 +21,6 @@ The source code for this course can be found at the following URL:
 <https://github.com/devalot/webdev>
 
 <<(../content/js/requirements.md)
-
--->
 
 Track 1: Modern Programming Techniques
 ========================================
@@ -61,6 +57,24 @@ In this section we will review and explore:
 
   * JavaScript `getters` and `setters`
 
+
+<<(../content/js/oop/context.md#example-this)
+<<(../content/js/adv-oop.md#property-get)
+<<(../content/js/adv-oop.md#property-set)
+
+<!-- FIXME: using Object.create() -->
+
+<<(../content/js/adv-oop.md#proto)
+<<(../content/js/adv-oop.md#ctor-proto)
+<<(../content/js/adv-oop.md#prototype-inheritance)
+<<(../content/js/changes/es2015.md#class-basic)
+
+<!-- FIXME: Generic functions -->
+<!-- FIXME: Static class methods -->
+<!-- FIXME: get and set descriptors -->
+<!-- FIXME: getters and setters in classes -->
+<!-- FIXME: functions and this gotcha (alias, bind, arrow) -->
+
 Functional Programming with JavaScript
 --------------------------------------
 
@@ -87,6 +101,28 @@ following:
 
   * Safe programming with pure functions
 
+<!-- FIXME: Three ways to write functions -->
+<!-- FIXME: Functions as data -->
+<!-- FIXME: Closures -->
+<!-- FIXME: New functions for thier scope -->
+
+<<(../content/js/functional/array.md#foreach)
+<<(../content/js/functional/array.md#every-some)
+
+<!-- FIXME: better filter example -->
+<!-- FIXME: better map example -->
+
+<<(../content/js/adv-functions.md#arity)
+<<(../content/js/adv-functions.md#call)
+<<(../content/js/adv-functions.md#apply)
+<<(../content/js/adv-functions.md#bind)
+<<(../content/js/adv-functions.md#partial-intro)
+<<(../content/js/adv-functions.md#partial-haskell)
+<<(../content/js/adv-functions.md#partial-bind)
+<<(../content/js/adv-functions.md#partial-exercise)
+
+<!-- FIXME: pure functions -->
+
 Asynchronous Programming
 ------------------------
 
@@ -110,6 +146,17 @@ advantage of these features we'll learn about:
   * Concurrent vs. serial async code
 
   * Writing modern asynchronous code
+
+<!-- FIXME: Why async? Intro to the runtime -->
+
+<<(../content/js/adv-async.md#async-callbacks)
+<<(../content/js/adv-async.md#promise-callbacks)
+<<(../content/js/adv-async.md#promise-details)
+<<(../content/js/adv-async.md#promise-composition)
+<<(../content/js/adv-async.md#promise-owner-diagram)
+<<(../content/js/adv-async.md#promise-owner-example)
+<<(../content/js/adv-async.md#promise-user-diagram)
+<<(../content/js/adv-async.md#promise-composition-example)
 
 Track 2: Modern APIs and Tools
 ================================
@@ -146,6 +193,11 @@ the following features:
   * New data types (e.g., Map and Set)
 
   * Review classes, arrow functions, and `async` functions
+
+<<(../content/js/changes/es2015-features.md)
+<<(../content/js/changes/es2016-features.md)
+<<(../content/js/changes/es2017-features.md)
+<<(../content/js/changes/es2018-features.md)
 
 Important Browser APIs
 ----------------------

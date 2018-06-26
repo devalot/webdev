@@ -75,7 +75,7 @@ var args = Array.prototype.slice.call(arguments);
 var args = Array.from(arguments);
 ~~~
 
-### Function Arity
+### Function Arity ### {#arity}
 
 A function's *arity* is the number of arguments it expects.  In
 JavaScript you can access a function's arity with its `length`
@@ -86,14 +86,14 @@ property:
 
 ## Overriding `this` at Invocation
 
-### `Function.prototype.call`
+### `Function.prototype.call` ### {#call}
 
 Calling a function and explicitly setting `this`:
 
 ~~~ {.javascript insert="../../src/examples/js/call.js"}
 ~~~
 
-### `Function.prototype.apply`
+### `Function.prototype.apply` ### {#apply}
 
 The `apply` method is similar to `call` except that additional
 arguments are given with an array:
@@ -101,7 +101,7 @@ arguments are given with an array:
 ~~~ {.javascript insert="../../src/examples/js/apply.js"}
 ~~~
 
-### `Function.prototype.bind`
+### `Function.prototype.bind` ### {#bind}
 
 The `bind` method creates a new function which ensures your original
 function is always invoked with `this` set as you desire, as well as
@@ -122,7 +122,7 @@ correctly when using a function as a callback.  For example:
 
 ## Partial Function Application
 
-### Introduction to Partial Function Application
+### Introduction to Partial Function Application ### {#partial-intro}
 
   * What happens when you call a function with fewer arguments than it
     was defined to take?
@@ -130,17 +130,17 @@ correctly when using a function as a callback.  For example:
   * Sometimes it's useful to provide fewer arguments and get back a
     function that accepts the remaining functions.
 
-### Simple Example Using Haskell
+### Simple Example Using Haskell ### {#partial-haskell}
 
 ~~~ {.haskell insert="../../src/examples/js/partial.hs"}
 ~~~
 
-### Example Using the `bind` Method
+### Example Using the `bind` Method ### {#partial-bind}
 
 ~~~ {.javascript insert="../../src/examples/js/partial.js" token="example"}
 ~~~
 
-### Exercise: Better Partial Functions {#A3fb265fc145611e5a608e3c31be73765}
+### Exercise: Better Partial Functions {#partial-exercise}
 
 Write a `Function.prototype.curry` function that let's the following
 code work:
