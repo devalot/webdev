@@ -36,7 +36,7 @@ let
   ];
 
   ##############################################################################
-  installPhase = ''
+  buildPhase = ''
     # Keep NPM from trying to use the network:
     export NO_UPDATE_NOTIFIER=1
 
@@ -45,8 +45,10 @@ let
 
     # Run some files through Babel:
     ( cd $dest/src
-      mkdir -p babel/es5
-      node node_modules/.bin/babel --presets env -d babel/es5 babel/es6
+      node node_modules/.bin/babel -d babel/es2015-es5 babel/es2015
+
+      # Broken:
+      # node node_modules/.bin/babel -d babel/es2018-es5 babel/es2018
     )
 
     # Prepare the Webpack demo app:
@@ -68,4 +70,4 @@ let
     }
   '';
 
-in { inherit buildInputs installPhase shellHook; }
+in { inherit buildInputs buildPhase shellHook; }

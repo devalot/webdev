@@ -54,7 +54,7 @@ JavaScript build/automation tools that:
 
   * Presents include:
 
-    * ES6 to ES5 transpiling
+    * ES2015 to ES5 transpiling
 
     * JSX to JavaScript conversion
 

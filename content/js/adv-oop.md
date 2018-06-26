@@ -6,7 +6,7 @@
 
   * JavaScript doesn't use classes, it uses prototypes
 
-  * There are ways to simulate classes (even ES6 does it!)
+  * There are ways to simulate classes (even ES2015 does it!)
 
   * The prototypal model:
       - Tends to be smaller
@@ -87,7 +87,7 @@ property.
 ~~~ {.javascript insert="../../src/examples/js/inheritance.js" token="sq"}
 ~~~
 
-### Using `__proto__` in ES6/ES2015
+### Using `__proto__` in ES2015
 
 Starting in ECMAScript Edition 6, the `__proto__` property is
 standardized as an accessible property.

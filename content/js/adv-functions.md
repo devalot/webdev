@@ -69,7 +69,7 @@ forward as it should be.  The following code is a common idiom:
 var args = Array.prototype.slice.call(arguments);
 ~~~
 
-*or*, with ES6:
+*or*, with ES2015:
 
 ~~~ {.javascript}
 var args = Array.from(arguments);

@@ -38,6 +38,9 @@ pkgs.stdenv.mkDerivation rec {
 
   # Build things:
   buildPhase = ''
+    # Build Node.js modules and projects:
+    ${nodeHelper.buildPhase}
+
     edify build --top "$(pwd)" courses/*.md
   '';
 
@@ -56,9 +59,6 @@ pkgs.stdenv.mkDerivation rec {
     for file in $dest/{handouts,slides}/*.pdf; do
       mv $file $(echo $file | sed -E 's/[.](handout|slides)[.]pdf/.pdf/')
     done
-
-    # Install Node.js modules and build projects:
-    ${nodeHelper.installPhase}
 
     # Build archives:
     ( cd $out && zip -9 -y -r -q ${name}.zip ${name} )

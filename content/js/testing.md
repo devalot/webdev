@@ -39,7 +39,7 @@ In order to achieve comprehensive testing in JavaScript you need to:
 ### Example: Writing Jasmine Tests
 
 ~~~ {.javascript}
-describe("ES6 String Methods", function() {
+describe("ES2015 String Methods", function() {
   it("has a find method", function() {
     expect("foo".find).toBeDefined();
   });

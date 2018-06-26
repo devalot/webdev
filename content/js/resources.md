@@ -54,4 +54,4 @@
 
 ## Compatibility Tables {.unnumbered}
 
-  * [ES6 Status By kangax](https://kangax.github.io/compat-table/es6/)
+  * [ES2015 Status By kangax](https://kangax.github.io/compat-table/es6/)

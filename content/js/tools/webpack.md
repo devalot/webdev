@@ -20,8 +20,8 @@ A build tool for web applications:
   * Can load remote assets on-demand
 
 <!-- === Refresher on JavaScript Modules === -->
-<<(../es6.md#modules-export)
-<<(../es6.md#modules-why)
+<<(../es2015.md#modules-export)
+<<(../es2015.md#modules-why)
 
 ### Bundling JavaScript Modules
 

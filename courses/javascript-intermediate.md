@@ -71,9 +71,12 @@ This JavaScript course is delivered during two days.
 
 <<(../content/js/mvc.md)
 
-<<(../content/js/es6.md)
-<<(../content/js/es7.md)
-<<(../content/js/es8.md)
+# Modern JavaScript
+
+  <<(../content/js/changes/es2015.md)
+  <<(../content/js/changes/es2016.md)
+  <<(../content/js/changes/es2017.md)
+  <<(../content/js/changes/es2018.md)
 
 <<(../content/js/popular-apis.md)
 <<(../content/js/frameworks.md)

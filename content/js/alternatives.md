@@ -79,7 +79,7 @@ Adding types to a function:
 
 ### TypeScript
 
-  * A language based on ES6 (classes, arrow functions, etc.)
+  * A language based on ESNEXT (classes, arrow functions, etc.)
 
   * All features compile to ES5
 
@@ -99,7 +99,7 @@ Adding types to a function:
 
   * Sponsored by Google
 
-### Popular ES6 to ES5 Transpilers
+### Popular ES2015 to ES5 Transpilers
 
   * [Babel](https://babeljs.io/)
 

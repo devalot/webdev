@@ -15,6 +15,7 @@
     - 6th Edition, 2015 (not so much)
     - 7th Edition, 2016
     - 8th Edition, 2017
+    - 9th Edition, 2018
 
   - Special-purpose language
 

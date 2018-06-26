@@ -155,7 +155,7 @@ var arr = Array.prototype.slice.call(arguments);
 var arr = [].slice.call(arguments);
 ~~~
 
-*or*, with ES6:
+*or*, with ES2015:
 
 ~~~ {.javascript}
 var args = Array.from(arguments);

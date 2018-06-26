@@ -33,7 +33,7 @@
   - Resides in the global binding
 
   - Inner functions do not capture parent's `this` (there are several
-    workarounds such as `var self = this;`, `bind`, and ES6 arrow
+    workarounds such as `var self = this;`, `bind`, and ES2015 arrow
     functions)
 
   - The `this` object can be set manually! (Take a look at the `call`,
