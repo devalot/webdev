@@ -36,7 +36,7 @@ let
   ];
 
   ##############################################################################
-  buildPhase = ''
+  installPhase = ''
     # Keep NPM from trying to use the network:
     export NO_UPDATE_NOTIFIER=1
 
@@ -70,4 +70,4 @@ let
     }
   '';
 
-in { inherit buildInputs buildPhase shellHook; }
+in { inherit buildInputs installPhase shellHook; }
