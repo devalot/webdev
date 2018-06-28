@@ -26,3 +26,31 @@
  * is clicked, update the text content of the <h1> element with the
  * text content of the clicked <li> element.
  */
+var HeaderHistory = function(header) {
+  this.header = header;
+};
+
+HeaderHistory.prototype.setHeader = function(text) {
+  if (text.match(/^\s*$/)) return; // Skip blank text.
+
+  var li = document.createElement("LI");
+  li.textContent = this.header.textContent;
+  document.getElementById("history").appendChild(li);
+
+  this.header.textContent = text;
+};
+
+function go() {
+  var header = document.querySelector("h1");
+  var form = document.querySelector("form");
+  var input = document.getElementById("new-text");
+  var history = new HeaderHistory(header);
+
+  form.addEventListener("submit", function(e) {
+    history.setHeader(input.value);
+    input.value = "";
+    e.preventDefault();
+  });
+}
+
+go();

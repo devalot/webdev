@@ -18,7 +18,13 @@
  * create a class that inherits from another class.
  */
 function Builder(properties) {
+  // Extract the constructor function:
+  var ctor = properties.constructor;
+  delete properties.constructor;
 
-  // Your code here.
+  // All other properties are prototype functions:
+  ctor.prototype = properties;
 
+  // Return the constructor function;
+  return ctor;
 }
