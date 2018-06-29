@@ -7,6 +7,10 @@ View = (function() {
   //
   // Mustache API Docs: https://github.com/janl/mustache.js
   var set = function(templateID, object) {
+    var templateNode = document.getElementById(templateID);
+    var template = templateNode ? templateNode.textContent : "ERROR";
+    var view = document.getElementById("view");
+    view.innerHTML = Mustache.render(template, object);
   };
 
   // Return the public API.

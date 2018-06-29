@@ -21,4 +21,60 @@ describe("Artist model interface", function() {
       done.fail("shouldn't have failed");
     });
   });
+
+  it("should fetch all records", function(done) {
+    var records = [
+      {name: "M83"},
+      {name: "The Presets"},
+      {name: "Soulwax"}
+    ];
+
+    ajaxSpy("get", records);
+
+    Artist.fetchAll()
+      .then(function(as) {
+        expect(as.length).toBe(records.length);
+        expect(as.map(a => a.name)).toEqual(records.map(r => r.name));
+        expect(as.every(a => a instanceof Artist)).toBeTruthy();
+        done();
+      })
+      .catch(function(msg) {
+        done.fail("unexpected catch: " + msg);
+      });
+  });
+
+  describe("prototype functions", function() {
+    it("should save new records", function(done) {
+      var record = {id: 42, name: "Bowie"};
+      var artist = new Artist({name: record.name});
+      ajaxSpy("post", record);
+
+      artist.save()
+        .then(function() {
+          expect(artist.id).toBeDefined();
+          expect(artist.id).toBe(record.id);
+          done();
+        })
+        .catch(function(msg) {
+          done.fail("unexpected catch: " + msg);
+        });
+    });
+
+    it("should update existing records", function(done) {
+      var artist = new Artist({id: 42, name: "Phantogram"});
+      ajaxSpy("patch", null);
+
+      artist.save()
+        .then(function(x) {
+          expect(x).toEqual(artist);
+          // What else can I test?
+          done();
+        })
+        .catch(function(msg) {
+          done.fail("unexpected catch: " + msg);
+        });
+    });
+
+    it("should delete existing records");
+  });
 });

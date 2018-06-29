@@ -6,18 +6,38 @@
 //
 //  new Artist({name: "Prince", formation_year: 1970, ...});
 Artist = function(fields) {
+  var allowed = ["id", "name", "formation_year", "website"];
+  allowed.forEach(prop => this[prop] = fields[prop]);
 };
 
 /******************************************************************************/
 // Should fetch a single artist via Ajax.  Return a promise that
 // resolves to an instance of the Artist function.
 Artist.fetchOne = function(id) {
+  return Ajax.get("/api/artists/" + id)
+    .then(function(record) {
+      return new Artist(record);
+    });
+
+  // Using ES2015 arrow functions:
+  return Ajax.get("/api/artists/" + id)
+    .then(r => new Artist(r));
 };
 
 /******************************************************************************/
 // Should fetch all artists via Ajax.  Return a promise that
 // resolves to an array of Artist objects.
 Artist.fetchAll = function() {
+  return Ajax.get("/api/artists")
+    .then(function(records) {
+      return records.map(function(record) {
+        return new Artist(record);
+      });
+    });
+
+  // Using ES2015 arrow functions:
+  return Ajax.get("/api/artists")
+    .then(rs => rs.map(r => new Artist(r)));
 };
 
 /******************************************************************************/
@@ -29,10 +49,25 @@ Artist.prototype = {
   // the `this' object with properties returned by the server
   // (i.e. the newly generated remote ID when creating a record).
   save: function() {
+    if (this.id) {
+      return Ajax.patch("/api/artists/" + this.id, this)
+        .then( () => this );
+    } else {
+      return Ajax.post("/api/artists", this)
+        .then(record => {
+          this.id = record.id;
+          return this;
+        });
+    }
   },
 
   // Optional: Write a `destroy' method that deletes the artist from
   // the remote server.  Return a promise.
   destroy: function() {
+    return Ajax.destroy("/api/artists/" + this.id)
+      .then(() => {
+        delete this.id;
+        return this;
+      });
   },
 };
