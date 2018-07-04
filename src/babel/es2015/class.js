@@ -1,4 +1,43 @@
 /******************************************************************************/
+// <<: rec
+class Rectangle {
+  constructor(width, height) {
+    this.width  = width;
+    this.height = height;
+  }
+
+  area() {
+    return this.width * this.height;
+  }
+}
+// :>>
+
+// <<: rec-new
+var rect = new Rectangle(10, 20);
+rect.area(); // 200
+// :>>
+console.log(rect.area());
+
+/******************************************************************************/
+// <<: sq
+class Square extends Rectangle {
+  constructor(width) {
+    super(width, width);
+  }
+
+  sideSize() {
+    return this.width;
+  }
+}
+// :>>
+
+// <<: sq-new
+var sq = new Square(10);
+sq.area(); // 100
+// :>>
+console.log(sq.area());
+
+/******************************************************************************/
 // <<: Base class.
 class Person {
   constructor(name) {
@@ -44,7 +83,7 @@ Foo.sayHello();
 // :>>
 
 /******************************************************************************/
-// <<: Getters and setters.
+// <<: get-set
 class Car {
   constructor() {
     this._speed = 0;
@@ -55,13 +94,13 @@ class Car {
   }
 
   set speed(x) {
-    if (x > 100) throw "Slow the hell down";
-    if (x < 0)   throw "Uh, what?";
+    if (x < 0 || x > 100) throw "I don't think so";
     this._speed = x;
   }
 }
 
 var toyota = new Car();
-toyota.speed = 99;
-console.log(toyota.speed);
+toyota.speed = 55; // Calls the `set speed' function.
 // :>>
+
+console.assert(toyota.speed === 55);

@@ -1,6 +1,6 @@
 ## Function Closures
 
-### Closures: Basics
+### Closures: Basics ###
 
   - One of the most important features of JavaScript
 
@@ -10,7 +10,7 @@
 
   - Happens automatically when you use function expressions
 
-### Closures: Definitions
+### Closures: Definitions ###
 
   - Bound variable: local variables created with `var` or `let` are
     said to be *bound*.
@@ -23,26 +23,28 @@
 
   - A closure is a new scope for free variables.
 
-### Closures: Example
+### Demonstrating Closures: An Example ### {#closure-example}
 
 ~~~ {.javascript insert="../../src/examples/js/closure.js"}
 ~~~
 
-See: `src/examples/js/closure.html`
+(Open `src/examples/js/closure.html` and play in the debugger.)
 
-### Closures: Practical Example ### {#private}
+### A Practical Example of Using Closures: Private Variables ### {#private}
+
+Using closures to create truly private variables in JavaScript:
 
 ~~~ {.javascript}
 var Foo = function() {
-
   var privateVar = 42;
 
-  var getter = function() {
-    return privateVar;
-  };
-
   return {
-    getPrivateVar: getter,
+    getPrivateVar: function() {
+      return privateVar;
+    },
+    setPrivateVar: function(n) {
+      if (n) privateVar = n;
+    }
   };
 };
 
@@ -50,7 +52,7 @@ var x = Foo();
 x.getPrivateVar(); // 42
 ~~~
 
-### Exercise: Sharing Scope
+### Exercise: Sharing Scope ### {#closure-exercise}
 
   #. Open the following file:
 
@@ -61,7 +63,7 @@ x.getPrivateVar(); // 42
   #. Run the tests by opening the `index.html` file in your browser.
 
 
-### Loops and Closures {#e926298a258211e8abc83b6fee9937e9}
+### Closure Gotcha: Loops, Functions, and Closures {#closures-loops}
 
 <div class="notes">
 

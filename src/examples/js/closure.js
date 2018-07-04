@@ -1,15 +1,11 @@
-function outer() {
-  var name = "Grim";
+var makeCounter = function(startingValue) {
+  var n = startingValue;
 
-  var inner = function() {
-    console.log(name);
+  return function() {
+    return n += 1;
   };
+};
 
-  return inner;
-}
-
-// Invoke `outer' and get a function back:
-var f = outer();
-
-// Sometime in the future...
-f();
+var counter = makeCounter(0);
+counter(); // 1
+counter(); // 2

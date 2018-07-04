@@ -1,15 +1,20 @@
 ## Functions
 
-### Introduction to Functions
+### Introduction to Functions ### {#func-intro}
 
-  - "The best part of JavaScript"
+  - "The best part of JavaScript" -- Someone
 
   - Functions are used to implement **many** features in JS:
-    - Classes, constructors, and methods
-    - Modules, namespaces, and closures
-    - And a whole bunch of other stuff
 
-### Defining a Function
+    - Methods
+    - Classes
+    - Modules (i.e., namespaces, packages, etc.)
+    - Create new scopes
+    - Callbacks
+    - Event handlers
+    - etc.
+
+### Defining a Function ### {#func-define}
 
 There are several ways of defining functions:
 
@@ -17,7 +22,7 @@ There are several ways of defining functions:
   - Function expression (anonymous functions)
   - Arrow functions (new in ES2015)
 
-### Function Definition (Statement)
+### Function Definition (Statement) ### {#func-statement}
 
 ~~~ {.javascript}
 function add(a, b) {
@@ -27,14 +32,13 @@ function add(a, b) {
 var result = add(1, 2); // 3
 ~~~
 
-  - This syntax is know as a **function definition statement**. It is
-    only allowed where statements are allowed. This is when the
-    distinction between statements and expressions becomes important.
+  - This syntax is know as a *function definition statement*.  It is
+    only allowed where statements are allowed.
 
-  - Most of the time you should use the expression form of function
-    definition.
+  - In modern JavaScript you will mostly use the expression form of
+    function definitions or the arrow function syntax.
 
-### Function Definition (Expression)
+### Function Definition (Expression) ### {#func-expression}
 
 ~~~ {.javascript}
 var add = function(a, b) {
@@ -48,7 +52,26 @@ var result = add(1, 2); // 3
   - Name after `function` is optional
   - We'll see it used later
 
-### Function Invocation
+### Function Definition (Arrow Functions) ### {#func-arrow}
+
+Short form (single expression, implicit `return`):
+
+~~~ {.javascript}
+var add = (a, b) => a + b;
+add(1, 2);
+~~~
+
+Long form (multiple expressions, explicit `return`):
+
+~~~ {.javascript}
+var add = (a, b) => {
+  return a + b;
+};
+
+add(1, 2);
+~~~
+
+### Function Invocation ### {#func-parens}
 
   - Parentheses are mandatory in JavaScript for function invocation
 
@@ -71,18 +94,52 @@ add(1, 2)    // a is 1, b is 2
 add(1, 2, 3) // No name for 3.
 ~~~
 
-### Function Invocation and Parentheses
+(Note: ES2015 has default parameters.)
+
+### Functions as Data ### {#func-data}
+
+Functions can be treated like any other type of JavaScript value:
 
 ~~~ {.javascript}
 var add = function(a, b) {return a + b;};
 
 var x = add;       // x is now a function object
 x(1, 2);           // Same as add(1, 2);
-
-var y = add(1, 2); // y is 3
 ~~~
 
-### Functions that Return a Value
+### Passing Functions as Arguments ### {#funcs-as-args}
+
+It's very common to create functions *on the fly* and pass them to
+other functions as arguments:
+
+~~~ {.javascript}
+var a = [1, 2, 3];
+
+a.forEach(function(n) {
+  console.log(n);
+});
+~~~
+
+### Functions that Return Functions ### {#funcs-as-returns}
+
+Functions can create *nested functions* and return them:
+
+~~~ {.javascript}
+var f = function recordStartTime() {
+  var d = new Date();
+
+  return function() {
+    return d;
+  };
+};
+
+var getStartTime = recordStartTime();
+getStartTime(); // 2018-07-03T23:16:00.383Z
+~~~
+
+(Note: this creates what's known as a *closure*.)
+
+### Don't Forget to Use `return` ###
 
 In order for a function to return a value to its caller, it must use the
 `return` keyword.

@@ -60,20 +60,22 @@ In this section we will review and explore:
 
 <<(../content/js/oop/context.md#example-this)
 <<(../content/js/adv-oop.md#property-get)
+<<(../content/js/adv-oop.md#object-create)
 <<(../content/js/adv-oop.md#property-set)
-
-<!-- FIXME: using Object.create() -->
-
 <<(../content/js/adv-oop.md#proto)
+<<(../content/js/adv-oop.md#proto-array)
 <<(../content/js/adv-oop.md#ctor-proto)
+<<(../content/js/adv-oop.md#es2015-classes)
 <<(../content/js/adv-oop.md#prototype-inheritance)
-<<(../content/js/changes/es2015.md#class-basic)
-
-<!-- FIXME: Generic functions -->
-<!-- FIXME: Static class methods -->
-<!-- FIXME: get and set descriptors -->
-<!-- FIXME: getters and setters in classes -->
-<!-- FIXME: functions and this gotcha (alias, bind, arrow) -->
+<<(../content/js/adv-oop.md#es2015-inheritance)
+<<(../content/js/adv-oop.md#generic-functions)
+<<(../content/js/adv-oop.md#es2015-static)
+<<(../content/js/adv-oop.md#get-set)
+<<(../content/js/adv-oop.md#es2015-get-set)
+<<(../content/js/adv-oop.md#this-gotcha)
+<<(../content/js/adv-oop.md#this-bind)
+<<(../content/js/adv-oop.md#this-alias)
+<<(../content/js/adv-oop.md#this-arrow)
 
 Functional Programming with JavaScript
 --------------------------------------
@@ -101,10 +103,22 @@ following:
 
   * Safe programming with pure functions
 
-<!-- FIXME: Three ways to write functions -->
-<!-- FIXME: Functions as data -->
-<!-- FIXME: Closures -->
-<!-- FIXME: New functions for thier scope -->
+<<(../content/js/basic-functions.md#func-intro)
+<<(../content/js/basic-functions.md#func-define)
+<<(../content/js/basic-functions.md#func-statement)
+<<(../content/js/basic-functions.md#func-expression)
+<<(../content/js/basic-functions.md#func-arrow)
+<<(../content/js/basic-functions.md#func-parens)
+<<(../content/js/basic-functions.md#wrong-args)
+<<(../content/js/basic-functions.md#func-data)
+<<(../content/js/basic-functions.md#funcs-as-args)
+<<(../content/js/basic-functions.md#funcs-as-returns)
+<<(../content/js/closures.md#closure-example)
+<<(../content/js/closures.md#private)
+<<(../content/js/closures.md#closures-loops)
+<<(../content/js/closures.md#closure-exercise)
+
+<!-- FIXME: New functions for thier scope: IIFE -->
 
 <<(../content/js/functional/array.md#foreach)
 <<(../content/js/functional/array.md#every-some)
@@ -219,6 +233,14 @@ and more powerful features of web browsers:
 
   * Simple asynchronous HTTP requests using `fetch`
 
+<<(../content/js/apis/webstorage.md)
+<<(../content/js/apis/webworkers.md)
+
+<!-- FIXME: add a secont about service workers -->
+
+<<(../content/js/apis/websockets.md)
+<<(../content/js/apis/fetch.md)
+
 JavaScript Development Tools
 ----------------------------
 
@@ -240,3 +262,9 @@ important tools you need to know:
   * Project compilation with Webpack
 
   * Testing with Jasmine
+
+<!-- FIXME: ESLint how-to -->
+<!-- FIXME: Slides on bable -->
+
+<<(../content/js/tools/webpack.md)
+<<(../content/js/testing.md)

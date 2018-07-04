@@ -13,7 +13,7 @@
 
 ### Context Example ### {#example-this}
 
-~~~ {.javascript insert="../../../src/examples/js/this.js"}
+~~~ {.javascript insert="../../../src/examples/js/this.js" token="manual"}
 ~~~
 
 ### Context and the `this` Keyword

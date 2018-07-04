@@ -10,18 +10,27 @@ Rectangle.prototype.area = function() {
 };
 
 var rect = new Rectangle(10, 20);
-console.log(rect.area());
+rect.area(); // 200
 // :>>
+
+// <<: generic
+Rectangle.withWidth = function(width) {
+  return new Rectangle(width, width);
+};
+
+var rect = Rectangle.withWidth(10);
+rect.area(); // 100
+// :>>
+console.assert(rect.area() === 100);
 
 // <<: sq
 var Square = function(width) {
   Rectangle.call(this, width, width);
-  this.isSquare = true;
 };
 
 Square.prototype = Object.create(Rectangle.prototype);
 Square.prototype.sideSize = function() {return this.width;};
 
 var sq = new Square(10);
-console.log(sq.area());
+sq.area(); // 100
 // :>>

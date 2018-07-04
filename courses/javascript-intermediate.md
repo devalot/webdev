@@ -43,7 +43,7 @@ This JavaScript course is delivered during two days.
 
 <<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
 <<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
-<<(../content/js/closures.md#e926298a258211e8abc83b6fee9937e9)
+<<(../content/js/closures.md#closures-loops)
 <<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
 ## Document Object Model Review
