@@ -13,7 +13,7 @@ Welcome to Intermediate JavaScript
 
   4. Download the course ZIP file:
 
-     https://www.devalot.com/r/webdev
+     https://www.devalot.com/r/webdev.zip
 
   5. Extract the ZIP file
 

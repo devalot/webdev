@@ -11,7 +11,7 @@
     -   Dynamic, defined at runtime
     -   Context is accessible as the `this` variable
 
-### Context Example ### {#example-this}
+### Calling Functions Through Objects ### {#example-this}
 
 ~~~ {.javascript insert="../../../src/examples/js/this.js" token="manual"}
 ~~~

@@ -23,22 +23,24 @@
   * Uses an anonymous closure to hide private functionality and make a
     public interface
 
-### Immediately-Invoked Function Expressions: Basics
+### Immediately-Invoked Function Expressions: Basics ### {#iife-short}
+
+Using functions to create new scopes/namespaces:
 
 ~~~ {.javascript insert="../../src/examples/js/iife.js" token="short"}
 ~~~
 
-### Immediately-Invoked Function Expressions: Expanded
+### Immediately-Invoked Function Expressions: Expanded ### {#iife-expanded}
 
 ~~~ {.javascript insert="../../src/examples/js/iife.js" token="long"}
 ~~~
 
-### Example: Module Pattern
+### Example: Module Pattern ### {#iife-modules}
 
 ~~~ {.javascript include="../../src/examples/js/module.js"}
 ~~~
 
-### Exercise: Using IIFEs to Make Private Functions
+### Exercise: Using IIFEs to Make Private Functions ###
 
   #. Open the following file:
 

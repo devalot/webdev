@@ -14,9 +14,9 @@
       - Can simulate classical inheritance as needed
       - More powerful
 
-### Object Inheritance ### {#property-get}
+### Inheriting Properties from Other Objects ### {#property-get}
 
-![Inheriting Properties](../../diagrams/js/inheritance.dot)\
+![](../../diagrams/js/inheritance.dot)\
 <!-- Placeholder -->
 
 ### Manual Configuration of Inheritance ### {#object-create}
@@ -27,9 +27,9 @@
 ~~~ {.javascript exec="node ../../src/examples/js/objcreate.js"}
 ~~~
 
-### Object Inheritance ### {#property-set}
+### Setting Properties and Inheritance ### {#property-set}
 
-![Setting a Property](../../diagrams/js/inheritance-set.dot)\
+![](../../diagrams/js/inheritance-set.dot)\
 <!-- Placeholder -->
 
 ### Prototype Refresher

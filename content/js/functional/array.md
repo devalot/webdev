@@ -40,35 +40,36 @@ a.forEach(f);
     });
     ~~~
 
-### Higher-order Array Functions
-
-  - `a.filter(f);`: New array filtered with a predicate `f`
-  - `a.map(f);`: New array after transforming with `f`
-  - `a.reduce(f);`: **Fold** an array into something else using `f`
-
-### Filtering an Array with a Predicate Function
+### Filtering an Array with a Predicate Function ###
 
 ![](../../../diagrams/js/filter.dot)\
 <!-- Placeholder -->
+
+### Filter Example ### {#filter-example}
+
+~~~ {.javascript insert="../../../src/examples/js/filter.js" token="simple"}
+~~~
+
+(See: `src/examples/js/filter.js`)
 
 ### Mapping a Function Over an Array
 
 ![](../../../diagrams/js/map.dot)\
 <!-- Placeholder -->
 
-### Example: Folding an Array with `reduce`
+### Map Example ### {#map-example}
 
-~~~ {.javascript}
-var a = [1, 2, 3];
-
-// Sum numbers in `a'.
-var sum = a.reduce(function(acc, elm) {
-  // 1. `acc' is the accumulator
-  // 2. `elm' is the current element
-  // 3. You must return a new accumulator
-  return acc + elm;
-}, 0);
+~~~ {.javascript insert="../../../src/examples/js/map.js" token="simple"}
 ~~~
+
+(See: `src/examples/js/map.js`)
+
+### Example: Folding an Array with `reduce` ### {#reduce-example}
+
+~~~ {.javascript insert="../../../src/examples/js/reduce.js" token="sum"}
+~~~
+
+(See: `src/examples/js/reduce.js`)
 
 ### Exercise: Arrays and Functional Programming
 

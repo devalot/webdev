@@ -1,12 +1,6 @@
-## Webpack
-
-[Webpack][] is a powerful tool for managing all of the assets of a web
-application.  It takes the place of traditional build tools such as
-Maven, GNU Make, etc.
-
 ### What is Webpack?
 
-A build tool for web applications:
+[Webpack][] is a build tool for web applications:
 
   * Uses ES2015 modules to bundle JavaScript into a single file ready
     for deployment to production

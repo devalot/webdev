@@ -9,10 +9,10 @@ digraph proto {
   object_a [label="{a|color: \"red\"|speed: 100}"];
   object_b [label="{b|color: \"green\"}"];
   object_c [label="{c|width: 10}"];
-  
+
   object_c -> object_b;
   object_b -> object_a;
 
   // ###########################################################################
-  notes [label="c.color === \"green\";\lc.speed === 100;\lc.width === 10;\l", shape="plaintext",  style=""];
+  notes [label="c.color === \"green\";\lc.speed === 100;", shape="plaintext",  style=""];
 }

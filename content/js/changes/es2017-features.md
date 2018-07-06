@@ -8,7 +8,7 @@
 
   * A few others
 
-### Async Functions ###
+### Async Functions ### {#async-await}
 
 **Major** improvement to asynchronous functions thanks to promises and
 generators.  Asynchronous callbacks are hidden with new syntax.

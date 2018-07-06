@@ -9,7 +9,7 @@ Welcome to HTML and CSS Introduction
 
   3. Download the course ZIP file:
 
-     https://www.devalot.com/r/webdev
+     https://www.devalot.com/r/webdev.zip
 
   4. Extract the ZIP file
 

@@ -117,15 +117,14 @@ following:
 <<(../content/js/closures.md#private)
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/closures.md#closure-exercise)
-
-<!-- FIXME: New functions for thier scope: IIFE -->
-
+<<(../content/js/adv-functions.md#iife-short)
+<<(../content/js/adv-functions.md#iife-expanded)
+<<(../content/js/adv-functions.md#iife-modules)
 <<(../content/js/functional/array.md#foreach)
 <<(../content/js/functional/array.md#every-some)
-
-<!-- FIXME: better filter example -->
-<!-- FIXME: better map example -->
-
+<<(../content/js/functional/array.md#filter-example)
+<<(../content/js/functional/array.md#map-example)
+<<(../content/js/functional/array.md#reduce-example)
 <<(../content/js/adv-functions.md#arity)
 <<(../content/js/adv-functions.md#call)
 <<(../content/js/adv-functions.md#apply)
@@ -134,8 +133,7 @@ following:
 <<(../content/js/adv-functions.md#partial-haskell)
 <<(../content/js/adv-functions.md#partial-bind)
 <<(../content/js/adv-functions.md#partial-exercise)
-
-<!-- FIXME: pure functions -->
+<<(../content/js/functional/pure.md)
 
 Asynchronous Programming
 ------------------------
@@ -161,8 +159,7 @@ advantage of these features we'll learn about:
 
   * Writing modern asynchronous code
 
-<!-- FIXME: Why async? Intro to the runtime -->
-
+<<(../content/js/adv-async.md#intro)
 <<(../content/js/adv-async.md#async-callbacks)
 <<(../content/js/adv-async.md#promise-callbacks)
 <<(../content/js/adv-async.md#promise-details)
@@ -171,6 +168,8 @@ advantage of these features we'll learn about:
 <<(../content/js/adv-async.md#promise-owner-example)
 <<(../content/js/adv-async.md#promise-user-diagram)
 <<(../content/js/adv-async.md#promise-composition-example)
+<<(../content/js/apis/fetch/basics.md)
+<<(../content/js/changes/es2017-features.md#async-await)
 
 Track 2: Modern APIs and Tools
 ================================
@@ -233,13 +232,20 @@ and more powerful features of web browsers:
 
   * Simple asynchronous HTTP requests using `fetch`
 
-<<(../content/js/apis/webstorage.md)
-<<(../content/js/apis/webworkers.md)
+<<(../content/js/apis/fetch/basics.md)
+<<(../content/js/apis/fetch/support.md)
 
-<!-- FIXME: add a secont about service workers -->
+<<(../content/js/apis/webstorage/basics.md)
+<<(../content/js/apis/webstorage/support.md)
 
-<<(../content/js/apis/websockets.md)
-<<(../content/js/apis/fetch.md)
+<<(../content/js/apis/webworkers/basics.md)
+<<(../content/js/apis/webworkers/support.md)
+
+<<(../content/js/apis/serviceworkers/basics.md)
+<<(../content/js/apis/serviceworkers/support.md)
+
+<<(../content/js/apis/websockets/basics.md)
+<<(../content/js/apis/websockets/support.md)
 
 JavaScript Development Tools
 ----------------------------
@@ -263,8 +269,13 @@ important tools you need to know:
 
   * Testing with Jasmine
 
-<!-- FIXME: ESLint how-to -->
-<!-- FIXME: Slides on bable -->
-
+<<(../content/js/tools/lint.md)
+<<(../content/js/tools/babel.md)
 <<(../content/js/tools/webpack.md)
-<<(../content/js/testing.md)
+<<(../content/js/jasmine/basics.md)
+<<(../content/js/jasmine/matcher.md)
+<<(../content/js/jasmine/life.md)
+<<(../content/js/jasmine/pending.md)
+<<(../content/js/jasmine/spy.md)
+<<(../content/js/jasmine/async.md)
+<<(../content/js/jasmine/run.md)

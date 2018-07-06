@@ -1,5 +1,3 @@
-## The Web Storage API
-
 ### What is Web Storage?
 
   * Allows you to store key/value pairs
@@ -53,29 +51,3 @@ Properties and methods:
   * `clear()`: Remove all items in the storage object.
 
   * `getItem(key)`, `setItem(key, value)`, `removeItem(key)`.
-
-<div class="notes">
-
-More information about the `Storage` object can be found at:
-
-<https://developer.mozilla.org/en-US/docs/Web/API/Storage>
-
-</div>
-
-### Browser Support
-
-  - IE      >= 8
-  - Firefox >= 2
-  - Safari  >= 4
-  - Chrome  >= 4
-  - Opera   >= 10.50
-
-<div class="notes">
-
-### Documentation
-
-  * <https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage>
-
-  * <https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage>
-
-</div>

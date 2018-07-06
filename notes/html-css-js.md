@@ -7,7 +7,7 @@ Welcome to HTML, CSS, and JavaScript
 
   2. Download the course ZIP file:
 
-     https://www.devalot.com/r/webdev
+     https://www.devalot.com/r/webdev.zip
 
   3. Extract the ZIP file
 
