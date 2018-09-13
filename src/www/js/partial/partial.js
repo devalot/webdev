@@ -2,19 +2,23 @@
 
 Function.prototype.curry = function() {
   let f = this;
-  let args = [];
-  let this_ = null;
 
-  let wrapper = function() {
-    args = args.concat(Array.from(arguments));
-    this_ = this_ || this;
+  // Curried function wrapping around `f':
+  return function() {
+    let args = [];
+    let this_ = this;
 
-    if (args.length >= f.length) {
-      return f.apply(this_, args);
-    } else {
-      return wrapper;
-    }
+    // Function that checks for saturation:
+    let wrapper = function() {
+      args = args.concat(Array.from(arguments));
+
+      if (args.length >= f.length) {
+        return f.apply(this_, args);
+      } else {
+        return wrapper;
+      }
+    };
+
+    return wrapper.apply(this, arguments);
   };
-
-  return wrapper;
 };
