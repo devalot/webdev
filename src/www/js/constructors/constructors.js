@@ -1,3 +1,4 @@
+// jshint esversion: 6
 /*
  * Exercise: Constructor Functions
  *
@@ -18,6 +19,8 @@
  *   mul: Same as `add', except use multiplication
  *   get: Returns the value of the current calculator value
  *
+ * 5. The `add' and `mul' functions should clear the stack.
+ *
  * Example usage:
  *
  *   var c = new Calculator(5);
@@ -27,3 +30,26 @@
  *                // Stack is now empty.
  *   c.get();     // returns 20
  */
+function Calculator(init) {
+  this.value = init || 0;
+  this.stack = [];
+}
+
+Calculator.prototype = {
+  op: function(f) {
+    this.value = this.stack.reduce(f, this.value);
+    this.stack = [];
+  },
+  get: function() {
+    return this.value;
+  },
+  push: function(num) {
+    this.stack.push(num);
+  },
+  add: function() {
+    this.op((a, n) => a + n);
+  },
+  mul: function() {
+    this.op((a, n) => a * n);
+  }
+};

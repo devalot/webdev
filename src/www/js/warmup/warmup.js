@@ -1,3 +1,4 @@
+// jshint esversion: 6
 /*
  * Use Case:
  *
@@ -26,3 +27,31 @@
  * is clicked, update the text content of the <h1> element with the
  * text content of the clicked <li> element.
  */
+let HeaderManager = function(headerSelector, ulSelector) {
+  this.header = document.querySelector(headerSelector);
+  this.history = document.querySelector(ulSelector);
+};
+
+HeaderManager.prototype.update = function(text) {
+  this.push(this.header.textContent);
+  this.header.textContent = text;
+};
+
+HeaderManager.prototype.push = function(text) {
+  let li = document.createElement("li");
+  li.textContent = text;
+  this.history.appendChild(li);
+};
+
+let manager = new HeaderManager("h1", "#history");
+let form = document.querySelector("form");
+let input = document.getElementById("new-text");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (input.value.match(/\S/)) {
+    manager.update(input.value);
+    input.value = "";
+  }
+});

@@ -1,3 +1,4 @@
+// jshint esversion: 6
 /*
  * Hosts Exercise:
  *
@@ -47,4 +48,34 @@
  *
  * Make sure your tests still pass.
  */
-Hosts = undefined;
+Hosts = (function() {
+  // If using ES2015, use Map instead!
+  let table = Object.create(null);
+
+  let api = {
+    add: function(name, address) {
+      if (!(name in table)) table[name] = [];
+      table[name].push(address);
+    },
+    lookupByName: function(name) {
+      if (name in table) return table[name];
+      return [];
+    },
+    lookupByIP: function(address) {
+      let names = [];
+
+      for (let name in table) {
+        if (table[name].includes(address)) {
+          names.push(name);
+        }
+      }
+
+      return names;
+    },
+    clear: function() {
+      table = Object.create(null);
+    }
+  };
+
+  return api;
+})();
