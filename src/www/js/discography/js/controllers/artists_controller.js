@@ -1,11 +1,28 @@
+// jshint esversion:6
 ArtistsController = (function(){
 
   // Display all artists.
   var index = function() {
+    // Step 1. Fetch all artists.
+    Artist.fetchAll()
+      .then(function(artists) {
+        // Step 2. Render a view
+        View.set("artists-index", {artists});
+        document.getElementById("artists-list")
+          .addEventListener("click", function(e) {
+            let url = e.target.getAttribute("href");
+            let id = url && url.match(/(\d+)$/);
+            if (id) show(id);
+          });
+      });
   };
 
   // Display a single artist.
   var show = function(id) {
+    Artist.fetchOne(id)
+      .then(function(artist) {
+        View.set("artists-show", artist);
+      });
   };
 
   // Display a form for creating a new artist.
