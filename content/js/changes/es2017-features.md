@@ -13,21 +13,7 @@
 **Major** improvement to asynchronous functions thanks to promises and
 generators.  Asynchronous callbacks are hidden with new syntax.
 
-~~~ {.javascript}
-async function getArtist() {
-  try {
-    var response1 = await fetch("/api/artists/1");
-    var artist = await response1.json();
-
-    var response2 = await fetch("/api/artists/1/albums");
-    artist.albums = await response2.json();
-
-    return artist;
-  } catch(e) {
-    // Rejected promises throw exceptions
-    // when using `await'.
-  }
-}
+~~~ {.javascript insert="../../../src/examples/js/async-await.js"}
 ~~~
 
 ### Summary of Other Changes

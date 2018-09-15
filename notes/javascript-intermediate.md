@@ -25,7 +25,16 @@ Welcome to Intermediate JavaScript
 Don't have a preferred text editor or IDE?
 ------------------------------------------
 
-If you don't have a coding editor already, 
+If you don't have a coding editor already,
 I recommend Visual Studio Code:
 
   https://code.visualstudio.com/
+
+Who are you?
+------------
+
+  1. What's your name?
+
+  2. How comfortable are you with JavaScript?
+
+  3. What do you want to learn?

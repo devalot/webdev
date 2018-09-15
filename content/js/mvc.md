@@ -97,15 +97,15 @@ Making an Ajax request:
 
         GET /api/artists/2
 
-  * Create a new record (JSON body):
+  * Create a new artist (JSON body):
 
         POST /api/artists
 
-  * Update a record (JSON body):
+  * Update an artist (JSON body):
 
         PATCH /api/artists/2
 
-  * Delete a record (no body):
+  * Delete an artist (no body):
 
         DELETE /api/artists/2
 
@@ -118,8 +118,6 @@ Making an Ajax request:
   #. Run the tests by opening:
 
         src/www/js/discography/js/spec/artist.html
-
-  #. Play with the code in the browser console
 
 ### Testing with Jasmine
 
