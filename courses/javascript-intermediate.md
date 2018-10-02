@@ -39,14 +39,16 @@ This JavaScript course is delivered during two days.
 <<(../metadata/links.md)
 <<(../content/js/requirements.md)
 
-# JavaScript Review (Warming Up)
+JavaScript Review (Warming Up)
+==============================
 
-<<(../content/js/basic-functions.md#a5d15bd6258111e8a686cf157ebd8e95)
-<<(../content/js/basic-functions.md#a706548258211e8a1a73f1bc7dcefa25)
+<<(../content/js/hoisting.md#a5d15bd6258111e8a686cf157ebd8e95)
+<<(../content/js/hoisting.md#a706548258211e8a1a73f1bc7dcefa25)
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
-## Document Object Model Review
+Document Object Model Review
+----------------------------
 
 <<(../content/js/dom/fetch.md#c90768f0258511e8b89193e5afe59cab)
 <<(../content/js/dom/traversal.md#e8f42bd0258511e8936dbfa61311da9e)
@@ -56,33 +58,59 @@ This JavaScript course is delivered during two days.
 <<(../content/js/dom/events.md#a6c1d41c258611e89ac42bb59fa4b75e)
 <<(../content/js/dom/warmup-ex.md)
 
-<!-- Advanced Functions -->
-<<(../content/js/adv-functions.md)
+Functional Programming
+======================
 
-<!-- Advanced OOP -->
-<<(../content/js/adv-oop.md)
+<<(../content/js/functional/basics.md)
+<<(../content/js/functional/params.md)
+<<(../content/js/functional/data.md)
+<<(../content/js/closures.md)
+<<(../content/js/functional/this.md)
+<<(../content/js/functional/modules.md)
+<<(../content/js/functional/array.md)
+<<(../content/js/functional/pure.md)
 
-# Testing in JavaScript
+Object-Oriented Programming
+===========================
+
+<<(../content/js/oop/context.md)
+<<(../content/js/oop/prototype.md)
+<<(../content/js/oop/ctor-and-classes.md)
+<<(../content/js/oop/reflection.md)
+<<(../content/js/oop/mutable.md)
+
+
+Asynchronous Programming
+========================
+
+<<(../content/js/adv-async.md#intro)
+<<(../content/js/adv-async.md#async-callbacks)
+<<(../content/js/adv-async.md#promise-callbacks)
+<<(../content/js/adv-async.md#promise-details)
+<<(../content/js/adv-async.md#promise-composition)
+<<(../content/js/adv-async.md#promise-owner-diagram)
+<<(../content/js/adv-async.md#promise-owner-example)
+<<(../content/js/adv-async.md#promise-user-diagram)
+<<(../content/js/adv-async.md#promise-composition-example)
+<<(../content/js/apis/fetch/basics.md)
+<<(../content/js/changes/es2017-features.md#async-await)
+
+<!--
+
+  TODO:
+
+    * Web Components
+
+    * Observable (Reactivity/Immutability)
+
+    * TypeScript Fundamentals
+
+    * Contributing to an Open Source project
+
+-->
+
+
+Testing with Jasmine
+====================
 
 <<(../content/js/testing.md)
-
-<!-- The runtime and promises -->
-<<(../content/js/adv-async.md)
-
-<<(../content/js/mvc.md)
-
-# Modern JavaScript
-
-  <<(../content/js/changes/es2015.md)
-  <<(../content/js/changes/es2016.md)
-  <<(../content/js/changes/es2017.md)
-  <<(../content/js/changes/es2018.md)
-
-<<(../content/js/popular-apis.md)
-<<(../content/js/frameworks.md)
-
-# Real World JavaScript Development
-
-<<(../content/js/alternatives.md)
-<<(../content/js/tools.md)
-<<(../content/js/resources.md)

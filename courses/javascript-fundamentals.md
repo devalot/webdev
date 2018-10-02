@@ -45,7 +45,7 @@ The source code for this course can be found at the following URL:
 
 # Functions
 
-  <<(../content/js/basic-functions.md)
+  <<(../content/js/functional/basics.md)
   <<(../content/js/functional/array.md)
   <<(../content/js/function-patterns.md)
   <<(../content/js/closures.md)

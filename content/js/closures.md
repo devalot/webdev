@@ -1,4 +1,5 @@
-## Function Closures
+Closures
+--------
 
 ### Closures: Basics ###
 
@@ -8,7 +9,7 @@
 
   - But, they are all around you in JavaScript
 
-  - Happens automatically when you use function expressions
+  - Happens automatically when you nest functions
 
 ### Closures: Definitions ###
 

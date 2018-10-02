@@ -45,12 +45,4 @@ var fakeNew = function(func) {
 };
 ~~~
 
-### Exercise: Constructor Functions
-
-  #. Open the following file:
-
-        src/www/js/constructors/constructors.js
-
-  #. Complete the exercise.
-
-  #. Run the tests by opening the `index.html` file in your browser.
+<<(../labs.md#constructors)

@@ -101,7 +101,7 @@ a.map(e => e + 1);
 
   * If you use curly braces you need to use `return`.
 
-### Default Parameters ###
+### Default Parameters {#params-default} ###
 
 ~~~ {.javascript insert="../../../src/babel/es2015/parameters.js" token="default"}
 ~~~
@@ -123,7 +123,7 @@ a.map(e => e + 1);
 
 </div>
 
-### Rest Parameters
+### Rest Parameters {#params-rest}
 
 ~~~ {.javascript insert="../../../src/babel/es2015/parameters.js" token="rest"}
 ~~~
@@ -144,7 +144,7 @@ a.map(e => e + 1);
 
 </div>
 
-### Spread Syntax
+### Spread Syntax {#args-spread} ###
 
 ~~~ {.javascript insert="../../../src/babel/es2015/parameters.js" token="spread"}
 ~~~
