@@ -1,3 +1,4 @@
+// <<: foo
 var a = 5;
 
 function foo(b) {
@@ -6,12 +7,15 @@ function foo(b) {
 
   if (d === c) {
     var e = "error: wrong number";
-    console.log(e);
+    console.error(e);
   }
 
-  var bar = function(f) {
+  return function(f) {
     var c = 2;
-    a = 12;
-    return a + c + b;
+    return f + c + b;
   };
 }
+// :>>
+
+var x = foo(1)(2);
+console.assert(x === 5);

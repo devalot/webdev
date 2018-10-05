@@ -15,7 +15,7 @@ Variable Scope
 
 ### Example: Identify the Scope For Each Variable {#a706548258211e8a1a73f1bc7dcefa25}
 
-~~~ {.javascript insert="../../src/examples/js/three-scopes.js"}
+~~~ {.javascript insert="../../src/examples/js/three-scopes.js" token="foo"}
 ~~~
 
 <div class="notes">
@@ -25,8 +25,6 @@ Variable Scope
   - Variables `a` and `d` are global
 
   - There are two independent local variables named `c`
-
-  - Variable `bar` is a local variable containing a function
 
   - Variables `b`, `e`, and `f` are local to their respective functions
 
