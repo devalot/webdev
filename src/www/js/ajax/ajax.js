@@ -7,49 +7,37 @@
  *
  * Hints:
  *
- * Set content type before sending a request:
+ *   * `fetch' returns a promise that yield a response object.
  *
- *   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+ *   * The response object has a `json' method that returns a promise.
  *
- * Send a data object as JSON:
- *
- *    req.send(JSON.stringify(data));
- *
- * Parse an incoming JSON string:
- *
- *   var data = JSON.parse(req.responseText || "null");
- *
- * Only resolve the promise if the (load) `status' code is >= 200 and
- * < 300.  Otherwise reject the promise.  Also reject the promise on
- * XHR failure (error).
- *
+ *   * The `fetch' API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
  */
 Ajax = (function(){
-  var raw = function(url, method, data) {
-    // Return a promise.
+  let raw = async function(url, method, data) {
+    // Return a promise via fetch.
   };
 
   // HTTP GET (Fetch resource).
-  var get = function(url) {
+  let get = function(url) {
+    return raw(url, 'GET');
   };
 
   // HTTP POST (Create new resource).
-  var post = function(url, data) {
+  let post = function(url, data) {
+    return raw(url, 'POST', data);
   };
 
   // HTTP PATCH (Update existing resource).
-  var patch = function(url, data) {
+  let patch = function(url, data) {
+    return raw(url, 'PATCH', data);
   };
 
   // HTTP DELETE (Delete existing resource).
-  var destroy = function(url) {
+  let del = function(url) {
+    return raw(url, 'DELETE');
   };
 
-  // Public interface here:
-  return {
-    get:     get,
-    post:    post,
-    patch:   patch,
-    destroy: destroy,
-  };
+  // Return the public interface.
+  return {get, post, patch, del};
 })();

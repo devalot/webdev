@@ -83,29 +83,48 @@ Object-Oriented Programming
 Asynchronous Programming
 ========================
 
-<<(../content/js/adv-async.md#intro)
-<<(../content/js/adv-async.md#async-callbacks)
-<<(../content/js/adv-async.md#promise-callbacks)
-<<(../content/js/adv-async.md#promise-details)
-<<(../content/js/adv-async.md#promise-composition)
-<<(../content/js/adv-async.md#promise-owner-diagram)
-<<(../content/js/adv-async.md#promise-owner-example)
-<<(../content/js/adv-async.md#promise-user-diagram)
-<<(../content/js/adv-async.md#promise-composition-example)
-<<(../content/js/apis/fetch/basics.md)
-<<(../content/js/changes/es2017-features.md#async-await)
+<<(../content/js/async/runtime.md)
+<<(../content/js/async/promises.md)
+<<(../content/js/apis/fetch/index.md)
+<<(../content/js/apis/fetch/lab.md)
+<<(../content/js/async/await.md)
 
 <!--
 
   TODO:
 
-    * Web Components
+    * Async Programming
 
-    * Observable (Reactivity/Immutability)
+      - Show what it look like to make an Ajax request before showing
+        (and other notes from the targeted topics class)
 
-    * TypeScript Fundamentals
+      - Lab: Using the fetch API + REST
 
-    * Contributing to an Open Source project
+      - Lab: Using the fetch API with await
+
+    * Web Application Development
+
+      - Web Components
+
+      - Lab: Disco app with custom <disco-artist> elements
+
+      - Observable (Reactivity/Immutability)
+
+      - Lab: A web sockets chat room
+
+      - Web Sockets
+
+      - Service Workers
+
+    * Real World JavaScript
+
+      - TypeScript Fundamentals
+
+      - Webpack
+
+      - Babel
+
+      - Contributing to an Open Source project
 
 -->
 

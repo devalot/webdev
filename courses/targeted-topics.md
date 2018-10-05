@@ -159,17 +159,11 @@ advantage of these features we'll learn about:
 
   * Writing modern asynchronous code
 
-<<(../content/js/adv-async.md#intro)
-<<(../content/js/adv-async.md#async-callbacks)
-<<(../content/js/adv-async.md#promise-callbacks)
-<<(../content/js/adv-async.md#promise-details)
-<<(../content/js/adv-async.md#promise-composition)
-<<(../content/js/adv-async.md#promise-owner-diagram)
-<<(../content/js/adv-async.md#promise-owner-example)
-<<(../content/js/adv-async.md#promise-user-diagram)
-<<(../content/js/adv-async.md#promise-composition-example)
-<<(../content/js/apis/fetch/basics.md)
-<<(../content/js/changes/es2017-features.md#async-await)
+<<(../content/js/async/runtime.md)
+<<(../content/js/async/promises.md)
+<<(../content/js/apis/fetch/index.md)
+<<(../content/js/apis/fetch/lab.md)
+<<(../content/js/async/await.md)
 
 Track 2: Modern APIs and Tools
 ================================

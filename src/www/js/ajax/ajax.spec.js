@@ -1,64 +1,71 @@
-describe("Ajax interface", function() {
+describe("Ajax", function() {
 
-  /****************************************************************************/
-  it("has a get method", function() {
-    expect(Ajax.get).toBeDefined();
-  });
+  // Placeholder for the response object:
+  let response;
 
-  /****************************************************************************/
-  it("get method should resolve promise", function(done) {
-    XMLHttpRequest.withResponse(function(response) {
-      response.responseText = JSON.stringify([1, 2, 3]);
+  // Install mock fetch API:
+  beforeEach(function() {
+    spyOn(window, 'fetch').and.callFake(function(url, options={}) {
+      let json = () => Promise.resolve({url, options});
+      response = {json};
 
-      var promise = Ajax.get("/foo");
-      expect(promise).toBeDefined();
-      expect(promise.then).toBeDefined();
-
-      promise.then(function(array) {
-        expect(response.requestMethod).toEqual("GET");
-        expect(response.requestURL).toEqual("/foo");
-        expect(array.length).toEqual(3);
-
-        // Tell Jasmine we were called.  MUST call the `done' function
-        // *after* all expectations or the tests will silently pass :(
-        done();
-      }).catch(function() {
-        done.fail("promise should have been resolved");
-      });
+      spyOn(response, "json").and.callThrough();
+      return Promise.resolve(response);
     });
   });
 
-  /****************************************************************************/
-  it("should reject when status is not in 200 range", function(done) {
-    XMLHttpRequest.withResponse(function(response) {
-      response.status = 199;
-
-      var promise = Ajax.get("/foo");
-      expect(promise).toBeDefined();
-      expect(promise.then).toBeDefined();
-
-      promise.then(function() {
-        done.fail("when HTTP status is 199, promise should reject");
-      }).catch(function() {
-        done(); // Tell jasmine that our test is done.
-      });
+  describe("raw", function() {
+    it("should call fetch", function() {
+      Ajax.get("/");
+      expect(window.fetch).toHaveBeenCalled();
     });
-  });
 
-  /****************************************************************************/
-  it("should reject when the `error' event fires", function(done) {
-    XMLHttpRequest.withResponse(function(response) {
-      response.status = null; // Will trigger an `error' event.
+    it("should call the response.json method", async function(done) {
+      let r = await Ajax.get("/");
+      expect(response.json).toHaveBeenCalled();
+      done();
+    });
 
-      var promise = Ajax.get("/foo");
-      expect(promise).toBeDefined();
-      expect(promise.then).toBeDefined();
+    it("should return a promise", function() {
+      let r = Ajax.get("/");
 
-      promise.then(function() {
-        done.fail("when `error' event fires the promise should reject");
-      }).catch(function() {
-        done(); // Tell jasmine that our test is done.
-      });
+      expect(typeof r).toBe("object");
+      expect(r instanceof Promise).toBeTruthy();
+    });
+
+    it("should use the correct HTTP method", async function(done) {
+      for (let m of ["get", "post", "patch", "del"]) {
+        let {url, options} = await Ajax[m]("/");
+        if (m === "del") m = "delete";
+
+        expect(url).toBe("/");
+        expect(options.method).toBe(m.toUpperCase());
+      }
+
+      done();
+    });
+
+    it("should send the correct body as JSON", async function(done) {
+      let data = {a: 1, b: 2};
+
+      let rs = [
+        {method: "get"},
+        {method: "del"},
+        {method: "post",  data},
+        {method: "patch", data}
+      ];
+
+      for (let r of rs) {
+        let {options} = await Ajax[r.method]("/", r.data);
+
+        if (r.data) {
+          expect(options.body).toBe(JSON.stringify(r.data));
+        } else {
+          expect(options.body).toBeUndefined();
+        }
+      }
+
+      done();
     });
   });
 });
