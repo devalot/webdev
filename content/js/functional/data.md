@@ -6,9 +6,9 @@ Function Objects
 Functions can be treated like any other type of JavaScript value:
 
 ~~~ {.javascript}
-var add = function(a, b) {return a + b;};
+let add = function(a, b) {return a + b;};
 
-var x = add;       // x is now a function object
+let x = add;       // x is now a function object
 x(1, 2);           // Same as add(1, 2);
 ~~~
 
@@ -18,7 +18,7 @@ It's very common to create functions *on the fly* and pass them to
 other functions as arguments:
 
 ~~~ {.javascript}
-var a = [1, 2, 3];
+let a = [1, 2, 3];
 
 a.forEach(function(n) {
   console.log(n);
@@ -30,15 +30,15 @@ a.forEach(function(n) {
 Functions can create *nested functions* and return them:
 
 ~~~ {.javascript}
-var f = function recordStartTime() {
-  var d = new Date();
+let f = function recordStartTime() {
+  let d = new Date();
 
   return function() {
     return d;
   };
 };
 
-var getStartTime = recordStartTime();
+let getStartTime = recordStartTime();
 getStartTime(); // 2018-07-03T23:16:00.383Z
 ~~~
 

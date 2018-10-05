@@ -39,7 +39,7 @@
     if (e.request.url.match(/artists$/)) {
       console.log("hijacking resource fetch and returning static content");
 
-      var response = new Response(JSON.stringify({message: "hello"}));
+      let response = new Response(JSON.stringify({message: "hello"}));
       e.respondWith(response);
     }
   });

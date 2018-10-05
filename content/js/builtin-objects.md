@@ -61,8 +61,8 @@
   - Must be constructed:
 
     ~~~ {.javascript}
-    var d = new Date(); // current date
-    var d = new Date("Wed, 28 Jan 2015 13:30:00 MST");
+    let d = new Date(); // current date
+    let d = new Date("Wed, 28 Jan 2015 13:30:00 MST");
     ~~~
 
   - Months start at 0, days start at 1
@@ -83,7 +83,7 @@
   * Prototype Methods:
 
     ~~~ {.javascript}
-    var d = new Date();
+    let d = new Date();
 
     d.getMonth();
     d.getHours();
@@ -104,16 +104,16 @@
 
     ~~~ {.javascript}
     // Array literal:
-    var myArray = [1, 2, 3];
+    let myArray = [1, 2, 3];
 
     // Using the constructor function:
-    var myArray = new Array(1, 2, 3);
+    let myArray = new Array(1, 2, 3);
     ~~~
 
   * Functions/Methods:
 
     ~~~ {.javascript}
-    var a = [1, 2, 3];
+    let a = [1, 2, 3];
     a.length; // 3
     Array.isArray(a); // true (>= ES5)
     typeof a; // "object" :(
@@ -123,7 +123,7 @@
 
   - Insert:  `a.unshift(x);` **or** `a.push(x);`
   - Remove:  `a.shift();` **or** `a.pop();`
-  - Combine: `var b = a.concat([4, 5]);`
+  - Combine: `let b = a.concat([4, 5]);`
   - Extract: `a.slice(...);` **or** `a.splice(...);`
   - Search:  `a.indexOf(x);`
   - Sort:    `a.sort();`
@@ -134,7 +134,7 @@
 keys in order!
 
 ~~~ {.javascript}
-for (var i=0; i < myArray.length; ++i) {
+for (let i=0; i < myArray.length; ++i) {
   // myArray[i]
 }
 ~~~

@@ -17,9 +17,9 @@
 ### Variables in JavaScript
 
 ~~~ {.javascript}
-var x;          // undefined
-var y = "Foo";  // String
-var z = 5;      // Number
+let x;          // undefined
+let y = "Foo";  // String
+let z = 5;      // Number
 ~~~
 
 ### Declaring and Initializing Variables
@@ -27,15 +27,15 @@ var z = 5;      // Number
   - Declare variables to make them local:
 
     ~~~ {.javascript}
-    var x;
+    let x;
     ~~~
 
   - You can initialize them at the same time:
 
     ~~~ {.javascript}
-    var n = 1;
+    let n = 1;
 
-    var x, y=1, z;
+    let x, y=1, z;
     ~~~
 
   - If you don't declare a variable with `var`, the first time you
@@ -242,15 +242,15 @@ operator:
 Boolean negation: `!`:
 
 ~~~ {.javascript}
-var x = false;
-var y = !x; // y is true
+let x = false;
+let y = !x; // y is true
 ~~~
 
 Double negation: `!!`:
 
 ~~~ {.javascript}
-var n = 1;
-var y = !!n; // y is true
+let n = 1;
+let y = !!n; // y is true
 ~~~
 
 ### Exercise: Boolean Operators

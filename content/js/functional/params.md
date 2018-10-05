@@ -23,13 +23,13 @@ Functions have access to two special variables:
   - Best to just use ES2015 *rest* parameters
 
 ~~~ {.javascript}
-var arr = Array.prototype.slice.call(arguments);
+let args = Array.prototype.slice.call(arguments);
 ~~~
 
 *or*, with ES2015:
 
 ~~~ {.javascript}
-var args = Array.from(arguments);
+let args = Array.from(arguments);
 ~~~
 
 ### Function Arity ### {#arity}

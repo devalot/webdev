@@ -6,7 +6,7 @@ The `forEach` function is a good example of a *higer-order*
 function:
 
 ~~~ {.javascript}
-var a = [1, 2, 3];
+let a = [1, 2, 3];
 
 a.forEach(function(val, index, array) {
   // Do something...
@@ -16,7 +16,7 @@ a.forEach(function(val, index, array) {
 Or, less idiomatic:
 
 ~~~ {.javascript}
-var f = function(val) { /* ... */ };
+let f = function(val) { /* ... */ };
 a.forEach(f);
 ~~~
 
@@ -25,7 +25,7 @@ a.forEach(f);
   - Test if a function returns `true` on all elements:
 
     ~~~ {.javascript}
-    var a = [1, 2, 3];
+    let a = [1, 2, 3];
 
     a.every(function(val) {
       return val > 0;

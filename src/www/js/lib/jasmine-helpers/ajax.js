@@ -72,7 +72,7 @@ XMLHttpRequest.prototype = {
     if (!this.srhCalled)  throw "Whoa: the XHR.setRequestHeader method was never called!";
 
     if (XMLHttpRequest.fakeResponse) {
-      for (var p in XMLHttpRequest.fakeResponse) {
+      for (let p in XMLHttpRequest.fakeResponse) {
         if (XMLHttpRequest.fakeResponse.hasOwnProperty(p)) {
           this[p] = XMLHttpRequest.fakeResponse[p];
         }

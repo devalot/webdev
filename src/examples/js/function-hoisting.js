@@ -1,7 +1,7 @@
-var sum = add(1, 2);
+let sum = add(1, 2); // works
 console.log(sum);
 
-var diff = sub(1, 2);
+let diff = sub(1, 2); // does not work.
 console.log(diff);
 
 function add (a, b) {

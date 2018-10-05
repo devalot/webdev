@@ -1,6 +1,6 @@
 $(function() {
   console.log("main: creating a web worker");
-  var worker = new Worker("worker.js");
+  let worker = new Worker("worker.js");
 
   console.log("main: listening for messages coming from the worker");
   worker.addEventListener("message", function(e) {

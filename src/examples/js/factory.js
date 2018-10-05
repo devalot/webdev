@@ -1,6 +1,6 @@
 // <<: factory
-var Message = function(sender, content) {
-  var m = Object.create(Message.prototype);
+let Message = function(sender, content) {
+  let m = Object.create(Message.prototype);
 
   m.sender  = sender;
   m.content = content;
@@ -11,5 +11,5 @@ var Message = function(sender, content) {
 
 Message.prototype = { /* ... */ };
 
-var message = Message("pjones@devalot.com", "Hello");
+let message = Message("pjones@devalot.com", "Hello");
 // :>>

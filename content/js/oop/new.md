@@ -33,9 +33,9 @@ The `new` operator does the following:
 ### Implementing a Fake `new` Operator
 
 ~~~ {.javascript}
-var fakeNew = function(func) {
+let fakeNew = function(func) {
   // Step 1. Create an object with proper inheritance:
-  var newObject = Object.create(func.prototype);
+  let newObject = Object.create(func.prototype);
 
   // Step 2. Invoke the constructor:
   func.call(newObject);

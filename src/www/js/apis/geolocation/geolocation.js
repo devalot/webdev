@@ -1,8 +1,8 @@
 Geolocation = (function() {
 
-  var get = function(element) {
-    var missing = function() {element.innerHTML = "MISSING.";};
-    var error   = function() {element.innerHTML = "ERROR!";   };
+  let get = function(element) {
+    let missing = function() {element.innerHTML = "MISSING.";};
+    let error   = function() {element.innerHTML = "ERROR!";   };
 
     if (!("geolocation" in navigator)) {
       return missing();
@@ -13,7 +13,7 @@ Geolocation = (function() {
         pos.coords.latitude.toString()  + "<br/>" +
         pos.coords.longitude.toString() + "</p>";
 
-      var img = new Image();
+      let img = new Image();
       img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" +
         pos.coords.latitude  + "," +
         pos.coords.longitude + "&zoom=13&size=300x300&sensor=false";

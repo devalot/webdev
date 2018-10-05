@@ -1,4 +1,4 @@
-var main = document.getElementById("main");
+let main = document.getElementById("main");
 
 if (main) {
   console.log("#main child count: ", main.childNodes.length);

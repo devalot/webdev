@@ -1,5 +1,5 @@
 /******************************************************************************/
-var someBadCondition = false;
+let someBadCondition = false;
 
 // <<: throw
 if (someBadCondition) {
@@ -9,7 +9,7 @@ if (someBadCondition) {
 
 /******************************************************************************/
 // <<: catch1
-var beSafe = function() {
+let beSafe = function() {
   try {
     // Some code that might fail.
   }
@@ -22,7 +22,7 @@ var beSafe = function() {
 
 /******************************************************************************/
 // <<: catch2
-var beSafe = function() {
+let beSafe2 = function() {
   try { /* Code that might fail. */ }
   catch (e) {
     if (e instanceof TypeError) {
@@ -53,7 +53,7 @@ throw new ShoppingCartError("WTF!");
 
 /******************************************************************************/
 // <<: custom2
-var error = new Error("WTF!");
+let error = new Error("WTF!");
 error.name = "ShoppingCartError";
 error.extraInfo = 42;
 throw error;

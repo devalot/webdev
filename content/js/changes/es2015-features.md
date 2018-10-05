@@ -56,7 +56,7 @@ The `const` keyword defines a block-level variable that must be
 initialized when it's declared and can't be reassigned:
 
 ~~~ {.javascript}
-var f = function() {
+let f = function() {
   const x = "foo";
 
   // ...
@@ -209,7 +209,7 @@ class Square extends Rectangle {
   * Classes can also be defined using an expression syntax:
 
     ~~~ {.javascript}
-    var Person = class {
+    let Person = class {
       // ..
     };
     ~~~

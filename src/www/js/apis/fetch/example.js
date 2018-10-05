@@ -1,9 +1,9 @@
 (function() {
   function updateUI(data) {
-    var view = document.getElementById("view");
+    let view = document.getElementById("view");
 
     data.forEach(function(artist) {
-      var li = document.createElement("LI");
+      let li = document.createElement("LI");
       li.textContent = artist.name;
       view.appendChild(li);
     });

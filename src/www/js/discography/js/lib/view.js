@@ -6,7 +6,7 @@ View = (function() {
   // section of index.html.
   //
   // Mustache API Docs: https://github.com/janl/mustache.js
-  var set = function(templateID, object) {
+  let set = function(templateID, object) {
   };
 
   // Return the public API.

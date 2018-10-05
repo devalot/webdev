@@ -7,7 +7,7 @@
   - A dynamic collection of **properties**:
 
     ~~~ {.javascript}
-    var box = {
+    let box = {
       color: "tan",
       height: 12
     };
@@ -15,7 +15,7 @@
     box.color;             // Getter method
     box.color = "red";     // Setter method
 
-    var x = "color";
+    let x = "color";
     box[x];          // "red"
     box[x] = "blue"; // Alternative syntax
     ~~~
@@ -40,14 +40,14 @@ There are four primary ways to work with object properties:
 
     ~~~ {.javascript}
     object.property = "foo";
-    var x = object.property;
+    let x = object.property;
     ~~~
 
   #. Square bracket notation:
 
     ~~~ {.javascript}
     object["property"] = "foo";
-    var x = object["property"];
+    let x = object["property"];
     ~~~
 
   #. Through the `Object.defineProperty` function
@@ -65,7 +65,7 @@ There are four primary ways to work with object properties:
     them:
 
     ~~~ {.javascript}
-    var obj = {};
+    let obj = {};
 
     Object.defineProperty(obj, "someName", {
       configurable: false, // someName can't be deleted
@@ -153,7 +153,7 @@ if (someVal === undefined) {
     inherited or local.
 
 ~~~ {.javascript}
-for (var propertyName in object) {
+for (let propertyName in object) {
    /*
       propertyName is a string.
 
@@ -224,7 +224,7 @@ for (var propertyName in object) {
 
 Hints:
 
-  - `for (var prop in someobj) { /* ... */ }`
+  - `for (let prop in someobj) { /* ... */ }`
 
   - `someobj.hasOwnProperty(prop)`
 

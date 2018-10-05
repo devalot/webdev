@@ -1,10 +1,8 @@
 /******************************************************************************/
 // <<: mixin
 Function.prototype.mixin = function() {
-  var i, prop;
-
-  for (i=0; i<arguments.length; ++i) {
-    for (prop in arguments[i].prototype) {
+  for (let i=0; i<arguments.length; ++i) {
+    for (let prop in arguments[i].prototype) {
       this.prototype[prop] =
         arguments[i].prototype[prop];
     }
@@ -14,17 +12,17 @@ Function.prototype.mixin = function() {
 
 /******************************************************************************/
 // <<: usage
-var A = function() {};
+let A = function() {};
 A.prototype.isA = function() {return true};
 
-var B = function() {};
+let B = function() {};
 B.prototype.isB = function() {return true};
 
-var C = function() {};
+let C = function() {};
 C.prototype.isC = function() {return true};
 
 C.mixin(A, B);
-var obj = new C();
+let obj = new C();
 
 console.log(obj.isA()); // true
 console.log(obj.isB()); // true

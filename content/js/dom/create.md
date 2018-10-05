@@ -14,7 +14,7 @@
 ### Adding Nodes to the Tree {#a5306c0a258611e8bfa2af6ab5c5b3cc}
 
 ~~~ {.javascript}
-var parent = document.getElementById("customers"),
+let parent = document.getElementById("customers"),
     existingChild = parent.firstElementChild,
     newChild = document.createElement("li");
 ~~~

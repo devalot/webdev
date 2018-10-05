@@ -7,7 +7,7 @@
 describe("Artist model interface", function() {
   it("fetchOne should provide one artist", function(done) {
     // Some test data:
-    var record = {name: "The Wombats"};
+    let record = {name: "The Wombats"};
 
     // Pretend the server responded with the above object:
     ajaxSpy('get', record);

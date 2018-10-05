@@ -12,7 +12,7 @@ Object.defineProperty(Car.prototype, "speed", {
   }
 });
 
-var toyota = new Car();
+let toyota = new Car();
 toyota.speed = 55; // Calls the `set' function.
 // :>>
 

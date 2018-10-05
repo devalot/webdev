@@ -1,5 +1,5 @@
 describe("Regular Expression Exercise", function() {
-  var today = new Date().toDateString();
+  let today = new Date().toDateString();
 
   [ ["today",       today + " 0"],
     ["pi",          "3.14 0"],

@@ -20,7 +20,7 @@
  *
  * Example usage:
  *
- *   var c = new Calculator(5);
+ *   let c = new Calculator(5);
  *   c.push(5);   // Add 5 to the stack.
  *   c.push(10);  // Add 10 to the stack.
  *   c.add();     // Sum stack and add to 5,

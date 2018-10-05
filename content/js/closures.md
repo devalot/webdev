@@ -36,8 +36,8 @@ Closures
 Using closures to create truly private variables in JavaScript:
 
 ~~~ {.javascript}
-var Foo = function() {
-  var privateVar = 42;
+let Foo = function() {
+  let privateVar = 42;
 
   return {
     getPrivateVar: function() {
@@ -49,7 +49,7 @@ var Foo = function() {
   };
 };
 
-var x = Foo();
+let x = Foo();
 x.getPrivateVar(); // 42
 ~~~
 

@@ -1,5 +1,5 @@
 function Car (color) {
-  var newCar = Object.create(Car.prototype);
+  let newCar = Object.create(Car.prototype);
 
   newCar.color = color;
 
@@ -12,5 +12,5 @@ Car.prototype = {
   }
 };
 
-var toyota = Car("brown");
+let toyota = Car("brown");
 toyota.goFast();

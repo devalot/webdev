@@ -22,8 +22,8 @@
   * In the JavaScript (after the user picks a file):
 
     ~~~ {.javascript}
-    var input = document.getElementById("the-input");
-    var size = input.files[0].size;
+    let input = document.getElementById("the-input");
+    let size = input.files[0].size;
     ~~~
 
 ### Browser Support

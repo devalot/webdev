@@ -51,7 +51,7 @@ See [this reference][event-types] for a list of all event types.
 
   - I.e., `this === eventElement`
 
-  - Use `bind` or the `var self = this;` trick
+  - Use `bind` or the `let self = this;` trick
 
 ### Event Propagation
 

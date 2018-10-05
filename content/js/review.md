@@ -60,10 +60,11 @@ What is the scope for `x`, `y`, `z`, and `w`?
 
 ~~~ {.javascript}
 function foo (x) {
-  var y = 0;
+  let y = 0;
 
   if (x === 1) {
     var z = 1;
+    let v = 2;
     w = x;
   }
 }

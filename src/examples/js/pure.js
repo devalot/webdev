@@ -1,6 +1,6 @@
 // This is not pure!
 // <<: cache
-var checkUserPermission = function(code, roles, cache) {
+let checkUserPermission = function(code, roles, cache) {
   if (cache.includes(code)) {
     return true;
   } else if (Object.values(roles).includes(code)) {
@@ -11,8 +11,8 @@ var checkUserPermission = function(code, roles, cache) {
   return false;
 };
 
-var cache = [];
-var roles = {view: 1, edit: 2, remove: 3};
+let cache = [];
+let roles = {view: 1, edit: 2, remove: 3};
 
 if (checkUserPermission(3, roles, cache)) {
   console.log("user can remove page");
@@ -24,11 +24,11 @@ console.log(cache);
 
 // Tricky!
 // <<: helper
-var emailMatches = function(email, f) {
+let emailMatches = function(email, f) {
   return f(email.subject) || f(email.body);
 };
 
-var email = {subject: "Foo", body: "Bar"};
+let email = {subject: "Foo", body: "Bar"};
 
 bool = emailMatches(email, function(str) {
   return str.match(/oo/);

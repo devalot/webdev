@@ -1,19 +1,19 @@
 ArtistsController = (function(){
 
   // Display all artists.
-  var index = function() {
+  let index = function() {
   };
 
   // Display a single artist.
-  var show = function(id) {
+  let show = function(id) {
   };
 
   // Display a form for creating a new artist.
-  var form = function() {
+  let form = function() {
   };
 
   // Taking values from a form, create a new artist.
-  var create = function() {
+  let create = function() {
   };
 
   // Public interface:

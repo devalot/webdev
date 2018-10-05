@@ -3,7 +3,7 @@
 ### Getting and Setting Node Attributes
 
 ~~~ {.javascript}
-var element = document.getElementById("foo"),
+let element = document.getElementById("foo"),
     name    = "bar";
 ~~~
 

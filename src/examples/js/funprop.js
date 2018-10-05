@@ -1,7 +1,7 @@
-var x = {color: "magenta"};
-var y = {color: "orange" };
+let x = {color: "magenta"};
+let y = {color: "orange" };
 
-var z = function() {
+let z = function() {
   console.log("my color is: ", this.color);
 };
 

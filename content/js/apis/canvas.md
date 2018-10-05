@@ -22,7 +22,7 @@
 canvas  = document.getElementById("circle");
 context = canvas.getContext("2d");
 
-var path = new Path2D();
+let path = new Path2D();
 path.arc(75, 75, 50, 0, Math.PI * 2, true);
 context.stroke(path);
 ~~~

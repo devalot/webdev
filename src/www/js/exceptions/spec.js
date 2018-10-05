@@ -12,7 +12,7 @@ describe("Exception Exercise", function() {
   });
 
   it("Should throw an exception for odd numbers", function() {
-    var f = function() { check(33); };
+    let f = function() { check(33); };
     expect(f).toThrowError(OddNumberError);
   });
 });

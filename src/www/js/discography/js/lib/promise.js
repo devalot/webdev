@@ -6,7 +6,7 @@
  * executor.  The executor function is given two arguments, called
  * "resolve" and "reject".  Example usage:
  *
- *   var p = new Promise(function(resolve, reject) {
+ *   let p = new Promise(function(resolve, reject) {
  *     if (somethingGood) {
  *       resolve(someGoodData);
  *     } else {
@@ -33,18 +33,18 @@
  */
 Promise = function(executor) {
   // 1. Initialize state of the promise (pending, resolved, rejected).
-  var fulfilled = false, rejected = false;
+  let fulfilled = false, rejected = false;
 
   // 2. A place to store callbacks (success and error).
-  var fulfillmentHandlers = [], rejectionHandlers = [];
+  let fulfillmentHandlers = [], rejectionHandlers = [];
 
   // 3. A place to store the promised value.
-  var fulfilledValue = null, rejectedValue = null;
+  let fulfilledValue = null, rejectedValue = null;
 
   // 4. The "resolve" function given to the executor function.  The
   // executor function will call this function with the promised value
   // if the asynchronous computation was successful.
-  var resolveFunc = function(value) {
+  let resolveFunc = function(value) {
     if (fulfilled || rejected) return;
     fulfilled = true;
     fulfilledValue = value;
@@ -54,7 +54,7 @@ Promise = function(executor) {
   // 5. The "reject" function given to the executor function.  The
   // executor function will call this function with the error value if
   // the asynchronous computation failed.
-  var rejectFunc = function(value) {
+  let rejectFunc = function(value) {
     if (fulfilled || rejected) return;
     rejected = true;
     rejectedValue = value;
@@ -64,7 +64,7 @@ Promise = function(executor) {
   // 6. A function that adds a handler to the fulfillmentHandlers
   // array.  If the promise has already been resolved then the handler
   // should be called immediately.
-  var addFulfillmentHandler = function(handler) {
+  let addFulfillmentHandler = function(handler) {
     if (fulfilled) { handler(fulfilledValue);           }
     else           { fulfillmentHandlers.push(handler); }
   };
@@ -72,7 +72,7 @@ Promise = function(executor) {
   // 7. A function that adds a handler to the rejectionHandlers
   // array.  If the promise has already been rejected then the handler
   // should be called immediately.
-  var addRejectionHandler = function(handler) {
+  let addRejectionHandler = function(handler) {
     if (rejected) { handler(rejectedValue);          }
     else          { rejectionHandlers.push(handler); }
   };
@@ -81,9 +81,9 @@ Promise = function(executor) {
   // chained (composed) correctly.
   this.addHandler = function(onFulfilled, onRejected) {
     return new Promise(function(resolve, reject) {
-      var go = function(f) {
+      let go = function(f) {
         return function(value) {
-          var result = f ? f(value) : value;
+          let result = f ? f(value) : value;
           if (result === undefined) result = value;
 
           if (result instanceof Promise) {

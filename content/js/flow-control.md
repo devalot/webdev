@@ -72,7 +72,7 @@ Don't forget that `break;` statement!
   * Traditional `for`:
 
     ~~~ {.javascript}
-    for (var i=0; i<n; ++i) { /* body */ }
+    for (let i=0; i<n; ++i) { /* body */ }
     ~~~
 
   * Traditional `while`:
@@ -90,7 +90,7 @@ Don't forget that `break;` statement!
   * Object Property Version of `for`:
 
     ~~~ {.javascript}
-    for (var prop in object) { /* body */ }
+    for (let prop in object) { /* body */ }
     ~~~
 
 ### Traditional for Loops
@@ -98,7 +98,7 @@ Don't forget that `break;` statement!
   - Just like in C:
 
     ~~~ {.javascript}
-    for (var i=0; i<10; ++i) {
+    for (let i=0; i<10; ++i) {
       // executes 10 times.
     }
     ~~~
@@ -110,7 +110,7 @@ Don't forget that `break;` statement!
 ### Traditional while Loops
 
 ~~~ {.javascript}
-var i=0;
+let i=0;
 
 while (i<10) {
   ++i;
@@ -120,7 +120,7 @@ while (i<10) {
 ### Flipped while Loops
 
 ~~~ {.javascript}
-var i=0;
+let i=0;
 
 do {
   ++i;
@@ -150,8 +150,8 @@ do {
   - Example:
 
     ~~~ {.javascript}
-    var isWarm; // Is set to something unknown.
-    var shirt = isWarm ? "t-shirt" : "sweater";
+    let isWarm; // Is set to something unknown.
+    let shirt = isWarm ? "t-shirt" : "sweater";
     ~~~
 
 ### Exercise: Experiment with Control Flow

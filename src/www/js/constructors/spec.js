@@ -10,15 +10,15 @@ describe("Constructor Functions Exercise", function() {
   });
 
   it("Should default the initial value to zero", function() {
-    var c1 = new Calculator(10);
+    let c1 = new Calculator(10);
     expect(c1.get()).toBe(10);
 
-    var c2 = new Calculator();
+    let c2 = new Calculator();
     expect(c2.get()).toBe(0);
   });
 
   it("Should add and multiply numbers", function() {
-    var c = new Calculator(10);
+    let c = new Calculator(10);
 
     c.push(5);
     c.add();
@@ -30,8 +30,8 @@ describe("Constructor Functions Exercise", function() {
   });
 
   it("Should support unique objects", function() {
-    var c1 = new Calculator(10);
-    var c2 = new Calculator(5);
+    let c1 = new Calculator(10);
+    let c2 = new Calculator(5);
 
     c1.push(2);
     c2.push(1);
@@ -43,7 +43,7 @@ describe("Constructor Functions Exercise", function() {
   });
 
   it("Should be able to run example code", function() {
-    var c = new Calculator(5);
+    let c = new Calculator(5);
     c.push(5);
     c.push(10);
     c.add();

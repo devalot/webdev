@@ -3,15 +3,15 @@ describe("Partial Function Application", function() {
 
   /****************************************************************************/
   it("should allow partial function application", function() {
-    var f = function(x, y, z) { return [x, y, z]; };
+    let f = function(x, y, z) { return [x, y, z]; };
 
-    var g = f.curry();
+    let g = f.curry();
     expect(typeof g).toBe("function");
 
-    var h = g("A");
+    let h = g("A");
     expect(typeof h).toBe("function");
 
-    var a = h("B", "C");
+    let a = h("B", "C");
     expect(Array.isArray(a)).toBe(true);
     expect(a).toEqual(["A", "B", "C"]);
   });
@@ -19,7 +19,7 @@ describe("Partial Function Application", function() {
   /****************************************************************************/
   it("should pass `this' through", function() {
     // <<: obj.add
-    var obj = {
+    let obj = {
       magnitude: 10,
 
       add: function(x, y) {
@@ -29,7 +29,7 @@ describe("Partial Function Application", function() {
     // :>>
 
     // <<: add10
-    var add10 = obj.add(10);
+    let add10 = obj.add(10);
     add10(2); // Should return 120
     // :>>
 

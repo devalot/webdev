@@ -14,7 +14,7 @@ describe("Hosts", function() {
 
   /****************************************************************************/
   it("lookupByName should return an array on empty query", function() {
-    var result = Hosts.lookupByName("shouldbeempty");
+    let result = Hosts.lookupByName("shouldbeempty");
 
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(0);
@@ -22,7 +22,7 @@ describe("Hosts", function() {
 
   /****************************************************************************/
   it("lookupByName should return multiple IP addresses", function() {
-    var result = Hosts.lookupByName("foobar");
+    let result = Hosts.lookupByName("foobar");
 
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(2);
@@ -32,7 +32,7 @@ describe("Hosts", function() {
 
   /****************************************************************************/
   it("lookupByIP should return an array on empty query", function() {
-    var result = Hosts.lookupByIP("0.0.0.0");
+    let result = Hosts.lookupByIP("0.0.0.0");
 
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(0);
@@ -40,7 +40,7 @@ describe("Hosts", function() {
 
   /****************************************************************************/
   it("lookupByIP should result multiple names", function() {
-    var result = Hosts.lookupByIP("127.0.0.1");
+    let result = Hosts.lookupByIP("127.0.0.1");
 
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(2);
@@ -50,8 +50,8 @@ describe("Hosts", function() {
 
   /****************************************************************************/
   it("should have the correct API", function() {
-    var names = ["clear", "add", "lookupByName", "lookupByIP"];
-    var keys = Object.keys(Hosts);
+    let names = ["clear", "add", "lookupByName", "lookupByIP"];
+    let keys = Object.keys(Hosts);
 
     if ("length" in Hosts) names.push("length");
     expect(keys.length).toBe(names.length);

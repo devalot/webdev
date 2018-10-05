@@ -20,7 +20,7 @@
 
     ~~~ {.javascript}
     sessionStorage.setItem("key", "value");
-    var item = sessionStorage.getItem("key");
+    let item = sessionStorage.getItem("key");
     sessionStorage.removeItem("key");
     ~~~
 
@@ -36,7 +36,7 @@
 
     ~~~ {.javascript}
     localStorage.setItem("key", "value");
-    var item = localStorage.getItem("key");
+    let item = localStorage.getItem("key");
     localStorage.removeItem("key");
     ~~~
 

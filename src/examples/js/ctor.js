@@ -1,5 +1,5 @@
 // <<: ctor
-var Message = function(sender, content) {
+let Message = function(sender, content) {
   this.sender  = sender;
   this.content = content;
 };
@@ -14,7 +14,7 @@ Message.prototype.send = function() {
 // :>>
 
 // <<: new
-var m = new Message("pjones@devalot.com", "Hello");
+let m = new Message("pjones@devalot.com", "Hello");
 m.send(); // calls `Message.prototype.send'
           // with `this' set to `m'
 // :>>

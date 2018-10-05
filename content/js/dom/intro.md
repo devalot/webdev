@@ -33,7 +33,7 @@ And produce this tree structure:
   - Maps to:
 
     ~~~ {.javascript}
-    var node = {
+    let node = {
       tagName:    "P",
       childNodes: NodeList,
       className:  "hi",

@@ -1,4 +1,4 @@
-var main = document.getElementById("main");
+let main = document.getElementById("main");
 
 // <<: example
 main.addEventListener("click", function(event) {

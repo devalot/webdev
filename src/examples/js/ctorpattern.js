@@ -6,5 +6,5 @@ Car.prototype.goFast = function() {
   this.speed = 130;
 };
 
-var toyota = new Car("brown");
+let toyota = new Car("brown");
 toyota.goFast();

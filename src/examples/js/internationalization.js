@@ -5,12 +5,12 @@
 // http://www.ecma-international.org/publications/standards/Ecma-402.htm
 
 // Numbers and currency:
-var n = 123456.78;
+let n = 123456.78;
 
-var formatted = new Intl.NumberFormat().format(n);
+let formatted = new Intl.NumberFormat().format(n);
 console.log(formatted);
 
-var currency = new Intl.NumberFormat('en-US', {
+let currency = new Intl.NumberFormat('en-US', {
   style: "currency",
   currency: "USD",
 }).format(n);

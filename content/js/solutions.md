@@ -6,13 +6,13 @@ One possible solution:
 
 ~~~ {.javascript}
   function outer(value) {
-    var shared = value;
+    let shared = value;
 
-    var inner1 = function() {
+    let inner1 = function() {
       console.log("from inner1: " + shared);
     };
 
-    var inner2 = function() {
+    let inner2 = function() {
       console.log("from inner2: " + shared);
     };
 
@@ -27,7 +27,7 @@ One possible solution:
 And here's another version, this time using objects:
 
 ~~~ {.javascript}
-  var outer = function(value) {
+  let outer = function(value) {
     return {
       first: function() {
         console.log("First:", value);
@@ -49,9 +49,9 @@ And here's another version, this time using objects:
 
 ~~~ {.javascript}
 function reverse (array) {
-  var result = [];
+  let result = [];
 
-  for (var j=0, i=array.length - 1; i >= 0; --i, ++j) {
+  for (let j=0, i=array.length - 1; i >= 0; --i, ++j) {
     result[j] = array[i];
   }
 
@@ -61,9 +61,9 @@ function reverse (array) {
 console.log(reverse(["A", "B", "C", "D"]).toString());
 
 function reverse2 (array) {
-  var result = [];
+  let result = [];
 
-  for (var i=0; i<array.length; ++i) {
+  for (let i=0; i<array.length; ++i) {
     result.unshift(array[i]);
   }
 
@@ -77,7 +77,7 @@ Throw an exception:
 
 ~~~ {.javascript}
   function safeReverse (toReverse) {
-    var result = [];
+    let result = [];
 
     //  Solution 1:
     if (!Array.isArray(toReverse)) {
@@ -97,7 +97,7 @@ Inline version (bonus):
 
 ~~~ {.javascript}
   function inlineReverse (array) {
-    for (var x, i=0, j=array.length - 1; i < j; ++i, --j) {
+    for (let x, i=0, j=array.length - 1; i < j; ++i, --j) {
       x = array[i];
       array[i] = array[j];
       array[j] = x;
@@ -116,10 +116,10 @@ Inline version (bonus):
 
 ~~~ {.javascript}
 processString = function(input) {
-  var today = (new Date()).toDateString(),
+  let today = (new Date()).toDateString(),
       count = 0;
 
-  var result = input.replace(/\b\w+\b/g, function(word) {
+  let result = input.replace(/\b\w+\b/g, function(word) {
     count += (word.match(/x/gi) || []).length;
 
     switch (word.toLowerCase()) {
@@ -148,12 +148,12 @@ processString = function(input) {
     }
 
     // Log the header row:
-    var headers = Object.keys(list[0]).sort();
+    let headers = Object.keys(list[0]).sort();
     console.log(headers.map(String.capitalize).join("\t"));
 
     // Log each of the objects:
     list.forEach(function(e) {
-      var values = headers.map(function(h) {
+      let values = headers.map(function(h) {
         return e[h];
       });
 
@@ -216,7 +216,7 @@ processString = function(input) {
   - Example:
 
     ~~~ {.javascript}
-      var me = {
+      let me = {
         name: "Peter",
         height: 67,
         speak: function(message) {
@@ -230,7 +230,7 @@ processString = function(input) {
 One Possible Solution:
 
 ~~~ {.javascript}
-  var me = {
+  let me = {
     name: "Peter",
     height: 67,
     speak: function(message) {
@@ -244,15 +244,15 @@ One Possible Solution:
   - <http://jsfiddle.net/devalot/fgvpdLd8/>
 
 ~~~ {.javascript}
-  var Bucket = function(bucket_id) {
-    var bucket = document.getElementById(bucket_id);
+  let Bucket = function(bucket_id) {
+    let bucket = document.getElementById(bucket_id);
 
-    var move = function(element) {
+    let move = function(element) {
       bucket.appendChild(element);
     };
 
-    var moveOnClick = function(selector) {
-      var element = document.querySelector(selector);
+    let moveOnClick = function(selector) {
+      let element = document.querySelector(selector);
 
       if (!element) {
         console.error("No matching element: " + selector);
@@ -270,7 +270,7 @@ One Possible Solution:
     };
   };
 
-  var bucket = Bucket("bucket");
+  let bucket = Bucket("bucket");
   bucket.moveOnClick(".main li:nth-child(2)");
   bucket.moveOnClick("#articles .flag");
   bucket.moveOnClick(".footer div div div div");

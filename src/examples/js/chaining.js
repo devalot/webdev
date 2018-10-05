@@ -1,13 +1,13 @@
 /******************************************************************************/
 // <<: string
-var s = "Hello World".split(/\s+/).reverse().join(" ");
+let s = "Hello World".split(/\s+/).reverse().join(" ");
 console.log(s); // ?
 // :>>
 
 /******************************************************************************/
 // <<: this
-var weather = (function() {
-  var windSpeed = 0, windDirection = 0;
+let weather = (function() {
+  let windSpeed = 0, windDirection = 0;
 
   return {
     windSpeed: function(x) {

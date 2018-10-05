@@ -1,8 +1,8 @@
 // <<: manual
-var apple  = {name: "Apple",  color: "red"   };
-var orange = {name: "Orange", color: "orange"};
+let apple  = {name: "Apple",  color: "red"   };
+let orange = {name: "Orange", color: "orange"};
 
-var logColor = function() {
+let logColor = function() {
   console.log(this.color);
 };
 
@@ -28,7 +28,7 @@ function Parent(children) {
   });
 }
 
-var p = new Parent(["Peter", "Paul", "Mary"]);
+let p = new Parent(["Peter", "Paul", "Mary"]);
 // :>>
 
 console.assert(children.length === 3);
@@ -46,12 +46,12 @@ function ParentWithBind(children) {
 }
 // :>>
 
-var p2 = new ParentWithBind(["Peter", "Paul", "Mary"]);
+let p2 = new ParentWithBind(["Peter", "Paul", "Mary"]);
 console.assert(p2.children.length === 3);
 
 // <<: this-alias
 function ParentWithAlias(children) {
-  var self = this;
+  let self = this;
   this.children = [];
 
   // Add children that have valid names:
@@ -63,7 +63,7 @@ function ParentWithAlias(children) {
 }
 // :>>
 
-var p3 = new ParentWithAlias(["Peter", "Paul", "Mary"]);
+let p3 = new ParentWithAlias(["Peter", "Paul", "Mary"]);
 console.assert(p3.children.length === 3);
 
 // <<: this-arrow
@@ -79,5 +79,5 @@ function ParentWithArrow(children) {
 }
 // :>>
 
-var p4 = new ParentWithArrow(["Peter", "Paul", "Mary"]);
+let p4 = new ParentWithArrow(["Peter", "Paul", "Mary"]);
 console.assert(p4.children.length === 3);

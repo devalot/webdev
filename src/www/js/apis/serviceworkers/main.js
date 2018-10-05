@@ -1,5 +1,5 @@
 (function() {
-  var doRegistration = function() {
+  let doRegistration = function() {
     navigator.serviceWorker.register("worker.js")
       .then(function(registration) {
         console.log("registration complete");
@@ -9,7 +9,7 @@
       });
   };
 
-  var doFetch = function() {
+  let doFetch = function() {
     fetch("/api/artists")
       .then(function(response) {
         return response.json();

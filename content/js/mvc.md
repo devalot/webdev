@@ -134,7 +134,7 @@ Making an Ajax request:
   * Tell the library you want to hijack Ajax calls:
 
     ~~~ {.javascript}
-    var artist = {name: "The Wombats"};
+    let artist = {name: "The Wombats"};
     ajaxSpy('get', artist);
 
     /* Call a function that uses the `Ajax' module. */
@@ -223,9 +223,9 @@ Hello {{name}}!
 And fetch them when needed:
 
 ~~~ {.javascript}
-var obj = {name: "World"};
-var tpl = document.getElementById("my-template");
-var out = Mustache.render(tpl.innerHTML, obj);
+let obj = {name: "World"};
+let tpl = document.getElementById("my-template");
+let out = Mustache.render(tpl.innerHTML, obj);
 ~~~
 
 <div class="notes">

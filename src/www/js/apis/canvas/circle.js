@@ -2,11 +2,11 @@
 Circle = (function() {
 
   /****************************************************************************/
-  var canvas, context;
+  let canvas, context;
 
   /****************************************************************************/
-  var draw = function() {
-    var path = new Path2D();
+  let draw = function() {
+    let path = new Path2D();
 
     path.arc(75, 75, 50, 0, Math.PI * 2, true);
 
@@ -19,7 +19,7 @@ Circle = (function() {
   };
 
   /****************************************************************************/
-  var init = function() {
+  let init = function() {
     canvas  = document.getElementById("circle");
     context = canvas.getContext("2d");
     draw();

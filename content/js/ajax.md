@@ -27,7 +27,7 @@
 ### Sending a Request, Basic Overview
 
 ~~~ {.javascript}
-var req = new XMLHttpRequest();
+let req = new XMLHttpRequest();
 
 // Attach event listener...
 
@@ -38,7 +38,7 @@ req.send(null);
 ### Knowing When the Request Is Complete
 
 ~~~ {.javascript}
-var req = new XMLHttpRequest();
+let req = new XMLHttpRequest();
 
 req.addEventListener("load", function(e) {
   if (req.status == 200) {
@@ -106,7 +106,7 @@ More work to extract data from XML:
 
     // ...
 
-    var data = JSON.parse(req.responseText);
+    let data = JSON.parse(req.responseText);
     ~~~
 
 ## Tips and Tricks

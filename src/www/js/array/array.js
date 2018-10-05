@@ -4,7 +4,7 @@
 
 /****************************************************************************/
 // TEST DATA:
-var users = [
+let users = [
   {id: 1, username: "caiva", age: 30},
   {id: 2, username: "ahxae", age: 17},
   {id: 3, username: "i4tie", age: 42},

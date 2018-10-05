@@ -1,6 +1,6 @@
 (function() {
 
-  var Code = function() {
+  let Code = function() {
     this.code = document.getElementById("code");
     this.ul = document.getElementById("stack");
     this.stack = [];
@@ -15,12 +15,12 @@
   Code.prototype = {
     // Find all the functions:
     scan: function() {
-      var el = this.code.children[0];
-      var first = null;
+      let el = this.code.children[0];
+      let first = null;
 
       do {
-        var ins = el.getAttribute("data-ins") || "";
-        var name = ins.match(/^func (\w+)$/);
+        let ins = el.getAttribute("data-ins") || "";
+        let name = ins.match(/^func (\w+)$/);
 
         if (name) {
           first = first || name[1];
@@ -36,7 +36,7 @@
     clear: function() {
       this.dead = true;
       this.ul.innerHTML = "";
-      var current = this.code.querySelector(".current");
+      let current = this.code.querySelector(".current");
       if (current) current.classList.remove("current");
     },
 
@@ -49,7 +49,7 @@
 
     // Push a pointer to the function stack:
     push: function(name, returnTo) {
-      var li = document.createElement("LI");
+      let li = document.createElement("LI");
       li.textContent = name;
       this.ul.insertBefore(li, this.ul.firstChild);
       this.stack.push(returnTo);
@@ -63,8 +63,8 @@
 
     // Interpret the current source line:
     interpret: function() {
-      var ins = this.pointer.getAttribute("data-ins") || "";
-      var words = ins.split(/\s+/);
+      let ins = this.pointer.getAttribute("data-ins") || "";
+      let words = ins.split(/\s+/);
 
       switch (words[0]) {
       case "push":
@@ -73,7 +73,7 @@
         return;
 
       case "pop":
-        var prev = this.pop();
+        let prev = this.pop();
         if (prev) {
           this.jump(prev);
           this.step();
@@ -89,7 +89,7 @@
 
     // Move to the next source line:
     step: function() {
-      var el = this.pointer.nextElementSibling;
+      let el = this.pointer.nextElementSibling;
       if (el) this.jump(el);
       else this.clear();
     },
@@ -106,15 +106,15 @@
   };
 
   // Work items to manage in the work queue.
-  var Work = function(title, delay) {
+  let Work = function(title, delay) {
     this.title = title;
     this.delay = delay;
   };
 
   // <li> -> Work.
   Work.fromLI = function(li) {
-    var title = li.getAttribute("data-title");
-    var delay = li.getAttribute("data-delay");
+    let title = li.getAttribute("data-title");
+    let delay = li.getAttribute("data-delay");
     return new Work(title, delay);
   };
 
@@ -148,7 +148,7 @@
   };
 
   // Simulate the JavaScript runtime:
-  var Runtime = function() {
+  let Runtime = function() {
     this.code  = null;
     this.ul = document.getElementById("queue");
     this.ul.innerHTML = "";
@@ -157,12 +157,12 @@
   Runtime.prototype = {
     // The CPU is giving you a time slice:
     tick: function() {
-      var items = this.ul.children;
-      var ready = null;
+      let items = this.ul.children;
+      let ready = null;
 
       // Update all of the work items in the queue:
-      for (var i=0; i<items.length; ++i) {
-        var work = Work.fromLI(items[i]);
+      for (let i=0; i<items.length; ++i) {
+        let work = Work.fromLI(items[i]);
         work.tick();
         work.toLI(items[i]);
         if (work.isReady()) ready = ready || items[i];
@@ -193,13 +193,13 @@
 
     // Add some work to the work queue:
     addToQueue: function(work) {
-      var li = document.createElement("LI");
+      let li = document.createElement("LI");
       work.toLI(li);
 
       if (work.delay) {
         this.ul.appendChild(li);
       } else {
-        var ready = this.ul.querySelector("[data-delay]");
+        let ready = this.ul.querySelector("[data-delay]");
         if (ready) this.ul.insertBefore(li, ready);
         else this.ul.appendChild(li);
       }
@@ -233,7 +233,7 @@
     }
   };
 
-  var rt = new Runtime();
+  let rt = new Runtime();
   document.body.addEventListener("keydown", rt.keydown.bind(rt));
   document.body.addEventListener("click", rt.click.bind(rt));
   setInterval(rt.tick.bind(rt), 1000);

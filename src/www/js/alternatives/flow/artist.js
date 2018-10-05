@@ -10,7 +10,7 @@ class Artist {
   website: ?string;
 
   static fetchAll(f: (artists: Array<Artist>) => void): void {
-    var request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
 
     request.addEventListener("load", e => {
       if (request.status >= 200 && request.status < 300) {
@@ -33,7 +33,7 @@ declare class Mustache {
 }
 
 function render(artists: Array<Artist>): void {
-  var view = document.getElementById('view');
-  var tpl  = document.getElementById('artists').innerHTML;
+  let view = document.getElementById('view');
+  let tpl  = document.getElementById('artists').innerHTML;
   view.innerHTML = Mustache.render(tpl, {artists: artists});
 }

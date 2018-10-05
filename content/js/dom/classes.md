@@ -3,7 +3,7 @@
 ### Class Attribute API
 
 ~~~ {.javascript}
-var element = document.getElementById("foo"),
+let element = document.getElementById("foo"),
     name    = "bar";
 ~~~
 

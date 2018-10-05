@@ -1,4 +1,4 @@
-var r = new XMLHttpRequest();
+let r = new XMLHttpRequest();
 
 r.addEventListener("load", function() {
   console.log(r.status);

@@ -37,7 +37,7 @@ Pacman.prototype = {
   dots: function() {
     this.context.beginPath();
 
-    for (var x=this.dotSpacing; x < this.width; x += this.dotSpacing) {
+    for (let x=this.dotSpacing; x < this.width; x += this.dotSpacing) {
       if (x > this.x || this.x - this.dotSpacing * 2 > x) {
         this.context.arc(x, this.y, 4, 0, Math.PI * 2, false);
       }
@@ -49,7 +49,7 @@ Pacman.prototype = {
 
   // Pacman himself.
   pacman: function() {
-    var cirA = this.arc,
+    let cirA = this.arc,
         cirB = Math.PI * 2 - this.arc;
 
     this.context.beginPath();

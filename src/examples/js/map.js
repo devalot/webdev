@@ -1,10 +1,10 @@
 // <<: simple
-var strings = [
+let strings = [
   "Mon, 14 Aug 2006 02:34:56 GMT",
   "Thu, 05 Jul 2018 22:09:06 GMT"
 ];
 
-var dates = strings.map(function(s) {
+let dates = strings.map(function(s) {
   return new Date(s);
 });
 

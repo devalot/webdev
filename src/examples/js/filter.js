@@ -1,7 +1,7 @@
 // <<: simple
-var numbers = [10, 7, 23, 42, 95];
+let numbers = [10, 7, 23, 42, 95];
 
-var even = numbers.filter(function(n) {
+let even = numbers.filter(function(n) {
   return n % 2 === 0;
 });
 

@@ -1,6 +1,6 @@
 describe("a function", function() {
   // <<: beforeEach
-  var foo;
+  let foo;
 
   beforeEach(function() {
     foo = {
@@ -12,7 +12,7 @@ describe("a function", function() {
   // <<: call
   it("should be called", function() {
     spyOn(foo, 'plusOne');
-    var x = foo.plusOne(1);
+    let x = foo.plusOne(1);
 
     expect(foo.plusOne).toHaveBeenCalled();
     expect(x).toBeUndefined();
@@ -22,7 +22,7 @@ describe("a function", function() {
   // <<: callThrough
   it("should call through and execute", function() {
     spyOn(foo, 'plusOne').and.callThrough();
-    var x = foo.plusOne(1);
+    let x = foo.plusOne(1);
 
     expect(foo.plusOne).toHaveBeenCalled();
     expect(x).toBe(2);

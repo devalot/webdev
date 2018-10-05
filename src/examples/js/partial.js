@@ -1,10 +1,10 @@
 /******************************************************************************/
 // <<: example
-var add = function(x, y) {
+let add = function(x, y) {
   return x + y;
 };
 
-var add10 = add.bind(undefined, 10);
+let add10 = add.bind(undefined, 10);
 
 console.log(add10(2));
 // :>>
@@ -12,11 +12,11 @@ console.log(add10(2));
 /******************************************************************************/
 // <<: no-bind
 Function.prototype.partial = function() {
-  var args = Array.prototype.slice.call(arguments),
+  let args = Array.prototype.slice.call(arguments),
       func = this;
 
-  var partial = function() {
-    var args2 = Array.prototype.slice.call(arguments);
+  let partial = function() {
+    let args2 = Array.prototype.slice.call(arguments);
     return func.apply(this, args.concat(args2));
   };
 
@@ -26,7 +26,7 @@ Function.prototype.partial = function() {
 
 /******************************************************************************/
 // <<: working
-var obj = {
+let obj = {
   color: "red",
   add: function(x, y) {
     console.log("adding " + x + " and " + y);

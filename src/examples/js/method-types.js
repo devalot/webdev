@@ -1,5 +1,5 @@
  // Calling the Array constructor function:
-var x = [0, 1, 2];
+let x = [0, 1, 2];
 
 // Calling a generic method:
 if (Array.isArray(x)) {

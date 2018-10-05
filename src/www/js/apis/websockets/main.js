@@ -1,9 +1,9 @@
 $(function() {
-  var log = function(data) {
+  let log = function(data) {
     $("#log").prepend($("<li></li>").text(data));
   };
 
-  var ws = new WebSocket("ws://localhost:3000/");
+  let ws = new WebSocket("ws://localhost:3000/");
 
   ws.onopen = function() {
     log("connected to WebSocket server");

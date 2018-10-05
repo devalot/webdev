@@ -1,15 +1,15 @@
 /******************************************************************************/
 // <<: slow
-var digitName = function(n) {
-  var names = ["zero", "one", "two", /* more elements */];
+let digitName = function(n) {
+  let names = ["zero", "one", "two", /* more elements */];
   return names[n] || "";
 };
 // :>>
 
 /******************************************************************************/
 // <<: fixed
-var digitName = function(n) {
-  var names = ["zero", "one", "two", /* more elements */];
+let digitName = function(n) {
+  let names = ["zero", "one", "two", /* more elements */];
 
   // No `var' here!
   digitName = function(n) {

@@ -1,11 +1,11 @@
 (function() {
 
   // <<: debounce
-  var input   = document.getElementById("search"),
+  let input   = document.getElementById("search"),
       output  = document.getElementById("output"),
       timeout = null;
 
-  var updateSearchResults = function() {
+  let updateSearchResults = function() {
     output.textContent = input.value;
   };
 

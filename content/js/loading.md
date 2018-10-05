@@ -20,7 +20,7 @@
 
     ~~~ {.html}
     <script>
-      var x = "Hey, I'm JavaScript!";
+      let x = "Hey, I'm JavaScript!";
       console.log(x);
     </script>
     ~~~

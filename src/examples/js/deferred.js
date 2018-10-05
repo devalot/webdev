@@ -1,24 +1,24 @@
-var Deferred = function() {
-  var successHandlers = [];
-  var errorHandlers   = [];
-  var isRejected      = false;
-  var isResolved      = false;
-  var resolveData     = null;
-  var rejectData      = null;
+let Deferred = function() {
+  let successHandlers = [];
+  let errorHandlers   = [];
+  let isRejected      = false;
+  let isResolved      = false;
+  let resolveData     = null;
+  let rejectData      = null;
 
-  var then = function(callback) {
+  let then = function(callback) {
     if (isResolved) callback(resolveData);
     successHandlers.push(callback);
     return this;
   };
 
-  var fail = function(callback) {
+  let fail = function(callback) {
     if (isRejected) callback(rejectData);
     errorHandlers.push(callback);
     return this;
   };
 
-  var resolve = function(data) {
+  let resolve = function(data) {
     isResolved = true;
     resolveData = data;
     successHandlers.forEach(function(callback) {
@@ -26,7 +26,7 @@ var Deferred = function() {
     });
   };
 
-  var reject = function(data) {
+  let reject = function(data) {
     isRejected = true;
     rejectData = data;
     errorHandlers.forEach(function(callback) {
@@ -49,7 +49,7 @@ var Deferred = function() {
   };
 };
 
-var promise = Deferred().promise();
+let promise = Deferred().promise();
 
 promise.then(function(data) {
   // Here for success.

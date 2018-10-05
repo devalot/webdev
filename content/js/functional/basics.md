@@ -16,7 +16,7 @@ function add(a, b) {
   return a + b;
 }
 
-var result = add(1, 2); // 3
+let result = add(1, 2); // 3
 ~~~
 
   - This syntax is know as a *function definition statement*.  It is
@@ -28,11 +28,11 @@ var result = add(1, 2); // 3
 ### Function Definition (Expression) ### {#func-expression}
 
 ~~~ {.javascript}
-var add = function(a, b) {
+let add = function(a, b) {
   return a + b;
 };
 
-var result = add(1, 2); // 3
+let result = add(1, 2); // 3
 ~~~
 
   - Function is callable through a variable
@@ -44,14 +44,14 @@ var result = add(1, 2); // 3
 Short form (single expression, implicit `return`):
 
 ~~~ {.javascript}
-var add = (a, b) => a + b;
+let add = (a, b) => a + b;
 add(1, 2);
 ~~~
 
 Long form (multiple expressions, explicit `return`):
 
 ~~~ {.javascript}
-var add = (a, b) => {
+let add = (a, b) => {
   return a + b;
 };
 
@@ -72,7 +72,7 @@ add(1, 2);
 ### Function Invocation (Example) ### {#wrong-args}
 
 ~~~ {.javascript}
-var add = function(a, b) {
+let add = function(a, b) {
   return a + b;
 };
 

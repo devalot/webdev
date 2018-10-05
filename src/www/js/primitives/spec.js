@@ -7,7 +7,7 @@ describe("Primitives Exercise", function() {
 
   describe("Exercise 2", function() {
     it("Should return a string of at least 5 characters", function() {
-      var result = exercise2();
+      let result = exercise2();
       expect(result).toBeDefined();
       expect(typeof result).toBe("string");
       expect(result.length).toBeGreaterThan(4);

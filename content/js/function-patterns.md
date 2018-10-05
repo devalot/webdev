@@ -5,7 +5,7 @@
   - A function expression without a name:
 
     ~~~ {.javascript}
-    var anon = function() {};
+    let anon = function() {};
     ~~~
 
   - Pros:
@@ -48,7 +48,7 @@
 
     ~~~ {.javascript}
     // setTimeout(func, delayInMs[, arg1, argn]);
-    var timer = setTimeout(func, 500);
+    let timer = setTimeout(func, 500);
     ~~~
 
   - Use `clearTimeout(timer)` to cancel

@@ -68,7 +68,7 @@ Functional Programming
 <<(../content/js/functional/this.md)
 <<(../content/js/functional/modules.md)
 <<(../content/js/functional/array.md)
-<<(../content/js/functional/pure.md)
+<<(../content/js/functional/partial.md)
 
 Object-Oriented Programming
 ===========================

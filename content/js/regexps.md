@@ -11,7 +11,7 @@
   * JavaScript supports literals for the `RegExp` object:
 
     ~~~ {.javascript}
-    var re = /^\d+$/;
+    let re = /^\d+$/;
     re.test("1234"); // true
     ~~~
 

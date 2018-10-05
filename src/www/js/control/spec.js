@@ -1,5 +1,5 @@
 describe("Flow Control Exercises", function() {
-  var e1 = function(f) {
+  let e1 = function(f) {
     return function() {
       it("Should return true when given 42", function() {
         expect(f(42)).toBeDefined();
@@ -17,7 +17,7 @@ describe("Flow Control Exercises", function() {
   };
 
 
-  var e2and3 = function(f) {
+  let e2and3 = function(f) {
     return function() {
       e1(f)();
 
@@ -26,14 +26,14 @@ describe("Flow Control Exercises", function() {
       });
 
       it("Should return false when given \"43\"", function() {
-        var result = f("43");
+        let result = f("43");
         expect(result).toBe(false);
       });
     };
   };
 
-  var e4 = function(f) {
-    var counter = {f: function() {}};
+  let e4 = function(f) {
+    let counter = {f: function() {}};
 
     return function() {
       it("Should call the counter function 3 times", function() {
@@ -44,7 +44,7 @@ describe("Flow Control Exercises", function() {
     };
   };
 
-  var e5 = function(f) {
+  let e5 = function(f) {
     if (f([]) !== undefined) {
       return function() {
         it("Should correctly sum numbers", function() {
