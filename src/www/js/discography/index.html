@@ -8,23 +8,20 @@
     <h1>Discography</h1>
 
     <!-- This is where we're going to insert the view -->
-    <div id="view"></div>
+    <section id="view"></section>
+
+    <!-- Write your templates here -->
 
     <!-- Bring in our JavaScript files -->
-    <script src="js/vendor/mustache.min.js"></script>
     <script src="../ajax/ajax.js"></script>
-    <script src="js/lib/model.js"></script>
-    <script src="js/lib/view.js"></script>
-    <script src="js/lib/controller.js"></script>
-    <script src="js/models/artist.js"></script>
-    <script src="js/models/album.js"></script>
-    <script src="js/controllers/artists_controller.js"></script>
-    <script src="js/controllers/albums_controller.js"></script>
+    <script src="components/show.js"></script>
+    <script src="components/index.js"></script>
+    <script src="components/chat.js"></script>
 
     <!-- Bootstrap the application -->
     <script>
       (function() {
-        ArtistsController.index();
+        ArtistList.bootstrap("view");
       })();
     </script>
   </body>

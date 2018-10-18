@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<title>Demo</title>
+
+<template id="artists-show">
+  <details>
+    <summary>
+      <slot name="name">Artist Name</slot>
+      (<slot name="year">Formation Year</slot>)
+    </summary>
+
+    <ul></ul>
+  </details>
+</template>
+
+<template id="artists-index">
+  <section>
+    <header>
+      <h2>Our Favorite Artists</h2>
+    </header>
+
+    <slot name="artists"></slot>
+  </section>
+</template>
+
+<template id="chat-initial">
+  <style>
+    label {
+      margin-right: 2em;
+    }
+  </style>
+
+  <section>
+    <header>
+      <h2>Join Our Live Chat!</h2>
+    </header>
+
+    <form>
+      <label>Name: <input type="text" name="name"></label>
+      <label>Access Code: <input type="text" name="code"></label>
+      <input type="submit" value="Join">
+    </form>
+  </section>
+</template>
+
+<template id="chat-live">
+  <style>
+    ul {
+      list-style-type: none;
+    }
+
+    .sender {
+      padding-right: 1em;
+      font-style: italic;
+    }
+  </style>
+
+  <section>
+    <header>
+      <h2>Live Chat!</h2>
+    </header>
+
+    <form>
+      <ul></ul>
+      <input type="text" name="message">
+      <input type="submit" value="Send">
+    </form>
+  </section>
+</template>
+
+<main>
+  <header>
+    <h1>Demo</h1>
+  </header>
+
+  <section id="view">
+  </section>
+
+  <chat-box></chat-box>
+</main>
+
+<script src="getJSON.js"></script>
+<script src="components/show.js"></script>
+<script src="components/index.js"></script>
+<script src="components/chat.js"></script>
+<script>ArtistList.bootstrap("view");</script>

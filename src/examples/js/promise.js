@@ -15,17 +15,17 @@ $.getJSON("/a", function(data_a) {
 // :>>
 
 // <<: with
-$.getJSON("/a").
-  then(function(data) {
+$.getJSON("/a")
+  .then(function(data) {
     return $.getJSON("/b/" + data.id);
-  }).
-  then(function(data) {
+  })
+  .then(function(data) {
     return $.getJSON("/c/" + data.id);
-  }).
-  then(function(data) {
+  })
+  .then(function(data) {
     console.log("Got C: ", data);
-  }).
-  catch(function(message) {
+  })
+  .catch(function(message) {
     console.error("Something failed:", message);
   });
 // :>>

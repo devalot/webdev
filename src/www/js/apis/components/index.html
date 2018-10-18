@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Components</title>
+  </head>
+
+  <body>
+    <!-- ################################################################### -->
+    <section>
+      <header>
+        <h2>Custom Elements</h2>
+      </header>
+
+      <!-- Using autonomous elements: -->
+      <h3>Autonomous Elements</h3>
+      <p>Using the &lt;hello-autonomous&gt; element:</p>
+
+      <!-- <<: autonomous -->
+      <hello-autonomous></hello-autonomous>
+      <!-- :>> -->
+
+      <!-- Using customized elements: -->
+      <h3>Customized Elements</h3>
+      <p>Using the &lt;p&gt; element with <code>is</code>:</p>
+
+      <!-- <<: customized -->
+      <p is="hello-customized"></p>
+      <!-- :>> -->
+    </section>
+
+    <!-- ################################################################### -->
+    <section>
+      <header>
+        <h2>Shadow DOM</h2>
+      </header>
+
+      <!-- A custom element that uses a shadow DOM: -->
+      <!-- <<: shadow -->
+      <hello-shadow></hello-shadow>
+      <!-- :>> -->
+    </section>
+
+    <!-- ################################################################### -->
+    <section>
+      <header>
+        <h2>HTML Templates</h2>
+      </header>
+
+      <!-- A template that uses slots: -->
+      <template id="with-name">
+        <ul>
+          <li>Hello <slot name="first-name">World</slot>!</li>
+          <li>Your name came from a slot</li>
+        </ul>
+      </template>
+
+      <!-- Custom element that fills in a slot: -->
+      <hello-template>
+        <span slot="first-name">Alice</span>
+      </hello-template>
+    </section>
+
+
+    <!-- Load the example source code: -->
+    <script src="example.js"></script>
+  </body>
+</html>

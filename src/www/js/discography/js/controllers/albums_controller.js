@@ -1,5 +1,0 @@
-AlbumsController = (function(){
-
-
-
-})();
