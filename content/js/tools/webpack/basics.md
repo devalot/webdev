@@ -15,8 +15,8 @@
 
 <!-- === Refresher on JavaScript Modules === -->
 
-<<(../changes/es2015.md#modules-export)
-<<(../changes/es2015.md#modules-why)
+<<(../../changes/es2015.md#modules-export)
+<<(../../changes/es2015.md#modules-why)
 
 ### Bundling JavaScript Modules
 

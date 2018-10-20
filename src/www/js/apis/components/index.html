@@ -46,18 +46,22 @@
         <h2>HTML Templates</h2>
       </header>
 
-      <!-- A template that uses slots: -->
+      <!-- <<: template -->
+      <!-- Create a template and slots: -->
       <template id="with-name">
         <ul>
           <li>Hello <slot name="first-name">World</slot>!</li>
           <li>Your name came from a slot</li>
         </ul>
       </template>
+      <!-- :>> -->
 
+      <!-- <<: slot -->
       <!-- Custom element that fills in a slot: -->
       <hello-template>
         <span slot="first-name">Alice</span>
       </hello-template>
+      <!-- :>> -->
     </section>
 
 

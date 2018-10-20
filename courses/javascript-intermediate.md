@@ -89,32 +89,36 @@ Asynchronous Programming
 <<(../content/js/apis/fetch/lab.md)
 <<(../content/js/async/await.md)
 
+Web Application Development
+===========================
+
+<<(../content/js/apis/components/index.md)
+<<(../content/js/apis/websockets/index.md)
+<<(../content/js/apis/webstorage/index.md)
+<<(../content/js/apis/serviceworkers/index.md)
+
+Real World JavaScript
+=====================
+
+<<(../content/js/tools/lint/index.md)
+<<(../content/js/tools/babel/index.md)
+<<(../content/js/tools/webpack/index.md)
+
 <!--
 
   TODO:
 
-    * Async Programming
-
-      - Show what it look like to make an Ajax request before showing
-        (and other notes from the targeted topics class)
-
-      - Lab: Using the fetch API + REST
-
-      - Lab: Using the fetch API with await
-
     * Web Application Development
 
-      - Web Components
-
-      - Lab: Disco app with custom <disco-artist> elements
-
-      - Observable (Reactivity/Immutability)
-
-      - Lab: A web sockets chat room
-
       - Web Sockets
+        - Lab: A web sockets chat room
+
+      - Web Storage
+        - Add caching to the album list
 
       - Service Workers
+
+      - Observable (Reactivity/Immutability)
 
     * Real World JavaScript
 

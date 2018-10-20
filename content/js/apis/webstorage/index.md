@@ -1,5 +1,5 @@
-The Web Storage API
--------------------
+Web Storage
+-----------
 
 <<(basics.md)
 <<(support.md)

@@ -229,6 +229,12 @@ and more powerful features of web browsers:
 <<(../content/js/apis/fetch/basics.md)
 <<(../content/js/apis/fetch/support.md)
 
+<<(../content/js/apis/components/elements.md)
+<<(../content/js/apis/components/shadow.md)
+<<(../content/js/apis/components/templates.md)
+<<(../content/js/apis/components/support.md)
+<<(../content/js/apis/components/labs.md#ex-wc-main)
+
 <<(../content/js/apis/webstorage/basics.md)
 <<(../content/js/apis/webstorage/support.md)
 
@@ -263,9 +269,9 @@ important tools you need to know:
 
   * Testing with Jasmine
 
-<<(../content/js/tools/lint.md)
-<<(../content/js/tools/babel.md)
-<<(../content/js/tools/webpack.md)
+<<(../content/js/tools/lint/basics.md)
+<<(../content/js/tools/babel/basics.md)
+<<(../content/js/tools/webpack/basics.md)
 <<(../content/js/jasmine/basics.md)
 <<(../content/js/jasmine/matcher.md)
 <<(../content/js/jasmine/life.md)
