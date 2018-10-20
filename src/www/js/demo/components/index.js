@@ -1,8 +1,16 @@
 class ArtistList extends HTMLElement {
-  static bootstrap(id) {
+  constructor() {
+    super();
+
+    const shadowRoot = this.attachShadow({mode: 'open'})
+    const template = document.getElementById("artists-index");
+    shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  connectedCallback() {
     getJSON("/api/artists")
-      .then(function(artists) {
-        let container = document.getElementById(id);
+      .then(artists => {
+        let container = this.shadowRoot.querySelector('ul.artists');
         let list = document.createElement("artist-list");
 
         for (let artist of artists) {
@@ -22,14 +30,6 @@ class ArtistList extends HTMLElement {
           container.appendChild(element);
         }
       });
-  }
-
-  constructor() {
-    super();
-
-    const shadowRoot = this.attachShadow({mode: 'open'})
-    const template = document.getElementById("artists-index");
-    shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 

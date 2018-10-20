@@ -37,8 +37,13 @@ This JavaScript course is delivered during two days.
   Promises and `await`         Developer Tools
   The `fetch` API              Testing w/ Jasmine
 
+
+<div class="notes">
+
 <<(../metadata/links.md)
 <<(../content/js/requirements.md)
+
+</div>
 
 JavaScript Review (Warming Up)
 ==============================

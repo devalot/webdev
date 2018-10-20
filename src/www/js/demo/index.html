@@ -18,7 +18,7 @@
       <h2>Our Favorite Artists</h2>
     </header>
 
-    <slot name="artists"></slot>
+    <ul class="artists"></ul>
   </section>
 </template>
 
@@ -72,8 +72,8 @@
     <h1>Demo</h1>
   </header>
 
-  <section id="view">
-  </section>
+  <artist-list>
+  </artist-list>
 
   <chat-box></chat-box>
 </main>
@@ -82,4 +82,3 @@
 <script src="components/show.js"></script>
 <script src="components/index.js"></script>
 <script src="components/chat.js"></script>
-<script>ArtistList.bootstrap("view");</script>

@@ -5,7 +5,7 @@ let
   # Some helper files:
   repo = fetchGit {
     url = "git://git.devalot.com/edify.git";
-    rev = "5faef56f9d28dd8c1233d37edd7cd72af1fc03a2";
+    rev = "95f51d410056cbf7f241c596a1263d7cfeefe942";
   };
 
   edify = import "${repo}/nix/builder.nix" args;
@@ -16,7 +16,7 @@ in
 
 edify.mkDerivation rec {
   name = "webdev-${version}";
-  version = "1.0";
+  version = "0.8";
   src = builtins.fetchGit ./.;
 
   # Extra files to include in the zip archive:
