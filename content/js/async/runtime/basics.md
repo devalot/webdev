@@ -1,6 +1,3 @@
-The JavaScript Runtime
-----------------------
-
 ### Introduction to the Runtime ### {#intro}
 
   * JavaScript has a single-threaded runtime
@@ -15,7 +12,7 @@ The JavaScript Runtime
 
 ### Visualizing the Runtime ###
 
-![The JavaScript Event Loop](../../../diagrams/js/runtime.dot)\
+![The JavaScript Event Loop](../../../../diagrams/js/runtime.dot)\
 <!-- Placeholder -->
 
 (See the demo: `src/www/js/runtime/index.html`)

@@ -1,4 +1,4 @@
-### Built-in Functions (Types and Conversions) {#pre-parse} ###
+### Built-in Functions (Types and Conversions) {#pre-parse}
 
 `isNaN(num)`:
   ~ Safely test if `num` is `NaN`
@@ -12,7 +12,7 @@
 `parseFloat(str)`:
   ~ Convert a string to a number (float)
 
-### Exercise: Function Arguments and Parsing {#parse} ###
+### Exercise: Function Arguments and Parsing {#parse}
 
   #. Open the following file:
 
@@ -22,7 +22,7 @@
 
   #. Run the tests by opening the `index.html` file in your browser.
 
-### Exercise: Constructor Functions {#constructors} ###
+### Exercise: Constructor Functions {#constructors}
 
   #. Open the following file:
 
@@ -32,7 +32,7 @@
 
   #. Run the tests by opening the `index.html` file in your browser.
 
-### Exercise: Class Builder {#builder} ###
+### Exercise: Class Builder {#builder}
 
   #. Open the following files:
 

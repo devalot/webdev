@@ -30,11 +30,12 @@ This JavaScript course is delivered during two days.
 
   Day 1                        Day 2
   --------------               --------------
-  Quick Review                 Class Project
-  Advanced Functions           Beyond ES5 (ES2009)
-  Object-Oriented Programming  Browser APIs
-  Asynchronous Programming     Libraries and Frameworks
-  Testing w/ Jasmine           Developer Tools for JS
+  Quick Review                 Web Components
+  Functional Programming       WebSockets
+  Prototypes and Classes       WebStorage
+  The Asynchronous Runtime     Service Workers
+  Promises and `await`         Developer Tools
+  The `fetch` API              Testing w/ Jasmine
 
 <<(../metadata/links.md)
 <<(../content/js/requirements.md)
@@ -79,15 +80,14 @@ Object-Oriented Programming
 <<(../content/js/oop/reflection.md)
 <<(../content/js/oop/mutable.md)
 
-
 Asynchronous Programming
 ========================
 
-<<(../content/js/async/runtime.md)
-<<(../content/js/async/promises.md)
+<<(../content/js/async/runtime/index.md)
+<<(../content/js/async/promises/index.md)
 <<(../content/js/apis/fetch/index.md)
 <<(../content/js/apis/fetch/lab.md)
-<<(../content/js/async/await.md)
+<<(../content/js/async/await/index.md)
 
 Web Application Development
 ===========================

@@ -1,7 +1,7 @@
 Object Mutability
 -----------------
 
-### Passing Objects to Functions ###
+### Passing Objects to Functions {#mutable-passing}
 
 JavaScript uses *call by sharing* when you pass arguments to a
 function:
@@ -14,7 +14,7 @@ Produces:
 ~~~ {.javascript exec="node ../../../src/examples/js/mutability.js"}
 ~~~
 
-### `Object.freeze` ###
+### `Object.freeze` {#mutable-freeze}
 
 ~~~ {.javascript}
 Object.freeze(obj);
@@ -34,7 +34,7 @@ assert(Object.isFrozen(obj) === true);
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
 </div>
 
-### `Object.seal` ###
+### `Object.seal` {#mutable-seal}
 
 ~~~ {.javascript}
 Object.seal(obj);
@@ -50,7 +50,7 @@ assert(Object.isSealed(obj) === true);
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 </div>
 
-### `Object.preventExtensions` ###
+### `Object.preventExtensions` {#mutable-preventExtensions}
 
 ~~~ {.javascript}
 Object.preventExtensions(obj);

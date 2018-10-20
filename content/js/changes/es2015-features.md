@@ -101,7 +101,7 @@ a.map(e => e + 1);
 
   * If you use curly braces you need to use `return`.
 
-### Default Parameters {#params-default} ###
+### Default Parameters {#params-default}
 
 ~~~ {.javascript insert="../../../src/babel/es2015/parameters.js" token="default"}
 ~~~
@@ -144,7 +144,7 @@ a.map(e => e + 1);
 
 </div>
 
-### Spread Syntax {#args-spread} ###
+### Spread Syntax {#args-spread}
 
 ~~~ {.javascript insert="../../../src/babel/es2015/parameters.js" token="spread"}
 ~~~
@@ -186,7 +186,7 @@ a.map(e => e + 1);
 
 </div>
 
-### Classes ### {#class-basic}
+### Classes {#class-basic}
 
 New `class` keyword that provides syntactic sugar over prototypal
 inheritance:

@@ -65,7 +65,9 @@ In this section we will review and explore:
 <<(../content/js/oop/prototype.md#proto)
 <<(../content/js/oop/prototype.md#proto-array)
 <<(../content/js/oop/prototype.md#ctor-proto)
+<<(../content/js/oop/ctor-and-classes.md#ctor-proto)
 <<(../content/js/oop/ctor-and-classes.md#es2015-classes)
+<<(../content/js/labs.md#constructors)
 <<(../content/js/oop/ctor-and-classes.md#prototype-inheritance)
 <<(../content/js/oop/ctor-and-classes.md#es2015-inheritance)
 <<(../content/js/oop/ctor-and-classes.md#generic-functions)
@@ -76,6 +78,9 @@ In this section we will review and explore:
 <<(../content/js/oop/ctor-and-classes.md#this-bind)
 <<(../content/js/oop/ctor-and-classes.md#this-alias)
 <<(../content/js/oop/ctor-and-classes.md#this-arrow)
+<<(../content/js/oop/mutable.md#mutable-passing)
+<<(../content/js/oop/mutable.md#mutable-freeze)
+<<(../content/js/labs.md#builder)
 
 Functional Programming with JavaScript
 --------------------------------------
@@ -110,6 +115,9 @@ following:
 <<(../content/js/functional/basics.md#func-arrow)
 <<(../content/js/functional/basics.md#func-parens)
 <<(../content/js/functional/basics.md#wrong-args)
+<<(../content/js/functional/params.md#arity)
+<<(../content/js/changes/es2015-features.md#params-default)
+<<(../content/js/changes/es2015-features.md#params-rest)
 <<(../content/js/functional/data.md#func-data)
 <<(../content/js/functional/data.md#funcs-as-args)
 <<(../content/js/functional/data.md#funcs-as-returns)
@@ -118,14 +126,12 @@ following:
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/closures.md#closure-exercise)
 <<(../content/js/functional/modules.md#iife-short)
-<<(../content/js/functional/modules.md#iife-expanded)
 <<(../content/js/functional/modules.md#iife-modules)
 <<(../content/js/functional/array.md#foreach)
 <<(../content/js/functional/array.md#every-some)
 <<(../content/js/functional/array.md#filter-example)
 <<(../content/js/functional/array.md#map-example)
 <<(../content/js/functional/array.md#reduce-example)
-<<(../content/js/functional/params.md#arity)
 <<(../content/js/functional/this.md#call)
 <<(../content/js/functional/this.md#apply)
 <<(../content/js/functional/this.md#bind)
@@ -159,11 +165,12 @@ advantage of these features we'll learn about:
 
   * Writing modern asynchronous code
 
-<<(../content/js/async/runtime.md)
-<<(../content/js/async/promises.md)
-<<(../content/js/apis/fetch/index.md)
+<<(../content/js/async/runtime/basics.md)
+<<(../content/js/async/promises/basics.md)
+<<(../content/js/apis/fetch/basics.md)
+<<(../content/js/apis/fetch/support.md)
 <<(../content/js/apis/fetch/lab.md)
-<<(../content/js/async/await.md)
+<<(../content/js/async/await/basics.md)
 
 Track 2: Modern APIs and Tools
 ================================
@@ -228,24 +235,19 @@ and more powerful features of web browsers:
 
 <<(../content/js/apis/fetch/basics.md)
 <<(../content/js/apis/fetch/support.md)
-
 <<(../content/js/apis/components/elements.md)
 <<(../content/js/apis/components/shadow.md)
 <<(../content/js/apis/components/templates.md)
 <<(../content/js/apis/components/support.md)
 <<(../content/js/apis/components/labs.md#ex-wc-main)
-
-<<(../content/js/apis/webstorage/basics.md)
-<<(../content/js/apis/webstorage/support.md)
-
-<<(../content/js/apis/webworkers/basics.md)
-<<(../content/js/apis/webworkers/support.md)
-
-<<(../content/js/apis/serviceworkers/basics.md)
-<<(../content/js/apis/serviceworkers/support.md)
-
 <<(../content/js/apis/websockets/basics.md)
 <<(../content/js/apis/websockets/support.md)
+<<(../content/js/apis/webstorage/basics.md)
+<<(../content/js/apis/webstorage/support.md)
+<<(../content/js/apis/webworkers/basics.md)
+<<(../content/js/apis/webworkers/support.md)
+<<(../content/js/apis/serviceworkers/basics.md)
+<<(../content/js/apis/serviceworkers/support.md)
 
 JavaScript Development Tools
 ----------------------------

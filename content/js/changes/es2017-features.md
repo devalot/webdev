@@ -13,7 +13,7 @@
 **Major** improvement to asynchronous functions thanks to promises and
 generators.  Asynchronous callbacks are hidden with new syntax.
 
-~~~ {.javascript insert="../../../src/examples/js/async-await.js"}
+~~~ {.javascript insert="../../../src/examples/js/async-await.js" token="getArtist"}
 ~~~
 
 ### Summary of Other Changes

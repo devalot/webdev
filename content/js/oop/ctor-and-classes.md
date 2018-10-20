@@ -6,16 +6,16 @@ Constructor Functions and Classes
 ~~~ {.javascript insert="../../../src/examples/js/inheritance.js" token="rec"}
 ~~~
 
-<!-- EXERCISE -->
-<<(../labs.md#constructors)
-
-### ES2015 Classes (Hidden Prototypes) ### {#es2015-classes}
+### ES2015 Classes (Hidden Prototypes) {#es2015-classes}
 
 ~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="rec"}
 ~~~
 
 ~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="rec-new"}
 ~~~
+
+<!-- EXERCISE -->
+<<(../labs.md#constructors)
 
 ### Constructor Functions and Inheritance ### {#prototype-inheritance}
 
