@@ -246,6 +246,7 @@ and more powerful features of web browsers:
 <<(../content/js/apis/components/labs.md#ex-wc-main)
 <<(../content/js/apis/websockets/basics.md)
 <<(../content/js/apis/websockets/support.md)
+<<(../content/js/apis/websockets/labs.md)
 <<(../content/js/apis/webstorage/basics.md)
 <<(../content/js/apis/webstorage/support.md)
 <<(../content/js/apis/webworkers/basics.md)

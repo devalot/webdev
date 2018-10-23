@@ -115,9 +115,6 @@ Real World JavaScript
 
     * Web Application Development
 
-      - Web Sockets
-        - Lab: A web sockets chat room
-
       - Web Storage
         - Add caching to the album list
 
