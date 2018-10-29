@@ -30,7 +30,7 @@ a.forEach(function(n) {
 Functions can create *nested functions* and return them:
 
 ~~~ {.javascript}
-let f = function recordStartTime() {
+function recordStartTime() {
   let d = new Date();
 
   return function() {
