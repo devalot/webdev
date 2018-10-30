@@ -14,7 +14,6 @@ let
   nodeNixFiles = [
     { load = ./webdev;  for = "src";                       }
     { load = ./webpack; for = "src/www/js/tools/webpack";  }
-    { load = ./vue;     for = "src/www/js/frameworks/vue"; }
   ];
 
   ##############################################################################
@@ -32,7 +31,6 @@ let
   ##############################################################################
   buildInputs = [
     nodejs
-    pkgs.nodePackages.node2nix
   ];
 
   ##############################################################################
@@ -60,14 +58,6 @@ let
     ( cd "$dest/src/www/js/frameworks/vue"
       npm run build
     )
-  '';
-
-  ##############################################################################
-  shellHook = ''
-    # Helper function to call node2nix correctly.
-    runNode2Nix() {
-      node2nix -8 -l package-lock.json --development
-    }
   '';
 
 in { inherit buildInputs installPhase shellHook; }

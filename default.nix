@@ -27,7 +27,4 @@ edify.mkDerivation rec {
 
   # Install things:
   installPhase = nodeHelper.installPhase;
-
-  # Shell helpers:
-  shellHook = nodeHelper.shellHook;
 }
