@@ -101,6 +101,7 @@ Web Application Development
 <<(../content/js/apis/websockets/index.md)
 <<(../content/js/apis/webstorage/index.md)
 <<(../content/js/apis/serviceworkers/index.md)
+<<(../content/js/changes/esnext/observable/index.md)
 
 Real World JavaScript
 =====================
@@ -115,12 +116,7 @@ Real World JavaScript
 
     * Web Application Development
 
-      - Web Storage
-        - Add caching to the album list
-
       - Service Workers
-
-      - Observable (Reactivity/Immutability)
 
     * Real World JavaScript
 

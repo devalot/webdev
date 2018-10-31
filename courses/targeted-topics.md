@@ -239,6 +239,7 @@ and more powerful features of web browsers:
 
 <<(../content/js/apis/fetch/basics.md)
 <<(../content/js/apis/fetch/support.md)
+<<(../content/js/apis/fetch/lab.md)
 <<(../content/js/apis/components/elements.md)
 <<(../content/js/apis/components/shadow.md)
 <<(../content/js/apis/components/templates.md)
