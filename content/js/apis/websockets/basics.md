@@ -17,6 +17,19 @@
      communications between the client and server over the upgraded
      port 80 connection
 
+### Example: WebSockets
+
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="new"}
+~~~
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="onopen"}
+~~~
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="onmessage"}
+~~~
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="send"}
+~~~
+
+(See: `src/www/js/apis/websockets/main.js`)
+
 ### Security Considerations
 
   * There are no host restrictions on WebSockets connections
@@ -24,4 +37,3 @@
   * Encrypt traffic and confirm identity when using WebSockets
 
   * Never allow foreign JavaScript to execute in a user's browser
-
