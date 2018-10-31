@@ -249,6 +249,7 @@ and more powerful features of web browsers:
 <<(../content/js/apis/websockets/labs.md)
 <<(../content/js/apis/webstorage/basics.md)
 <<(../content/js/apis/webstorage/support.md)
+<<(../content/js/apis/webstorage/labs.md#ex-storage-chat)
 <<(../content/js/apis/webworkers/basics.md)
 <<(../content/js/apis/webworkers/support.md)
 <<(../content/js/apis/serviceworkers/basics.md)

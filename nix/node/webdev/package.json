@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "WebDev Exercises and Demos",
   "private": true,
-  "scripts": {},
   "directories": {},
   "author": "Peter J. Jones",
   "license": "BSD-2-Clause",
@@ -11,8 +10,12 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "mockapie": "git://github.com/pjones/mockapie.git",
-    "nightwatch": "^0.9.8"
-   },
+    "nightwatch": "^0.9.8",
+    "typescript": "3.1.4"
+  },
+  "scripts": {
+    "babel": "babel -d babel/es2015-es5 --presets=env babel/es2015"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/devalot/webdev.git"
