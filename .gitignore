@@ -2,3 +2,4 @@
 /result
 **/node_modules
 src/www/js/tools/webpack/dist
+src/www/js/alternatives/typescript/**/*.js

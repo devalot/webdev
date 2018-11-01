@@ -1,0 +1,15 @@
+{
+  "name": "typescript-demos",
+  "version": "1.0.0",
+  "description": "Exercises and Demos for TypeScript",
+  "private": true,
+  "directories": {},
+  "author": "Peter J. Jones",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "typescript": "^3.1.5"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
+  }
+}

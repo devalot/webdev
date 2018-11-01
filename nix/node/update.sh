@@ -27,8 +27,9 @@ update() {
 }
 
 ################################################################################
-update "$top/src"                       "webdev"
-update "$top/src/www/js/tools/webpack"  "webpack"
+update "$top/src" "webdev"
+update "$top/src/www/js/alternatives/typescript" "typescript"
+update "$top/src/www/js/tools/webpack" "webpack"
 
 # No longer building these:
 # update "$top/src/www/js/frameworks/vue" "vue"

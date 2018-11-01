@@ -106,6 +106,7 @@ Web Application Development
 Real World JavaScript
 =====================
 
+<<(../content/js/alternatives/typescript/basics.md)
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
@@ -119,12 +120,6 @@ Real World JavaScript
       - Service Workers
 
     * Real World JavaScript
-
-      - TypeScript Fundamentals
-
-      - Webpack
-
-      - Babel
 
       - Contributing to an Open Source project
 

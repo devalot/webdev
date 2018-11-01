@@ -10,8 +10,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "mockapie": "git://github.com/pjones/mockapie.git",
-    "nightwatch": "^0.9.8",
-    "typescript": "3.1.4"
+    "nightwatch": "^0.9.8"
   },
   "scripts": {
     "babel": "babel -d babel/es2015-es5 --presets=env babel/es2015"

@@ -12,8 +12,15 @@ let
   # Files which describe needed NPM modules.  Use the
   # `nix/node/update.sh' script to generate these files.
   nodeNixFiles = [
-    { load = ./webdev;  for = "src";                       }
-    { load = ./webpack; for = "src/www/js/tools/webpack";  }
+    { load = ./webdev;
+      for = "src";
+    }
+    { load = ./typescript;
+      for = "src/www/js/alternatives/typescript";
+    }
+    { load = ./webpack;
+      for = "src/www/js/tools/webpack";
+    }
   ];
 
   ##############################################################################
@@ -51,11 +58,6 @@ let
 
     # Prepare the Webpack demo app:
     ( cd "$dest/src/www/js/tools/webpack"
-      npm run build
-    )
-
-    # Prepare the Vue.js demo app:
-    ( cd "$dest/src/www/js/frameworks/vue"
       npm run build
     )
   '';

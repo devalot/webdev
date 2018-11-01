@@ -2534,15 +2534,6 @@ let
         sha1 = "0ba5ec2a885640e470ea4e8505971900dac58822";
       };
     };
-    "typescript-3.1.4" = {
-      name = "typescript";
-      packageName = "typescript";
-      version = "3.1.4";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/typescript/-/typescript-3.1.4.tgz";
-        sha512 = "JZHJtA6ZL15+Q3Dqkbh8iCUmvxD3iJ7ujXS+fVkKnwIVAdHc5BJTDNM0aTrnr2luKulFjU7W+SRhDZvi66Ru7Q==";
-      };
-    };
     "ultron-1.1.1" = {
       name = "ultron";
       packageName = "ultron";
@@ -3029,7 +3020,6 @@ let
       sources."trim-right-1.0.1"
       sources."type-check-0.3.2"
       sources."type-detect-0.1.1"
-      sources."typescript-3.1.4"
       sources."ultron-1.1.1"
       sources."unpipe-1.0.0"
       sources."user-home-1.1.1"
