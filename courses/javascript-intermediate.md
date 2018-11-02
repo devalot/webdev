@@ -110,6 +110,7 @@ Real World JavaScript
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
+<<(../content/oss/how-to.md)
 
 <!--
 
