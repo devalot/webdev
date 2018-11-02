@@ -112,21 +112,6 @@ Real World JavaScript
 <<(../content/js/tools/webpack/index.md)
 <<(../content/oss/how-to.md)
 
-<!--
-
-  TODO:
-
-    * Web Application Development
-
-      - Service Workers
-
-    * Real World JavaScript
-
-      - Contributing to an Open Source project
-
--->
-
-
 Testing with Jasmine
 ====================
 

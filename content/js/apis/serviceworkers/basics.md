@@ -9,6 +9,22 @@
 
   * Allows for complete offline experience
 
+### Registering a Service Worker ###
+
+From your site's JavaScript:
+
+~~~ {.javascript insert="../../../../src/www/js/apis/serviceworkers/main.js" token="register"}
+~~~
+
+(See `src/www/js/apis/serviceworkers/main.js`)
+
+### Caching Resources ###
+
+~~~ {.javascript insert="../../../../src/www/js/apis/serviceworkers/worker.js" token="install"}
+~~~
+
+(See `src/www/js/apis/serviceworkers/worker.js`)
+
 ### Additional Uses of Service Workers ###
 
   * [Push notifications][] for mobile and desktop

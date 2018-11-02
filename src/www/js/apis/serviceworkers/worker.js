@@ -3,10 +3,19 @@
 
   // Service worker was installed.  This is where you'd want to start
   // caching the assets your site needs while offline.
-  self.addEventListener("install", function() {
+  // <<: install
+  self.addEventListener("install", function(event) {
     console.log("installed");
-    self.skipWaiting(); // activate a new version.
+
+    async function ready() {
+      let cache = await caches.open("v1");
+      await cache.addAll(["/api/artists"]);
+      self.skipWaiting(); // activate a new version.
+    }
+
+    event.waitUntil(ready());
   });
+  // :>>
 
   // A worker goes into the `waiting' state when a new version has
   // been loaded but can't activate because the site is currently
@@ -36,7 +45,7 @@
   self.addEventListener("fetch", function(e) {
     console.log("intercepted resource fetch: ", e.request.url);
 
-    if (e.request.url.match(/artists$/)) {
+    if (e.request.url.match(/albums$/)) {
       console.log("hijacking resource fetch and returning static content");
 
       let response = new Response(JSON.stringify({message: "hello"}));
