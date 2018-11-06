@@ -82,5 +82,3 @@ add(1, 2, 3) // No name for 3.
 ~~~
 
 (Note: ES2015 has default parameters.)
-
-<<(../changes/es2015-features.md#args-spread)

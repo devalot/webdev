@@ -43,3 +43,4 @@ property:
 
 <<(../changes/es2015-features.md#params-default)
 <<(../changes/es2015-features.md#params-rest)
+<<(../changes/es2015-features.md#args-spread)
