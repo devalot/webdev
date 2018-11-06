@@ -11,7 +11,7 @@
 //
 // To run your tests or debug, start your server and go to:
 //
-//   http://localhost:3000/js/ajax/
+//   http://localhost:3000/js/fetch/
 //
 function getArtists(id) {
 
