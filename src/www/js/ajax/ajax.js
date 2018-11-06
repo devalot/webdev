@@ -15,7 +15,12 @@
  */
 Ajax = (function(){
   let raw = async function(url, method, data) {
-    // Return a promise via fetch.
+    let response = await fetch(url, {
+      method: method,
+      body: data && JSON.stringify(data)
+    });
+
+    return response.json();
   };
 
   // HTTP GET (Fetch resource).

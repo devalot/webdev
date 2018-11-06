@@ -47,4 +47,42 @@
  *
  * Make sure your tests still pass.
  */
-Hosts = undefined;
+Hosts = (function() {
+  let table = new Map();
+
+  let api = {
+    add(name, address) {
+      if (!table.has(name)) table.set(name, []);
+      table.get(name).push(address);
+    },
+
+    lookupByName(name) {
+      if (table.has(name)) return table.get(name);
+      return [];
+    },
+
+    lookupByIP(address) {
+      // let matches = [];
+      //
+      // for (let entry of table) {
+      //   if (entry[1].indexOf(address) >= 0)
+      //     matches.push(entry[0]);
+      // }
+      //
+      // return matches;
+
+      return table.keys().reduce(function(acc, name) {
+        if (table.get(name).includes(address)) acc.push(name);
+        return acc;
+      }, []);
+    },
+
+
+
+    clear() {
+      table.clear();
+    }
+  };
+
+  return api;
+})(); // <--- Don't forget to call your function!

@@ -17,9 +17,7 @@ let users = [
 // The function below should return an array of users from the TEST
 // DATA above that only includes users under the age of 18.
 function exercise1() {
-
-  // Your code here.
-
+  return users.filter(u => u.age < 18);
 }
 
 /****************************************************************************/
@@ -29,9 +27,7 @@ function exercise1() {
 // should be all of the usernames from the TEST DATA above, in the
 // same order.
 function exercise2() {
-
-  // Your code here.
-
+  return users.map(u => u.username);
 }
 
 /****************************************************************************/
@@ -42,9 +38,9 @@ function exercise2() {
 // `toString()` method) from the TEST DATA above where the user is
 // over the age of 20 and younger than 40.
 function exercise3() {
-
-  // Your code here.
-
+  return users
+    .filter(u => u.age > 20 && u.age < 40)
+    .map(u => u.id.toString());
 }
 
 /****************************************************************************/
@@ -53,7 +49,8 @@ function exercise3() {
 // The function below should return the `users' array from above (TEST
 // DATA) in reverse order.  Do not use the built-in reverse function.
 function exercise4() {
-
-  // Your code here.
-
+  return users.reduce(function(acc, user) {
+    acc.unshift(user);
+    return acc;
+  }, []);
 }
