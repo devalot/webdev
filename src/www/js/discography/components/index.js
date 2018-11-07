@@ -10,6 +10,11 @@ class ArtistList extends HTMLElement {
   // the next exercise.
   constructor() {
     super();
+
+    const shadowRoot = this.attachShadow({mode: 'open'});
+    const template   = document.getElementById("artist-list-template");
+
+    shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
   // Exercise 2:
@@ -20,6 +25,32 @@ class ArtistList extends HTMLElement {
   //
   // When you are done, open the `show.js' component and continue.
   connectedCallback() {
+    const ul = this.shadowRoot.querySelector("ul");
+
+    const getArtists = async function() {
+      const response = await fetch("/api/artists");
+      const artists = await response.json();
+
+      artists.forEach(a => {
+        const li = document.createElement("li");
+        const detail = document.createElement("artist-detail");
+
+        const name = document.createElement("span");
+        name.setAttribute("slot", "name");
+        name.textContent = a.name;
+        detail.appendChild(name);
+
+        const year = document.createElement("span");
+        year.setAttribute("slot", "year");
+        year.textContent = a.formation_year;
+        detail.appendChild(year);
+
+        li.appendChild(detail);
+        ul.appendChild(li);
+      });
+    };
+
+    getArtists();
   }
 }
 
