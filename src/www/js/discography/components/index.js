@@ -17,8 +17,6 @@ class ArtistList extends HTMLElement {
   // Fetch all artists from the backend and render them into the
   // template's `<ul>' element.  Start simple by just inserting the
   // the name of the artist.
-  //
-  // When you are done, open the `show.js' component and continue.
   connectedCallback() {
   }
 }
