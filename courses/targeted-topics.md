@@ -278,6 +278,7 @@ important tools you need to know:
 
   * Testing with Jasmine
 
+<<(../content/js/tools/node/basics.md)
 <<(../content/js/tools/lint/basics.md)
 <<(../content/js/tools/babel/basics.md)
 <<(../content/js/tools/webpack/basics.md)

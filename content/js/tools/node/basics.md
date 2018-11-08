@@ -18,7 +18,8 @@
 
   * Run scripts or build processes
 
-  * 250k+ packages available
+  * 800k+ packages available
+
+  * If it has something to do with JavaScript you install it with npm
 
   * <https://www.npmjs.com/>
-
