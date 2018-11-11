@@ -289,3 +289,4 @@ important tools you need to know:
 <<(../content/js/jasmine/spy.md)
 <<(../content/js/jasmine/async.md)
 <<(../content/js/jasmine/run.md)
+<<(../content/js/alternatives/typescript/basics.md)
