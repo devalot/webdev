@@ -40,3 +40,13 @@
 
 `toContain(x)`:
   : Expect an array to contain `x` as an element.
+
+### Exercise: Writing a Test with Jasmine
+
+  #. Open `src/www/js/jasmine/adder.spec.js`
+
+  #. Read the code then do exercise 1 (we'll do exercise 2 later)
+
+  #. To test and debug, open
+
+         src/www/js/jasmine/index.html
