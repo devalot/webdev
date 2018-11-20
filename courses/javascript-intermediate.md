@@ -108,6 +108,7 @@ Real World JavaScript
 
 <<(../content/js/tools/node/index.md)
 <<(../content/js/alternatives/typescript/basics.md)
+<<(../content/js/alternatives/typescript/more.md)
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
