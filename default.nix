@@ -16,7 +16,7 @@ in
 
 edify.mkDerivation rec {
   name = "webdev-${version}";
-  version = "0.11";
+  version = "0.12";
   src = builtins.fetchGit ./.;
 
   # Extra files to include in the zip archive:
