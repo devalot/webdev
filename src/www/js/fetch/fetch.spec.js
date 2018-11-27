@@ -7,7 +7,8 @@ describe("getArtists", function() {
   beforeEach(function() {
     spyOn(window, 'fetch').and.callFake(function(url, options={}) {
       let json = () => Promise.resolve({url, options});
-      response = {json};
+      // response = {json};
+      response = {json, ok: true, status: 200};
 
       spyOn(response, "json").and.callThrough();
       return Promise.resolve(response);

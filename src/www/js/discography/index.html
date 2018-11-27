@@ -12,15 +12,41 @@
 
     <!-- Live Chat! -->
     <chat-box data-host="wschat.devalot.com"
-              data-code="ENTER YOUR ACCESS CODE HERE"
-              data-user="ENTER YOUR NAME HERE">
+              data-code="ab8tz"
+              data-user="Peter">
     </chat-box>
 
+    <template id="chat-template">
+      <section>
+        <header>
+          <h2>Live Chat!</h2>
+        </header>
+        <form>
+          <ul></ul>
+          <input type="text" name="content">
+          <input type="submit" value="Send" disabled>
+        </form>
+      </section>
+    </template>
 
     <!-- Write your templates here -->
+    <template id="artists-index">
+      <section>
+        <header>
+          <h2>Sweet List of Artists!</h2>
+        </header>
+        <ul></ul>
+      </section>
+    </template>
+
+    <template id="artists-show">
+      <slot name="name">Artist Name</slot>
+      (<slot name="year">Formation Year</slot>)
+    </template>
 
     <!-- Bring in our JavaScript files -->
     <script src="../ajax/ajax.js"></script>
+    <script src="components/events.js"></script>
     <script src="components/show.js"></script>
     <script src="components/index.js"></script>
     <script src="components/chat.js"></script>

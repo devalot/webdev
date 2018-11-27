@@ -10,6 +10,14 @@ class ArtistDetail extends HTMLElement {
   // it create `<artist-detail>' elements with the correct slots.
   constructor() {
     super();
+
+    const shadow = this.attachShadow({mode: "open"});
+    const template = document.getElementById("artists-show");
+    shadow.appendChild(template.content.cloneNode(true));
+
+    // const p = document.createElement("p");
+    // p.textContent = "Testing something here.";
+    // shadow.appendChild(p);
   }
 
   // Bonus Exercise:
@@ -22,6 +30,10 @@ class ArtistDetail extends HTMLElement {
   //
   // For an example, see: http://localhost:3000/js/demo/
   connectedCallback() {
+    // const p = this.shadowRoot.querySelector("p");
+    // p.addEventListener("click", function(e) {
+    //   console.log("click in shadow root: ", e.target);
+    // });
   }
 }
 
