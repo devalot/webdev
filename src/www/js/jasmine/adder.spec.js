@@ -10,7 +10,7 @@ describe("Jasmine Exercises 1 and 2", function() {
 
         // If odd:
         if (sum % 2 !== 0) {
-          return foundOdd(sum);
+          return this.foundOdd(sum);
         }
 
         return sum;

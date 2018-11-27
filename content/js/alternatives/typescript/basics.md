@@ -37,9 +37,3 @@ Introduction to TypeScript
 
 ~~~ {.javascript insert="../../../../src/www/js/alternatives/typescript/examples/add.ts" token="length"}
 ~~~
-
-### Additional Examples ###
-
-Look in the following folder for additional examples:
-
-`src/www/js/alternatives/typescript/examples`
