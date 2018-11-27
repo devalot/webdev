@@ -16,7 +16,17 @@
 //            the setTemp function.
 //
 function closure() {
+  let temp = 0;
 
-  // Your code here.
+  let setTemp = function(newTemp) {
+    if (newTemp >= 0 && newTemp <= 100) {
+      temp = newTemp;
+    }
+  };
 
+  let getTemp = function() {
+    return temp;
+  };
+
+  return { getTemp, setTemp };
 }
