@@ -10,7 +10,7 @@ describe("Jasmine Exercises 1 and 2", function() {
 
         // If odd:
         if (sum % 2 !== 0) {
-          return foundOdd(sum);
+          return this.foundOdd(sum);
         }
 
         return sum;
@@ -35,15 +35,23 @@ describe("Jasmine Exercises 1 and 2", function() {
     // Write a test that verifies that the `add' method of the
     // `WeirdAdder' class correctly sums and returns its two
     // arguments.
-
-
+    it("should sum two numbers correctly", function() {
+      let adder = new WeirdAdder();
+      expect(adder.add(1, 2)).toBe(3);
+      expect(adder.add(2, 2)).toBe(4);
+    });
 
     /**************************************************************************/
     // Exercise 2:
     //
     // Using Jasmine spies, write a test that calls the `add' method
     // and confirm that the `foundOdd' method is also called.
-
+    it("should call foundOdd on odd numbers", function() {
+      let adder = new WeirdAdder();
+      spyOn(adder, 'foundOdd').and.callThrough();
+      expect(adder.add(1, 2)).toBe(3);
+      expect(adder.foundOdd).toHaveBeenCalled();
+    });
 
   });
 });
