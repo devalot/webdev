@@ -2,16 +2,13 @@
 
 ### Custom HTML Elements ###
 
-The Web Components standard allows us to create two types of custome
-HTML elements:
+The Web Components standard allows us to create custom HTML elements:
 
-  * Completely new elements as long as they have a dash in their name
-    (e.g. `<chat-box>`)
+  * Create an ES2015 class that inherits from `HTMLElement`
 
-  * Customized versions of existing HTML elements (e.g. `<p is="chat-box">`)
+  * Pick the name for your new HTML element (must contain a hyphen ("`-`"))
 
-Both types of elements require an ES2015 class to drive the element's
-behavior.
+  * Register your class as a handler for the custom element name
 
 ### Autonomous Custom Elements ###
 
@@ -56,20 +53,15 @@ static get observedAttributes() {
 }
 ~~~
 
+Finally, some web component frameworks have additional lifecycle
+callbacks.  For example, the Lighting Web Components (LWC) framework
+contains a `render` callback.
+
 </div>
 
 ### Example: Autonomous Custom Element ###
 
 ~~~ {.javascript insert="../../../../src/www/js/apis/components/example.js" token="autonomous-elements"}
-~~~
-
-(See: `src/www/js/apis/components/example.js`)
-
-### Customized Built-in Elements ###
-
-Add additional behaviors to existing elements:
-
-~~~ {.javascript insert="../../../../src/www/js/apis/components/example.js" token="customized-elements"}
 ~~~
 
 (See: `src/www/js/apis/components/example.js`)

@@ -53,16 +53,10 @@ JavaScript Review (Warming Up)
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
-Document Object Model Review
-----------------------------
+The Document Object Model
+=========================
 
-<<(../content/js/dom/fetch.md#c90768f0258511e8b89193e5afe59cab)
-<<(../content/js/dom/traversal.md#e8f42bd0258511e8936dbfa61311da9e)
-<<(../content/js/dom/create.md#f89dbf4c258511e8952d0b8f8af2f634)
-<<(../content/js/dom/create.md#a5306c0a258611e8bfa2af6ab5c5b3cc)
-<<(../content/js/dom/text.md#a3af8004258611e88aa2efbe26ab52d0)
-<<(../content/js/dom/events.md#a6c1d41c258611e89ac42bb59fa4b75e)
-<<(../content/js/dom/warmup-ex.md)
+<<(../content/js/dom.md)
 
 Functional Programming
 ======================
@@ -112,7 +106,6 @@ Real World JavaScript
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
-<<(../content/oss/how-to.md)
 
 Testing with Jasmine
 ====================
