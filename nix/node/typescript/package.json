@@ -8,5 +8,8 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "typescript": "^3.1.5"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
   }
 }

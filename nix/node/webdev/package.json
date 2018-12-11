@@ -7,13 +7,16 @@
   "author": "Peter J. Jones",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-decorators": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "mockapie": "git://github.com/pjones/mockapie.git",
     "nightwatch": "^0.9.8"
   },
   "scripts": {
-    "babel": "babel -d babel/es2015-es5 --presets=env babel/es2015"
+    "babel": "babel babel --out-dir babel-out --presets=@babel/env"
   },
   "repository": {
     "type": "git",

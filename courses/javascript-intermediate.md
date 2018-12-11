@@ -92,6 +92,7 @@ Web Application Development
 ===========================
 
 <<(../content/js/apis/components/index.md)
+<<(../content/js/changes/esnext/decorators/index.md)
 <<(../content/js/apis/websockets/index.md)
 <<(../content/js/apis/webstorage/index.md)
 <<(../content/js/apis/serviceworkers/index.md)

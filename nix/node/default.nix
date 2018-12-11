@@ -49,12 +49,7 @@ let
     ${concatMapStrings installModules nodeNixFiles}
 
     # Run some files through Babel:
-    ( cd $dest/src
-      node node_modules/.bin/babel -d babel/es2015-es5 babel/es2015
-
-      # Broken:
-      # node node_modules/.bin/babel -d babel/es2018-es5 babel/es2018
-    )
+    ( cd $dest/src && npm run babel )
 
     # Prepare the Webpack demo app:
     ( cd "$dest/src/www/js/tools/webpack"

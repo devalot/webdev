@@ -216,6 +216,8 @@ the following features:
 <<(../content/js/changes/es2016-features.md)
 <<(../content/js/changes/es2017-features.md)
 <<(../content/js/changes/es2018-features.md)
+<<(../content/js/changes/esnext/decorators/basics.md)
+<<(../content/js/changes/esnext/observable/basics.md)
 
 Important Browser APIs
 ----------------------
