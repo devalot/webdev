@@ -26,4 +26,22 @@ function post() {
 }
 
 // Execute the POST:
-post();
+post()
+
+// loading an image
+
+const loadCage = () => {
+  fetch('https://placecage.com/300/200')
+    .then((response) => {
+      if (response.ok) {
+        response.blob().then((myBlob) => {
+          var objectURL = URL.createObjectURL(myBlob)
+          var img = document.getElementById('myImage')
+          img.src = objectURL
+        })
+      } else {
+        console.log('Network response was not ok.')
+      }
+    })
+
+}

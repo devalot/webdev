@@ -16,7 +16,7 @@
 
     * etc.
 
-### Manually Using Bable ###
+### Manually Using Babel ###
 
 Process all files from the `input` directory and put all generated
 files in the `output` directory:
@@ -42,4 +42,4 @@ Simple overview of a build process:
 
   #. Run that file through Babel
 
-  #. Minify and compress the file Bable produced
+  #. Minify and compress the file Babel produced
