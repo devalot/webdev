@@ -20,14 +20,4 @@ wss.on('connection', (ws, req) => {
   ws.on('close', () => {
     sendToClients(ws, `${user} disconnected.`)
   })
-  ws.on('message', message => {
-    sendToClients(ws, message)
-  })
-
-  ws.send(
-    JSON.stringify({
-      user: 'root',
-      message: '---Welcome---',
-    }),
-  )
 })
