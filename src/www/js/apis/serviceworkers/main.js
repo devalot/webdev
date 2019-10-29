@@ -11,8 +11,8 @@
     // :>>
   };
 
-  let doFetch = function() {
-    fetch("/api/albums")
+  let doFetch = function(resource) {
+    fetch(`/api/${resource}`)
       .then(function(response) {
         return response.json();
       })
@@ -34,8 +34,11 @@
     });
 
     // Make an XHR call on button click:
-    document.getElementById("fetch").addEventListener("click", function() {
-      doFetch();
+    document.getElementById("fetch-albums").addEventListener("click", function() {
+      doFetch('albums');
+    });
+    document.getElementById("fetch-artists").addEventListener("click", function() {
+      doFetch('artists');
     });
 
   } else {

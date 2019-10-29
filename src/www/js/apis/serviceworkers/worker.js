@@ -8,7 +8,7 @@
     console.log("installed");
 
     async function ready() {
-      let cache = await caches.open("v1");
+      let cache = await caches.open('myCacheName');
       await cache.addAll(["/api/artists"]);
       self.skipWaiting(); // activate a new version.
     }
@@ -43,7 +43,7 @@
 
   // Primary purpose of Service Worker, act as a network proxy:
   self.addEventListener("fetch", function(e) {
-    console.log("intercepted resource fetch: ", e.request.url);
+    console.log("detected resource fetch: ", e.request.url);
 
     if (e.request.url.match(/albums$/)) {
       console.log("hijacking resource fetch and returning static content");
@@ -51,6 +51,13 @@
       let response = new Response(JSON.stringify({message: "hello"}));
       e.respondWith(response);
     }
+
+    e.respondWith(
+      fetch(e.request).catch(function() {
+        console.log('returning from cache')
+        return caches.match(e.request);
+      })
+    );
   });
 
 })();
