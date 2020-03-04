@@ -110,9 +110,9 @@ Example: Event Handler
 
   - Avoid blocking functions (e.g., `alert`, `confirm`)
 
-  - For long tasks use eteration or web workers
+  - For long tasks use iteration or web workers
 
-  - Eteration: Break work up using `setTimeout(0)`
+  - Iteration: Break work up using `setTimeout(0)`
 
 ### Event "Debouncing"
 

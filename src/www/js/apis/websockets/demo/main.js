@@ -27,11 +27,15 @@ $(function() {
   };
   // :>>
 
-  $("button").click(function() {
+  $("#ping").click(function() {
     log("sending PING to server");
 
     // <<: send
     ws.send("PING");
     // :>>
   });
+
+  $('#disconnect').click(() => {
+    ws.close()
+  })
 });

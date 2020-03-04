@@ -2,7 +2,7 @@ WebDev: Web Development Course
 ==============================
 
 This is the source code and training content for the Web
-Development course taught by [Peter J. Jones][pjones].
+Development course taught by [Andrew Smith](https://github.com/andrewsouthpaw/).
 
 The official site for this course is
 <https://github.com/devalot/webdev>

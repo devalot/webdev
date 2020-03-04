@@ -51,6 +51,4 @@ The module pattern:
 
   * Best as part of the development process:
 
-    - via the TypeScript compiler
-
     - Flattened using a tool such as webpack
