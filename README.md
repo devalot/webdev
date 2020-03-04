@@ -1,3 +1,5 @@
+Lunch retro [Wednesday](https://drive.google.com/open?id=1kD9PxUSdisdlqf-Gzhi3e9qgLdiZd3FuZUGtlPZGLl4)
+
 WebDev: Web Development Course
 ==============================
 
