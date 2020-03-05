@@ -1,4 +1,5 @@
 Lunch retro [Wednesday](https://drive.google.com/open?id=1kD9PxUSdisdlqf-Gzhi3e9qgLdiZd3FuZUGtlPZGLl4)
+Morning retro [Thursday](https://forms.gle/5ChMHpUt5MpXqdWu5)
 
 WebDev: Web Development Course
 ==============================
