@@ -23,15 +23,11 @@ describe('#findById', () => {
 
 ### Expecting the Opposite
 
-`.not`:
-  : Chainable expectation to test its opposite
+You can chain `not` to test the opposite
 
 ~~~ {.javascript}
-describe('#deleteVowels', () => {
-  it('should not return any vowels', () => {
-    expect(deleteVowels('hello world'))
-      .not.toMatch(/[AEIOU]/i)
-  })
+it('test the opposite', () => {
+  expect(0).not.toEqual(1)
 })
 ~~~
 
