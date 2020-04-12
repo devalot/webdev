@@ -4,7 +4,7 @@
   "description": "WebDev Exercises and Demos",
   "private": true,
   "directories": {},
-  "author": "Peter J. Jones",
+  "author": "Andrew Smith",
   "license": "BSD-2-Clause",
   "dependencies": {
     "@babel/cli": "^7.2.0",
@@ -27,6 +27,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devalot/webdev.git"
+    "url": "https://github.com/andrewsouthpaw/webdev"
   }
 }
