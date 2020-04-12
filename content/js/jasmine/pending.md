@@ -1,16 +1,7 @@
-### Deferred (Pending) Tests
+### Pending Tests
 
-Tests can be marked as pending either by:
-
-~~~ {.javascript}
-it("declared without a body!");
-~~~
-
-or:
+Tests can be marked as pending:
 
 ~~~ {.javascript}
-it("uses the pending function", function() {
-  expect(0).toBe(1);
-  pending("this isn't working yet!");
-});
+it.todo('should do a thing')
 ~~~

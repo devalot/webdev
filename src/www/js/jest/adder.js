@@ -1,17 +1,24 @@
 export class WeirdAdder {
-  add(x, y) {
-    let sum = x + y;
+  oddSums = []
 
-    // If odd:
-    if (sum % 2 !== 0) {
-      return this.foundOdd(sum);
+  add(x, y) {
+    let sum = x + y
+
+    if (isOdd(sum)) {
+      return this.foundOdd(sum)
     }
 
-    return sum;
+    return sum
   }
 
-  foundOdd(n) {
-    console.log(`${n} is odd`);
-    return n;
+  getOddSumsCount() { return this._getOddSums().length }
+
+  _isOdd(value) { return sum % 2 === 1 }
+
+  _getOddSums() { return this.oddSums }
+
+  _foundOdd(n) {
+    console.log(`${n} is odd`)
+    return n
   }
 }

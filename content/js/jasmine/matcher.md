@@ -1,19 +1,40 @@
-### Basic Expectation Matchers
+### Most Common Matchers
 
-`toBe(x)`:
-  : Compares with `x` using `===`.
+`toEqual({ name: 'Andrew' })`:
+  : Most common equality matcher. Compares objects or arrays by comparing contents, not identity.
 
 `toMatch(/hello/)`:
   : Tests against regular expressions or strings.
 
-`toBeDefined()`:
-  : Confirms expectation is not `undefined`.
+`toThrow(message)`:
+  : Tests the function will throw an error.
 
-`toBeUndefined()`:
-  : Opposite of `toBeDefined()`.
+~~~ {.javascript}
+describe('#findById', () => {
+  it('should show an error if value is not a number', () => {
+    expect(() => findById('invalid')).toThrow('Must provide a number')
+  })
+})
+~~~
 
-`toBeNull()`:
-  : Confirms expectation is `null`.
+`.not`:
+  : Chainable expectation to test its opposite
+
+~~~ {.javascript}
+describe('#deleteVowels', () => {
+  it('should not return any vowels', () => {
+    expect(deleteVowels('hello world')).not.toMatch(/[AEIOU]/i)
+  })
+})
+~~~
+
+### Other Matchers Sometimes Used
+
+`toContainEqual(x)`:
+  : Expect an array to contain `x` as an element, using `toEqual` logic for comparison (not identity).
+
+`toBe(x)`:
+  : Compares with `x` using `===`.
 
 `toBeTruthy()`:
   : Should be true `true` when cast to a Boolean.
@@ -21,32 +42,16 @@
 `toBeFalsy()`:
   : Should be `false` when cast to a Boolean.
 
-### Numeric Expectation Matchers
+`arrayContaining(array)`:
+  : Checks its a subset (order doesn't matter)
 
-`toBeLessThan(n)`:
-  : Should be less than `n`.
+### Exercise: Writing a Test with Jest
 
-`toBeGreaterThan(n)`:
-  : Should be greater than `n`.
+  #. Open `src/www/js/jest/__tests__/adder.spec.js`, do exercise 1
 
-`toBeCloseTo(e, p)`:
-  : Difference within `p` places of precision.
+  #. To test and debug, run
 
-
-### Smart Expectation Matchers
-
-`toEqual(x)`:
-  : Can test object and array equality.
-
-`toContain(x)`:
-  : Expect an array to contain `x` as an element.
-
-### Exercise: Writing a Test with Jasmine
-
-  #. Open `src/www/js/jasmine/adder.spec.js`
-
-  #. Read the code then do exercise 1 (we'll do exercise 2 later)
-
-  #. To test and debug, open
-
-         src/www/js/jasmine/index.html
+~~~
+cd src
+yarn test www/js/jest/__tests__/adder.spec.js
+~~~

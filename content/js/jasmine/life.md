@@ -13,3 +13,33 @@ Each of the following functions takes a callback as an argument:
 
 `afterAll`:
   : After all `it` specs are executed.
+
+### Abstracting Life Cycle Callbacks
+
+These functions can be invoked from any module, as long as the calling context is within a spec file!
+
+~~~ {.javascript}
+// ************
+// setup.js
+// ************
+
+const startWithLoggedInUser = () => {
+  beforeEach(() => {
+    // set up your app state to simulate a logged-in user
+  })
+
+  afterEach(() => {
+    // clean up app state...
+  })
+}
+
+// ************
+// todos.js
+// ************
+
+describe('user todos', () => {
+  startWithLoggedInUser()
+
+  it('should read user todos', () => { /* ... */ })
+})
+~~~

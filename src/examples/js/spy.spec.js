@@ -1,44 +1,31 @@
-describe("a function", function() {
+describe('video#play', () => {
   // <<: beforeEach
-  let foo;
-
-  beforeEach(function() {
-    foo = {
-      plusOne: function(n) { return n + 1; },
-    };
-  });
+  const video = {
+    play() { return true },
+  }
   // :>>
 
   // <<: call
-  it("should be called", function() {
-    spyOn(foo, 'plusOne');
-    let x = foo.plusOne(42);
+  it('should play a video', () => {
+    const spy = jest.spyOn(video, 'play')
+    const isPlaying = video.play()
 
-    expect(foo.plusOne).toHaveBeenCalled();
-    expect(foo.plusOne).toHaveBeenCalledTimes(1);
-    expect(foo.plusOne).toHaveBeenCalledWith(42);
+    expect(spy).toHaveBeenCalled()
+    expect(isPlaying).toBe(true)
 
-    expect(x).toBeUndefined();
-  });
-  // :>>
-
-  // <<: callThrough
-  it("should call through and execute", function() {
-    spyOn(foo, 'plusOne').and.callThrough();
-    let x = foo.plusOne(42);
-
-    expect(foo.plusOne).toHaveBeenCalled();
-    expect(x).toBe(43);
-  });
+    spy.mockRestore()
+  })
   // :>>
 
   // <<: callFake
-  it("should call a fake implementation", function() {
-    spyOn(foo, 'plusOne').and.callFake(n => n + 2);
-    let x = foo.plusOne(42);
+  it('should allow a fake implementation', () => {
+    const spy = jest.spyOn(video, 'play').mockImplementation(() => false)
+    const isPlaying = video.play()
 
-    expect(foo.plusOne).toHaveBeenCalled();
-    expect(x).toBe(44);
-  });
+    expect(spy).toHaveBeenCalled()
+    expect(isPlaying).toBe(false)
+
+    spy.mockRestore()
+  })
   // :>>
-});
+})

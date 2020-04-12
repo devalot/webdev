@@ -1,21 +1,19 @@
-### What is Jasmine? ###
+### What is Jest? ###
 
-  * Specification-based testing
+  * JS testing framework
 
-  * Expectations instead of assertions
+  * Focus on simplicity and easy configuration
 
-  * Provides the testing framework
+  * Easy mocking of modules
 
-  * Only provides a very simple way to run tests
+  * Good for unit, integration, and even end-to-end tests
 
-### Example: Writing Jasmine Tests ###
+### Example: Writing Jest Tests ###
 
 ~~~ {.javascript}
-describe("ES2015 String Methods", function() {
-  describe("Prototype Methods", function() {
-    it("has a find method", function() {
-      expect("foo".find).toBeDefined();
-    });
-  });
-});
+describe("#add", () => {
+  it("adds two numbers together", () => {
+    expect(add(1, 2)).toEqual(3)
+  })
+})
 ~~~
