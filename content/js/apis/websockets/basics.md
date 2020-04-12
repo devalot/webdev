@@ -19,13 +19,13 @@
 
 ### Example: WebSockets
 
-~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="new"}
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/demo/main.js" token="new"}
 ~~~
-~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="onopen"}
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/demo/main.js" token="onopen"}
 ~~~
-~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="onmessage"}
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/demo/main.js" token="onmessage"}
 ~~~
-~~~ {.javascript insert="../../../../src/www/js/apis/websockets/main.js" token="send"}
+~~~ {.javascript insert="../../../../src/www/js/apis/websockets/demo/main.js" token="send"}
 ~~~
 
 (See: `src/www/js/apis/websockets/main.js`)
