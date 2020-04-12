@@ -1,21 +1,27 @@
 ### Most Common Matchers
 
-`toEqual({ name: 'Andrew' })`:
+`toEqual(val)`:
   : Most common equality matcher. Compares objects or arrays by comparing contents, not identity.
 
 `toMatch(/hello/)`:
   : Tests against regular expressions or strings.
+
+
+### Expecting an Error
 
 `toThrow(message)`:
   : Tests the function will throw an error.
 
 ~~~ {.javascript}
 describe('#findById', () => {
-  it('should show an error if value is not a number', () => {
-    expect(() => findById('invalid')).toThrow('Must provide a number')
+  it('should throw if not a number', () => {
+    expect(() => findById('invalid'))
+      .toThrow('Must provide a number')
   })
 })
 ~~~
+
+### Expecting the Opposite
 
 `.not`:
   : Chainable expectation to test its opposite
@@ -23,7 +29,8 @@ describe('#findById', () => {
 ~~~ {.javascript}
 describe('#deleteVowels', () => {
   it('should not return any vowels', () => {
-    expect(deleteVowels('hello world')).not.toMatch(/[AEIOU]/i)
+    expect(deleteVowels('hello world'))
+      .not.toMatch(/[AEIOU]/i)
   })
 })
 ~~~
@@ -31,7 +38,7 @@ describe('#deleteVowels', () => {
 ### Other Matchers Sometimes Used
 
 `toContainEqual(x)`:
-  : Expect an array to contain `x` as an element, using `toEqual` logic for comparison (not identity).
+  : Expect an array to contain `x`.
 
 `toBe(x)`:
   : Compares with `x` using `===`.
@@ -43,11 +50,13 @@ describe('#deleteVowels', () => {
   : Should be `false` when cast to a Boolean.
 
 `arrayContaining(array)`:
-  : Checks its a subset (order doesn't matter)
+  : Checks it's a subset (order doesn't matter).
 
 ### Exercise: Writing a Test with Jest
 
-  #. Open `src/www/js/jest/__tests__/adder.spec.js`, do exercise 1
+  #. Open `src/www/js/jest/__tests__/adder.spec.js`
+
+  #. Do exercise 1
 
   #. To test and debug, run
 

@@ -1,5 +1,7 @@
 export class WeirdAdder {
-  oddSums = []
+  constructor() {
+    this.oddSums = []
+  }
 
   add(x, y) {
     let sum = x + y

@@ -19,7 +19,8 @@ describe('video#play', () => {
 
   // <<: callFake
   it('should allow a fake implementation', () => {
-    const spy = jest.spyOn(video, 'play').mockImplementation(() => false)
+    const spy = jest.spyOn(video, 'play')
+      .mockImplementation(() => false)
     const isPlaying = video.play()
 
     expect(spy).toHaveBeenCalled()

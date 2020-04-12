@@ -1,9 +1,7 @@
-### Spying on a Function or Callback (Setup)
+### Spying on a Function or Callback (Call Tracking)
 
 ~~~ {.javascript insert="../../../src/examples/js/spy.spec.js" token="beforeEach"}
 ~~~
-
-### Spying on a Function or Callback (Call Tracking)
 
 ~~~ {.javascript insert="../../../src/examples/js/spy.spec.js" token="call"}
 ~~~

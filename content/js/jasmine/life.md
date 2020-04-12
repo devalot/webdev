@@ -19,9 +19,7 @@ Each of the following functions takes a callback as an argument:
 These functions can be invoked from any module, as long as the calling context is within a spec file!
 
 ~~~ {.javascript}
-// ************
 // setup.js
-// ************
 
 const startWithLoggedInUser = () => {
   beforeEach(() => {
@@ -32,10 +30,12 @@ const startWithLoggedInUser = () => {
     // clean up app state...
   })
 }
+~~~
 
-// ************
+### Abstracting Life Cycle Callbacks Use
+
+~~~ {.javascript}
 // todos.js
-// ************
 
 describe('user todos', () => {
   startWithLoggedInUser()
