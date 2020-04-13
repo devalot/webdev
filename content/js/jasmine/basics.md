@@ -11,6 +11,8 @@
 ### Example: Writing Jest Tests ###
 
 ~~~ {.javascript}
+const add = (x, y) => x + y
+
 describe('#add', () => {
   it('adds two numbers together', () => {
     expect(add(1, 2)).toEqual(3)

@@ -1,73 +1,65 @@
 ## General Testing Overview
 
-### Testing in the Browser
+### 3 Types of Tests
 
-In order to achieve comprehensive testing in JavaScript you need to:
+  #. Unit
 
-  * Test your code in the web browser
+  #. Integration
 
-  * Then test it in every browser you support
+  #. End-to-End (E2E)
 
-  * And use a tool that automates this process
+**Unit** and **Integration** tests can be run without a browser. Faster to run, sometimes slower to write.
 
-### The Two Major Flavors of Testing
+**E2E** tests simulate user behavior interacting with a browser environment. Slower to run, sometimes faster to write.
 
-  * Assertion-based testing:
+### Unit and Integration Tests
 
-    ~~~ {.javascript}
-    assert("empty objects", objects.length > 0);
-    ~~~
+Most popular framework is **Jest**.
 
-  * Expectation-based testing:
+Other common frameworks are **Mocha**, **Jasmine**, **AVA**, **Tape**, and **QUnit**
 
-    ~~~ {.javascript}
-    expect(objects.length).toBeGreaterThan(0);
-    ~~~
+### Unit and Integration Tests Categories
+
+There's two basic categories that JS unit tests fall into:
+
+  #. Pure JavaScript
+
+  #. JavaScript + Browser
+
+Code that is "just" JavaScript (no browser APIs) is the easiest to test.
+
+Testing code that includes the browser is often challenging and often requires more mocking.
 
 <<(jasmine/index.md)
 
-### Best Practices for Testing
+<<(jasmine/jsdom.md)
 
-  * Make sure your tests actually fail
+<<(jasmine/best-practices.md)
 
-  * Separate pure logic from DOM manipulation
+## E2E Testing
 
-  * Test with valid *and* invalid input (or use fuzzing)
+E2E tests are slow to run relative to unit tests, but give the highest degree of confidence that your system is working correctly.
 
-  * Automate your tests so they run all the time
+It simulates a user interacting with your website via a browser.
 
-  * Avoid mocking/spies if you can (they create "holes")
+Popular services/frameworks:
 
-### Further Information
+  * Cypress
 
-See the following for more information:
+  * Nightwatch
 
-  * [Jasmine][] documentation
+  * Selenium
 
-  * [Karma][] test runner
+## Compatibility Testing
 
-Other testing frameworks:
+Depending on your team's requirements, you may need to make sure your site works in all browsers.
 
-  * [JSPec][]: Full-featured behavior testing
+Popular services:
 
-  * [Sinon][]: Spies, stubs, and mocks
+  * SauceLabs
 
-  * [Chai][]: Testing assertion library
+  * BrowserStack
 
-## Browser Automated Testing
+   * LambdaTest
 
-### End-to-End Testing Options
-
-![](../../diagrams/js/browser-testing.dot)\
-<!-- Placeholder -->
-
-[karma]: http://karma-runner.github.io/0.12/index.html
-[jasmine]: http://jasmine.github.io/
-[jasmine-standalone]: https://github.com/pivotal/jasmine/releases
-[jasmine-npm]: https://github.com/jasmine/jasmine-npm
-[karma-jasmine]: https://github.com/karma-runner/karma-jasmine
-[jspec]: https://www.drupal.org/project/jspec
-[sinon]: http://sinonjs.org/
-[chai]: http://chaijs.com/
-[selenium]: http://www.seleniumhq.org/
-[phantomjs]: http://phantomjs.org/
+These tests are the most expensive to write and maintain.

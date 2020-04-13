@@ -108,7 +108,6 @@ Real World JavaScript
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
 
-Testing with Jasmine
-====================
+# Testing
 
 <<(../content/js/testing.md)

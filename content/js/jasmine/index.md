@@ -1,6 +1,7 @@
 ## Test-Driven Development with Jest
 
 <<(basics.md)
+<<(run.md)
 <<(matcher.md)
 <<(life.md)
 <<(pending.md)
@@ -8,6 +9,8 @@
 <<(mock-fn.md)
 <<(timers.md)
 <<(async.md)
-<<(run.md)
 
-TODO mock modules
+!# TODO add beforeEach exercise
+!# TODO mock modules
+!# TODO babel compilation
+!# TODO watch mode
