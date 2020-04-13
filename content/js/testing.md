@@ -38,9 +38,15 @@ Testing code that includes the browser is often challenging and often requires m
 
 ## E2E Testing
 
-E2E tests are slow to run relative to unit tests, but give the highest degree of confidence that your system is working correctly.
+### E2E Testing
 
 It simulates a user interacting with your website via a browser.
+
+  * PROS: Less mocking --> easier to write
+
+  * CONS: Slow to run
+
+### E2E Testing Frameworks
 
 Popular services/frameworks:
 
@@ -51,6 +57,8 @@ Popular services/frameworks:
   * Selenium
 
 ## Compatibility Testing
+
+### Compatibility Testing
 
 Depending on your team's requirements, you may need to make sure your site works in all browsers.
 
