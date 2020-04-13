@@ -19,7 +19,7 @@ Who said JS DOM manipulations weren't handy?
 
 Set the browser body *each time*, it persists between tests.
 
-~~~ {.javascript insert="../../../src/examples/js/jsdom.test.js" token="jsdom-setup"}
+~~~ {.javascript insert="../../../src/examples/js/jsdom.test.js" token="jsdom-test-setup"}
 ~~~
 
 ### Testing DOM Manipulations
