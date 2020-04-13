@@ -36,6 +36,8 @@ Really. Just do it.
 
   * Automate your tests so they run all the time
 
+### Mock Less, Smile More
+
   * Avoid mocking/stubbing as they create implicit interface contracts. Generally only mock:
 
     #. Server calls
@@ -43,6 +45,10 @@ Really. Just do it.
     #. Complex functions / behavior
 
     #. Slow / expensive functions
+
+  * Mocking reduces confidence in system [actually working](https://img.devrant.com/devrant/rant/r_200166_KJvGZ.gif)
+
+  * Mocking is often hard to read
 
 ### UI Testing Best Practices
 

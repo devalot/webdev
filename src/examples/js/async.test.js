@@ -4,15 +4,13 @@ const users = {
   2: { id: 2, name: 'Billy' },
 }
 
-const getUser = (id) => (
-  new Promise((res, rej) => {
-    process.nextTick(() => (
-      users[id]
-        ? res(users[id])
-        : rej('User ID ' + id + ' not found.')
-    ))
-  })
-)
+const getUser = (id) => new Promise((res, rej) => {
+  process.nextTick(() => (
+    users[id]
+      ? res(users[id])
+      : rej('User ID ' + id + ' not found.')
+  ))
+})
 // :>>
 
 // <<: async-await
@@ -99,7 +97,9 @@ const loadUserInBackground = (id, callback) => {
 const flushPromises = () => (
   new Promise(res => process.nextTick(res))
 )
+// :>>
 
+// <<: async-flush-example
 it('can have promises flushed', async () => {
   const mockFn = jest.fn()
   loadUserInBackground(1, mockFn)

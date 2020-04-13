@@ -23,14 +23,13 @@ describe('addTodoToDOMList', () => {
     addTodoToDOMList('Practice DOM changes')
 
     const todos = document.getElementById('todos')
-    expect(todos.children.length).toEqual(2)
-
     const todosText = Array.from(todos.children)
       .map(child => child.textContent)
+
     expect(todosText).toEqual([
       'Learn jsdom',
       'Practice DOM changes',
     ])
-    // :>>
   })
+  // :>>
 })

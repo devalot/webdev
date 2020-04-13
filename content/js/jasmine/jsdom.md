@@ -6,11 +6,9 @@ Sometimes your unit/integration tests will involve browser APIs, e.g.:
 
   * `addTodoToDOMList`: appends an `li` element to a `ul` todos element.
 
-**jsdom**: fake browser environment
+Use **jsdom**: creates fake browser environment
 
 ### DOM Manipulation
-
-Who said JS DOM manipulations weren't handy?
 
 ~~~ {.javascript insert="../../../src/examples/js/jsdom.test.js" token="jsdom-add-todo"}
 ~~~

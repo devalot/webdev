@@ -2,8 +2,6 @@
 
 ### Testing Asynchronous Functions
 
-Jest makes it easy to deal with async behavior.
-
 Given a (fake) server interaction:
 
 ~~~ {.javascript insert="../../../src/examples/js/async.test.js" token="fake-server"}
@@ -67,6 +65,11 @@ Easiest way is to force a process tick in the test.
 We call it "flushing promises".
 
 ~~~ {.javascript insert="../../../src/examples/js/async.test.js" token="async-flush"}
+~~~
+
+### Testing Inaccessible Async Operations (Example)
+
+~~~ {.javascript insert="../../../src/examples/js/async.test.js" token="async-flush-example"}
 ~~~
 
 This happens all the time in UI unit testing, e.g. with React.
@@ -175,8 +178,6 @@ it('will not work', async () => {
 ### Prefer process.nextTick
 
 When possible, mock async behavior with `process.nextTick`.
-
-Why?
 
 Turns out `jest.useFakeTimers()` messes with `setTimeout` behavior...
 

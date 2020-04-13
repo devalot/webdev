@@ -25,6 +25,12 @@ const getTodo = async (id) => {
   return todo
 }
 
+const getTodoInBackground = (id, cb) => {
+  getTodos()
+    .then((todos) => find(propEq('id', id), todos))
+  return true
+}
+
 describe('Async tests', () => {
   describe('#getTodos', () => {
     it.todo('should work with async/await')
@@ -51,5 +57,9 @@ describe('Async tests', () => {
         expect(1).toEqual(0)
       }
     })
+  })
+
+  describe('#getTodoInBackground', () => {
+    it.todo('should get a todo in background and pass to callback')
   })
 })

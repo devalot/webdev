@@ -8,7 +8,7 @@
 
   * Easy mocking of modules
 
-  * Good for unit, integration, and even end-to-end tests
+  * Good for unit and integration tests
 
 ### Example: Writing Jest Tests ###
 

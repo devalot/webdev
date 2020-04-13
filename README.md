@@ -1,6 +1,3 @@
-Lunch retro [Wednesday](https://drive.google.com/open?id=1kD9PxUSdisdlqf-Gzhi3e9qgLdiZd3FuZUGtlPZGLl4)
-Morning retro [Thursday](https://forms.gle/5ChMHpUt5MpXqdWu5)
-
 WebDev: Web Development Course
 ==============================
 
@@ -13,8 +10,9 @@ The official site for this course is
 Prerequisites
 -------------
 
-This collection of exercises and demos needs [Node.js][] `>=` 8
-installed to work correctly.
+- [NodeJS](https://nodejs.org/)
+- [npm](http://npmjs.com/)
+- [yarn](https://classic.yarnpkg.com/)
 
 Starting Things Up
 ------------------
@@ -22,11 +20,11 @@ Starting Things Up
   1. Look in the `start-scripts` folder for a file matching your
      operating system:
 
-       - macOS: Double-click the `macos.command` file
+    `cd src && yarn`
 
        - Windows: Double-click the `windows.cmd` file
 
-       - Linux/*BSD: Open a term and use `linux.sh`
+    `yarn start`
 
   2. Open the following URL in your browser of choice:
 
@@ -48,6 +46,5 @@ Building the Course Content (PDF Files)
 The generated PDF files will be in the `result` directory.
 
 [pjones]: http://www.devalot.com/about/pjones.html
-[node.js]: https://nodejs.org/
 
 Maybe later: figure out how to [get it to build on macOS](https://www.softinio.com/post/moving-from-homebrew-to-nix-package-manager/).
