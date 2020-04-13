@@ -1,3 +1,29 @@
+## Jest: Spies
+
+### What Are Spies
+
+* Spies allow you to track calls to a method
+
+  * Arguments
+
+  * Results
+
+* Passes call through to original implementation
+
+### Spies API
+
+Creating a spy:
+
+~~~ {.javascript}
+const spy = jest.spyOn(myObject, 'method')
+~~~
+
+Removing a spy:
+
+~~~ {.javascript}
+spy.restore()
+~~~
+
 ### Spying on a Function or Callback (Call Tracking)
 
 ~~~ {.javascript insert="../../../src/examples/js/spy.spec.js" token="beforeEach"}

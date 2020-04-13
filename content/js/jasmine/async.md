@@ -1,3 +1,5 @@
+## Jest: Async
+
 ### Testing Asynchronous Functions
 
 Jest makes it easy to deal with async behavior.

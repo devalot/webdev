@@ -1,4 +1,4 @@
-## General Testing Overview
+## Testing Overview
 
 ### 3 Types of Tests
 

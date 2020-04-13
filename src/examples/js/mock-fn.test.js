@@ -69,4 +69,17 @@ describe('mock functions', () => {
       .toEqual(['Andrew', 'Charlie'])
   })
   // :>>
+
+  // <<: mock-return
+  it('should mock return values', () => {
+    const mock = jest.fn()
+      .mockReturnValueOnce(42)
+      .mockReturnValueOnce('hello')
+      .mockReturnValue('default')
+
+    expect(mock()).toEqual(42)
+    expect(mock()).toEqual('hello')
+    expect(mock()).toEqual('default')
+  })
+  // :>>
 })

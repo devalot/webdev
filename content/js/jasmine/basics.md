@@ -1,3 +1,5 @@
+## Jest: Basics
+
 ### What is Jest? ###
 
   * JS testing framework
@@ -19,3 +21,13 @@ describe('#add', () => {
   })
 })
 ~~~
+
+### Running Jest Tests
+
+  #. `yarn add jest`
+
+  #. Make a `*.spec.js` file
+
+  #. Run `yarn jest`
+
+Yes, it's just that easy.

@@ -1,7 +1,4 @@
-## Test-Driven Development with Jest
-
 <<(basics.md)
-<<(run.md)
 <<(matcher.md)
 <<(life.md)
 <<(pending.md)

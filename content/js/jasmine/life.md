@@ -1,3 +1,21 @@
+## Jest: Environment & Life Cycle
+
+### Jest Environment
+
+  * Each spec file runs in its **own, isolated environment**
+
+  * `setupTestFrameworkScriptFile`: Shared, one-time setup
+
+```json
+{
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setup_jest.js"
+  }
+}
+```
+
+  * `setupFiles`: Setup files run once before every test file
+
 ### Life Cycle Callbacks
 
 Each of the following functions takes a callback as an argument:
