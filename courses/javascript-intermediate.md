@@ -19,7 +19,7 @@ Introduction to This Course {.unnumbered}
 
 The source code for this course can be found at the following URL:
 
-<https://github.com/devalot/webdev>
+<https://github.com/andrewsouthpaw/webdev>
 
 Overview {.unnumbered}
 ----------------------
@@ -30,13 +30,12 @@ This JavaScript course is delivered during two days.
 
   Day 1                        Day 2
   --------------               --------------
-  Quick Review                 Web Components
-  Functional Programming       WebSockets
-  Prototypes and Classes       WebStorage
-  The Asynchronous Runtime     Service Workers
-  Promises and `await`         Developer Tools
-  The `fetch` API              Testing w/ Jasmine
-
+  JavaScript ES2015+           FP part 2
+  Document Object Model        WebSockets
+  Functional Programming       Web Storage
+  OOP and Inheritance          Web APIs
+  Asynchronous Programming     Developer Tools
+  Network Calls                Testing
 
 <div class="notes">
 
@@ -91,12 +90,10 @@ Asynchronous Programming
 Web Application Development
 ===========================
 
-<<(../content/js/apis/components/index.md)
-<<(../content/js/changes/esnext/decorators/index.md)
 <<(../content/js/apis/websockets/index.md)
 <<(../content/js/apis/webstorage/index.md)
 <<(../content/js/apis/serviceworkers/index.md)
-<<(../content/js/changes/esnext/observable/index.md)
+<<(../content/js/apis/webworkers/index.md)
 
 Real World JavaScript
 =====================
