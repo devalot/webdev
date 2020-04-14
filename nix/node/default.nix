@@ -12,15 +12,12 @@ let
   # Files which describe needed NPM modules.  Use the
   # `nix/node/update.sh' script to generate these files.
   nodeNixFiles = [
-    { load = ./webdev;
-      for = "src";
-    }
-    { load = ./typescript;
-      for = "src/www/js/alternatives/typescript";
-    }
-    { load = ./webpack;
-      for = "src/www/js/tools/webpack";
-    }
+    # { load = ./webdev;
+    #   for = "src";
+    # }
+    # { load = ./typescript;
+    #   for = "src/www/js/alternatives/typescript";
+    # }
   ];
 
   ##############################################################################
@@ -46,15 +43,15 @@ let
     export NO_UPDATE_NOTIFIER=1
 
     # Install all needed node_modules.
-    ${concatMapStrings installModules nodeNixFiles}
+    # ${concatMapStrings installModules nodeNixFiles}
 
     # Run some files through Babel:
-    ( cd $dest/src && npm run babel )
+    # ( cd $dest/src && npm run babel )
 
     # Prepare the Webpack demo app:
-    ( cd "$dest/src/www/js/tools/webpack"
-      npm run build
-    )
+    # ( cd "$dest/src/www/js/tools/webpack"
+    #   npm run build
+    # )
   '';
 
 in { inherit buildInputs installPhase shellHook; }
