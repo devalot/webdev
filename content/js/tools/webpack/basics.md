@@ -1,90 +1,200 @@
 ### What is Webpack?
 
-[Webpack][] is a build tool for web applications:
+[Webpack](https://webpack.js.org/) is a build tool for web applications:
 
-  * Uses ES2015 modules to bundle JavaScript into a single file ready
-    for deployment to production
+  * Bundles all JavaScript modules into a single browser-safe JS file
 
-  * Transpiles JavaScript (i.e. ES20* to ES5)
+    * Browsers are still figuring out how to work with ES modules, and webpack does it better
 
-  * Lint code and run tests
+  * Can be configured to process files as they're imported
 
-  * Bundles many types of assets (CSS, HTML templates, etc.)
+    * Transpiling JS, linting, sizing images, etc.
 
-  * Can load remote assets on-demand
+  * Bring all your content into JS files (CSS, images, JSON, etc.)
 
-<!-- === Refresher on JavaScript Modules === -->
+### Other Benefits
 
-<<(../../changes/es2015.md#modules-export)
-<<(../../changes/es2015.md#modules-why)
+  * Dev Server + Live Reloading
+
+  * Hot Module Replacement
+
+  * Source Maps
+
+  * Caching
+
+  * Code Splitting + Lazy-loading
+
+  * Optimization (minification, tree-shaking, chunking)
 
 ### Bundling JavaScript Modules
 
 Webpack will:
 
-  #. Start with your main JavaScript file
+  #. Start with your "entry" JavaScript file
 
-  #. Follow all `import` statements
+  #. Follow all `import` and `require` statements
 
   #. Generate a single file containing all JavaScript
 
 The generated file is know as a *bundle*.
 
+### Bundling JS
+
+~~~ {.javascript}
+// index.js
+import { subtract } from './subtract'
+
+const add = (a = 1, b = 2) => a + b
+
+console.log(add(1, 2), subtract(8, 2))
+
+// subtract.js
+export const subtract = (a, b) => a - b
+~~~
+
+### Bundle Layout
+
+![](images/webpack-bundle.jpg)
+
+### Bundling Images
+
+~~~ {.javascript}
+import logo from './logo.jpg'
+
+const component = () => {
+  const element = document.createElement('div')
+
+  const webpackLogo = new Image()
+  webpackLogo.src = logo
+  element.appendChild(webpackLogo)
+
+  return element
+}
+~~~
+
+### Bundling Images
+
+![](images/webpack-image.png)
+
+### Bundling Stylesheets
+
+Now you can have localized stylesheets that connect to your JS.
+
+Importing SCSS or CSS...
+
+~~~ {.javascript}
+// index.js
+import './index.scss'
+~~~
+
+### Bundling Stylesheets
+
+Can inject style sheets directly into the DOM for you.
+
+~~~
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/index.scss":
+/*!**************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/index.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// ...exports.push([module.i, \"\\n#root {\\n  background-color: lightblue;\\n}
+...# sourceURL=webpack:///./src/index.scss?./node_modules/css-loader/dist/cjs.js");
+~~~
+
+Other performance optimizations are available.
+
+### CSS Modules
+
+Webpack will even help with CSS modules, if that's your jam.
+
+~~~
+/* style.css */
+.className {
+  color: green;
+}
+~~~
+
+~~~ {.javascript}
+import styles from "./style.css"
+
+element.innerHTML = '<div class="' + styles.className + '">'
+~~~
+
 ### More Power Through Loaders
 
-Webpack becomes a full build tool via *loaders*.  Here are some
-example [loaders][]:
+Webpack becomes a full build tool via **[loaders](https://webpack.js.org/loaders)**.
 
 `babel-loader`
   : Transpiles JavaScript using Babel
 
-`eslint-loader`
-  : Lints JavaScript using ESLint
+`file-loader`
+  : Load files (JPG, PNG, etc.)
 
-`mocha-loader`
-  : Run tests before building
-
-`html-loader`
-  : Bundle HTML templates
+`css-loader`
+  : Process CSS
 
 `sass-loader`
   : Process and bundle Sass
 
+`eslint-loader`
+  : Lints JavaScript using ESLint
+
+`html-loader`
+  : Bundle HTML templates
+
 ### Configuring Webpack
 
-Webpack is configured through a JavaScript file named
-`webpack.config.js`.  Using this file you can:
+Configuration file: `webpack.config.js`
 
-  * Tell Webpack what file is the main JavaScript file
+  * `entry`: Tell Webpack what file is the main JavaScript file
 
-  * Specify which loaders you are using and in which order
+  * `output`: Tell where to put the bundled assets
 
-  * Add additional JavaScript snippets such as polyfills to the bundle
+  * `module.rules`: Specify which files go through which loaders.
+    Each `rule` takes
 
-  * Go crazy since you are writing in JavaScript
+    * `test`: regex to see if it applies to the file
+
+    * `loader`: what loaders to user
+
+### Example Module Rules
+
+~~~ {.javascript}
+module: {
+  rules: [
+    {
+      test: /\.(js|jsx)$/,  // matches JS or JSX
+      exclude: /(node_modules)/,  // don't transpile node_modules
+      loader: 'babel-loader'  // run through babel-loader
+    },
+  ]
+},
+~~~
+
+### Dev Server
+
+TODO
 
 ### Webpack Demonstration
 
 Let's take a look at a Webpack demonstration application:
 
-  #. Open the following folder in your text editor:
+  #. Open the `webpack-babel-starter-project` repo
 
-        src/www/js/tools/webpack
+    [https://github.com/AndrewSouthpaw/webpack-babel-starter-project](https://github.com/AndrewSouthpaw/webpack-babel-starter-project)
 
-  #. Review the example files:
+  #. Follow the "Build Your Own" README steps
 
-     * `index.html`
-     * `src/index.js`
-     * `src/template.html`
-     * `webpack.config.js`
+  #. Add the ability to load an image
 
-  #. Build the application with:
+    * [Hint 1](https://lmgtfy.com/?q=webpack+image+loading)
 
-        $ npm run build
+    * [Hint 2](https://webpack.js.org/guides/asset-management/#loading-images)
 
-If you are running your Node.js server you can access this
-application at <http://localhost:3000/js/tools/webpack/>
+### Resources
 
-<!-- === Links === -->
-[webpack]: https://webpack.js.org/
-[loaders]: https://webpack.js.org/loaders
+  * Webpack + Babel starter: [webpack-babel-starter-project](https://github.com/AndrewSouthpaw/webpack-babel-starter-project)
+  * Frontend Masters: [Webpack Fundamentals](https://frontendmasters.com/courses/webpack-fundamentals/)
+  * Frontend Masters: [Webpack Performance](https://frontendmasters.com/courses/performance-webpack/)
