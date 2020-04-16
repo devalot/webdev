@@ -6,7 +6,7 @@ let
 
   ##############################################################################
   # Version of NodeJS used for bundling JS packages:
-  nodejs = pkgs.nodejs-8_x;
+  nodejs = pkgs.nodejs;
 
   ##############################################################################
   # Files which describe needed NPM modules.  Use the

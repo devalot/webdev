@@ -4,8 +4,8 @@
 let
   # Some helper files:
   repo = fetchGit {
-    url = "git://git.devalot.com/edify.git";
-    rev = "95f51d410056cbf7f241c596a1263d7cfeefe942";
+    url = "https://github.com/pjones/edify.git";
+    rev = "86fda3a27b96acbe866f2558f66ea4e92fb59e76";
   };
 
   edify = import "${repo}/nix/builder.nix" args;
@@ -18,6 +18,9 @@ edify.mkDerivation rec {
   name = "webdev-${version}";
   version = "0.13";
   src = builtins.fetchGit ./.;
+
+  # Extra markdown extensions:
+  extensions = [ "emoji" "implicit_figures" ];
 
   # Extra files to include in the zip archive:
   extraFiles = [ "LICENSE" "README.md" "start-scripts" "src" ];
