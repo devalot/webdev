@@ -1,5 +1,5 @@
 - [x] clean up webpack setup
-- [ ] Can I get rid of the title slide?
+- [x] Can I get rid of the title slide?
 - [ ] adding emoji
 - [ ] rewrite promises section to not involve network calls maybe?
 - [ ] convert all Jasmine tests to Jest
