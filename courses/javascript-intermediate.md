@@ -91,7 +91,7 @@ This JavaScript course is delivered during two days.
 
 # Developer Tools
 
-<<(../content/js/tools/node/index.md)
+<<(../content/js/tools/packages/index.md)
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)

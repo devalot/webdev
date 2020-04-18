@@ -8,6 +8,8 @@
 - [ ] webpack advanced section (code splitting, vendor, tree shaking, etc.)
 - [ ] webpack diagram to visualize what's happening
 - [ ] class properties
+- [ ] borrow setup instructions from EN project
+- [ ] add nvm section to node
 
 Idea for FP intro:
 
