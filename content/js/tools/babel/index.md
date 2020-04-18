@@ -1,4 +1,4 @@
-Transpiling with Babel
-----------------------
+## Babel
 
 <<(basics.md)
+<<(configuration.md)

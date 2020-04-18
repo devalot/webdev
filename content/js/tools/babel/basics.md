@@ -1,4 +1,56 @@
-### Introduction to Babel ###
+## Babel: Basics
+
+### Before There Was Babel...
+
+  * Each browser implements JavaScript specification
+
+  * New syntax and features show up:
+
+    * Arrow functions `() => {}`
+
+    * Spread syntax `{ ...obj, foo: 'bar' }`
+
+    * ... etc.
+
+### Every Developer Be Like
+
+![](images/please.jpg)
+
+### Every Browser Be Like
+
+  * Chrome, Firefox: Go For It!
+
+  * Safari: Maybe I'll Do This
+
+  * IE: I'll never do this
+
+### Browser Compatibility
+
+\begin{figure}
+  If you want to support older browsers, you must use "older" JavaScript
+\end{figure}
+
+### Babel
+
+![](images/babel-logo.png)
+
+  * Write fancy new JavaScript
+
+  * *Transpiles* into "older" JavaScript syntax
+
+  * *Polyfills* missing functionality
+
+  * Includes *presets* to convert from one form of JavaScript to another
+
+      * ES2015+ to ES5
+
+      * React's JSX files to ES5
+
+      * Vue's VUE files to ES5
+
+      * etc.
+
+### What is Babel
 
   * Automated JavaScript restructuring, refactoring, and rewriting
 
@@ -6,40 +58,81 @@
 
   * The AST can be manipulated in JavaScript
 
-  * Includes *presets* to convert from one form of JavaScript to another
+### Plugins Galore
 
-    * ESNEXT to ES5
+  * Community plugins to automatically transform your code
 
-    * React's JSX files to ES5
+      * Compile TypeScript / Flow -> JavaScript
 
-    * Vue's VUE files to ES5
+      * Manage feature flags
 
-    * etc.
+      * Improve module resolution
 
-### Manually Using Babel ###
+      * Augment language behavior (e.g. implicit `return`s)
 
-Process all files from the `input` directory and put all generated
-files in the `output` directory:
+### What Does Transpiling Look Like?
+
+Given `add`, using modern default parameters...
+
+```javascript
+// add.js
+export const add = (a = 1, b = 2) => a + b
+```
+
+Produces...
+
+```javascript
+var add = function add() {
+  var a = arguments.length > 0 && arguments[0] !== undefined
+    ? arguments[0] : 1;
+  var b = arguments.length > 1 && arguments[1] !== undefined
+    ? arguments[1] : 2;
+  return a + b;
+};
+```
+
+Which can be read by older browsers!
+
+### Adding Babel
 
 ~~~ {.shell}
-$ npm install --save-dev babel-cli babel-preset-env
-$ ./node_modules/.bin/babel --presets env -d output input
+$ yarn add -D @babel/core @babel/cli @babel/preset-env
 ~~~
 
-(Note: Babel 7 will use a slightly different command line.)
+Add a `babel.config.js` at your root:
 
-### Integrating Babel with Your Build Tools ###
+```javascript
+module.exports = {
+  presets: ['@babel/env']
+}
+```
 
-Most build tools (Grunt, Gulp, Webpack) support a Babel phase.
+### Babel Transpiling
 
-Simple overview of a build process:
+~~~ {.shell}
+$ yarn babel file.js
+~~~
 
-  #. Gather up all necessary JavaScript files
+This transpiles a file and prints it to your console.
 
-  #. Run the files through a linter like ESLint
+### Babel Transpiling
 
-  #. Concatenate them into a single file in the right order
+```shell
+$ yarn babel src/add.js
+```
 
-  #. Run that file through Babel
+Prints out:
 
-  #. Minify and compress the file Babel produced
+```javascript
+var add = function add() {
+  var a = arguments.length > 0 && arguments[0] !== undefined
+    ? arguments[0] : 1;
+  var b = arguments.length > 1 && arguments[1] !== undefined
+    ? arguments[1] : 2;
+  return a + b;
+};
+```
+
+### Integrating Babel with Your Build Tools
+
+Integrate with Webpack (discussed next) for automatic transpiling
