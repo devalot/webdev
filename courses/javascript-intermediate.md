@@ -1,11 +1,13 @@
 ---
 title: "Intermediate JavaScript"
 
+logo: /home/andrew/Projects/webdev/data/images/logo.png
+
 author:
-  - name: "Peter J. Jones"
-    email: "pjones@devalot.com"
-    url: "http://devalot.com"
-    twitter: "devalot"
+  - name: "Andrew Smith"
+    email: "andrewsmith@alumni.stanford.edu"
+    url: "https://www.andrewsouthpaw.com"
+    twitter: "andrewsouthpaw"
 
 copyright: >
   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License:

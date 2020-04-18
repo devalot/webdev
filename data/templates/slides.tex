@@ -1,0 +1,218 @@
+\documentclass[ignorenonframetext]{beamer}
+
+% ===============================================================================
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{tikz}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+% ===============================================================================
+% Beamer settings:
+\usetheme{Boadilla}
+\useoutertheme{infolines}
+\useinnertheme{circles}
+
+\definecolor{devalot-blue}{HTML}{065078}
+\definecolor{devalot-ltblue}{HTML}{C8DAE1}
+\definecolor{devalot-dkpurple}{HTML}{605E99}
+\definecolor{devalot-ltpurple}{HTML}{807DCC}
+\definecolor{devalot-red}{HTML}{A60A0A}
+\definecolor{devalot-section-fg}{HTML}{B5B3FF}
+\definecolor{devalot-subsection-fg}{HTML}{2C2B49}
+
+\setbeamertemplate{navigation symbols}{}% Remove navigation bar.
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{:}
+
+% http://pastebin.com/nK3BWG5v
+\setbeamercolor*{caption name}{fg=normal text.fg}
+\setbeamercolor*{title}{fg=devalot-blue}
+\setbeamercolor*{frametitle}{fg=devalot-red}
+\setbeamercolor*{section in head/foot}{bg=devalot-dkpurple,fg=devalot-section-fg}
+\setbeamercolor*{subsection in head/foot}{bg=devalot-ltpurple,fg=devalot-subsection-fg}
+\setbeamercolor*{subitem}{fg=devalot-red}
+\setbeamercolor*{item}{fg=devalot-dkpurple}
+\setbeamercolor*{description item}{fg=devalot-blue}
+
+% https://tex.stackexchange.com/questions/83048/change-the-contents-of-footline-in-a-beamer-presentation
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertsubsection
+  \end{beamercolorbox}}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshortauthor{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}%
+  \vskip0pt%
+}
+\makeatother
+
+% ===============================================================================
+\ifxetex
+  \usepackage{fontspec,xltxtra,xunicode}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\else
+  \ifluatex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+    \newcommand{\euro}{€}
+  \else
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    $if(euro)$
+      \usepackage{eurosym}
+    $endif$
+  \fi
+\fi
+
+% ===============================================================================
+% Command used by pand
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% ===============================================================================
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+% ===============================================================================
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+
+% ===============================================================================
+$if(tables)$
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+
+% ===============================================================================
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+$endif$
+
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Level 2 headings turn into title slides!
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+$endif$
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+$if(verbatim-in-note)$
+\VerbatimFootnotes% allows verbatim text in footnotes
+$endif$
+$if(lang)$
+\usepackage[$lang$]{babel}
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author.name$$sep$ \and $endfor$}
+$endif$
+
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+$endif$
+$if(biblatex)$
+\usepackage{biblatex}
+$if(biblio-files)$
+\bibliography{$biblio-files$}
+$endif$
+$endif$
+
+% ===============================================================================
+% Macros inserted by pandoc.
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% ===============================================================================
+% Hacks to allow columns in Markdown.
+\newcommand{\columnsbegin}{\begin{columns}}
+\newcommand{\columnsend}{\end{columns}}
+
+$if(logo)$
+  \titlegraphic{\includegraphics[width=\textwidth,height=.5\textheight]{$logo$}}
+% $else$
+%   \titlegraphic{\includegraphics[width=\textwidth,height=.5\textheight]{$logodevalotpdf$}}
+$endif$
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \centering
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \vspace{5mm}
+
+  \begin{columns}
+   $for(author)$
+    \column{.45\linewidth}
+    \centering
+    \usebeamerfont{author}$author.name$\par
+    \raisebox{-0.25\height}{\includegraphics[width=10px]{$logoemailpdf$}}
+    $author.email$\\
+    $if(author.twitter)$
+    \raisebox{-0.25\height}{\includegraphics[width=10px]{$logotwitterpdf$}}
+    \href{https://twitter.com/$author.twitter$}{@$author.twitter$}
+    $endif$
+    $if(author.url)$
+    $author.url$
+    $endif$
+   $endfor$
+  \end{columns}
+
+  \begin{center}
+    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+  \end{center}
+}
+
+% ===============================================================================
+\begin{document}
+\frame[plain]{\titlepage}
+
+$body$
+\end{document}
