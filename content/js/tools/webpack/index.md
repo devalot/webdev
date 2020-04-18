@@ -1,4 +1,3 @@
-Packaging with Webpack
-----------------------
+## Webpack
 
 <<(basics.md)

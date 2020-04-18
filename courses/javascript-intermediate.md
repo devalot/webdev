@@ -44,21 +44,18 @@ This JavaScript course is delivered during two days.
 
 </div>
 
-JavaScript Review (Warming Up)
-==============================
+# JavaScript Review (Warming Up)
 
 <<(../content/js/hoisting.md#a5d15bd6258111e8a686cf157ebd8e95)
 <<(../content/js/hoisting.md#a706548258211e8a1a73f1bc7dcefa25)
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
 
-The Document Object Model
-=========================
+# The Document Object Model
 
 <<(../content/js/dom.md)
 
-Functional Programming
-======================
+# Functional Programming
 
 <<(../content/js/functional/basics.md)
 <<(../content/js/functional/params.md)
@@ -69,8 +66,7 @@ Functional Programming
 <<(../content/js/functional/array.md)
 <<(../content/js/functional/partial.md)
 
-Object-Oriented Programming
-===========================
+# Object-Oriented Programming
 
 <<(../content/js/oop/context.md)
 <<(../content/js/oop/prototype.md)
@@ -78,8 +74,7 @@ Object-Oriented Programming
 <<(../content/js/oop/reflection.md)
 <<(../content/js/oop/mutable.md)
 
-Asynchronous Programming
-========================
+# Asynchronous Programming
 
 <<(../content/js/async/runtime/index.md)
 <<(../content/js/async/promises/index.md)
@@ -87,23 +82,21 @@ Asynchronous Programming
 <<(../content/js/apis/fetch/lab.md)
 <<(../content/js/async/await/index.md)
 
-Web Application Development
-===========================
+# Web Application Development
 
 <<(../content/js/apis/websockets/index.md)
 <<(../content/js/apis/webstorage/index.md)
 <<(../content/js/apis/serviceworkers/index.md)
 <<(../content/js/apis/webworkers/index.md)
 
-Real World JavaScript
-=====================
+# Developer Tools
 
 <<(../content/js/tools/node/index.md)
-<<(../content/js/alternatives/typescript/basics.md)
-<<(../content/js/alternatives/typescript/more.md)
 <<(../content/js/tools/lint/index.md)
 <<(../content/js/tools/babel/index.md)
 <<(../content/js/tools/webpack/index.md)
+<<(../content/js/alternatives/typescript/basics.md)
+<<(../content/js/alternatives/typescript/more.md)
 
 # Testing
 
