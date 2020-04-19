@@ -120,8 +120,8 @@ following:
 <<(../content/js/functional/basics.md#func-parens)
 <<(../content/js/functional/basics.md#wrong-args)
 <<(../content/js/functional/params.md#arity)
-<<(../content/js/changes/es2015.md#params-default)
-<<(../content/js/changes/es2015.md#params-rest)
+<<(../content/js/es-features/es2015.md#params-default)
+<<(../content/js/es-features/es2015.md#params-rest)
 <<(../content/js/functional/data.md#func-data)
 <<(../content/js/functional/data.md#funcs-as-args)
 <<(../content/js/functional/data.md#funcs-as-returns)
@@ -212,12 +212,12 @@ the following features:
 
   * Review classes, arrow functions, and `async` functions
 
-<<(../content/js/changes/es2015.md)
-<<(../content/js/changes/es2016.md)
-<<(../content/js/changes/es2017.md)
-<<(../content/js/changes/es2018.md)
-<<(../content/js/changes/esnext/decorators/basics.md)
-<<(../content/js/changes/esnext/observable/basics.md)
+<<(../content/js/es-features/es2015.md)
+<<(../content/js/es-features/es2016.md)
+<<(../content/js/es-features/es2017.md)
+<<(../content/js/es-features/es2018.md)
+<<(../content/js/es-features/experimental/decorators/basics.md)
+<<(../content/js/es-features/experimental/observable/basics.md)
 
 Important Browser APIs
 ----------------------

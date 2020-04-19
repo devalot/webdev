@@ -50,6 +50,10 @@ This JavaScript course is delivered during two days.
 
 <<(../content/js/review/index.md)
 
+# JavaScript Language
+
+<<(../content/js/es-features/index.md)
+
 # The Document Object Model
 
 <<(../content/js/dom/index.md)

@@ -14,10 +14,10 @@ code generation.
 
 ### Example Decorator ###
 
-~~~ {.javascript insert="../../../../../src/babel/esNEXT/decorators.js" token="deco"}
+~~~ {.javascript insert="../../../../../src/examples/es-features/esNEXT/decorators.js" token="deco"}
 ~~~
 
 ### Using the Decorator ###
 
-~~~ {.javascript insert="../../../../../src/babel/esNEXT/decorators.js" token="class"}
+~~~ {.javascript insert="../../../../../src/examples/es-features/esNEXT/decorators.js" token="class"}
 ~~~

@@ -37,12 +37,12 @@ The module pattern:
 
 ### Defining ES2015 Modules ###
 
-~~~ {.javascript insert="../../../src/babel/es2015/module.js"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/module.js"}
 ~~~
 
 ### Using ES2015 Modules ###
 
-~~~ {.javascript insert="../../../src/babel/es2015/import.js"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/import.js"}
 ~~~
 
 ### ES2015 Module Notes ###

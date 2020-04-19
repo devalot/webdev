@@ -8,10 +8,10 @@ Constructor Functions and Classes
 
 ### ES2015 Classes (Hidden Prototypes) {#es2015-classes}
 
-~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="rec"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="rec"}
 ~~~
 
-~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="rec-new"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="rec-new"}
 ~~~
 
 <!-- EXERCISE -->
@@ -24,10 +24,10 @@ Constructor Functions and Classes
 
 ### ES2015 Classes and Inheritance ### {#es2015-inheritance}
 
-~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="sq"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="sq"}
 ~~~
 
-~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="sq-new"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="sq-new"}
 ~~~
 
 ### Generic Functions (Static Class Methods) ### {#generic-functions}
@@ -40,7 +40,7 @@ are known as *generic* functions:
 
 ### ES2015 Static Class Methods ### {#es2015-static}
 
-~~~ {.javascript insert="../../../src/babel/es2015/class-static.js" token="static"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class-static.js" token="static"}
 ~~~
 
 ### Property Descriptors ###
@@ -73,7 +73,7 @@ Object.defineProperty(obj, propName, definition);
 
 ### ES2015 Getters and Setters ### {#es2015-get-set}
 
-~~~ {.javascript insert="../../../src/babel/es2015/class.js" token="get-set"}
+~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="get-set"}
 ~~~
 
 ### Object-Oriented Programming: Gotcha ### {#this-gotcha}

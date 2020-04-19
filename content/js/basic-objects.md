@@ -229,4 +229,4 @@ Hints:
   - `someobj.hasOwnProperty(prop)`
 
 
-<<(changes/es2015.md#o68acf4e36cb11e8a63ff768f96bc38a)
+<<(es-features/es2015.md#o68acf4e36cb11e8a63ff768f96bc38a)

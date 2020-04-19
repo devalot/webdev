@@ -11,6 +11,7 @@
 - [ ] borrow setup instructions from EN project
 - [ ] add nvm section to node
 - [ ] create visualization of querying
+- [ ] add notes about arrow function `this` once that topic is discussed
 
 Idea for FP intro:
 
