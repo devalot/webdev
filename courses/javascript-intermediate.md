@@ -30,14 +30,14 @@ This JavaScript course is delivered during two days.
 
 ### What's In Store ### {.unnumbered}
 
-  Day 1                        Day 2
-  --------------               --------------
-  JavaScript ES2015+           FP part 2
-  Document Object Model        WebSockets
-  Functional Programming       Web Storage
-  OOP and Inheritance          Web APIs
-  Asynchronous Programming     Developer Tools
-  Network Calls                Testing
+  | Day 1                     | Day 2          |
+  |---------------------------+----------------| 
+  | JavaScript ES2015+        | FP part 2      | 
+  | Document Object Model     | WebSockets     | 
+  | Functional Programming    | Web Storage    | 
+  | OOP and Inheritance       | Web APIs       | 
+  | Asynchronous Programming  | Developer Tools|
+  | Network Calls             | Testing        |
 
 <div class="notes">
 
@@ -52,7 +52,7 @@ This JavaScript course is delivered during two days.
 
 # The Document Object Model
 
-<<(../content/js/dom.md)
+<<(../content/js/dom/index.md)
 
 # Functional Programming
 

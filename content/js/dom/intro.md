@@ -1,70 +1,48 @@
 ### What is the DOM?
 
-  - What most people hate when they say they hate JavaScript
-  - The DOM is the browser's API for the document
-  - Through it you can manipulate the document
-  - Browser parses HTML and builds a tree structure
-  - It's a live data structure
+  - The browser's API for the HTML document
+  - Allows you to read and manipulate a website
+  - Browser parses HTML and builds a tree data structure
 
 ### The Document Structure
 
   - The `document` object provides access to the document
-  - It's a tree-like structure
-  - Each node in the tree represents one of:
+  - Two primary node types:
     - Element
-    - Content of an element
-  - Relationships between nodes allow traversal
+    - Text
 
-### Looking at the Parsed HTML Tree (again)
+### HTML Tree
 
-And produce this tree structure:
+```html
+<html>
+<body>
+  <h1 id="title">Welcome</h1>
+  <p>Cool <span class="loud">Site!</span></p>
+</body>
+</html>
+```
 
-![](../../../diagrams/html/tree.dot)\
-<!-- Here to stop a figure heading above -->
+### Parsed HTML Tree
+
+![](../../../diagrams/html/tree.dot)
 
 ### Element Nodes
 
-  - The HTML:
+* The HTML:
 
-    ~~~ {.html}
-    <p id="name" class="hi">My <span>text</span></p>
-    ~~~
+~~~ {.html}
+<p id="name" class="hi">My <span>text</span></p>
+~~~
 
-  - Maps to:
+* Maps to:
 
-    ~~~ {.javascript}
-    let node = {
-      tagName:    "P",
-      childNodes: NodeList,
-      className:  "hi",
-      innerHTML:  "My <span>text</span>",
-      id:         "name",
-      // ...
-    };
-    ~~~
-
-    -   Attributes may **very loosely** to object properties
-
-### Working with the Document Object Model
-
-  - Accessing elements:
-    -   Select a single element
-    -   Select many elements
-    -   Traverse elements
-  - Working with elements
-    -   Text nodes
-    -   Raw HTML
-    -   Element attributes
-
-
-### Performance Considerations
-
-  - Dealing with the DOM brings up a lot of performance issues
-  - Accessing a node has a cost (especially in IE)
-  - Styling has a bigger cost (it cascades)
-    -   Inserting nodes
-   -   Layout changes
-    -   Accessing CSS margins
-    -   Reflow
-    -   Repaint
-  - Accessing a `NodeList` has a cost
+~~~ {.javascript}
+{
+  tagName:    "P",
+  childNodes: NodeList,
+  className:  "hi",
+  innerHTML:  "My <span>text</span>",
+  id:         "name",
+  // ...
+}
+~~~

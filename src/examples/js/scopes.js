@@ -26,6 +26,7 @@ function outerFunction() {
 
   function innerFunction() {
     const inner = 'Inner variable'
+    console.log(outer) // ?
   }
 
   console.log(inner) // ?
@@ -179,4 +180,18 @@ function first() {
 function second() {
   console.log('Hello')
 }
+
+second() // ?
+// :>>
+
+// <<: top-down-answer
+function first() {
+  second()
+}
+
+function second() {
+  console.log('Hello')
+}
+
+second() // 'Hello'
 // :>>

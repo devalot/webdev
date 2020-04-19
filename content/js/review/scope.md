@@ -126,3 +126,10 @@ Does this work?
 
 ~~~ {.javascript insert="../../../src/examples/js/scopes.js" token="top-down"}
 ~~~
+
+### Top-Down Code
+
+Does this work?
+
+~~~ {.javascript insert="../../../src/examples/js/scopes.js" token="top-down-answer"}
+~~~

@@ -73,7 +73,7 @@ The source code for this course can be found at the following URL:
 
 # The Document Object Model
 
-  <<(../content/js/dom.md)
+  <<(../content/js/dom/index.md)
 
 # Asynchronous JavaScript and XML
 

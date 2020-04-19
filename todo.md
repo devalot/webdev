@@ -10,7 +10,22 @@
 - [ ] class properties
 - [ ] borrow setup instructions from EN project
 - [ ] add nvm section to node
+- [ ] create visualization of querying
 
 Idea for FP intro:
 
 - in OOP, everything is an is-a relationship. But in web there's ... so many things! How could we model them all?
+
+
+Closure example:
+
+```
+var scope = "I am global";
+function whatismyscope(){
+   var scope = "I am just a local";
+   function func() {return scope;}
+   return func;
+}
+
+whatismyscope()()
+```

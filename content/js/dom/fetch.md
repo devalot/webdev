@@ -1,42 +1,64 @@
-## Getting References to Elements
+## Querying
 
-<div class="notes">
+### Querying the DOM
 
-Starting with the `document` global variable, you can access specific
-elements in the DOM using the following functions.  Once you have a
-specific element you can use these functions again (with the element
-as the receiver) to search the DOM, which starts the search in the
-element's decedents.
+It all starts with the `document`
 
-</div>
+### Getting Single Elements
 
-### Accessing Individual Elements {#c90768f0258511e8b89193e5afe59cab}
+`.getElementById('root')`
 
-Starting on the `document` object or a previously selected element:
+  : Gets by ID
 
-`document.getElementById("main");`
+`.querySelector('p span')`
 
-  : Returns the element with the given ID (e.g., `<div id="main">`).
+  : Gets *first* element by CSS selector. Depth-first pre-order traversal.
 
-`document.querySelector("p span");`
+### Getting Multiple Elements
 
-  : Returns the *first* element that matches the given CSS selector.
-    The search is done using depth-first pre-order traversal.
+These return a `NodeList`
 
-### Accessing a List of Elements
+`.getElementsByTagName('a')`
 
-Starting on the `document` object or a previously selected element:
+  : All elements of that tag
 
-`document.getElementsByTagName("a");`
+`.getElementsByClassName('highlight')`
 
-  : Returns a `NodeList` containing *all* `<a>` elements.
+  : All elements with that class
 
-`document.getElementsByClassName("highlight");`
+`.querySelectorAll('p span')`
 
-  : Returns a `NodeList` containing *all* elements that have a `class`
-    attribute set to `foo` (e.g., `<div class="highlight">`).
+  : All elements match by CSS selector
 
-`document.querySelectorAll("p span");`
+### The `NodeList`
 
-  : Returns a `NodeList` containing *all* elements that match the given
-    CSS selector.
+`Array`-like object that isn't actually an `Array`.
+
+Common methods like `.map` don't exist.
+
+```javascript
+const alerts = document.getElementsByClassName('alert')
+console.log(alerts.length) // 4
+alerts.map(() => {}) // Error: map undefined
+```
+
+### The `NodeList`
+
+Convert to an `Array` with `Array.from()` or `[...nodeList]`
+
+```javascript
+const alerts = document.getElementsByClassName('alert')
+
+const values1 = Array.form(alerts).map(/* */) // OK
+const values2 = [...alerts].map(/* */) // OK
+```
+
+### Refining the Search
+
+These selectors can be done on *any* node.
+
+```javascript
+const app = document.getElementById('app')
+const form = app.getElementsByTagName('form')
+const checkboxes = form.getElementsByClassName('checkbox')
+```
