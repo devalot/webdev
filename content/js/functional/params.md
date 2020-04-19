@@ -41,6 +41,6 @@ property:
 ~~~ {.javascript insert="../../../src/examples/js/arity.js"}
 ~~~
 
-<<(../changes/es2015-features.md#params-default)
-<<(../changes/es2015-features.md#params-rest)
-<<(../changes/es2015-features.md#args-spread)
+<<(../changes/es2015.md#params-default)
+<<(../changes/es2015.md#params-rest)
+<<(../changes/es2015.md#args-spread)
