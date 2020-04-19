@@ -1,73 +1,26 @@
-/******************************************************************************/
 // <<: exercise-1
 function foo() {
-  x = 42;
-  var x;
-
-  console.log(x); // ?
-  return x;
+  console.log(x) // ?
+  var x = 42
 }
 // :>>
 
-/******************************************************************************/
 // <<: answer-1
 function foo() {
-  var x;
-  x = 42;
-
-  console.log(x);
-  return x;
+  var x
+  console.log(x)
+  x = 42
 }
 // :>>
 
-/******************************************************************************/
-// <<: exercise-2
-function foo() {
-  console.log(x); // ?
-  var x = 42;
-}
-// :>>
+// <<: function-hoisting
+function greet() {
+  sayHello()
 
-/******************************************************************************/
-// <<: answer-2
-function foo() {
-  var x;
-  console.log(x);
-  x = 42;
-}
-// :>>
-
-/******************************************************************************/
-// <<: before
-function foo() {
-  if (true) {
-    var x = 42;
-    console.log(x);
+  function sayHello() {
+    console.log('Hello')
   }
-
-  var y = "foo";
-  console.log(y);
 }
+
+greet() // ?
 // :>>
-
-foo();
-
-/******************************************************************************/
-// <<: after
-function foo() {
-  var x, y;
-
-  if (true) {
-    x = 42;
-    console.log(x);
-  }
-
-  y = "foo";
-  console.log(y);
-
-  // x === 42
-  // y === "foo"
-}
-// :>>
-
-foo();

@@ -83,15 +83,20 @@ Then visit <http://localhost:3000>
 
 1. Start with Linux, as macOS has incompatibility issues
 
-1. Install the [Nix Package Manager](https://nixos.org/nix/) (`>=`
-   2.0 is required)
+1. Install the [Nix Package Manager](https://nixos.org/nix/)
 
 1. Load into your shell: `  . /home/andrew/.nix-profile/etc/profile.d/nix.sh`
 
-1. Run the following command: `nix build`
+1. Open `nix-shell`
 
-The generated PDF files will be in the `result` directory.
+1. Run `edify_datadir=. edify build courses/javascript-intermediate.md`
 
-[pjones]: http://www.devalot.com/about/pjones.html
+The generated PDF files will be in the `build/courses` directory.
 
-Maybe later: figure out how to [get it to build on macOS](https://www.softinio.com/post/moving-from-homebrew-to-nix-package-manager/).
+Helpful commands for transferring data to and fro for VM:
+
+```
+$ rsync -auv --exclude 'src/node_modules' ~/Projects/webdev webdev:/home/andrew/Projects
+$ scp webdev:/home/andrew/Projects/webdev/build/courses/javascript-intermediate.slides.pdf slides
+$ open slides/javascript-intermediate.slides.pdf
+```

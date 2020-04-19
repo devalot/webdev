@@ -5,8 +5,8 @@ logo: /home/andrew/Projects/webdev/data/images/logo.png
 
 author:
   - name: "Andrew Smith"
-    email: "andrewsmith@alumni.stanford.edu"
-    url: "https://www.andrewsouthpaw.com"
+    email: "andrewsouthpaw@gmail.com"
+    url: "https://andrewsouthpaw.com"
     twitter: "andrewsouthpaw"
 
 copyright: >
@@ -46,12 +46,9 @@ This JavaScript course is delivered during two days.
 
 </div>
 
-# JavaScript Review (Warming Up)
+# JavaScript Review
 
-<<(../content/js/hoisting.md#a5d15bd6258111e8a686cf157ebd8e95)
-<<(../content/js/hoisting.md#a706548258211e8a1a73f1bc7dcefa25)
-<<(../content/js/closures.md#closures-loops)
-<<(../content/js/values-types.md#ec9075fc36c911e8bf5bdbeceee344b0)
+<<(../content/js/review/index.md)
 
 # The Document Object Model
 
