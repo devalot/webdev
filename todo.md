@@ -12,6 +12,7 @@
 - [ ] add nvm section to node
 - [ ] create visualization of querying
 - [ ] add notes about arrow function `this` once that topic is discussed
+- [ ] replace sandbox with the webpack babel starter repo
 
 Idea for FP intro:
 

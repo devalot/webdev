@@ -48,11 +48,11 @@ This JavaScript course is delivered during two days.
 
 # JavaScript Review
 
-<<(../content/js/review/index.md)
+<<(../content/js/review/scope.md)
 
 # JavaScript Language
 
-<<(../content/js/es-features/index.md)
+<<(../content/js/es-features/syntax.md)
 
 # The Document Object Model
 

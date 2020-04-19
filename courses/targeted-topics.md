@@ -120,8 +120,6 @@ following:
 <<(../content/js/functional/basics.md#func-parens)
 <<(../content/js/functional/basics.md#wrong-args)
 <<(../content/js/functional/params.md#arity)
-<<(../content/js/es-features/es2015.md#params-default)
-<<(../content/js/es-features/es2015.md#params-rest)
 <<(../content/js/functional/data.md#func-data)
 <<(../content/js/functional/data.md#funcs-as-args)
 <<(../content/js/functional/data.md#funcs-as-returns)
