@@ -7,8 +7,6 @@ author:
     url: "http://devalot.com"
     twitter: "devalot"
 
-bibliography: metadata/citations.bib
-
 copyright: >
   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License:
   <https://creativecommons.org/licenses/by-nc-sa/4.0/>
@@ -62,4 +60,3 @@ The source code for this course can be found at the following URL:
 <<(../content/css/frameworks.md)
 
 <<(../content/css/footer.md)
-<<(../metadata/links.md)

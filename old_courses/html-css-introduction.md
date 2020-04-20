@@ -8,8 +8,6 @@ author:
     url: "http://devalot.com"
     twitter: "devalot"
 
-bibliography: metadata/citations.bib
-
 copyright: >
   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License:
   <https://creativecommons.org/licenses/by-nc-sa/4.0/>
@@ -75,4 +73,3 @@ simply stack all the boxes on top of one another.
   <<(../content/css/layout/flexbox.md)
   <<(../content/css/layout/responsive.md)
   <<(../content/css/footer.md)
-  <<(../metadata/links.md)

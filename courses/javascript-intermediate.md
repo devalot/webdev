@@ -41,7 +41,6 @@ This JavaScript course is delivered during two days.
 
 <div class="notes">
 
-<<(../metadata/links.md)
 <<(../content/js/requirements.md)
 
 </div>

@@ -282,5 +282,5 @@ important tools you need to know:
 <<(../content/js/tools/lint/basics.md)
 <<(../content/js/tools/babel/basics.md)
 <<(../content/js/tools/webpack/basics.md)
-<<(../content/js/jasmine/index.md)
+<<(../content/js/jest/index.md)
 <<(../content/js/alternatives/typescript/basics.md)

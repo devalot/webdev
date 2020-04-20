@@ -5,5 +5,5 @@
 
 ```shell
 $ cd src
-$ yarn jest src/www/js/es-syntax/syntax.test.js --watch
+$ yarn jest syntax.test.js --watch
 ```

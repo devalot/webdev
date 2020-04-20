@@ -84,4 +84,3 @@ The source code for this course can be found at the following URL:
 <!-- ====================================================================== -->
 
 <<(../content/js/resources.md)
-<<(../metadata/links.md)

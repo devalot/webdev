@@ -30,11 +30,11 @@ Code that is "just" JavaScript (no browser APIs) is the easiest to test.
 
 Testing code that includes the browser is often challenging and often requires more mocking.
 
-<<(jasmine/index.md)
+<<(jest/index.md)
 
-<<(jasmine/jsdom.md)
+<<(jest/jsdom.md)
 
-<<(jasmine/best-practices.md)
+<<(jest/best-practices.md)
 
 ## E2E Testing
 
