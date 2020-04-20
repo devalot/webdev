@@ -9,7 +9,7 @@
 
 What gets printed out?
 
-~~~ {.javascript insert="../../../src/examples/js/hoisting.js" token="exercise-1"}
+~~~ {.javascript insert="../../src/examples/js/hoisting.js" token="exercise-1"}
 ~~~
 
 ### Answer: Hoisting
@@ -19,14 +19,14 @@ What gets printed out?
 
 This:
 
-~~~ {.javascript insert="../../../src/examples/js/hoisting.js" token="exercise-1"}
+~~~ {.javascript insert="../../src/examples/js/hoisting.js" token="exercise-1"}
 ~~~
 
 \column{.5\textwidth}
 
 Turns into:
 
-~~~ {.javascript insert="../../../src/examples/js/hoisting.js" token="answer-1"}
+~~~ {.javascript insert="../../src/examples/js/hoisting.js" token="answer-1"}
 ~~~
 
 \columnsend
@@ -35,7 +35,7 @@ Turns into:
 
 `function` statements are also hoisted, along with their declaration.
 
-~~~ {.javascript insert="../../../src/examples/js/hoisting.js" token="function-hoisting"}
+~~~ {.javascript insert="../../src/examples/js/hoisting.js" token="function-hoisting"}
 ~~~
 
 ### Good To Know, But...

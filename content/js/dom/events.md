@@ -89,6 +89,31 @@ Example: Event Handler
     -   `event.target`: The element the event triggered for
     -   `event.currentTarget`: Registered element (parent)
 
+
+### Functions Given Context
+
+Functions, particularly click handlers, are given context.
+
+```js
+document.getElementsByTagName('button')
+  .addEventListener('click', function() {
+    console.log(this) // the button that was clicked
+  })
+```
+
+Arrow functions won't work here.
+
+```js
+document.getElementsByTagName('button')
+  .addEventListener('click', () => {
+    console.log(this) // window
+  })
+```
+
+### Functions Given Context
+
+TODO talk about using currentTarget for arrow fns
+
 ### Event Handling: A Complete Example {#a6c1d41c258611e89ac42bb59fa4b75e}
 
 ~~~ {.javascript insert="../../../src/examples/js/events.js"}

@@ -5,6 +5,8 @@ Can destructure an `Object`, just like an `Array`
 ~~~ {.javascript insert="../../../src/examples/es-features/es2018.js" token="destructure"}
 ~~~
 
+### Object Destructuring
+
 You can destructure function parameters too!
 
 ~~~ {.javascript insert="../../../src/examples/es-features/es2018.js" token="destructure-parameter"}

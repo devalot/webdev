@@ -14,6 +14,9 @@
 - [ ] add notes about arrow function `this` once that topic is discussed
 - [ ] replace sandbox with the webpack babel starter repo
 - [ ] slide around class assignment to variable / passing as data?
+- [ ] es6 object shorthand
+- [ ] es6 object function shorthand
+- [ ] trailing comma in obj, functions, etc.
 
 Idea for FP intro:
 

@@ -27,6 +27,22 @@ describe('ES2015 syntax', () => {
     })
   })
 
+  describe('object shorthand', () => {
+    it('rewrite using object function shorthand', () => {
+      const person = {
+        name: 'Andrew',
+        getName: function() { return this.name }
+      }
+      expect(person.getName()).toEqual('Andrew')
+    })
+
+    it('rewrite using object property shorthand', () => {
+      const name = 'Andrew'
+      const person = { name: name }
+      expect(person.name).toEqual('Andrew')
+    })
+  })
+
   describe('functions', () => {
     it('rewrite the function declaration with arrow syntax', () => {
       expect(foo()).toEqual('foo')
