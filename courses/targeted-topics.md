@@ -112,14 +112,7 @@ following:
 
   * Safe programming with pure functions
 
-<<(../content/js/functional/basics.md#func-intro)
-<<(../content/js/functional/basics.md#func-define)
-<<(../content/js/functional/basics.md#func-statement)
-<<(../content/js/functional/basics.md#func-expression)
-<<(../content/js/functional/basics.md#func-arrow)
-<<(../content/js/functional/basics.md#func-parens)
-<<(../content/js/functional/basics.md#wrong-args)
-<<(../content/js/functional/params.md#arity)
+<<(../content/js/functional/basics.md)
 <<(../content/js/functional/data.md#func-data)
 <<(../content/js/functional/data.md#funcs-as-args)
 <<(../content/js/functional/data.md#funcs-as-returns)
