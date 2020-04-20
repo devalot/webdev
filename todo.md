@@ -13,6 +13,7 @@
 - [ ] create visualization of querying
 - [ ] add notes about arrow function `this` once that topic is discussed
 - [ ] replace sandbox with the webpack babel starter repo
+- [ ] slide around class assignment to variable / passing as data?
 
 Idea for FP intro:
 
