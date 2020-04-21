@@ -5,7 +5,7 @@ let
   # Some helper files:
   repo = fetchGit {
     url = "https://github.com/pjones/edify.git";
-    rev = "ac85b7c4682077cc5bc5cd1691c60e94305b8f39";
+    rev = "c73e108b05672e8b753dfdd0ae474e36f0c61d95";
   };
 
   edify = import "${repo}/nix/builder.nix" args;
@@ -21,6 +21,9 @@ edify.mkDerivation rec {
 
   # Extra markdown extensions:
   extensions = [ "emoji" "implicit_figures" ];
+
+  # Extra flags to pass to Pandoc:
+  pandocFlags = [ "pdf-engine=xelatex" ];
 
   # Extra files to include in the zip archive:
   extraFiles = [ "LICENSE" "README.md" "start-scripts" "src" ];
