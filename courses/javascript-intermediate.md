@@ -63,10 +63,8 @@ This JavaScript course is delivered during two days.
 <<(../content/js/functional/basics.md)
 <<(../content/js/functional/data.md)
 <<(../content/js/functional/array.md)
-<<(../content/js/closures.md)
+<<(../content/js/functional/closures.md)
 <<(../content/js/functional/this.md)
-<<(../content/js/functional/modules.md)
-<<(../content/js/functional/partial.md)
 
 # Object-Oriented Programming
 

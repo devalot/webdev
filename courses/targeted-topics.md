@@ -114,20 +114,11 @@ following:
 
 <<(../content/js/functional/basics.md)
 <<(../content/js/functional/data.md
-<<(../content/js/closures.md#closure-example)
-<<(../content/js/closures.md#private)
-<<(../content/js/closures.md#closures-loops)
-<<(../content/js/closures.md#closure-exercise)
-<<(../content/js/functional/modules.md#iife-short)
-<<(../content/js/functional/modules.md#iife-modules)
+<<(../content/js/functional/closures.md)
 <<(../content/js/functional/array.md)
 <<(../content/js/functional/this.md#call)
 <<(../content/js/functional/this.md#apply)
 <<(../content/js/functional/this.md#bind)
-<<(../content/js/functional/partial.md#partial-intro)
-<<(../content/js/functional/partial.md#partial-haskell)
-<<(../content/js/functional/partial.md#partial-bind)
-<<(../content/js/functional/partial.md#partial-exercise)
 <<(../content/js/functional/pure.md)
 
 Asynchronous Programming

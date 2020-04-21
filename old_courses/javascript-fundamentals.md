@@ -48,7 +48,7 @@ The source code for this course can be found at the following URL:
   <<(../content/js/functional/basics.md)
   <<(../content/js/functional/array.md)
   <<(../content/js/function-patterns.md)
-  <<(../content/js/closures.md)
+  <<(../content/js/functional/closures.md)
 
 # Object-Oriented Programming
 
