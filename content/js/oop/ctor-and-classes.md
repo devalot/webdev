@@ -14,8 +14,18 @@ Constructor Functions and Classes
 ~~~ {.javascript insert="../../../src/examples/es-features/es2015/class.js" token="rec-new"}
 ~~~
 
-<!-- EXERCISE -->
-<<(../labs.md#constructors)
+### Exercise: Constructor Functions {#constructors}
+
+  #. Open `src/www/js/oop/constructors.test.js`
+  
+  #. Follow directions in the `it` statements
+  
+  #. All tests should keep passing 
+
+```shell
+$ cd src
+$ yarn jest constructors.test.js --watch
+```
 
 ### Constructor Functions and Inheritance ### {#prototype-inheritance}
 

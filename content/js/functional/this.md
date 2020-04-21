@@ -1,10 +1,4 @@
-Receivers and Messages
-----------------------
-
-<!-- FIXME: What about examples/this.js ? -->
-
-
-<<(../oop/context.md#example-this)
+## Manually Setting Context
 
 ### `Function.prototype.call` ### {#call}
 

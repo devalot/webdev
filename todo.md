@@ -8,15 +8,15 @@
 - [ ] webpack advanced section (code splitting, vendor, tree shaking, etc.)
 - [ ] webpack diagram to visualize what's happening
 - [ ] class properties
-- [ ] borrow setup instructions from EN project
-- [ ] add nvm section to node
+- [x] borrow setup instructions from EN project
 - [ ] create visualization of querying
-- [ ] add notes about arrow function `this` once that topic is discussed
-- [ ] replace sandbox with the webpack babel starter repo
-- [ ] slide around class assignment to variable / passing as data?
-- [ ] es6 object shorthand
-- [ ] es6 object function shorthand
-- [ ] trailing comma in obj, functions, etc.
+- [x] add notes about arrow function `this` once that topic is discussed
+- [x] replace sandbox with the webpack babel starter repo
+- [ ] slide on class assignment to variable / passing as data?
+- [x] es6 object shorthand
+- [x] es6 object function shorthand
+- [x] trailing comma in obj, functions, etc.
+- [ ] try moving stuff to codesandbox.io?
 
 Idea for FP intro:
 

@@ -18,8 +18,8 @@
 ### Using ESLint Manually ###
 
 ~~~ {.shell}
-$ npm install -g eslint
-$ eslint yourfile.js
+$ yarn add eslint
+$ yarn eslint yourfile.js
 ~~~
 
 ### ESLint Plugins ###

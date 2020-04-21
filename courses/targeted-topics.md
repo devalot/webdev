@@ -71,7 +71,7 @@ In this section we will review and explore:
 <<(../content/js/oop/prototype.md#ctor-proto)
 <<(../content/js/oop/ctor-and-classes.md#ctor-proto)
 <<(../content/js/oop/ctor-and-classes.md#es2015-classes)
-<<(../content/js/labs.md#constructors)
+<<(../content/js/oop/ctor-and-classes.md#constructors-exercise)
 <<(../content/js/oop/ctor-and-classes.md#prototype-inheritance)
 <<(../content/js/oop/ctor-and-classes.md#es2015-inheritance)
 <<(../content/js/oop/ctor-and-classes.md#generic-functions)
@@ -84,7 +84,6 @@ In this section we will review and explore:
 <<(../content/js/oop/ctor-and-classes.md#this-arrow)
 <<(../content/js/oop/mutable.md#mutable-passing)
 <<(../content/js/oop/mutable.md#mutable-freeze)
-<<(../content/js/labs.md#builder)
 
 Functional Programming with JavaScript
 --------------------------------------
