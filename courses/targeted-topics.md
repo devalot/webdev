@@ -113,20 +113,14 @@ following:
   * Safe programming with pure functions
 
 <<(../content/js/functional/basics.md)
-<<(../content/js/functional/data.md#func-data)
-<<(../content/js/functional/data.md#funcs-as-args)
-<<(../content/js/functional/data.md#funcs-as-returns)
+<<(../content/js/functional/data.md
 <<(../content/js/closures.md#closure-example)
 <<(../content/js/closures.md#private)
 <<(../content/js/closures.md#closures-loops)
 <<(../content/js/closures.md#closure-exercise)
 <<(../content/js/functional/modules.md#iife-short)
 <<(../content/js/functional/modules.md#iife-modules)
-<<(../content/js/functional/array.md#foreach)
-<<(../content/js/functional/array.md#every-some)
-<<(../content/js/functional/array.md#filter-example)
-<<(../content/js/functional/array.md#map-example)
-<<(../content/js/functional/array.md#reduce-example)
+<<(../content/js/functional/array.md)
 <<(../content/js/functional/this.md#call)
 <<(../content/js/functional/this.md#apply)
 <<(../content/js/functional/this.md#bind)

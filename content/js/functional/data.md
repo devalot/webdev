@@ -1,45 +1,101 @@
-Function Objects
-----------------
+## Functions As Data
 
-### Functions as Data ### {#func-data}
+### Functions as Data
 
-Functions can be treated like any other type of JavaScript value:
+Functions are values and can be passed around.
 
-~~~ {.javascript}
-let add = function(a, b) {return a + b;};
+```javascript
+const add = (a, b) => a + b
+const otherAdd = add
+otherAdd(1, 2) // 3
+```
 
-let x = add;       // x is now a function object
-x(1, 2);           // Same as add(1, 2);
-~~~
+### Functions as Data
 
-### Passing Functions as Arguments ### {#funcs-as-args}
+Functions can be passed **into other functions**
 
-It's very common to create functions *on the fly* and pass them to
-other functions as arguments:
+```javascript
+const repeatThreeTimes = (action) => {
+  action()
+  action()
+  action()
+}
 
-~~~ {.javascript}
-let a = [1, 2, 3];
+const sayHello = () => { console.log('Hello') }
 
-a.forEach(function(n) {
-  console.log(n);
-});
-~~~
+repeatThreeTimes(sayHello)
 
-### Functions that Return Functions ### {#funcs-as-returns}
+//  'Hello'  'Hello'  'Hello'
+```
 
-Functions can create *nested functions* and return them:
+### Functions as Data
 
-~~~ {.javascript}
-function recordStartTime() {
-  let d = new Date();
+`repeatThreeTimes` is an example of a **higher-order function**. 
 
-  return function() {
-    return d;
-  };
-};
+Functions that take a function as an argument and use it in
 
-let getStartTime = recordStartTime();
-getStartTime(); // 2018-07-03T23:16:00.383Z
-~~~
+a prescribed way are called **higher-order functions**.
 
-(Note: this creates what's known as a *closure*.)
+\begin{figure}
+    Can anyone name higher-order functions they've encountered?
+\end{figure}
+
+### Functions Return Other Functions
+
+Functions can even return other functions.
+
+```javascript
+const always = (value) => {
+  return () => value
+}
+
+const getMagicNumber = always(42)
+
+getMagicNumber() // ?
+```
+
+### Functions Return Other Functions
+
+Functions can even return other functions.
+
+```javascript
+const always = (value) => {
+  return () => value
+}
+
+const getMagicNumber = always(42)
+
+getMagicNumber() // 42
+```
+
+### Functions Return Other Functions
+
+Functions that return functions are also **higher-order functions**
+
+(This creates a *closure* which we'll discuss later.)
+
+### Eliminating Unnecessary Anonymous Functions
+
+Some anonymous functions are redundant.
+
+Rather than wrapping, pass the function directly.
+
+```javascript
+const repeatThreeTimes = (action) => { /* ... */ }
+const sayHello = () => { console.log('hello') }
+
+repeatThreeTimes(() => { sayHello() }) // is the same as...
+repeatThreeTimes(sayHello)
+```
+
+### Eliminating Unnecessary Anonymous Functions
+
+Same goes for ones that receive arguments.
+
+```javascript
+const invokeWith42 = (fn) => fn(42)
+const add1ToNum = num => 1 + num
+
+invokeWith42((num) => add1ToNum(num)) // is the same as...
+invokeWith42(add1ToNum)
+```
