@@ -44,8 +44,3 @@
 
     - `eventName` is `"click"`, `"submit"`, etc.
     - `handler` is a function that accepts one argument.
-
-  * Complete Example
-
-~~~ {.javascript insert="../../src/examples/js/events.js"}
-~~~

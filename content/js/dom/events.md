@@ -2,97 +2,145 @@
 
 ### Events Overview
 
-  - Single-threaded, but asynchronous event model
+* Events can be click, hover, key press, focus, form submit, etc.
+* Events are received in a synchronous "event loop":
+    * JS runtime hangs out, quietly waiting for events
+    * Events fire and trigger registered handler functions
+    * Handler functions run synchronously
 
-  - Events fire and trigger registered handler functions
+### Most Common Events
 
-  - Events can be click, page ready, focus, submit (form), etc.
+* click
+* change
+* keydown
+* submit
 
-### So Many Events!
+(Example: `src/examples/js/events.html`)
 
-  - UI: load, unload, error, resize, scroll
-  - Keyboard: keydown, keyup, keypress
-  - Mouse: click, dblclick, mousedown, mouseup, mousemove
-  - Touch: touchstart, touchend, touchcancel, touchleave, touchmove
-  - Focus: focus, blur
-  - Form: input, change, submit, reset, select, cut, copy, paste
+### Slightly More Comprehensive List
 
-### Using Events (the Basics)
+* UI: load, unload, error, resize, scroll
+* Keyboard: keydown, keyup, keypress
+* Mouse: click, dblclick, mousedown, mouseup, mousemove
+* Touch: touchstart, touchend, touchcancel, touchleave, touchmove
+* Focus: focus, blur
+* Form: input, change, submit, reset, select, cut, copy, paste
 
-  #. Select the element you want to monitor
+### Handling Events
 
-  #. Register to receive the events you are interested in
+  #. Get the element to monitor
+  
+      * `document.getElementBy...`
 
-  #. Define a function that will be called when events are fired
+  #. Register a function for an event on that element
+  
+      * `.addEventListener('event', handler)`
 
 ### Event Registration
 
-Use the `addEventListener` function to register a function to be
-called when an event is triggered:
+```
+const button = document.getElementById('greet')
 
-Example: Registering a click handler:
+button.addEventListener('click', () => {
+  alert('Hello!')
+})
+```
 
-~~~ {.javascript insert="../../../src/examples/js/eventex.js"}
-~~~
+### Event Bubbling
 
-**Note**: Don't use older event handler APIs such as `onClick`!
+* Events propagate from the target node upwards
+* Called **bubbling**
 
-<div class="notes">
+```html
+<form onclick="console.log('form')">FORM
+  <div onclick="console.log('div')">DIV
+    <p onclick="console.log('p')">P</p>
+  </div>
+</form>
+```
 
-See [this reference][event-types] for a list of all event types.
+Clicking `<p>`:   `P  DIV  FORM`
 
-[event-types]: https://developer.mozilla.org/en-US/docs/Web/Events
+Clicking `<div>`:    `DIV  FORM`
 
-</div>
+### Event Bubbling
 
-### Event Handler Call Context
+* Bubbling can be prevented with `event.stopPropagation`
 
-  - Functions are called in the context of the DOM element
+```html
+<body onclick="console.log('Will not be reached')">
+  <button>Click me</button>
+</body>
+```
 
-  - I.e., `this === eventElement`
+```javascript
+button.addEventListener('click', (event) => {
+  event.stopPropagation()
+  console.log('button clicked')
+})
+```
 
-  - Use `bind` or the `let self = this;` trick
+Clicking `<button>`:  `button clicked`
 
-### Event Propagation
+### Sidenote
 
-<div class="notes">
+We're using `onclick` for terse examples
 
-Some additional details about events, propagation, and the browser's
-default action.
+Generally **only** use `addEventListener`
 
-</div>
+### Browser Default Action
 
-  * By default, events propagate from the target node upwards until
-    the root node is reached (bubbling).
+* The browser has a default action for many events, e.g.
+    * `submit` will `POST` to the `form` `action` url
+    * Clicking a link will load a new page
+* Default action prevented with `event.preventDefault`
 
-  * Event handlers can stop propagation using the
-    `event.stopPropagation` function.
+### Event Delegation
 
-  * Event handlers can also stop the browser from performing the
-    default action for an event by calling the `event.preventDefault`
-    function
+```html
+<ul>
+  <li>Option 1</li>
+  <li>Option 2</li>
+  <li>Option 3</li>
+</ul>
+```
 
-Example: Event Handler
+Repeated registered handlers. :-(
 
-~~~ {.javascript insert="../../../src/examples/js/eventstop.js" token="example"}
+~~~ {.javascript insert="../../../src/examples/js/events.js" token="multiple-handlers"}
 ~~~
 
 ### Event Delegation
 
-  - Parent receives event instead of child (via bubbling)
+What happens if another `li` is added dynamically
 
-  - Children can change without messing with event registration
+and then clicked?
 
-  - Fewer handlers registered, fewer callbacks
+(Example: `src/examples/js/events.html`)
 
-  - Relies on some event object properties:
-    -   `event.target`: The element the event triggered for
-    -   `event.currentTarget`: Registered element (parent)
+### Event Delegation
 
+Event handler `event` knows two things:
 
-### Functions Given Context
+* **`currentTarget`**: Where it's registered
+* **`target`**: Who triggered the event
 
-Functions, particularly click handlers, are given context.
+### Event Delegation
+
+\begin{figure}
+  How can we use this to our advantage?
+\end{figure}
+
+### Event Delegation
+
+Put the handler on the parent
+
+~~~ {.javascript insert="../../../src/examples/js/events.js" token="parent-delegation"}
+~~~
+
+### Functions Given Context of Event
+
+Event handlers are given context of that element.
 
 ```js
 document.getElementsByTagName('button')
@@ -106,18 +154,38 @@ Arrow functions won't work here.
 ```js
 document.getElementsByTagName('button')
   .addEventListener('click', () => {
-    console.log(this) // window
+    console.log(this) // window  :-(
   })
 ```
 
-### Functions Given Context
+### Functions Given Context of Event
 
-TODO talk about using currentTarget for arrow fns
+Easy solution is to use `event.currentTarget`.
 
-### Event Handling: A Complete Example {#a6c1d41c258611e89ac42bb59fa4b75e}
+```js
+document.getElementsByTagName('button')
+  .addEventListener('click', (event) => {
+    console.log(event.currentTarget) // the button
+  })
+```
 
-~~~ {.javascript insert="../../../src/examples/js/events.js"}
+### Functions Given Context of Event
+
+Moral of the story: `this` **can** be more expressive
+
+...but mostly it causes confusion. Avoid it when possible.
+
+### Event Debouncing and Throttling
+
+Given an event handler...
+
+* Debounce: group many events into a single execution
+* Throttle: limit executions to X for a time window
+
+~~~ {.javascript insert="../../../src/examples/js/events.js" token="event-limiting"}
 ~~~
+
+(Example: `src/examples/js/events.html`)
 
 ### Exercise: Simple User Interaction
 
@@ -130,19 +198,3 @@ TODO talk about using currentTarget for arrow fns
   #. Open the `index.html` file in your web browser.
 
   #. Complete the exercise.
-
-### Event Loop Warnings
-
-  - Avoid blocking functions (e.g., `alert`, `confirm`)
-
-  - For long tasks use iteration or web workers
-
-  - Iteration: Break work up using `setTimeout(0)`
-
-### Event "Debouncing"
-
-  - Respond to events in intervals instead of in real-time
-  - Reuse a timeout object to process events in the future
-
-~~~ {.javascript insert="../../../src/examples/js/debounce.js" token="debounce"}
-~~~

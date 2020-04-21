@@ -1,0 +1,84 @@
+<html>
+<head>
+  <style>
+    section {
+      padding: 50px;
+    }
+
+    .section-1 {
+      background-color: lightblue;
+    }
+
+    .section-2 {
+      background-color: lightsalmon;
+    }
+
+    .section-3 {
+      background-color: papayawhip;
+    }
+  </style>
+</head>
+<body>
+
+<section class="section-1">
+  <h1>Event Types</h1>
+  <p>
+    <button id="click-type">Click me</button>
+  </p>
+  <form action="#" id="submit-type">
+    <label>Text
+      <input name="text" type="text" id="change-type" />
+    </label><br>
+    <label>Checkbox
+      <input name="checkbox" type="checkbox" id="checked-type" />
+    </label><br>
+    <label>Keydown
+      <input name="keydown" type="text" id="keydown-type" />
+    </label><br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section class="section-2">
+  <h1>Parent Delegation</h1>
+  <ul>
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
+
+  <p>
+    <button id="add-option">Add option</button>
+  </p>
+  <p>
+    <button id="add-to-li">Add listeners to li</button>
+  </p>
+  <p>
+    <button id="add-to-parent">Add listeners to parent</button>
+  </p>
+</section>
+
+<section class="section-3">
+  <h1>Event Limiting</h1>
+
+  <label>
+    Type Something
+    <input id="event-limiting" type="text">
+  </label>
+
+  <p>
+    Unlimited mirroring:
+    <span id="unlimited"></span>
+  </p>
+  <p>
+    Debounced mirroring:
+    <span id="debounced" />
+  </p>
+  <p>
+    Throttled mirroring:
+    <span id="throttled" />
+  </p>
+</section>
+<script type="module" src="events.js"></script>
+</body>
+</html>
