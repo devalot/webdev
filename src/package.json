@@ -21,7 +21,6 @@
     "ws": "^6.1.3"
   },
   "scripts": {
-    "babel": "babel babel --out-dir babel-out --presets=@babel/env",
     "chat": "node bin/chat-server.js",
     "start": "node bin/server.js",
     "test": "jest"
