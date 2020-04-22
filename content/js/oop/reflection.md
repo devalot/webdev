@@ -31,3 +31,11 @@ Introspection and Reflection
     // Returns `Array.prototype':
     Object.getPrototypeOf([1, 2, 3]);
     ~~~
+
+  * `constructor` property:
+  
+    ~~~ {.javascript}
+    const foo = function foo() {}
+    const f = new foo()
+    f.constructor === foo
+    ~~~

@@ -1,5 +1,4 @@
-Object Mutability
------------------
+## Object Mutability
 
 ### Passing Objects to Functions {#mutable-passing}
 
@@ -61,3 +60,28 @@ Object.preventExtensions(obj);
 <div class="notes">
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)
 </div>
+
+### `ImmutableJS`
+
+Some libraries support immutability.
+
+```javascript
+const { Map } = require('immutable')
+
+const map1 = Map({ a: 1, b: 2, c: 3 })
+const map2 = Map({ a: 1, b: 2, c: 3 })
+map1.equals(map2) // true
+map1 === map2 // false
+```
+
+We tried it but it's painful.
+
+### Moral of the Story
+
+It's *possible* to enforce immutability in code...
+
+... but it's painful.
+
+... and it may be unreliable.
+
+Better option: adopt immutable programming conventions as a team.

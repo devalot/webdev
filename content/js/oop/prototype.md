@@ -1,94 +1,137 @@
 The Prototype
 -------------
 
-### Inheritance in JavaScript ###
+### Inheritance in JavaScript
 
-  * JavaScript doesn't use classes, it uses prototypes
+* JavaScript doesn't use classes, it uses **prototypes**
+* Prototypal inheritance:
+  * Tends to be smaller
+  * Less redundant
+  * Can simulate classical inheritance as needed
+  * More powerful
 
-  * There are ways to simulate classes (even ES2015 does it!)
+### Inheriting Properties from Other Objects
 
-  * The prototypal model:
-      - Tends to be smaller
-      - Less redundant
-      - Can simulate classical inheritance as needed
-      - More powerful
+![](../../../diagrams/js/inheritance.png)
 
-### Inheriting Properties from Other Objects ### {#property-get}
+### Setting Properties and Inheritance
 
-![](../../../diagrams/js/inheritance.dot)\
-<!-- Placeholder -->
+![](../../../diagrams/js/inheritance-set.png)
 
-### Manual Configuration of Inheritance ### {#object-create}
+### Establishing Inheritance
 
-~~~ {.javascript insert="../../../src/examples/js/objcreate.js" token="create"}
-~~~
+**`Object.create`** creates a new object with the provided object as the prototype.
 
-~~~ {.javascript exec="node ../../../src/examples/js/objcreate.js"}
-~~~
+```javascript
+const a = { color: 'red', speed: 100 }
 
-### Setting Properties and Inheritance ### {#property-set}
+const b = Object.create(a)
+b.speed // 100
+b.color = 'green'
 
-![](../../../diagrams/js/inheritance-set.dot)\
-<!-- Placeholder -->
+const c = Object.create(b)
+c.speed // 100
+c.color // 'green'
+```
 
-### Inheritance with `__proto__` ### {#proto}
+### Turtles All the Way Up
 
-![Prototypes](../../../diagrams/js/proto-simple.dot)\
-<!-- Placeholder -->
+![Prototypes](../../../diagrams/js/proto-simple.dot)
 
-### Prototype Details ###
+### Object.create
 
-  * All objects have an internal link to another object called its
-    *prototype* (known internally as the `__proto__` property).
+`Object.create` creates a new object and sets the `__proto__` property.
 
-  * The prototype object also has a prototype, and so on up the
-    *prototype chain* (the final link in the chain is `null`).
+```javascript
+const a = { color: 'red', speed: 100 }
 
-  * Objects *delegate* properties to other objects through the
-    prototype chain.
+const b = Object.create(a)
+b.speed // 100
+b.__proto__ === a // true
+```
 
-  * Only functions have a `prototype` property by default.
+### Turtles All the Way Up
 
-### Using `__proto__` in ES2015 ###
+```javascript
+const a = {}
+const b = Object.create(a)
+const c = Object.create(b)
 
-Starting in ECMAScript 2015, the `__proto__` property is standardized
-as an accessible property.
+c.__proto__ // b
+b.__proto__ // a
+a.__proto__ // Object.prototype
+Object.prototype.__proto__ // null
+```
 
-*Warning:* Using `__proto__` directly is strongly discouraged due to
-performance concerns.
+### Prototypes
 
-### Looking at `Array` Instances ### {#proto-array}
+* Every object has a `__proto__` **prototype**
+* The path of prototype objects is the **prototype chain**
+* Properties not found on an object will be check up the prototype chain
 
-![Array and Array.prototype](../../../diagrams/js/array-proto.dot)\
-<!-- Placeholder -->
+### Using `__proto__`
 
-### The Prototype Chain
+`__proto__` is *technically* non-standard, but de-facto available
 
-![Prototypal Inheritance](../../../diagrams/js/proto.dot)\
-<!-- Placeholder -->
+The "standard" is `Object.getPrototypeOf()`
 
-### Another Look at `Array` Instances
+Can be set after the fact with `Object.setPrototypeOf()`
 
-![Array and Friends](../../../diagrams/js/full-array-proto.dot)\
-<!-- Placeholder -->
+### Setting the Prototype
 
-Establishing the Prototype Chain
---------------------------------
+These are very different in performance:
 
-### Using `Object.create` ###
+```js
+const a = { color: 'green' }
 
-The `Object.create` function creates a new object and sets its
-`__proto__` property:
+// fast!
+const b = Object.create(a)
 
-~~~ {.javascript insert="../../../src/examples/js/objcreate.js" token="create"}
-~~~
+// sloooooow
+const c = {}
+Object.setPrototypeOf(c, a)
+c.color
+```
 
-### Using the `new` Operator ###
+### The Buck Stops Here
 
-The `new` operator creates a new object and sets its `__proto__`
-property.  The `new` operator takes a function as its right operand
-and sets the new object's `__proto__` to the function's `prototype`
-property.
+You can check if an object (and not one of the prototypes) has the property:
 
-~~~ {.javascript insert="../../../src/examples/js/objnew.js"}
-~~~
+```javascript
+const a = { color: 'green', speed: 100 }
+const b = Object.create(a)
+b.speed = 100
+
+b.hasOwnProperty('speed') // true
+b.hasOwnProperty('color') // false
+```
+
+### Inheriting Behavior
+
+Function properties further up the prototype chain refer to `this` the way you'd expect.
+
+Remember: it's all about the calling context!
+
+```javascript
+const a = {
+  name: 'Andrew',
+  getName() { return this.name },
+}
+
+const b = Object.create(a)
+b.name = 'Foo'
+b.getName() // 'Foo'
+```
+
+### Exercise
+
+  #. Open `src/www/js/oop/create.test.js`
+  
+  #. Follow directions in the `it` statements
+  
+  #. All tests should pass 
+
+```shell
+$ cd src
+$ yarn jest create.test.js --watch
+```

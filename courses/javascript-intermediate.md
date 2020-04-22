@@ -68,8 +68,11 @@ This JavaScript course is delivered during two days.
 
 # Object-Oriented Programming
 
+## Object-Oriented Programming
+
+<<(../content/js/oop/classes.md)
 <<(../content/js/oop/prototype.md)
-<<(../content/js/oop/ctor-and-classes.md)
+<<(../content/js/oop/constructors.md)
 <<(../content/js/oop/reflection.md)
 <<(../content/js/oop/mutable.md)
 
