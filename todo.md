@@ -17,6 +17,8 @@
 - [x] es6 object function shorthand
 - [x] trailing comma in obj, functions, etc.
 - [ ] try moving stuff to codesandbox.io?
+- [ ] demonstrate using `super` in a method
+- [ ] show class mixins
 
 Idea for FP intro:
 

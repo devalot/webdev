@@ -42,20 +42,28 @@ describe('Closures: Specializing Behavior', () => {
     expect(document.body.style.fontSize).toEqual('14px')
   })
 
-  it('should create specialized click handlers', () => {
-    const toggleCart = () => {} // TODO
+  it('write a #registerUser helper', () => {
+    // scaffolding... do not edit
+    const usersById = {
+      32: { id: 32, name: 'Alex', registered: false },
+      47: { id: 47, name: 'Billy', registered: false },
+    }
+    const { 32: alex, 47: billy } = usersById
 
-    const items = [
-      { id: 0, cart: true, onClick: toggleCart(0) },
-      { id: 1, cart: false, onClick: toggleCart(1) },
-      { id: 2, cart: false, onClick: toggleCart(2) },
-    ]
+    // #createRegistration:
+    //   1. takes a collection of objects indexed by their ID
+    //   2. returns a function that expects an ID, and should:
+    //       a. Find the user in the collection, and mark them as registered
+    //       b. Throw an error "User XX not found" if the ID didn't match a user
+    const createRegistration = () => {}
 
-    items[0].onClick()
-    expect(items[0].cart).toEqual(false)
-    items[0].onClick()
-    expect(items[0].cart).toEqual(true)
-    items[2].onClick()
-    expect(items[2].cart).toEqual(true)
+    // scaffolding... do not edit
+    const register = createRegistration(usersById)
+    register(32)
+    expect(alex.registered).toEqual(true)
+    expect(billy.registered).toEqual(false)
+    register(47)
+    expect(billy.registered).toEqual(true)
+    expect(() => register(1000)).toThrow('User 1000 not found')
   })
 })
