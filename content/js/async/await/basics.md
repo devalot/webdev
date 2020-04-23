@@ -27,12 +27,24 @@ Question: What does the `example2` function return?
 
 ### Exercise: Using `async` and `await` ###
 
-  #. Start your server if it isn't running
+  #. Start your server
+  
+    * cd src
+    * yarn start
 
+  #. Open a browser and check out the API
+  
+    * http://localhost:3000/api/artists
+    * http://localhost:3000/api/artists/2
+    * http://localhost:3000/api/albums
+  
   #. Open `src/www/js/ajax/ajax.js`
+  
+  #. Open `src/www/js/ajax/ajax.test.js`
 
-  #. Fill in the missing pieces
+  #. Make all tests pass
 
-  #. To test and debug, open
-
-         http://localhost:3000/js/ajax/
+```shell
+$ cd src
+$ yarn jest ajax.test.js --watch
+```

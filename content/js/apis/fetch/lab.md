@@ -3,12 +3,24 @@
 
 ### Exercise: Using the Fetch API ###
 
-  #. Start your server if it isn't running
+  #. Start your server
+  
+    * cd src
+    * yarn start
 
+  #. Open a browser and check out the API
+  
+    * http://localhost:3000/api/artists
+    * http://localhost:3000/api/artists/2
+    * http://localhost:3000/api/albums
+  
   #. Open `src/www/js/fetch/fetch.js`
+  
+  #. Open `src/www/js/fetch/fetch.test.js`
 
-  #. Fill in the missing pieces
+  #. Make all tests pass
 
-  #. To test and debug, open
-
-         http://localhost:3000/js/fetch/
+```shell
+$ cd src
+$ yarn jest fetch.test.js --watch
+```

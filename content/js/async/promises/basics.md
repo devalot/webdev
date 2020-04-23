@@ -23,8 +23,7 @@
 
 ### Visualizing Promises (Owner) ### {#promise-owner-diagram}
 
-![](../../../../diagrams/js/promise-owner.dot)\
-<!-- After diagram placeholder -->
+![](../../../../diagrams/js/promise-owner.png)
 
 ### Example: Promise Owner ### {#promise-owner-example}
 
@@ -33,8 +32,7 @@
 
 ### Visualizing Promises (User) ### {#promise-user-diagram}
 
-![](../../../../diagrams/js/promise-user.dot)\
-<!-- After diagram placeholder -->
+![](../../../../diagrams/js/promise-user.png)
 
 ### Promise Composition Example ### {#promise-composition-example}
 
