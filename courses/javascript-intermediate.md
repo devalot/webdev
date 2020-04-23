@@ -66,6 +66,12 @@ This JavaScript course is delivered during two days.
 <<(../content/js/functional/closures.md)
 <<(../content/js/functional/this.md)
 
+# FP Intermediate
+
+## Funtional Programming Intermediate
+
+<<(../content/js/functional/state.md)
+
 # Object-Oriented Programming
 
 ## Object-Oriented Programming

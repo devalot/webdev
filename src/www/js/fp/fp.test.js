@@ -33,7 +33,7 @@ describe('Functional Programming', () => {
 
       it('should uppercase all the words in the array', () => {
         const words = ['foo', 'bar', 'baz']
-        const uppercase = R.toUpper
+        const uppercase = x => x.toUpperCase()
         const shoutWords = undefined // TODO no anonymous functions
         expect(shoutWords(words)).toEqual(['FOO', 'BAR', 'BAZ'])
       })
