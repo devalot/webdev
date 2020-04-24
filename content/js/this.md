@@ -222,3 +222,12 @@ class Person extends React.Component {
   }
 }
 ```
+
+### Exercise
+
+  #. Open <https://codesandbox.io/s/this-9xunj>
+  
+  #. Complete the exercises
+  
+  #. Watch the *Console* for printouts of whether each exercise is passing
+  

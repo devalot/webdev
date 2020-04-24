@@ -23,6 +23,7 @@ describe('Creating inheritance', () => {
 
   it('write a function that tells how many prototype hops is needed to find a prop', () => {
     const baconNumber = () => {}
+  it('CHALLENGE: write a function that tells how many prototype hops is needed to find a prop', () => {
 
     const a = { color: 'green' }
     const b = Object.create(a)

@@ -12,6 +12,7 @@ describe('Higher Order Functions', () => {
     const withoutPropagation = () => {}
 
     // don't edit me...
+    // TODO test that eventWasHandled
     const wrappedEventHandler = withoutPropagation(eventHandler)
     wrappedEventHandler(event)
     expect(event.stopPropagation).toHaveBeenCalled()
