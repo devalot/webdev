@@ -13,3 +13,9 @@
 
 
 // Your code here.
+document.body.addEventListener('click', (e) => {
+  e.preventDefault()
+  const display = e.target.nextElementSibling
+  if (display.tagName !== 'SPAN') return
+  display.innerText = parseInt(display.innerText) + 1
+})

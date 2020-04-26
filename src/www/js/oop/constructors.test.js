@@ -1,3 +1,5 @@
+import { Calculator } from './constructors'
+
 describe('Constructor Functions Exercise', () => {
   it('Should provide a Calculator function', () => {
     expect(typeof Calculator).toEqual('function')

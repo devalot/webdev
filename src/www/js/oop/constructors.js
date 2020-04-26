@@ -27,3 +27,29 @@
  *                // Stack is now empty.
  *   c.get();     // returns 20
  */
+
+export const Calculator = function (initialValue = 0) {
+  this.otherValues = []
+  this.value = initialValue
+}
+
+Calculator.prototype.add = function () {
+  this.value = this.otherValues.reduce(
+    (acc, n) => acc + n,
+    this.value
+  )
+  this.otherValues.length = 0
+}
+Calculator.prototype.mul = function () {
+  this.value = this.otherValues.reduce(
+    (acc, n) => acc * n,
+    this.value
+  )
+  this.otherValues.length = 0
+}
+Calculator.prototype.get = function () {
+  return this.value
+}
+Calculator.prototype.push = function (value) {
+  this.otherValues.push(value)
+}

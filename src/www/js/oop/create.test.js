@@ -5,7 +5,7 @@ describe('Creating inheritance', () => {
   }
 
   it('make an object that has person as its prototype', () => {
-    const instructor = doSomething()
+    const instructor = Object.create(person)
     instructor.first = 'Andrew'
     instructor.last = 'Smith'
     expect(instructor.fullName()).toEqual('Andrew Smith')
@@ -14,16 +14,24 @@ describe('Creating inheritance', () => {
 
   it('make a #makePerson function that points to `person` as prototype', () => {
     // makePerson should take a `first` and `last` to give to the created object
-    const makePerson = () => {}
+    const makePerson = (first, last) => {
+      const obj = Object.create(person)
+      obj.first = first
+      obj.last = last
+      return obj
+    }
 
     const instructor = makePerson('Andrew', 'Smith')
     expect(instructor.fullName()).toEqual('Andrew Smith')
     expect(instructor.species).toEqual('Homo sapien')
   })
 
-  it('write a function that tells how many prototype hops is needed to find a prop', () => {
-    const baconNumber = () => {}
   it('CHALLENGE: write a function that tells how many prototype hops is needed to find a prop', () => {
+    const baconNumber = (obj, prop, hops = 0) => {
+      if (!obj) return -1
+      if (obj.hasOwnProperty(prop)) return hops
+      return baconNumber(obj.__proto__, prop, hops + 1)
+    }
 
     const a = { color: 'green' }
     const b = Object.create(a)

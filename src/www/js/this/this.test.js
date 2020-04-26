@@ -1,6 +1,11 @@
 describe('this', () => {
   it('EXERCISE 1: should give an age and an function #isAdult which checks if age is >= 18', () => {
-    const person = {}
+    const person = {
+      age: 17,
+      isAdult() {
+        return this.age >= 18
+      }
+    }
 
     expect(person.isAdult()).toEqual(false)
   })
@@ -8,7 +13,7 @@ describe('this', () => {
   it('EXERCISE 2: fix this code', () => {
     const c = {
       color: 'green',
-      getColor: () => {
+      getColor() {
         return this.color
       }
     }
@@ -20,7 +25,7 @@ describe('this', () => {
     const greeter = {
       message: 'Hello',
       print() {
-        function otherFn() {
+        const otherFn = () => {
           expect(this.message).toEqual('Hello')
         }
 
@@ -39,13 +44,13 @@ describe('this', () => {
       }
     }
 
-    const getColor = a.getColor
+    const getColor = a.getColor.bind(a)
 
     expect(getColor()).toEqual('red')
   })
 
   it('EXERCISE 5: fix this code', () => {
-    const getAge = () => this.age
+    const getAge = function() { return this.age }
 
     const p1 = {
       age: 42,
@@ -55,4 +60,3 @@ describe('this', () => {
     expect(p1.getAge()).toEqual(42)
   })
 })
-

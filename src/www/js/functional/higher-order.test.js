@@ -9,7 +9,12 @@ describe('Higher Order Functions', () => {
     // it should return a function that expects an event
     // it should call `#stopPropagation` on the event, and then
     //           pass it to the event handler
-    const withoutPropagation = () => {}
+    const withoutPropagation = (cb) => {
+      return (ev) => {
+        ev.stopPropagation()
+        cb(ev)  // ?? where does event come from?
+      }
+    }
 
     // don't edit me...
     // TODO test that eventWasHandled
@@ -25,11 +30,19 @@ describe('Higher Order Functions', () => {
     // #repeat takes a number, of how many times a callback function will be repeated
     //    It returns a function that will expect a count (which iteration of the repetition), along with other arguments
     //        It returns a function that receives other arguments to be given to the callback function
-    const repeat = () => {}
+    const repeat = (num) => (
+      (cb) => (
+        (...args) => {
+          for (let i = 1; i <= num; i++) {
+            cb(i, ...args)
+          }
+        }
+      )
+    )
 
     // do not edit
-    const repeat2Times = repeat(3)
-    const wrappedFn = repeat2Times((count, ...args) => { mockFn(count, ...args) })
+    const repeat3Times = repeat(3)
+    const wrappedFn = repeat3Times((count, ...args) => { mockFn(count, ...args) })
     wrappedFn('hello', 'world')
     expect(mockFn.mock.calls).toEqual([
       [1, 'hello', 'world'],

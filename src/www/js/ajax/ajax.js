@@ -13,7 +13,11 @@
  */
 export const Ajax = (() => {
   const raw = async (url, method, data) => {
-    // Implement this function.
+    const response = await fetch(
+      url,
+      { body: JSON.stringify(data), method },
+    )
+    return response.json()
   }
 
   // HTTP GET (Fetch resource).
