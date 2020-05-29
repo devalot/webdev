@@ -1,20 +1,18 @@
-{
-}@args:
+{ }@args:
 
 let
   # Some helper files:
   repo = fetchGit {
     url = "https://github.com/pjones/edify.git";
-    rev = "c73e108b05672e8b753dfdd0ae474e36f0c61d95";
+    rev = "d15977409d11afe4db8c69db626d3b38451152d2";
   };
 
   edify = import "${repo}/nix/builder.nix" args;
-  pkgs  = edify.pkgs;
+  pkgs = edify.pkgs;
 
-  nodeHelper = import ./nix/node {pkgs = edify.pkgs;};
-in
+  nodeHelper = import ./nix/node { pkgs = edify.pkgs; };
 
-edify.mkDerivation rec {
+in edify.mkDerivation rec {
   name = "webdev-${version}";
   version = "0.13";
   src = builtins.fetchGit ./.;
@@ -23,7 +21,7 @@ edify.mkDerivation rec {
   extensions = [ "emoji" "implicit_figures" ];
 
   # Extra flags to pass to Pandoc:
-  pandocFlags = [ "pdf-engine=xelatex" ];
+  pandocFlags = [ "pdf-engine=xelatex" "variable=theme:Boadilla" ];
 
   # Extra files to include in the zip archive:
   extraFiles = [ "LICENSE" "README.md" "start-scripts" "src" ];
