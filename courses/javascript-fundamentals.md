@@ -1,4 +1,8 @@
 ---
+mainfont: DejaVu Sans
+linkcolor: NavyBlue
+urlcolor: NavyBlue
+toccolor: Red
 title: "JavaScript Fundamentals"
 
 author:

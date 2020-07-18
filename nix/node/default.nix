@@ -15,12 +15,12 @@ let
     { load = ./webdev;
       for = "src";
     }
-    { load = ./typescript;
-      for = "src/www/js/alternatives/typescript";
-    }
-    { load = ./webpack;
-      for = "src/www/js/tools/webpack";
-    }
+    # { load = ./typescript;
+    #   for = "src/www/js/alternatives/typescript";
+    # }
+    # { load = ./webpack;
+    #   for = "src/www/js/tools/webpack";
+    # }
   ];
 
   ##############################################################################
@@ -52,9 +52,9 @@ let
     ( cd $dest/src && npm run babel )
 
     # Prepare the Webpack demo app:
-    ( cd "$dest/src/www/js/tools/webpack"
-      npm run build
-    )
+    # ( cd "$dest/src/www/js/tools/webpack"
+    #   npm run build
+    # )
   '';
 
 in { inherit buildInputs installPhase shellHook; }

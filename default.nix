@@ -4,7 +4,7 @@ let
   # Some helper files:
   repo = fetchGit {
     url = "https://github.com/pjones/edify.git";
-    rev = "d15977409d11afe4db8c69db626d3b38451152d2";
+    rev = "ea2868f53e14553c027def99161606d511b382c0";
   };
 
   edify = import "${repo}/nix/builder.nix" args;
