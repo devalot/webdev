@@ -1,34 +1,51 @@
-{ }@args:
-
+let sources = import nix/sources.nix;
+in
+{ pkgs ? import sources.nixpkgs { }
+}:
 let
-  # Some helper files:
-  repo = fetchGit {
-    url = "https://github.com/pjones/edify.git";
-    rev = "ea2868f53e14553c027def99161606d511b382c0";
-  };
+  inherit (pkgs) lib stdenvNoCC;
 
-  edify = import "${repo}/nix/builder.nix" args;
-  pkgs = edify.pkgs;
+  edify = import sources.edify { inherit pkgs; };
+  nodeHelper = import ./nix/node { inherit pkgs; };
 
-  nodeHelper = import ./nix/node { pkgs = edify.pkgs; };
-
-in edify.mkDerivation rec {
-  name = "webdev-${version}";
+in
+stdenvNoCC.mkDerivation {
+  pname = "webdev";
   version = "0.13";
-  src = builtins.fetchGit ./.;
 
-  # Extra markdown extensions:
-  extensions = [ "emoji" "implicit_figures" ];
+  src =
+    lib.cleanSourceWith {
+      src = lib.cleanSource ./.;
+      filter = path: type:
+        !(type == "directory" && baseNameOf path == "build");
+    };
 
-  # Extra flags to pass to Pandoc:
-  pandocFlags = [ "pdf-engine=xelatex" "variable=theme:Boadilla" ];
+  buildInputs =
+    [ edify.bin pkgs.zip ]
+    ++ nodeHelper.buildInputs;
 
-  # Extra files to include in the zip archive:
-  extraFiles = [ "LICENSE" "README.md" "start-scripts" "src" ];
+  buildPhase = ''
+    # It's safe to run shell commands in the Nix sandbox.
+    edify build --unsafe-allow-commands
+  '';
 
-  # Additional system dependencies:
-  buildInputs = nodeHelper.buildInputs;
+  installPhase = ''
+    mkdir -p "$out/$name/handouts" "$out/$name/slides"
+    cp -a LICENSE README.md start-scripts src "$out/$name"
 
-  # Install things:
-  installPhase = nodeHelper.installPhase;
+    # Copy PDF files into the correct locations:
+    find build -type f -name '*.handout.pdf' -exec mv '{}' "$out/$name/handouts" ';'
+    find build -type f -name '*.slides.pdf'  -exec mv '{}' "$out/$name/slides" ';'
+
+    # Rename PDF files:
+    for file in $out/$name/{handouts,slides}/*.pdf; do
+      mv "$file" "$(sed -E 's/[.](handout|slides)[.]pdf/.pdf/' <<<"$file")"
+    done
+
+    # Install other files:
+    ${nodeHelper.installPhase}
+
+    # Build archives:
+    ( cd "$out" && zip -9 -y -r -q "$name.zip" "$name" )
+  '';
 }

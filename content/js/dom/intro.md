@@ -43,7 +43,7 @@ And produce this tree structure:
     };
     ~~~
 
-    -   Attributes may **very loosely** to object properties
+  - Attributes map **very loosely** to object properties
 
 ### Working with the Document Object Model
 

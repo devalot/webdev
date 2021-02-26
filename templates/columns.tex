@@ -1,0 +1,4 @@
+\usepackage{multicol}
+\newcommand{\columnsbegin}{\begin{multicols}{2}}
+\newcommand{\columnsend}{\end{multicols}}
+\ifdef{\column}{}{\newcommand{\column}[1]{\columnbreak}}

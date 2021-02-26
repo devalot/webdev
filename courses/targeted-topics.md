@@ -20,11 +20,7 @@ The source code for this course can be found at the following URL:
 
 <https://github.com/devalot/webdev>
 
-<div class="notes">
-
 <<(../content/js/requirements.md)
-
-</div>
 
 Track 1: Modern Programming Techniques
 ========================================
@@ -68,7 +64,6 @@ In this section we will review and explore:
 <<(../content/js/oop/prototype.md#property-set)
 <<(../content/js/oop/prototype.md#proto)
 <<(../content/js/oop/prototype.md#proto-array)
-<<(../content/js/oop/prototype.md#ctor-proto)
 <<(../content/js/oop/ctor-and-classes.md#ctor-proto)
 <<(../content/js/oop/ctor-and-classes.md#es2015-classes)
 <<(../content/js/labs.md#constructors)
@@ -112,7 +107,6 @@ following:
 
   * Safe programming with pure functions
 
-<<(../content/js/functional/basics.md#func-intro)
 <<(../content/js/functional/basics.md#func-define)
 <<(../content/js/functional/basics.md#func-statement)
 <<(../content/js/functional/basics.md#func-expression)

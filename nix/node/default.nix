@@ -1,9 +1,7 @@
 { pkgs }:
 
 with pkgs.lib;
-
 let
-
   ##############################################################################
   # Version of NodeJS used for bundling JS packages:
   nodejs = pkgs.nodejs;
@@ -12,7 +10,8 @@ let
   # Files which describe needed NPM modules.  Use the
   # `nix/node/update.sh' script to generate these files.
   nodeNixFiles = [
-    { load = ./webdev;
+    {
+      load = ./webdev;
       for = "src";
     }
     # { load = ./typescript;
@@ -31,8 +30,8 @@ let
   # How to install node_modules for a project in webdev:
   installModules = def: ''
     cp -rp ${(mkNodePkgs def.load).nodeDependencies}/lib/node_modules \
-      "$dest/${def.for}"
-    chmod -R u+w "$dest/${def.for}"
+      "$out/$name/${def.for}"
+    chmod -R u+w "$out/$name/${def.for}"
   '';
 
   ##############################################################################
@@ -49,12 +48,13 @@ let
     ${concatMapStrings installModules nodeNixFiles}
 
     # Run some files through Babel:
-    ( cd $dest/src && npm run babel )
+    ( cd $out/$name/src && npm run babel )
 
     # Prepare the Webpack demo app:
-    # ( cd "$dest/src/www/js/tools/webpack"
+    # ( cd "$out/$name/src/www/js/tools/webpack"
     #   npm run build
     # )
   '';
 
-in { inherit buildInputs installPhase shellHook; }
+in
+{ inherit buildInputs installPhase; }

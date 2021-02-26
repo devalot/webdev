@@ -38,12 +38,7 @@ This JavaScript course is delivered during two days.
   The `fetch` API              Testing w/ Jasmine
 
 
-<div class="notes">
-
-<<(../metadata/links.md)
 <<(../content/js/requirements.md)
-
-</div>
 
 JavaScript Review (Warming Up)
 ==============================
@@ -112,3 +107,5 @@ Testing with Jasmine
 ====================
 
 <<(../content/js/testing.md)
+
+<<(../metadata/links.md)

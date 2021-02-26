@@ -1,0 +1,39 @@
+targets:
+  # PDF handouts for students:
+  - name: handout
+    format: pdf
+    command:
+      pandoc --from=markdown+emoji
+             --include-in-header=templates/columns.tex
+             --pdf-engine=xelatex
+             --output=%o
+             --to=latex
+             --toc
+             --toc-depth=2
+             --top-level-division=chapter
+             --number-sections
+             %i
+
+  # PDF beamer slides without notes:
+  - name: slides
+    format: pdf
+    remove-divs: [ notes ]
+    command:
+      pandoc --from=markdown+emoji
+             --include-in-header=templates/columns-beamer.tex
+             --pdf-engine=xelatex
+             --output=%o
+             --to=beamer
+             --slide-level=3
+             --variable=classoption:aspectratio=43
+             %i
+
+input-files:
+  - courses/css-fundamentals.md
+  - courses/html-css-introduction.md
+  - courses/javascript-fundamentals.md
+  - courses/javascript-intermediate.md
+  - courses/targeted-topics.md
+  - courses/typescript-fundamentals.md
+
+output-directory: build

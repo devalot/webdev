@@ -207,7 +207,7 @@ operator:
 
 (This operator first appeared in ECMAScript Edition 3, circa 1999.)
 
-<<(changes/es2015.md#x4588a4c36ca11e8bffa276babc0cbbb)
+<<(changes/es2015-features.md#x4588a4c36ca11e8bffa276babc0cbbb)
 
 ## Boolean Values and Logic Operators
 
