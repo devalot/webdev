@@ -8,12 +8,12 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@babel/cli": "^7.2.0",
+    "@babel/cli": "^7.20.7",
     "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-decorators": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "mockapie": "git://github.com/pjones/mockapie.git",
-    "nightwatch": "^0.9.8"
+    "nightwatch": "^2.6.9"
   },
   "scripts": {
     "babel": "babel babel --out-dir babel-out --presets=@babel/env"
